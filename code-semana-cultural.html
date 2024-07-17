@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Cultural</title>
+    <link rel="stylesheet" href="styles-semana-cultural.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="code-index.html"    class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable"  class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="code-simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="code-mision-vision.html"    class="no-copiable">Misión y Visión</a></ol>
+                            
+                            <ol><a href="code-nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="code-modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Directiva</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-direcciones-de-grupo.html"  class="no-copiable">Direcciones de Grupo</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Multimedia</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-semana-cultural.html"  class="no-copiable">Semana Cultural</a></ol>
+                            <ol><a href="code-dia-de-la-afrocolombianidad.html"  class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Documentos</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-manual-convivencia.html"   class="no-copiable">Manual de Convivencia</a></ol>
+                            <ol><a href="code-cronograma.html"   class="no-copiable">Cronograma</a></ol>
+                            <ol><a href="code-bibloteca digital.html"   class="no-copiable">Biblioteca Digital</a></ol>
+                        </ul>
+                    </li>
+                    <li><a href="code-admisiones.html" class="no-copiable">Admisiones</a></li>
+                    <li><a href="code-contacto.html" class="no-copiable">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section id="sede-3">
+                <br>
+                <h1>Semana Cultural</h1>
+                <p>Proximamente...</p>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, <br>sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                    <div class="social-container">
+                        <div class="social">
+                            <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" class="column-image">
+                                <img src="photo-facebook.png" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" class="column-image">
+                            <img src="photo-instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" class="column-image">
+                            <img src="photo-youtube.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>

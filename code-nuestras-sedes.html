@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Sedes</title>
+    <link rel="stylesheet" href="styles-nuestras-sedes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="code-index.html"    class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable"  class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="code-simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="code-mision-vision.html"    class="no-copiable">Misión y Visión</a></ol>
+                            
+                            <ol><a href="code-nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="code-modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Directiva</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-direcciones-de-grupo.html"  class="no-copiable">Direcciones de Grupo</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Multimedia</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-semana-cultural.html"  class="no-copiable">Semana Cultural</a></ol>
+                            <ol><a href="code-dia-de-la-afrocolombianidad.html"  class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Documentos</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-manual-convivencia.html"   class="no-copiable">Manual de Convivencia</a></ol>
+                            <ol><a href="code-cronograma.html"   class="no-copiable">Cronograma</a></ol>
+                            <ol><a href="code-bibloteca digital.html"   class="no-copiable">Biblioteca Digital</a></ol>
+                        </ul>
+                    </li>
+                    <li><a href="code-admisiones.html" class="no-copiable">Admisiones</a></li>
+                    <li><a href="code-contacto.html" class="no-copiable">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section id="sedes">
+                <br>
+                <h1>Nuestras Sedes</h1>
+                <div class="container-sa">
+                    <div class="row">
+                        <div class="column-sa">
+                            <img src="photo-sede-principal.png" alt="Imagen 1">
+                            <h3>Sede Principal</h3>
+                            <p>Nuestra sede esta ubicada en la Diag P15 No. 93-32B de Marroquín I en Cali, Colombia, 
+                                Fundada por el rector, esta sede principal es la primera de todas las sedes del colegio, 
+                                marcando el inicio de una trayectoria educativa que ha crecido y se ha expandido a lo 
+                                largo del tiempo.</p>
+                                <br>
+                            <iframe class= "iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.6775984247591!2d-76.
+                            47972523043312!3d3.420558599784634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30
+                            a74086ccb29d%3A0x66867908bbd4f8f8!2sDg.%2026p%2015%20%2393-32%2C%20Marroquin%20II%2C%20Cali
+                            %2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1721166344566!5m2!1ses!2sco" 
+                            style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" border-radius="15"></iframe>
+                        </div>
+                        <div class="column-sa">
+                            <a href="tel:+0987654321">
+                                <img src="photo-sede-1.png" alt="Imagen 2">
+                            </a>
+                            <h3>Sede 1</h3>
+                            <p>Esta sede esta ubicada en la Transversal 103A, Marroquin II, En Cali Colombia, que junto con la sede 2 la hacen ser las sedes mas grande de todo el colegio.
+                                Hay 2 jornadas mañana y tarde para primaria y para bachillerato solo en la tarde. Mas info <a href="code-cronograma.html"><b>aquí</b></a> </p>
+                            <br>
+                            <iframe class= "iframe"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15930.748934589687!2d-76.4777371!3d3.
+                            4261284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20E
+                            MPERADOR%20DECALI!5e0!3m2!1ses-419!2sco!4v1721167575834!5m2!1ses-419!2sco"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-sa">
+                            <a href="tel:+1122334455">
+                                <img src="photo-sede-2.png" alt="Imagen 3">
+                            </a>
+                            <h3>Sede 2</h3>
+                            <p>Nuestra otra sede se ubica en la Cra. 26m 1 #122-121 a 122-1, en el barrio Decepaz, Cali. </p>
+                        </div>
+                        <div class="column-sa">
+                            <a href="tel:+5566778899">
+                                <img src="photo-sede-3.png" alt="Imagen 4">
+                            </a>
+                            <h3>Sede 3</h3>
+                            <p>Este es un pequeño texto descriptivo para la imagen 4.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, <br>sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                    <div class="social-container">
+                        <div class="social">
+                            <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" class="column-image">
+                                <img src="photo-facebook.png" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" class="column-image">
+                            <img src="photo-instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" class="column-image">
+                            <img src="photo-youtube.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagenes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .body{
+            font-family: 'Raleway', sans-serif;
+        }
+
+        h1{
+            font-weight: 400;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 40px;
+        }
+
+        .linea{
+            background: #550b51;
+            height: 5px;
+            width: 100%;
+            display: block;
+        }
+
+        .galeria{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px 1fr));
+            width: 95%;
+            grid-gap: 10px;
+            padding: 40px 0;
+            overflow: hidden;
+        }   
+
+        .galeria > a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+        }
+        .galeria img{
+            width: 100%;
+            vertical-align: top;
+            height: 300px;
+            object-fit: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Galeria de Imagenes</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image1">
+            <img src="photo-bandera.png" alt="">
+        </a>
+        <a href="#image2">
+            <img src="photo-bandera.png" alt="">
+        </a>
+        <a href="#image3">
+            <img src="photo-bandera.png" alt="">
+        </a>
+        <a href="#image4">
+            <img src="photo-bandera.png" alt="">
+        </a>
+        <a href="#image5">
+            <img src="photo-bandera.png" alt="">
+        </a>
+        <a href="#image6">
+            <img src="photo-bandera.png" alt="">
+        </a>
+    </section>
+
+    <a href="#inicio">Aprietame</a>
+    <div id="inicio"></div>
+    <a href="#">Regresa</a>
+</body>
+</html>

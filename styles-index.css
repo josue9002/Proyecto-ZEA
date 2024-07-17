@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans;
+    background-image: url('photo-fondo.png');
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 0 100px;
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+header {
+    background-color: #565a5e;
+    color: #fff;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.school-name {
+    font-size: 2.0em;
+    font-weight: bold;
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+nav {
+    background-color: #ed1919;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+.nav-list li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background-color: #fff;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: block;
+    border-radius: 3px;
+}
+
+.nav-list a:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    color: #ed1919;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ed1919;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content ol{
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.dropdown-content ol a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content ol a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #ed1919;
+    border-radius: 0px;
+}
+
+.welcome-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.nav-list .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ed1919;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-list .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-list .dropdown-content ol {
+    margin: 0;
+}
+
+.nav-list .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list .dropdown-content a:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    color: #ed1919;
+}
+
+main {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    background-size: cover;
+}
+
+section#bienvenidos {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+#bienvenidos h1 {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.footer {
+    background-color: #565a5e;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 0 100px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+    margin-top: 2%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column.left {
+    text-align: left;
+}
+
+.footer-column.right {
+    text-align: right;
+}
+
+.separator-pdp {
+    margin: 20px 0;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.no-copiable {
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.column {
+    flex: 1;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-column img {
+    width: 40%;
+    height: auto;
+    display: block;
+}
+
+.text-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.social-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px; /* Añadido para separación entre el párrafo y las imágenes */
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ajusta este valor según la separación deseada */
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img {
+    width: 45px; /* Ajusta este valor según tus necesidades */
+    height: auto;
+    display: block;
+}
+
+.column-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
+}
+
+/* Noticias */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Cards*/
+.container-card {
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #003366;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #cc2f2f;
+	border: 1px solid #cc2f2f;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #cc2f2f;
+	color: #fff;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    margin-top: 900px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin: 0 10px;
+}
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+.separator img {
+    height: 25px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 10px;
+}
+
+.separator h2 {
+    margin: 0; /* Elimina el margen predeterminado del h2 */
+}
+/*Noticias*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-qs {
+    padding: 10px;
+    width: 45%;
+    margin: 20px 0;
+}
+.left-o {
+    float: left;
+    text-align: left;
+    text-align: justify;
+}
+.right-o {
+    float: right;
+    text-align: justify;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Galeria de Imagenes*/
+
+.gallery {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    min-width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+@media (max-width: 768px) {
+    .left-o,
+    .right-o {
+        float: none; /* Elimina el flotado para que se apilen en una columna */
+        text-align: left; /* Ajusta el texto a la izquierda */
+    }
+
+    .right-o {
+        text-align: left; /* Asegúrate de que el texto alineado a la izquierda en pantallas pequeñas */
+    }
+
+    .separator {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+        text-align: center; /* Alinea el texto al centro */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+
+    .separator::before,
+    .separator::after {
+        margin: 10px 0; /* Reduce el espacio entre las líneas en pantallas pequeñas */
+    }
+
+    .separator img {
+        height: 20px; /* Reducir tamaño del logo para pantallas pequeñas si es necesario */
+        margin: 0; /* Eliminar margen derecho en pantallas pequeñas */
+    }
+
+    .separator span {
+        font-size: 1.2em; /* Ajusta el tamaño del texto de noticias para pantallas pequeñas */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+}
+
+/* Encabezado */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Cambio a columnas en pantallas pequeñas */
+    }
+
+    .nav-list li {
+        margin: 5px 0; /* Margen ajustado en pantallas pequeñas */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none; /* Ocultar dropdowns al principio en pantallas pequeñas */
+    }
+
+    .dropdown {
+        position: relative; /* Ajuste de posición para dropdowns en pantallas pequeñas */
+    }
+
+    .dropdown-content {
+        position: absolute;
+        width: 100%; /* Dropdowns ocupan todo el ancho en pantallas pequeñas */
+        left: 0;
+    }
+
+    .logo {
+        height: 60px; /* Reducir el tamaño del logo para pantallas pequeñas */
+        margin-right: 5px; /* Ajustar margen derecho */
+    }
+
+    .school-name {
+        font-size: 1.2em; /* Reducir el tamaño del título para pantallas pequeñas */
+        margin-top: 5px; /* Ajustar margen superior si es necesario */
+    }
+
+    .section-qs {
+        width: 100%; /* Ocupa el ancho completo */
+        margin: 20px 0; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+    }
+}
+
+/* Pie de Pagina */
+@media (max-width: 768px) {
+    .footer {
+        margin: 100px; /* Elimina el margen horizontal en pantallas pequeñas */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia a diseño de columna para pantallas pequeñas */
+    }
+
+    .footer-column {
+        flex: 1 1 auto; /* Ajusta el ancho automático para adaptarse al contenido */
+        padding: 10px;
+        text-align: center; /* Alineación al centro para pantallas pequeñas */
+    }
+
+    .image-column img {
+        width: 50%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    }
+
+    .social img {
+        width: 30px; /* Ajusta el tamaño de las imágenes de redes sociales para pantallas pequeñas */
+    }
+}
