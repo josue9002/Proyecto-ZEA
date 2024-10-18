@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Cultural</title>
+    <link rel="stylesheet" href="styles-semana-cultural.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="code-index.html" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="code-simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="code-mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="code-nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="code-programa-oe.html" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="code-modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="code-personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="code-dia-de-la-afrocolombianidad.html" class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="code-requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="code-fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="code-contacto.html" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section>
+                <br>
+                <h1>Programación Semana Cultural</h1>
+                <br>
+                <div class="calendar-container">
+                    <div class="day">
+                        <h2>Lunes 23</h2>
+                        <p>Desfile de apertura - Sede Principal</p>
+                        <ul>
+                            <li>Docentes: 7:00am</li>
+                            <li>Estudiantes: 8:00am</li>
+                            <li>Recorrido por las sedes</li>
+                        </ul>
+                    </div>
+            
+                    <div class="day">
+                        <h2>Martes 24</h2>
+                        <p>Día de las Ciencias y Empresarial</p>
+                        <ul>
+                            <li>Maquetas y experimentos</li>
+                            <li>Uniforme: Educación física</li>
+                            <li>Horario: 8:00am - 11:00am</li>
+                        </ul>
+                    </div>
+            
+                    <div class="day">
+                        <h2>Miércoles 25</h2>
+                        <p>Festival Gastronómico y Talento LIMEC</p>
+                        <ul>
+                            <li>Ventas de productos y artesanías</li>
+                            <li>Uniforme: Educación física</li>
+                            <li>Horario: 8:00am - 11:00am</li>
+                        </ul>
+                    </div>
+            
+                    <div class="day">
+                        <h2>Jueves 26</h2>
+                        <p>Día Ludo Recreativo y Mini Olimpiadas</p>
+                        <ul>
+                            <li>Primaria: Cancha Los Naranjos</li>
+                            <li>4° y 5°: Cancha frente a la sede 2</li>
+                            <li>6° y 11°: Sede Principal</li>
+                            <li>Horario: 8:00am a 11:00am</li>
+                        </ul>
+                    </div>
+            
+                    <div class="day">
+                        <h2>Viernes 27</h2>
+                        <p>Salida Pedagógica (Acuaparque de la Caña)</p>
+                        <ul>
+                            <li>Inversión: 22.000 COP</li>
+                            <li>Incluye transporte</li>
+                            <li>Pueden llevar almuerzo</li>
+                            <li>Pendiente hora de salida</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="note">
+                    <p>Gracias por tu participación. ¡Esperamos que hayas disfrutado la Semana Cultural!</p>
+                </div>
+            </section>
+        </main>
+        
+        <script src="script-modalidades-sena.js"></script> <!-- Enlace al archivo JavaScript externo -->
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                        <div class="main-ok">
+                            <div class="icon fb">
+                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" style="text-decoration: none;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Facebook</span>
+                                </a>
+                            </div>
+                    
+                            <div class="icon ig">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </div>
+                    
+                            <div class="icon yt">
+                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" style="text-decoration: none;">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>

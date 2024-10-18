@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión y Vision</title>
+    <link rel="stylesheet" href="styles-mision-vision.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="code-index.html" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="code-simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="code-mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="code-nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="code-programa-oe.html" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="code-modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="code-personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="code-dia-de-la-afrocolombianidad.html" class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="code-requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="code-fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="code-contacto.html" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+          <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <br>
+            <div class="container-ms">
+                <div class="column-ms">
+                    <img src="photo-mision.png" alt="Imagen 1" class="column-image">
+                    <h1 class="titulo-izquierda">MISIÓN</h1>
+                    <br>
+                    <p class="parrafo-okok">Como institución educativa de la comuna 14 y 21 nuestra misión es formar 
+                        estudiantes que teniendo a Dios como guía apliquen y defiendan los valores 
+                        éticos, morales y culturales, que asuman con responsabilidad su formación 
+                        para el trabajo y desarrollo humano, como un proceso de cambio. A través 
+                        de procesos de indagación, cultura de paz y deporte para participar 
+                        activamente en la construcción positiva de su comunidad.</p>
+                </div>
+                <div class="column-ms">
+                    <img src="photo-vision.png" alt="Imagen 1" class="column-image">
+                    <h1 class="titulo-izquierda">VISIÓN</h1>
+                    <br>
+                    <p class="parrafo-okok">EL LICEO MIXTO EMPERADOR DE CALI se proyecta al 2025 como una institución 
+                        reconocida por su compromiso en formar integralmente a los ciudadanos 
+                        del sector a través de las especialidades en técnico comercial e industrial, 
+                        el fomento de la cultura de paz, la tecnología, ela deporte e interacción 
+                        con la comunidad desde la orientación espiritual.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container-fv">
+                <div class="column-fv">
+                    <img src="photo-filosofia.png" alt="Imagen 1" class="column-image">
+                    <h1 class="titulo-izquierda">FILOSOFÍA</h1>
+                    <br>
+                    <p class="parrafo-okok">La comunidad del LICEO MIXTO EMPERADOR DE CALI, propone realizar una labor 
+                        coherente con la realidad social, consciente del nivel socioeconómico y 
+                        cultural del entorno al cual gira, con actitud crítica frente al ritmo 
+                        del diario acontecer. Se propone formar hombres y mujeres libres e integros 
+                        promotores del bien y dela progreso del barrio, la ciudad y la patria, 
+                        ansiosos de aportar al máximo capacidades en bien de la persona.</p>
+                </div>
+                <div class="column-fv">
+                    <img src="photo-valores.png" alt="Imagen 1" class="column-image">
+                    <h1 class="titulo-derecha">VALORES INSTITUCIONALES</h1>
+                    <div class="tabla-centrada">
+                        <table>
+                            <tr>
+                                <td><p>Integridad: <span class="tooltip">Job 31:6 
+                                    <span class="tooltiptext">Que Dios me pese en la balanza de justicia,
+                                        porque sabe que soy íntegro.</span></p>
+                                        </td>
+                                <td><p>Orden: <span class="tooltip">1 Corintios 14:40
+                                    <span class="tooltiptext">Pero asegúrense de que todo se haga de forma apropiada y con orden.</span></p>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td><p>Justicia: <span class="tooltip">1 Corintios 4:5
+                                    <span class="tooltiptext">Así que no juzguen a nadie antes de tiempo, es decir, antes de que el Señor vuelva.
+                                        Pues él sacará a la luz nuestros secretos más oscuros y revelará nuestras intenciones más íntimas. 
+                                        Entonces Dios le dará a cada uno el reconocimiento que le corresponda.</span></p>
+                                        </td>
+                                <td><p>Fe: <span class="tooltip">Salmo 40:8
+                                    <span class="tooltiptext">Me complace hacer tu voluntad, Dios mío,
+                                        pues tus enseñanzas están escritas en mi corazón.</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Verdad: <span class="tooltip">1 Juan 1:6-7
+                                    <span class="tooltiptext">Por lo tanto, mentimos si afirmamos que tenemos comunión con Dios pero seguimos 
+                                        viviendo en oscuridad espiritual; no estamos practicando la verdad. Si vivimos en la luz, 
+                                        así como Dios está en la luz, entonces tenemos comunión unos con otros, y la sangre de Jesús, 
+                                        su Hijo, nos limpia de todo pecado.</span></p>
+                                        </td>
+                                <td><p>Paz: <span class="tooltip">Filipenses 4:7
+                                    <span class="tooltiptext">Así experimentarán la paz de Dios, que supera todo lo que podemos entender. 
+                                        La paz de Dios cuidará su corazón y su mente mientras vivan en Cristo Jesús.</span></p>
+                                        </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p>Respeto: <span class="tooltip">Romanos 13:7
+                                    <span class="tooltiptext">Ustedes den a cada uno lo que le deben: paguen los impuestos y demás 
+                                        aranceles a quien corresponda, y den respeto y honra a los que están en autoridad.</span></p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-column left">
+                    <div class="column image-column">
+                        <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                    </div>
+                </div>
+                <div class="column text-column">
+                    <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                    <br>
+                    <p>Cali - Colombia</p>
+                </div>
+                <div class="footer-column right">
+                    <div class="column social-column">
+                        <br>
+                        <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                            <div class="main-ok">
+                                <div class="icon fb">
+                                    <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" style="text-decoration: none;">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                    </a>
+                                </div>
+                        
+                                <div class="icon ig">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </div>
+                        
+                                <div class="icon yt">
+                                    <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" style="text-decoration: none;">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <span>YouTube</span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="footer-bottom">
+                <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+            </div>
+        </footer>
+</body>
+</html>

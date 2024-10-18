@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisiones</title>
+    <link rel="stylesheet" href="styles-admisiones.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('lmYBs-ZQclK0xj_Sj')
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="code-index.html" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="code-simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="code-mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="code-nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="code-programa-oe.html" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="code-modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="code-personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="code-semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="code-dia-de-la-afrocolombianidad.html" class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="code-admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="code-requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="code-fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="code-contacto.html" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section id="admisiones">
+                <h2>Formulario de Admisiones</h2>
+                <form id="contact-form" autocomplete="off">
+                        <P><B>Información Personal del Estudiante</B></P>
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" name="nombres" required>
+                        
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                        
+                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        
+                        <label for="genero">Genero:</label>
+                        <select id="genero" name="grado_aplicar" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+
+                        <label for="documento_identidad">Documento de Identidad:</label>
+                        <input type="text" id="documento_identidad" name="documento_identidad" required>
+                        
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                        
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" required>
+                        
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>         
+
+                        <P><B>Información Academica</B></P>
+                        <label for="grado_aplicar">Grado al que aplica:</label>
+                        <select id="grado_aplicar" name="grado_aplicar" required>
+                            <option value="materno">Materno</option>
+                            <option value="parvulos">Parvulos</option>
+                            <option value="pre-jardin">Pre-jardin</option>
+                            <option value="jardin">Jardin</option>
+                            <option value="transicion">Transición</option>
+                            <option value="primero">Primero</option>
+                            <option value="segundo">Segundo</option>
+                            <option value="tercero">Tercero</option>
+                            <option value="cuarto">Cuarto</option>
+                            <option value="quinto">Quinto</option>
+                            <option value="sexto">Sexto</option>
+                            <option value="septimo">Séptimo</option>
+                            <option value="octavo">Octavo</option>
+                            <option value="noveno">Noveno</option>
+                            <option value="decimo">Décimo</option>
+                            <option value="once">Once</option>
+                        </select>
+                        
+                        <label for="ultimo_colegio">Último colegio al que asistió:</label>
+                        <input type="text" id="ultimo_colegio" name="ultimo_colegio" required>
+                        
+                        <label for="rendimiento_academico">Rendimiento Académico:</label>
+                        <textarea id="rendimiento_academico" name="rendimiento_academico" rows="4" required></textarea>
+            
+                        <P><B>Información de Salud</B></P>
+                        <label for="eps">EPS:</label>
+                        <input type="text" id="eps" name="eps" required>
+                        
+                        <label for="condiciones_medicas">Condiciones Médicas Especiales:</label>
+                        <textarea id="condiciones_medicas" name="condiciones_medicas" rows="4" required></textarea>
+                        
+                        <label for="alergias">Alergias:</label>
+                        <textarea id="alergias" name="alergias" rows="4" required></textarea>
+                        
+                        <label for="medicamentos">Medicamentos:</label>
+                        <textarea id="medicamentos" name="medicamentos" rows="4" required></textarea>
+
+                        <P><B>Información del Hogar</B></P>
+                        <label for="nombre_padre">Nombre del Padre:</label>
+                        <input type="text" id="nombre_padre" name="nombre_padre" required>
+                        
+                        <label for="telefono_padre">Teléfono del Padre:</label>
+                        <input type="text" id="telefono_padre" name="telefono_padre" required>
+                        
+                        <label for="nombre_madre">Nombre de la Madre:</label>
+                        <input type="text" id="nombre_madre" name="nombre_madre" required>
+                        
+                        <label for="telefono_madre">Teléfono de la Madre:</label>
+                        <input type="text" id="telefono_madre" name="telefono_madre" required>
+                        
+                        <label for="otros_acudientes">Otros Acudientes:</label>
+                        <textarea id="otros_acudientes" name="otros_acudientes" rows="4"></textarea>
+            
+                        <P><B>Información Adicional</B></P>
+                        <label for="motivo_inscripcion">Motivo de la Inscripción:</label>
+                        <textarea id="motivo_inscripcion" name="motivo_inscripcion" rows="4" required></textarea>
+                        
+                        <label for="expectativas">Expectativas del Colegio:</label>
+                        <textarea id="expectativas" name="expectativas" rows="4" required></textarea>
+            
+                    <button type="submit"><b>Enviar Solicitud</b></button>
+                </form>   
+
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                     emailjs.init('lmYBs-ZQclK0xj_Sj')
+                    </script>
+
+                <script type="text/javascript">
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            
+                        // Usa EmailJS para enviar el formulario
+                        emailjs.sendForm('service_ums1al4', 'template_ty5oho1', this)
+                            .then(function() {
+                                alert('Mensaje enviado con éxito!');
+                            }, function(error) {
+                                alert('Fallo al enviar el mensaje: ' + JSON.stringify(error));
+                            });
+                    });
+                </script>
+
+                <script>
+                const btn = document.getElementById('button');
+
+                    document.getElementById('form')
+                     .addEventListener('submit', function(event) {
+                       event.preventDefault();
+                    
+                       btn.value = 'Sending...';
+                    
+                       const serviceID = 'default_service';
+                       const templateID = 'template_ty5oho1';
+                    
+                       emailjs.sendForm(serviceID, templateID, this)
+                        .then(() => {
+                          btn.value = 'Send Email';
+                          alert('Sent!');
+                        }, (err) => {
+                          btn.value = 'Send Email';
+                          alert(JSON.stringify(err));
+                        });
+                    });
+                </script>
+
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                        <div class="main-ok">
+                            <div class="icon fb">
+                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" style="text-decoration: none;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Facebook</span>
+                                </a>
+                            </div>
+                    
+                            <div class="icon ig">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </div>
+                    
+                            <div class="icon yt">
+                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" style="text-decoration: none;">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>
