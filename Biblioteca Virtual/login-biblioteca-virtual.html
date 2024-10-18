@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login-biblioteca-virtual.css">
+  <title>Login</title>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-left">
+          <!-- Botón de menú hamburguesa -->
+          <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      </div>
+  
+      <div class="nav-right" id="navbar-links">
+          <ul>
+              <li><a href="index-biblioteca-virtual.html"><b>Inicio</b></a></li>
+              <li><a href="productos-biblioteca-virtual.html"><b>Productos</b></a></li>
+              <li><a href="acerca-de-biblioteca-virtual.html"><b>Acerca De</b></a></li>
+              <li><a href="login-biblioteca-virtual.html"><b>Login</b></a></li>
+              <li><a href="registro-biblioteca-virtual.html"><b>Crear Cuenta</b></a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <script src="script-menu-biblioteca.js"></script>
+
+    <div class="fondo">
+      <img src="photo-fondo-biblioteca.jpg" alt="fondo">
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>INICIAR SESION</h3>
+            <p>Por favor ingrese sus credenciales para ingresar.</p>
+          </div>
+        </div>
+        <form class="login-form" action="login.php" method="POST">
+          <input type="text" name="username" placeholder="Usuario" required/>
+          <input type="password" name="password" placeholder="Contraseña" required/>
+          <button type="submit">Iniciar Sesión</button>
+          <p class="message">No está registrado? <a href="registro-biblioteca-virtual.html">Crear Cuenta</a></p>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  background-color: #ed1919;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 17px;
+  padding: 7px;
+  z-index: 1000;
+}
+
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-right ul li a:hover {
+  background-color: #ffffff;
+  color: #ed1919;
+  border-radius: 5px;
+}
+
+/* Botón de menú hamburguesa */
+.menu-toggle {
+  margin-left: 10px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  padding-right: 20px;
+}
+
+/* Diseño responsive para pantallas pequeñas */
+@media (max-width: 750px) {
+  .nav-right ul {
+      flex-direction: column;
+      width: 100%;
+      display: none; /* Oculto por defecto */
+  }
+
+  .nav-right ul li {
+      margin: 5px 10px;
+      text-align: left;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-right: 30px;
+      padding-right: 0px;
+      padding-left: 0;
+      width: 100%;
+  }
+
+  .nav-right ul li a{
+    padding: 5px;
+  }
+
+  .menu-toggle {
+      display: block; /* Mostrar el botón en pantallas pequeñas */
+  }
+
+  /* Mostrar el menú cuando está activo */
+  .nav-right.active ul {
+      display: flex;
+  }
+}
+
+
+li {
+  padding-left: 20px;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color:white;
+}
+
+li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: #ed1919;
+}
+
+.active {
+  background-color: #ed1919;
+}
+
+.section-body{
+    
+    padding-top: 80px;
+    padding-left: 15px;
+}
+.section-body h4{
+    font-size: large;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.vertical-nav
+{
+    padding-top: 10px;
+}
+
+
+.section-body ul {
+    list-style-type: none;
+    width: 23%;
+    background-color: #0070d2;
+    border-radius: 20px;
+    color: #fff;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+    padding: 15px;
+    padding-left: 2px;
+  }
+  
+  .section-body  li a {
+    display: block;
+    color: #ffffff;
+    padding: 8px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .section-body li a.active {
+    background-color: #0070d2;
+    color: white;
+  }
+  
+  .section-body li a:hover:not(.active) {
+    background-color: #003868;
+    color: white;
+  }
+
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 90px;
+  padding-right: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  width: 300px;
+  height: 400px;
+}
+
+.about-section {
+  padding: 90px 10px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Cards*/
+.container-card {
+	width: 100%;
+	display: flex;
+	max-width: 1500px;
+	margin: auto;   
+}
+.card{
+	width: 100%;
+  height: 100%;
+	margin: 20px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+  border-radius: 10px;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: auto;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #003366;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #007BFF;
+	border: 1px solid #007BFF;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #007BFF;
+	color: #fff;
+}
+@media only screen and (min-width:300px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 5px;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	.container-card {
+		justify-content: space-around; /* Ajusta el espaciado entre las tarjetas */
+	}
+
+	.card {
+		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container-card {
+		grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	.container-card {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+p{
+  padding: 5px;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .column{
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .column {
+      width: 100%; /* Las columnas ocupan el 100% del ancho en pantallas pequeñas */
+     margin: 5px 0;
+     align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+        <!-- Botón de menú hamburguesa -->
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    </div>
+
+    <div class="nav-right" id="navbar-links">
+        <ul>
+            <li><a href="index-biblioteca-virtual.html"><b>Inicio</b></a></li>
+            <li><a href="productos-biblioteca-virtual.html"><b>Productos</b></a></li>
+            <li><a href="guias-biblioteca-virtual.html"><b>Guias</b></a></li>
+            <li><a href="acerca-de-biblioteca-virtual.html"><b>Acerca De</b></a></li>
+            <li><a href="login-biblioteca-virtual.html"><b>Login</b></a></li>
+            <li><a href="registro-biblioteca-virtual.html"><b>Crear Cuenta</b></a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <script src="script-menu-biblioteca.js"></script>
+
+<div class="about-section">
+  <br>
+  <h1>Sobre nosotros </h1>
+  <br>
+  <p>Nuestra Biblioteca Virtual ofrece a sus clientes una interfaz sencilla para buscar y leer libros en línea.</p>
+  <p>Si tiene alguna pregunta, deje un comentario en la sección de comentarios de la página de inicio. También puede enviarnos un correo electrónico y llamarnos
+    los días laborables.</p>
+  <p>Gracias por su paciencia y espero que haya tenido una excelente experiencia aquí.</p>
+</div>
+
+<h2 style="text-align:center"><br>Nuestro Equipo</h2><br>
+<div class="container">
+<div class="container-card">
+        
+  <div class="card">
+      <figure>
+          <img src="photo-logo.png">
+      </figure>
+      <div class="contenido-card">
+          <h3>Liceo Mixto Emperador</h3>
+          <p>La Semana Cultural del Emperador es un evento anual que durante una semana, la comunidad escolar participa en actividades como presentaciones de música, danza, teatro, exposiciones de arte y una feria gastronómica.</p>
+          <a href="code-semana-cultural.html">Leer Más</a>
+      </div>
+  </div>
+  <div class="card">
+      <figure>
+          <img src="photo-editorial-panamericana.png">
+      </figure>
+      <div class="contenido-card">
+          <h3>Programa OE</h3>
+          <p>El Programa OE del colegio LIMEC está diseñado para proporcionar apoyo individualizado a los estudiantes en áreas específicas como el desarrollo personal, emocional y académico.</p>
+          <a href="code-programa-oe.html">Leer Más</a>
+      </div>
+  </div>
+  <div class="card">
+      <figure>
+          <img src="photo-biblioteca.png">
+      </figure>
+      <div class="contenido-card">
+          <h3>Biblioteca Digital</h3>
+          <p>La Biblioteca Digital del Emperador es un recurso en línea que ofrece acceso a una amplia colección de materiales educativos, facilitando el aprendizaje y la investigación, permitiendo a estudiantes y profesores acceder a información. </p>
+          <a href="Biblioteca Virtual/index-biblioteca-virtual.html">Leer Más</a>
+      </div>
+  </div>
+  <div class="card">
+      <figure>
+          <img src="photo-promo-2024.png">
+      </figure>
+      <div class="contenido-card">
+          <h3>Promo 2024</h3>
+          <p>Bienvenidos a su último año en el Colegio Lice. Este es un hito significativo en su viaje educativo, lleno de aprendizajes, desafíos y triunfos. Han demostrado determinación y resiliencia para alcanzar sus metas. </p>
+          <a href="code-bibloteca digital.html">Leer Más</a>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
