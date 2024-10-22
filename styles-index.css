@@ -472,7 +472,7 @@ section#bienvenidos {
 
 .gallery {
     position: relative;
-    max-width: 1300px;
+    max-width: 100%;
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
