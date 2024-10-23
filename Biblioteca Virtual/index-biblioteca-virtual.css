@@ -270,14 +270,12 @@ input[type=submit] {
   padding: 12px 20px;
   cursor: pointer;
   border-radius: 100px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 
 input[type=submit]:hover {
   background-color: #b30000;
   color: #fff;
   border: 2px solid;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 
 label{
