@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    margin: 0 100px;
+    margin: 0 200px;
     background-color: aliceblue;
     padding: 20px;
     box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
