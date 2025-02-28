@@ -22,7 +22,6 @@ body {
     padding: 20px;
     box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
     border-radius: 10px; /* Opcional: para bordes redondeados */
-    max-width: 1350px;
 }
 
 header {
