@@ -748,12 +748,14 @@ section#bienvenidos {
     transition: all .3s ease-out;
 }
 .icon:hover{
-    width: 200px;
+    width: 140px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     color: #fff;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
 }
 .icon:hover i{
     color: #fff;
@@ -1160,6 +1162,7 @@ body.modal-open { overflow: hidden; }
   .modal-anuncio__actions{ background: #ffffff; }
   .btn-anuncio--primary{ background: #000000; color: #ffffff; }
 }
+
 
 
 
