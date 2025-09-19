@@ -1026,32 +1026,141 @@ body.modal-open { overflow: hidden; }
 }
 
 
-/* ==== Imagen a la izquierda del anuncio ==== */
-.modal-anuncio__content {
+/* ===============================
+   Responsive para el modal/anuncio
+   =============================== */
+
+/* Ajustes generales: que el modal nunca pegue bordes */
+.modal-anuncio{
+  max-width: 640px;
+  width: min(92vw, 640px);
+  margin: 0 12px; /* pequeño margen lateral en pantallas angostas */
+}
+
+/* Layout responsivo del contenido (imagen izquierda + texto derecha) */
+.modal-anuncio__content{
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap: clamp(12px, 2.2vw, 20px);
+  padding: clamp(16px, 2.5vw, 20px);
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* para que en pantallas pequeñas se acomode en columna */
+  flex-wrap: wrap; /* si no cabe, que pase abajo */
 }
 
-.modal-anuncio__image {
-  flex: 0 0 200px;        /* ancho fijo de 200px aprox */
-  height: 200px;          /* alto igual para que sea cuadrado */
-  border-radius: 12px;    /* bordes redondeados opcionales */
+/* Imagen cuadrada “mediana” por defecto */
+.modal-anuncio__image{
+  flex: 0 0 200px;
+  width: 220px;
+  height: 230px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
-
-.modal-anuncio__image img {
+.modal-anuncio__image img{
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* que la imagen ocupe todo el cuadrado */
+  object-fit: cover;
 }
 
-.modal-anuncio__text {
+/* Texto a la derecha */
+.modal-anuncio__text{
   flex: 1;
-  min-width: 240px;       /* para que no se colapse en pantallas muy angostas */
+  min-width: 260px;
 }
+
+/* Botones */
+.modal-anuncio__actions{
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* ====== Breakpoint tablet y abajo ====== */
+@media (max-width: 768px){
+  .modal-anuncio{
+    width: min(94vw, 620px);
+    border-radius: 16px;
+  }
+
+  /* Pasa a columna, centrado */
+  .modal-anuncio__content{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Imagen más grande pero fluida */
+  .modal-anuncio__image{
+    width: clamp(180px, 48vw, 280px);
+    height: clamp(180px, 48vw, 280px);
+    flex: 0 0 auto; /* deja que fluya */
+  }
+
+  /* Botones: un poco más grandes para tacto */
+  .btn-anuncio{
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 1rem;
+  }
+
+  .modal-anuncio__actions{
+    justify-content: center;
+  }
+}
+
+/* ====== Breakpoint móvil pequeño ====== */
+@media (max-width: 480px){
+  .modal-anuncio{
+    width: 96vw;
+    margin: 0 2vw;
+    border-radius: 14px;
+  }
+
+  /* Imagen tipo “banner cuadrado” centrado */
+  .modal-anuncio__image{
+    width: min(80vw, 320px);
+    height: min(80vw, 320px);
+    border-radius: 10px;
+  }
+
+  /* Texto con mejor lectura */
+  .modal-anuncio__text p{
+    margin: 8px 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  /* Botones a una columna, ocupando ancho */
+  .modal-anuncio__actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .modal-anuncio__actions .btn-anuncio{
+    width: 100%;
+  }
+}
+
+/* ====== Accesibilidad extra ====== */
+/* Reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .modal-anuncio{
+    transition: none !important;
+  }
+  .overlay-anuncio{
+    backdrop-filter: none; /* evita blur si marean los filtros */
+  }
+}
+
+/* Modo oscuro (si lo usas en todo el sitio) */
+@media (prefers-color-scheme: dark){
+  .modal-anuncio{
+    background: #ffffff;
+    color: #000000;
+  }
+  .modal-anuncio__actions{ background: #ffffff; }
+  .btn-anuncio--primary{ background: #000000; color: #ffffff; }
+}
+
+
+
 
