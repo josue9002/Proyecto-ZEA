@@ -69,3 +69,21 @@ reorderSlide();
 setInterval(() => {
   moveSlide(DIRECTION.RIGHT);
 }, 7000); // 10000 milisegundos = 10 segundos
+
+  // Bloquear copiar/cortar/pegar en texto
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
+
+  // Bloquear clic derecho en todo el documento
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Bloquear arrastre de imágenes
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  // Opcional: bloquear combinaciones de teclado comunes (Ctrl/Cmd + S, U, C, A, X, P)
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && ['s','u','c','a','x','p'].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+    }
+  });
