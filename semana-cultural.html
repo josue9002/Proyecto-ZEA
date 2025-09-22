@@ -14,19 +14,19 @@
 
   <style>
     :root{
-      --bg: #0f172a;          /* slate-900 */
-      --card: #111827;         /* gray-900 */
-      --card-2: #0b1220;       /* deep blue */
+      --bg: #393939;          /* slate-900 */
+      --card: #023e6c;         /* gray-900 */
+      --card-2: #696969;       /* deep blue */
       --text: #e5e7eb;         /* gray-200 */
-      --muted: #9ca3af;        /* gray-400 */
+      --muted: #ffffff;        /* gray-400 */
       --primary: #ed3a3a;      /* violet-600 */
       --primary-2: #b8b8b8;    /* cyan-400 */
       --accent: #3c3c3c;       /* amber-500 */
       --ring: rgba(124,58,237,.35);
       --radius: 18px;
-      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --shadow: 0 10px 35px rgba(47, 47, 47, 0.35);
       --glass: rgba(255,255,255,.06);
-      --gradient: radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,.25), transparent 60%),
+      --gradient: radial-gradient(1200px 600px at 20% -10%, rgba(87, 87, 87, 0.25), transparent 60%),
                   radial-gradient(800px 400px at 100% 10%, rgba(34,211,238,.25), transparent 60%),
                   linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
     }
@@ -178,13 +178,13 @@
           <!-- Logo del colegio (reemplaza src) -->
           <img class="logo" src="photo-logo-animado-2.png" alt="Logo del colegio" />
           <div class="title-block">
-            <h1>LIMEC<span class="title-badge">2025</span></h1>
-            <p class="subtitle">Dios, amor, ciencia y sabiduria</p>
+            <h1>Semana Cultural<span class="title-badge">2025</span></h1>
+            <p class="subtitle">Del 22 al 26 de Septiembre</p>
           </div>
         </div>
         <div class="cta">
           <!-- Botones opcionales (puedes quitar) -->
-          <a class="pill focusable" href="#programa"><i class="fa-solid fa-calendar-days"></i> Programa</a>
+          <a class="pill focusable" href="index.html"><i class="fa-solid fa-house"></i> Volver al Inicio</a>
           <a class="pill focusable" href="#info"><i class="fa-solid fa-circle-info"></i> Info</a>
         </div>
       </div>
@@ -192,10 +192,8 @@
 
     <main id="programa" aria-labelledby="titulo-semana">
       <div class="grid">
-        <section class="intro" role="region" aria-label="Presentación">
-          <h2 id="titulo-semana" style="margin:0 0 6px; font-weight:800; letter-spacing:.3px;">Semana Cultural</h2>
-          <p>Explora las actividades de cada día para participar sin perderte nada.</p>
-        </section>
+        
+  
 
         <!-- LUNES -->
         <article class="day" aria-labelledby="lunes-title">
@@ -214,30 +212,50 @@
               <!-- Repite los .slot que necesites -->
               <div class="slot">
                 <div>
-                  <strong>Lugar</strong>
+                  <strong>Lugar Sede Principal</strong>
                   <span>Patio del Colegio</span>
                 </div>
                 <div>
                   <strong>Grados</strong>
-                  <span>1° a 5°</span>
+                  <span>1° a 11°</span>
                 </div>
                 <div>
                   <strong>JORNADA MAÑANA</strong>
-                  <span>8:00AM A 11:00 AM </span>
+                  <span>7:30AM A 11:00 AM </span>
                 </div>
               </div>
               <div class="slot">
                 <div>
-                  <strong>Lugar</strong>
+                  <strong>Lugar Sede 1 y 2</strong>
                   <span>Patio del Colegio</span>
                 </div>
                 <div>
                   <strong>Grados</strong>
+                  <span>1° a 5°</span><br>
                   <span>6° a 11°</span>
                 </div>
                 <div>
-                  <strong>JORNADA TARDE</strong>
-                  <span>2:00 PM A 5:00 PM</span>
+                  <strong>JORNADA MAÑANA Y TARDE</strong>
+                  <span>Primaria: 7:30 a 11:00 AM</span><BR>
+                  <span>Bachillerato: 2:00 a 5:00 PM </span>
+                </div>
+              </div>
+              <div class="slot">
+                <div>
+                  <strong>Lugar Sede 3</strong>
+                  <span>Patio del Colegio</span>
+                </div>
+                <div>
+                  <strong>Grados</strong>
+                  <span>Materno a Transicion</span><br>
+                  <span>1° a 5°</span><br>
+                  <span>6° a 11°</span>
+                </div>
+                <div>
+                  <strong>JORNADA MAÑANA Y TARDE</strong>
+                  <span>Primera Infancia: 1:00 PM A 4PM</span><BR>
+                  <span>Primaria: 7:30 a 11 AM</span><BR>
+                  <span>Bachillerato: 7:30 a 11 AM </span>
                 </div>
               </div>
             </div>
@@ -261,14 +279,14 @@
 
             <div class="horarios">
               <div class="slot">
-                <div><strong>Lugar</strong><span>Organizar los estudiantes deacuerdo a su grado.</span></div>
+                <div><strong>Lugar Sede Principal, 1 y 2</strong><span>Al frente del colegio en la cancha frente a la Clinica Versalles</span></div>
                 <div><strong>Grados</strong><span>Todos</span></div>
-                <div><strong>HORARIO DE LLEGADA DE DOCENTES Y PERSONAS DE APOYO</strong><span>7:00am</span></div>
+                <div><strong>HORARIO DE LLEGADA DE ESTUDIANTES</strong><span>7:30 am</span></div>
               </div>
               <div class="slot">
-                <div><strong>Lugar</strong><span>En la entrada del colegio</span></div>
+                <div><strong>Lugar Sede 3</strong><span>En la entrada del colegio</span></div>
                 <div><strong>Grados</strong><span>Todos</span></div>
-                <div><strong>HORARIO DE LLEGADA DE ESTUDIANTES</strong><span>8:00 am</span></div>
+                <div><strong>HORARIO DE LLEGADA DE ESTUDIANTES</strong><span>7:30 AM a 11:00 AM</span></div>
               </div>
             </div>
             <div class="foot">
@@ -293,19 +311,14 @@
 
             <div class="horarios">
               <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
-                <div><strong>Grados</strong><span>PRIMERA INFANCIA, PRIMERO Y SEGUNDO</span></div>
-                <div><strong>Hora</strong><span>7:30 A 10:00 AM</span></div>
+                <div><strong>Lugar Sede Principal, 1 y 2</strong><span>Cancha Sede 2</span></div>
+                <div><strong>Grados</strong><span>PRIMERA INFANCIA, PRIMERO Y SEGUNDO</span><br><span>TERCERO, CUARTO, QUINTO</span><br><span>BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>7:30 A 10:00 AM</span><br><br><span>10:00 A 12:30 AM</span><br><span>2:00 PM A 5:00 PM</span></div>
               </div>
               <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
-                <div><strong>Grados</strong><span>TERCERO, CUARTO, QUINTO</span></div>
-                <div><strong>Hora</strong><span>10:00 A 12:30 AM</span></div>
-              </div>
-              <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
-                <div><strong>Grados</strong><span>BACHILLERATO</span></div>
-                <div><strong>Hora</strong><span>2:00 PM A 5:00 PM</span></div>
+                <div><strong>Lugar Sede 3</strong><span>Polideportivo</span></div>
+                <div><strong>Grados</strong><span>TODOS</span></div>
+                <div><strong>Hora</strong><span>7:30 AM</span></div>
               </div>
             </div>
             <div class="foot">
@@ -328,24 +341,19 @@
 
             <div class="horarios">
               <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
-                <div><strong>Grados</strong><span>PRIMERA INFANCIA</span></div>
-                <div><strong>Hora</strong><span>7:30 A 9:30 AM</span></div>
+                <div><strong>Lugar Sede Principal</strong><span>Cancha Los Naranjos</span></div>
+                <div><strong>Grados</strong><span>TRANSICION</span><BR><span>PRIMERO SEGUNDO Y TERCERO</span><BR><span>CUARTO QUINTO Y BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>7:30 A 9:30 AM</span><BR><span>10:00 A 12:00 AM</span><BR><span>7:30 A 11:00 AM</span></div>
               </div>
               <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
-                <div><strong>Grados</strong><span>PRIMERO, SEGUNDO Y TERCERO TARDE</span></div>
-                <div><strong>Hora</strong><span>10:00 A 12:00 AM</span></div>
+                <div><strong>Lugar Sede 1 y 2</strong><span>Al frente del colegio en la cancha frente a la Clinica Versalles</span></div>
+                <div><strong>Grados</strong><span>PRIMERA INFANCIA</span><br><span>PRIMERO, SEGUNDO Y TERCERO TARDE</span><br><span>TERCERO MAÑANA SEDE 2, CUARTO Y QUINTO</span><br><span>BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>7:30 A 9:30 AM</span><br><span>10:00 A 12:00 AM</span><br><br><span>7:30 A 11:00 AM</span><br><br><span>2:00 PM A 5:00 PM</span></div>
               </div>
               <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
-                <div><strong>Grados</strong><span>TERCERO MAÑANA SEDE 2, CUARTO Y QUINTO</span></div>
-                <div><strong>Hora</strong><span>8:00 A 11:00 AM</span></div>
-              </div>
-              <div class="slot">
-                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
-                <div><strong>Grados</strong><span>BACHILLERATO</span></div>
-                <div><strong>Hora</strong><span>2:00 PM A 5:00 PM</span></div>
+                <div><strong>Lugar Sede 3</strong><span>Polideportivo</span></div>
+                <div><strong>Grados</strong><span>PRIMERA INFANCIA</span><br><span>PRIMARIA</span><br><span>BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>2:00 A 5:00 AM</span><br><span>9:30 A 12:30 AM</span><br><span>7:00 A 9:30 AM</span></div>
               </div>
             </div>
             <div class="foot">
@@ -378,14 +386,17 @@
             </div>
           </div>
         </article>
-
-        <!-- Info / Notas -->
-        <section id="info" class="intro" role="region" aria-label="Información general">
+<section id="info" class="intro" role="region" aria-label="Información general">
           <h2 style="margin:0 0 6px; font-weight:800;">Información general</h2>
           <p>
             Recuerda llegar 10 minutos antes de cada actividad. Mantén tus pertenencias seguras y sigue las indicaciones
             de los docentes. La programación puede ajustarse por condiciones climáticas o logística.
           </p>
+        </section>
+        <!-- Info / Notas -->
+        <section class="intro" role="region" aria-label="Presentación">
+          <h2 id="titulo-semana" style="margin:0 0 6px; font-weight:800; letter-spacing:.3px;">Para la comunidad educativa</h2>
+          <p>Gracias por los aportes y el apoyo para que esta semana cultural sea un exito Dios los continue bendiciendo en sabiduria y amor.</p>
         </section>
       </div>
     </main>
@@ -406,3 +417,4 @@
   </script>
 </body>
 </html>
+
