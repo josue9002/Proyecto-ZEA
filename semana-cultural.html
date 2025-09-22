@@ -1,200 +1,408 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana Cultural</title>
-    <link rel="stylesheet" href="styles-semana-cultural.css">
-    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="photo-logo.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
-     crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semana Cultural 2025 | Liceo Mixto Emperador de Cali</title>
+
+  <!-- Fuentes Google (mismo vibe que vienes usando) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Iconos (opcional) -->
+  <link rel="preconnect" href="https://kit.fontawesome.com">
+  <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --bg: #0f172a;          /* slate-900 */
+      --card: #111827;         /* gray-900 */
+      --card-2: #0b1220;       /* deep blue */
+      --text: #e5e7eb;         /* gray-200 */
+      --muted: #9ca3af;        /* gray-400 */
+      --primary: #ed3a3a;      /* violet-600 */
+      --primary-2: #b8b8b8;    /* cyan-400 */
+      --accent: #3c3c3c;       /* amber-500 */
+      --ring: rgba(124,58,237,.35);
+      --radius: 18px;
+      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --glass: rgba(255,255,255,.06);
+      --gradient: radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(800px 400px at 100% 10%, rgba(34,211,238,.25), transparent 60%),
+                  linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin:0; padding:0; background: var(--bg); color: var(--text);
+      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    .wrapper{
+      min-height:100svh; background: var(--gradient);
+    }
+    header{
+      position: relative;
+      padding: 28px 20px 18px;
+      display:flex; align-items:center; gap:16px; justify-content:center;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      backdrop-filter: saturate(140%) blur(5px);
+    }
+    .header-inner{
+      width:min(1200px, 92vw);
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .branding{
+      display:flex; align-items:center; gap:14px;
+    }
+    .logo{
+      width:56px; height:56px; border-radius:14px; object-fit:cover;
+      background:#111; border:1px solid rgba(255,255,255,.15);
+      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    }
+    .title-block h1{
+      font-size: clamp(1.4rem, 2vw + 0.6rem, 2.1rem);
+      margin:0; line-height:1.15; font-weight:800; letter-spacing:.3px;
+      display:flex; align-items:center; gap:.6rem;
+    }
+    .title-badge{
+      font-size:.85rem; font-weight:700; color:#0b1020; background: linear-gradient(90deg, var(--primary-2), #60a5fa);
+      padding:.2rem .6rem; border-radius:999px; transform: translateY(-2px);
+    }
+    .subtitle{
+      margin:.2rem 0 0; font-size:.95rem; color: var(--muted); font-family: Raleway, sans-serif;
+    }
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .cta .pill{
+      display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(255,255,255,.15);
+      background: var(--glass); padding:.6rem .9rem; border-radius:999px; color:var(--text);
+      text-decoration:none; font-weight:600; box-shadow: var(--shadow);
+    }
+    .cta .pill:hover{ border-color: rgba(255,255,255,.35); }
+
+    main{ padding: 24px 20px 60px; display:flex; justify-content:center; }
+    .grid{
+      width:min(1200px, 92vw);
+      display: grid; gap:20px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .intro{
+      grid-column: 1 / -1;
+      background: linear-gradient(180deg, rgba(124,58,237,.13), rgba(34,211,238,.08));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      padding: 18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .intro p{ margin:6px 0 0; color: var(--muted); font-family: Raleway, sans-serif; }
+
+    /* Tarjeta día */
+    .day{
+  grid-column:span 12;display:grid;grid-template-columns:280px 1fr;gap:18px;
+  background:linear-gradient(180deg,var(--card),var(--card-2));
+  border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);
+  position:relative; /* importante para ribbon */
+}
+.day:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.45);}
+.ribbon{
+  position:absolute;top:12px;left:12px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  padding:6px 14px;border-radius:999px;font-weight:800;letter-spacing:.5px;font-size:.78rem;
+  text-transform:uppercase;box-shadow:0 8px 18px rgba(0,0,0,.4);
+  z-index:10; /* <<< FIX: arriba de la imagen */
+}
+    .media{
+      background: #0b0f1a; position: relative; min-height: 220px;
+    }
+    .media img{
+      width:100%; height:100%; object-fit: cover;
+      display:block; filter: saturate(1.05) contrast(1.02);
+    }
+    .media .overlay{
+      position:absolute; inset:0; background: linear-gradient(180deg, transparent, rgba(0,0,0,.35) 65%, rgba(0,0,0,.65));
+    }
+    .content{
+      padding:18px 16px 16px;
+      display:flex; flex-direction: column; gap:10px;
+    }
+    .tag{
+      display:inline-flex; gap:.45rem; align-items:center;
+      font-size:.75rem; font-weight:700; color:#0b1220;
+      background: linear-gradient(90deg, var(--primary-2), #60a5fa);
+      padding:.25rem .6rem; border-radius:999px; width:max-content;
+    }
+    h3{
+      margin:4px 0 0; font-size: clamp(1.05rem, 1vw + .8rem, 1.35rem); line-height:1.2; font-weight:800;
+    }
+    .desc{
+      margin: 0; color: #cbd5e1; font-family: Raleway, sans-serif; line-height:1.55;
+    }
+    .horarios{
+      margin: 4px 0 0; display:grid; gap:10px;
+    }
+    .slot{
+      display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;
+      background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding:10px 12px;
+    }
+    .slot strong{ display:block; font-size:.78rem; color:#c7d2fe; letter-spacing:.2px; }
+    .slot span{ font-size:.95rem; color: var(--text); }
+    .foot{
+      display:flex; justify-content:flex-end; margin-top:6px;
+    }
+    .foot .mini{
+      font-size:.75rem; color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .day{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px){
+      .slot{ grid-template-columns: 1fr; }
+      .branding .title-badge{ display:none; }
+    }
+
+    /* Pequeño foco accesible */
+    .focusable:focus{
+      outline: 2px solid transparent;
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo-container">
-                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
-            </div>
-            <nav>
-                <div class="menu-icon" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="index.html" class="no-copiable">Inicio</a></li>
-                    <li class="dropdown">
-                        <a class="no-copiable">Mi Institución</a>
-                        <ul class="dropdown-content">
-                            <ol><a href="historia.html" class="no-copiable">Historia</a></ol>
-                            <ol><a href="simbolos.html" class="no-copiable">Simbolos</a></ol>
-                            <ol><a href="mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
-                            <ol><a href="nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
-                            <ol><a href="programa-oe.html" class="no-copiable">Programa OE</a></ol>
-                            <ol><a href="modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
-                          </ul>
-                      </li>
-                      <li class="dropdown">
-                          <a class="no-copiable">Directiva</a>
-                          <ul class="dropdown-content">
-                              <ol><a href="direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
-                              <ol><a href="personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
-                          </ul>
-                      </li>
-                      <li class="dropdown">
-                          <a class="no-copiable">Multimedia</a>
-                          <ul class="dropdown-content">
-                              <ol><a href="semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
-                              <ol><a href="dia-de-la-afrocolombianidad.html" class="no-copiable">Dia de la Afrocolombianidad</a></ol>
-                          </ul>
-                      </li>
-                      <li class="dropdown">
-                          <a class="no-copiable">Documentos</a>
-                          <ul class="dropdown-content">
-                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
-                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
-                          </ul>
-                      </li>
-                      <li class="dropdown">
-                        <a class="no-copiable">Admisiones</a>
-                        <ul class="dropdown-content">
-                            <ol><a href="admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
-                            <ol><a href="requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
-                            <ol><a href="fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
-                        </ul>
-                    </li>
-                      <li><a href="contacto.html" class="no-copiable">Contacto</a></li>
-                  </ul>
-              </nav>
-          </header>
-
-        <script src="script-menu.js"></script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                document.querySelectorAll('.no-copiable').forEach(element => {
-                    element.addEventListener('copy', (e) => e.preventDefault());
-                    element.addEventListener('cut', (e) => e.preventDefault());
-                    element.addEventListener('contextmenu', (e) => e.preventDefault());
-                });
-            });
-        </script>
-
-        <main>
-            <section>
-                <br>
-                <h1>Programación Semana Cultural</h1>
-                <br>
-                <div class="calendar-container">
-                    <div class="day">
-                        <h2>Lunes 22</h2>
-                        <p>Desfile de apertura - Sede Principal</p>
-                        <ul>
-                            <li>Docentes: 7:00am</li>
-                            <li>Estudiantes: 8:00am</li>
-                            <li>Recorrido por las sedes</li>
-                        </ul>
-                    </div>
-            
-                    <div class="day">
-                        <h2>Martes 23</h2>
-                        <p>Día de las Ciencias y Empresarial</p>
-                        <ul>
-                            <li>Maquetas y experimentos</li>
-                            <li>Uniforme: Educación física</li>
-                            <li>Horario: 8:00am - 11:00am</li>
-                        </ul>
-                    </div>
-            
-                    <div class="day">
-                        <h2>Miércoles 24</h2>
-                        <p>Festival Gastronómico y Talento LIMEC</p>
-                        <ul>
-                            <li>Ventas de productos y artesanías</li>
-                            <li>Uniforme: Educación física</li>
-                            <li>Horario: 8:00am - 11:00am</li>
-                        </ul>
-                    </div>
-            
-                    <div class="day">
-                        <h2>Jueves 25</h2>
-                        <p>Día Ludo Recreativo y Mini Olimpiadas</p>
-                        <ul>
-                            <li>Primaria: Cancha Los Naranjos</li>
-                            <li>4° y 5°: Cancha frente a la sede 2</li>
-                            <li>6° y 11°: Sede Principal</li>
-                            <li>Horario: 8:00am a 11:00am</li>
-                        </ul>
-                    </div>
-            
-                    <div class="day">
-                        <h2>Viernes 26</h2>
-                        <p>Salida Pedagógica (por definir)</p>
-                        <ul>
-                            <li>Inversión: $$$$$$$ COP</li>
-                            <li>Incluye transporte</li>
-                            <li>Pueden llevar almuerzo</li>
-                            <li>Pendiente hora de salida</li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <div class="note">
-                    <p>Gracias por tu participación. ¡Esperamos que hayas disfrutado la Semana Cultural!</p>
-                </div>
-            </section>
-        </main>
-        
-        <script src="script-modalidades-sena.js"></script> <!-- Enlace al archivo JavaScript externo -->
-    </div>
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-column left">
-                <div class="column image-column">
-                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
-                </div>
-            </div>
-            <div class="column text-column">
-                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
-                <br>
-                <p>Cali - Colombia</p>
-            </div>
-            <div class="footer-column right">
-                <div class="column social-column">
-                    <br>
-                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
-                        <div class="main-ok">
-                            <div class="icon fb">
-                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <span>Facebook</span>
-                                </a>
-                            </div>
-                    
-                            <div class="icon ig">
-                                 <a href="https://www.instagram.com/limec.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==9"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>Instagram</span>
-                            </div>
-                    
-                            <div class="icon yt">
-                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-youtube"></i>
-                                <span>YouTube</span>
-                                </a>
-                            </div>
-                        </div>
-                </div>
-            </div>
+  <div class="wrapper">
+    <header>
+      <div class="header-inner">
+        <div class="branding">
+          <!-- Logo del colegio (reemplaza src) -->
+          <img class="logo" src="photo-logo-animado-2.png" alt="Logo del colegio" />
+          <div class="title-block">
+            <h1>LIMEC<span class="title-badge">2025</span></h1>
+            <p class="subtitle">Dios, amor, ciencia y sabiduria</p>
+          </div>
         </div>
-        <div class="separator"></div>
-        <div class="footer-bottom">
-            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        <div class="cta">
+          <!-- Botones opcionales (puedes quitar) -->
+          <a class="pill focusable" href="#programa"><i class="fa-solid fa-calendar-days"></i> Programa</a>
+          <a class="pill focusable" href="#info"><i class="fa-solid fa-circle-info"></i> Info</a>
         </div>
-    </footer>
+      </div>
+    </header>
+
+    <main id="programa" aria-labelledby="titulo-semana">
+      <div class="grid">
+        <section class="intro" role="region" aria-label="Presentación">
+          <h2 id="titulo-semana" style="margin:0 0 6px; font-weight:800; letter-spacing:.3px;">Semana Cultural</h2>
+          <p>Explora las actividades de cada día para participar sin perderte nada.</p>
+        </section>
+
+        <!-- LUNES -->
+        <article class="day" aria-labelledby="lunes-title">
+          <span class="ribbon">Lunes</span>
+          <figure class="media">
+            <img src="ilustracion-plana-dia-nacional-ciencia_23-2149253941.jpg" alt="Imagen del lunes: [Descripción de la actividad]" />
+            <div class="overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="content">
+            <span class="tag"><i class="fa-solid fa-bolt"></i>Inicio de semana</span>
+            <h3 id="lunes-title">Lunes 22 - Dia de las Ciencias</h3>
+            <p class="desc">Se presentarán las maquetas y los experimentos que han realizado los estudiantes en el transcurso del año lectivo.
+                            Los estudiantes vendrán con el uniforme de educación física.</p>
+
+            <div class="horarios">
+              <!-- Repite los .slot que necesites -->
+              <div class="slot">
+                <div>
+                  <strong>Lugar</strong>
+                  <span>Patio del Colegio</span>
+                </div>
+                <div>
+                  <strong>Grados</strong>
+                  <span>1° a 5°</span>
+                </div>
+                <div>
+                  <strong>JORNADA MAÑANA</strong>
+                  <span>8:00AM A 11:00 AM </span>
+                </div>
+              </div>
+              <div class="slot">
+                <div>
+                  <strong>Lugar</strong>
+                  <span>Patio del Colegio</span>
+                </div>
+                <div>
+                  <strong>Grados</strong>
+                  <span>6° a 11°</span>
+                </div>
+                <div>
+                  <strong>JORNADA TARDE</strong>
+                  <span>2:00 PM A 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+            <div class="foot">
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MARTES -->
+        <article class="day" aria-labelledby="martes-title">
+          <span class="ribbon">Martes</span>
+          <figure class="media">
+            <img src="desfile-banda-marcha-ninos-dibujos-animados-ninos-musicos-marcha-ninos-tocando-instrumentos-musicales-voz-alta_723224-8.jpg" alt="Imagen del martes: [Descripción de la actividad]" />
+            <div class="overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="content">
+            <span class="tag"><i class="fa-solid fa-guitar"></i>Desfile Cultural</span>
+            <h3 id="martes-title">Martes - Desfile</h3>
+            <p class="desc">Cada grado decorará una carroza de acuerdo al lugar que le correspondió de la ciudad de Cali, la cual participa en el concurso y se elegirá la mejor de primera infancia, primaria y bachillerato.</p>
+
+            <div class="horarios">
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Organizar los estudiantes deacuerdo a su grado.</span></div>
+                <div><strong>Grados</strong><span>Todos</span></div>
+                <div><strong>HORARIO DE LLEGADA DE DOCENTES Y PERSONAS DE APOYO</strong><span>7:00am</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>En la entrada del colegio</span></div>
+                <div><strong>Grados</strong><span>Todos</span></div>
+                <div><strong>HORARIO DE LLEGADA DE ESTUDIANTES</strong><span>8:00 am</span></div>
+              </div>
+            </div>
+            <div class="foot">
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MIÉRCOLES -->
+        <article class="day" aria-labelledby="miercoles-title">
+          <span class="ribbon">Miércoles</span>
+          <figure class="media">
+            <img src="AXO6VA2TMBD57AOKSRSZDYGGHQ.jpg" alt="Imagen del miércoles: [Descripción de la actividad]" />
+            <div class="overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="content">
+            <span class="tag"><i class="fa-solid fa-masks-theater"></i> Talentos</span>
+            <h3 id="miercoles-title">Miercoles - Festival Gastronomico y Talento Limec</h3>
+            <p class="desc">Se llevarán a cabo diferentes ventas de productos y artesanías a través de Stand elaborados por los estudiantes.
+                            Los estudiantes vendrán con el uniforme de
+                            educación física. </p>
+
+            <div class="horarios">
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
+                <div><strong>Grados</strong><span>PRIMERA INFANCIA, PRIMERO Y SEGUNDO</span></div>
+                <div><strong>Hora</strong><span>7:30 A 10:00 AM</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
+                <div><strong>Grados</strong><span>TERCERO, CUARTO, QUINTO</span></div>
+                <div><strong>Hora</strong><span>10:00 A 12:30 AM</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Sede 2</span></div>
+                <div><strong>Grados</strong><span>BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>2:00 PM A 5:00 PM</span></div>
+              </div>
+            </div>
+            <div class="foot">
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- JUEVES -->
+        <article class="day" aria-labelledby="jueves-title">
+          <span class="ribbon">Jueves</span>
+          <figure class="media">
+            <img src="Fotos de Perfil (5).png" alt="Imagen del jueves: [Descripción de la actividad]" />
+            <div class="overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="content">
+            <span class="tag"><i class="fa-solid fa-futbol"></i> Deporte</span>
+            <h3 id="jueves-title">Jueves - Dia Ludo Recreativo y Miniolimpiadas</h3>
+            <p class="desc">Se programarán actividades recreativas y las mini olimpiadas de matemáticas y español.</p>
+
+            <div class="horarios">
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
+                <div><strong>Grados</strong><span>PRIMERA INFANCIA</span></div>
+                <div><strong>Hora</strong><span>7:30 A 9:30 AM</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
+                <div><strong>Grados</strong><span>PRIMERO, SEGUNDO Y TERCERO TARDE</span></div>
+                <div><strong>Hora</strong><span>10:00 A 12:00 AM</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
+                <div><strong>Grados</strong><span>TERCERO MAÑANA SEDE 2, CUARTO Y QUINTO</span></div>
+                <div><strong>Hora</strong><span>8:00 A 11:00 AM</span></div>
+              </div>
+              <div class="slot">
+                <div><strong>Lugar</strong><span>Cancha Los Naranjos</span></div>
+                <div><strong>Grados</strong><span>BACHILLERATO</span></div>
+                <div><strong>Hora</strong><span>2:00 PM A 5:00 PM</span></div>
+              </div>
+            </div>
+            <div class="foot">
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- VIERNES -->
+        <article class="day" aria-labelledby="viernes-title">
+          <span class="ribbon">Viernes</span>
+          <figure class="media">
+            <img src="piscina_5_0.jpg" alt="Imagen del viernes: [Descripción de la actividad]" />
+            <div class="overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="content">
+            <span class="tag"><i class="fa-solid fa-fireworks"></i>Clausura</span>
+            <h3 id="viernes-title">Viernes - Salida Pedagogica</h3>
+            <p class="desc">PASEO (PENDIENTE POR DEFINIR)</p>
+
+            <div class="horarios">
+              <div class="slot">
+                <div><strong>Lugar</strong><span>(Por Definir)</span></div>
+                <div><strong>Grados</strong><span>Todos</span></div>
+                <div><strong>Hora</strong><span>(Por Definir)</span></div>
+              </div>
+            </div>
+            <div class="foot">
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Info / Notas -->
+        <section id="info" class="intro" role="region" aria-label="Información general">
+          <h2 style="margin:0 0 6px; font-weight:800;">Información general</h2>
+          <p>
+            Recuerda llegar 10 minutos antes de cada actividad. Mantén tus pertenencias seguras y sigue las indicaciones
+            de los docentes. La programación puede ajustarse por condiciones climáticas o logística.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- (Opcional) Pequeñísimo script para “enlaces suaves” -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
