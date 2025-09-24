@@ -15,22 +15,30 @@
 
   <style>
     :root{
-      --bg: #393939;          /* slate-900 */
-      --card: #023e6c;         /* gray-900 */
-      --card-2: #696969;       /* deep blue */
-      --text: #e5e7eb;         /* gray-200 */
-      --muted: #ffffff;        /* gray-400 */
-      --primary: #ed3a3a;      /* violet-600 */
-      --primary-2: #b8b8b8;    /* cyan-400 */
-      --accent: #3c3c3c;       /* amber-500 */
-      --ring: rgba(124,58,237,.35);
-      --radius: 18px;
-      --shadow: 0 10px 35px rgba(47, 47, 47, 0.35);
-      --glass: rgba(255,255,255,.06);
-      --gradient: radial-gradient(1200px 600px at 20% -10%, rgba(87, 87, 87, 0.25), transparent 60%),
-                  radial-gradient(800px 400px at 100% 10%, rgba(34,211,238,.25), transparent 60%),
-                  linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-    }
+  /* Base clara: blanco/grises suaves */
+  --bg: #1a1a1a;          /* fondo general (muy claro) */
+  --card: #08233e;        /* tarjetas blancas */
+  --card-2: #09325b;      /* gris muy claro para contraste */
+  --text: #ffffff;        /* texto principal (gris oscuro) */
+  --muted: rgb(175, 175, 175);       /* texto secundario */
+
+  /* Marca: rojo + grises */
+  --primary: #ed1919;     /* rojo institucional */
+  --primary-2: #c9c9c9;   /* gris medio claro de apoyo */
+  --accent: #740d0d;      /* gris para gradientes/badges */
+
+  /* Accesibilidad/sombras */
+  --ring: rgba(211, 47, 47, .35); /* halo rojo */
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --glass: rgba(255,255,255,.75);
+
+  /* Brillos suaves en fondo, con toques rojos/grises */
+  --gradient:
+    radial-gradient(1200px 600px at 20% -10%, rgba(0, 0, 0, 0.856), transparent 60%),
+    radial-gradient(800px 400px at 100% 10%, rgba(156,163,175,.14), transparent 60%),
+    linear-gradient(180deg, rgba(63, 63, 63, 0.6), rgba(255,255,255,0));
+}
     * { box-sizing: border-box; }
     html, body {
       margin:0; padding:0; background: var(--bg); color: var(--text);
@@ -54,8 +62,8 @@
       display:flex; align-items:center; gap:14px;
     }
     .logo{
-      width:56px; height:56px; border-radius:14px; object-fit:cover;
-      background:#111; border:1px solid rgba(255,255,255,.15);
+      width:56px; height:56px; border-radius:0; object-fit:cover;
+      background:none; border:0px solid rgba(255,255,255,.15);
       box-shadow: 0 6px 18px rgba(0,0,0,.35);
     }
     .title-block h1{
@@ -74,8 +82,8 @@
       display:flex; gap:10px; align-items:center;
     }
     .cta .pill{
-      display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(255,255,255,.15);
-      background: var(--glass); padding:.6rem .9rem; border-radius:999px; color:var(--text);
+      display:inline-flex; align-items:center; gap:.5rem; border:0px solid rgba(255, 255, 255, 0.853);
+      background: linear-gradient(90deg,var(--primary),var(--accent));; padding:.6rem .9rem; border-radius:999px; color:var(--text);
       text-decoration:none; font-weight:600; box-shadow: var(--shadow);
     }
     .cta .pill:hover{ border-color: rgba(255,255,255,.35); }
@@ -88,7 +96,7 @@
     }
     .intro{
       grid-column: 1 / -1;
-      background: linear-gradient(180deg, rgba(124,58,237,.13), rgba(34,211,238,.08));
+      background: linear-gradient(180deg, rgba(172, 22, 17, 0.774), rgba(116, 6, 6, 0.812));
       border: 1px solid rgba(255,255,255,.12);
       border-radius: var(--radius);
       padding: 18px 18px;
@@ -177,7 +185,7 @@
       <div class="header-inner">
         <div class="branding">
           <!-- Logo del colegio (reemplaza src) -->
-          <img class="logo" src="photo-logo-animado-2.png" alt="Logo del colegio" />
+          <img class="logo" src="photo-logo-animado-2/s.png" alt="Logo del colegio" />
           <div class="title-block">
             <h1>Semana Cultural<span class="title-badge">2025</span></h1>
             <p class="subtitle">Del 22 al 26 de Septiembre</p>
@@ -185,7 +193,7 @@
         </div>
         <div class="cta">
           <!-- Botones opcionales (puedes quitar) -->
-          <a class="pill focusable" href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+          <a class="pill focusable" href="index.html"><i class="fa-solid fa-house"></i> Volver al Inicio</a>
           <a class="pill focusable" href="#info"><i class="fa-solid fa-circle-info"></i> Info</a>
         </div>
       </div>
@@ -261,7 +269,7 @@
               </div>
             </div>
             <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
             </div>
           </div>
         </article>
@@ -291,7 +299,7 @@
               </div>
             </div>
             <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
             </div>
           </div>
         </article>
@@ -323,7 +331,7 @@
               </div>
             </div>
             <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
             </div>
           </div>
         </article>
@@ -337,12 +345,12 @@
           </figure>
           <div class="content">
             <span class="tag"><i class="fa-solid fa-futbol"></i> Deporte</span>
-            <h3 id="jueves-title">Jueves - Dia Ludico Recreativo y Miniolimpiadas</h3>
+            <h3 id="jueves-title">Jueves - Dia Ludo Recreativo y Miniolimpiadas</h3>
             <p class="desc">Se programarán actividades recreativas y las mini olimpiadas de matemáticas y español.</p>
 
             <div class="horarios">
               <div class="slot">
-                <div><strong>Lugar Sede Principal</strong><span>Cancha Los Naranjos (Primaria)<br>En el colegio (Bachillerato)</span></div>
+                <div><strong>Lugar Sede Principal</strong><span>Cancha Los Naranjos</span></div>
                 <div><strong>Grados</strong><span>TRANSICION</span><BR><span>PRIMERO SEGUNDO Y TERCERO</span><BR><span>CUARTO QUINTO Y BACHILLERATO</span></div>
                 <div><strong>Hora</strong><span>7:30 A 9:30 AM</span><BR><span>10:00 A 12:00 AM</span><BR><span>7:30 A 11:00 AM</span></div>
               </div>
@@ -358,7 +366,7 @@
               </div>
             </div>
             <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
             </div>
           </div>
         </article>
@@ -373,27 +381,17 @@
           <div class="content">
             <span class="tag"><i class="fa-solid fa-fireworks"></i>Clausura</span>
             <h3 id="viernes-title">Viernes - Salida Pedagogica</h3>
-            <p class="desc">
-              VALOR: $28.000 POR PERSONA,
-              incluye transporte e ingreso al lugar, en en cuenta que:<br><br>
-              •	Puedes llevar alimentos en recipiente plástico (NO ICOPOR)<br>
-              •	Los estudiantes de primera infancia y primaria van con acompañante<br>
-              •	Los estudiantes van con uniforme de educación física<br>
-              •	Recuerda que tu traje de baño debe ser decoroso conforme a la filosofía institucional<br>
-              •	Las personas que ya hayan cancelado los $23.000 deben de cancelar el excedente.<br>
-              •	El plazo para el pago es hasta el 24 de septiembre a las 4:00 pm<br><br>
-            ¡TE ESPERAMOS!
-              </p>
+            <p class="desc">PASEO (PENDIENTE POR DEFINIR)</p>
 
             <div class="horarios">
               <div class="slot">
-                <div><strong>Lugar</strong><span>Club Campestre Comfandi Arroyohondo</span></div>
+                <div><strong>Lugar</strong><span>(Por Definir)</span></div>
                 <div><strong>Grados</strong><span>Todos</span></div>
-                <div><strong>Hora</strong><span>7:30 AM a 4:00 PM</span></div>
+                <div><strong>Hora</strong><span>(Por Definir)</span></div>
               </div>
             </div>
             <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
+              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [12/09/2025]</span>
             </div>
           </div>
         </article>
@@ -428,6 +426,7 @@
   </script>
 </body>
 </html>
+
 
 
 
