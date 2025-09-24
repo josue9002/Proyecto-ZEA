@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styles-galeria.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('lmYBs-ZQclK0xj_Sj')
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="programa-oe.html" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="galeria.html" class="no-copiable"> Galeria</a></ol>
+                              <ol><a href="dia-de-la-afrocolombianidad.html" class="no-copiable">Dia de la Afrocolombianidad</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="contacto.html" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section>
+                <h1>Galería de Fotos</h1>
+
+  <section class="cards" id="cards">
+    <!-- Edita data-images con tus .jpg (pueden estar junto a este HTML) -->
+    <article class="card" tabindex="0"
+      data-title="Lunes 22 - Dia de las Ciencias"
+      data-images='["5.jpeg","2.jpeg","4.jpeg","6.jpeg","7.jpeg","8.jpeg","9.jpeg"]'>
+      <div class="cover"><div>LUNES</div><div class="icon-dos">📁</div></div>
+      <div class="panel" aria-hidden="true"></div>
+    </article>
+
+    <article class="card" tabindex="0"
+      data-title="Martes - Carrozas"
+      data-images='["M-2.JPG","M-3.JPG","M-4.JPG","M-5.JPG","M-6.JPG","M-7.JPG","M-8.JPG","M-9.JPG","M-10.JPG","M-11.JPG","M-12.JPG","M-13.JPG","M-14.JPG","M-15.JPG","M-16.JPG","M-17.JPG","M-18.JPG","M-19.JPG","M-20.JPG","M-21.JPG","M-22.JPG","M-23.JPG","M-24.JPG","M-25.JPG"]'>
+      <div class="cover"><div>MARTES</div><div class="icon-dos">📁</div></div>
+      <div class="panel" aria-hidden="true"></div>
+    </article>
+
+    <article class="card" tabindex="0"
+      data-title="Miercoles - Festival Gastronomico y Talento Limec"
+      data-images='["foto_miercoles1.jpg","foto_miercoles2.jpg"]'>
+      <div class="cover"><div>MIÉRCOLES</div><div class="icon-dos">📁</div></div>
+      <div class="panel" aria-hidden="true"></div>
+    </article>
+  </section>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+  let openCard = null;
+
+  function buildPanel(card){
+    const panel = card.querySelector(".panel");
+    const title = card.dataset.title || "Galería";
+    const images = JSON.parse(card.dataset.images || "[]");
+
+    panel.innerHTML = `
+      <div class="panel-inner">
+        <div class="panel-header">
+          <div class="panel-title">${title}</div>
+          <button class="close-btn" aria-label="Cerrar">Cerrar ✕</button>
+        </div>
+        <div class="viewer">
+          <button class="navBtn prev" aria-label="Anterior">❮</button>
+          <img alt="Vista ampliada"/>
+          <button class="navBtn next" aria-label="Siguiente">❯</button>
+        </div>
+        <div class="thumbs"></div>
+      </div>`;
+
+    const imgTag = panel.querySelector(".viewer img");
+    const prev = panel.querySelector(".prev");
+    const next = panel.querySelector(".next");
+    const close = panel.querySelector(".close-btn");
+    const thumbs = panel.querySelector(".thumbs");
+
+    let idx = 0;
+
+    function show(i){
+      if(!images.length) return;
+      idx = (i + images.length) % images.length;
+
+      // Carga y, cuando esté lista, ajusta nada (el CSS ya evita recortes)
+      imgTag.onload = () => {
+        // resalta miniatura activa
+        thumbs.querySelectorAll("img").forEach((t,k)=>{
+          t.classList.toggle("active", k === idx);
+        });
+      };
+      imgTag.src = images[idx];
+    }
+
+    // Thumbs
+    images.forEach((src, k)=>{
+      const t = document.createElement("img");
+      t.src = src; t.alt = `Miniatura ${k+1}`;
+      t.addEventListener("click", ()=> show(k));
+      thumbs.appendChild(t);
+    });
+
+    prev.addEventListener("click", ()=> show(idx-1));
+    next.addEventListener("click", ()=> show(idx+1));
+    close.addEventListener("click", ()=> collapse(card));
+
+    // Teclado dentro del panel
+    panel.addEventListener("keydown", (e)=>{
+      if(e.key === "Escape"){ collapse(card); }
+      if(e.key === "ArrowRight"){ show(idx+1); }
+      if(e.key === "ArrowLeft"){ show(idx-1); }
+    });
+
+    show(0);
+  }
+
+  function expand(card){
+    if(openCard && openCard !== card) collapse(openCard);
+    if(card.classList.contains("expanded")) return;
+    buildPanel(card);
+    card.classList.add("expanded");
+    card.querySelector(".panel").setAttribute("aria-hidden","false");
+    openCard = card;
+  }
+  function collapse(card){
+    card.classList.remove("expanded");
+    const panel = card.querySelector(".panel");
+    panel.setAttribute("aria-hidden","true");
+    panel.innerHTML = "";
+    if(openCard === card) openCard = null;
+  }
+
+  // Abrir/cerrar con click o Enter/Espacio
+  cards.forEach(card=>{
+    card.addEventListener("click", e=>{
+      if(e.target.closest(".panel")) return;  // ignora clicks dentro del panel
+      card.classList.contains("expanded") ? collapse(card) : expand(card);
+    });
+    card.addEventListener("keydown", e=>{
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        card.classList.contains("expanded") ? collapse(card) : expand(card);
+      }
+    });
+  });
+</script>
+  </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                        <div class="main-ok">
+                            <div class="icon fb">
+                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA" style="text-decoration: none;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Facebook</span>
+                                </a>
+                            </div>
+                    
+                            <div class="icon ig">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </div>
+                    
+                            <div class="icon yt">
+                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" style="text-decoration: none;">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>
