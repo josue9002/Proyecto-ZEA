@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Cultural</title>
+    <link rel="stylesheet" href="styles-cronograma.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="photo-logo.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="historia.html" class="no-copiable">Historia</a></ol>
+                            <ol><a href="simbolos.html" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="mision-vision.html" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="nuestras-sedes.html" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="programa-oe.html" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="modalidades-sena.html" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="direcciones-de-grupo.html" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="personal-admin.html" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="semana-cultural.html" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="galeria.html" class="no-copiable">Galeria</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual.html" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="admisiones.html" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="requisitos-jardin.html" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="fechas-importantes.html" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="contacto.html" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+        <main>
+            <section>
+                <div class="container-dos">
+    <header class="hero" aria-labelledby="site-title">
+      <div class="logo-dos" title="Liceo Mixto Emperador">
+        <img src="photo-logo-animado-2.png" alt="Escudo Liceo Mixto Emperador">
+      </div>
+      <div class="title">
+        <h1 id="site-title">Cronograma académico</h1>
+        <p> 2025 — <strong id="periodo-label">Tercer periodo</strong></p>
+        <div class="controls" role="region" aria-label="Controles">
+          <input id="search" class="input" type="search" placeholder="Buscar actividad…" aria-label="Buscar actividad">
+          <label class="toggle">
+            <input id="only-pc" type="checkbox" aria-label="Mostrar solo por confirmar"> Mostrar<strong>Por confirmar</strong>
+          </label>
+          <select id="view-month" class="select" aria-label="Filtrar por mes">
+            <option value="all">Todos los meses</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+          </select>
+          <button id="export" class="btn btn-primary" title="Exportar PDF">🖨️ Exportar PDF</button>
+        </div>
+      </div>
+
+      <!-- Selector de periodo -->
+      <div class="period-switch">
+        <div id="period-trigger" class="period-trigger" role="button" aria-haspopup="menu" aria-expanded="false">
+          3er periodo ▾
+        </div>
+        <div id="period-menu" class="period-menu" role="menu" aria-label="Seleccionar periodo">
+          <div class="period-item" data-period="1" role="menuitem">1er periodo </div>
+          <div class="period-item" data-period="2" role="menuitem">2do periodo </div>
+          <div class="period-item" data-period="3" role="menuitem">3er periodo </div>
+        </div>
+      </div>
+    </header>
+
+    <section-dos class="timeline" id="timeline" aria-live="polite"></section-dos>
+<div hidden id="miHidden">
+    <!-- Editor (solo para 1er y 2do) -->
+    <section-dos id="editor" class="panel" hidden>
+      <h2 style="margin:0">✍️ Editor del periodo <span id="editor-periodo" class="pill">1</span></h2>
+      <div class="form">
+        <div class="row">
+          <input id="f-title" class="input" placeholder="Actividad (ej. Exámenes finales)">
+          <input id="f-date" class="input" placeholder="Fecha visible (ej. 12 al 18 de mayo)">
+        </div>
+        <div class="row">
+          <input id="f-month" class="input" placeholder="Mes (número, ej. 5 u 11) — opcional">
+          <input id="f-dayStart" class="input" placeholder="Día inicio (número) — opcional">
+          <input id="f-dayEnd" class="input" placeholder="Día fin (número) — opcional">
+        </div>
+        <div class="row">
+          <input id="f-tags" class="input" placeholder="Tags (coma: informes,docente)">
+          <label class="toggle"><input id="f-confirm" type="checkbox"> Por confirmar</label>
+          <select id="f-chip" class="select">
+            <option value="">Etiqueta visual</option>
+            <option value="eval">Evaluación</option>
+            <option value="final">Definitivo</option>
+            <option value="docs">Documentos</option>
+          </select>
+          <button id="add" class="btn btn-primary">Añadir actividad</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="btn">
+          📥 Importar CSV/JSON
+          <input id="import-file" type="file" accept=".csv,.json" hidden>
+        </label>
+        <button id="export-csv" class="btn">📤 Exportar CSV</button>
+        <button id="clear" class="btn btn-ghost" title="Borrar todo">🗑️ Limpiar periodo</button>
+      </div>
+
+      <div class="panel" style="gap:8px">
+        <strong>Formato CSV:</strong>
+        <code style="font-size:12px">title,dateLabel,month,dayStart,dayEnd,tags,confirm,chip</code>
+        <span class="muted" style="color:var(--muted);font-size:12px">Ejemplo: <em>Semana institucional,06 al 10 de octubre,10,6,10,institucional,,</em></span>
+      </div>
+
+      <table class="table" id="table"></table>
+  </div>
+    </section-dos>
+
+    <script src="script-cronograma.js"></script> <!-- Enlace al archivo JavaScript externo -->
+            </section>
+        </main>     
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p>Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                        <div class="main-ok">
+                            <div class="icon fb">
+                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA"  target="_blank" style="text-decoration: none;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Facebook</span>
+                                </a>
+                            </div>
+                    
+                            <div class="icon ig">
+                                 <a href="https://www.instagram.com/limec.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==9"  target="_blank" style="text-decoration: none;">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </div>
+                    
+                            <div class="icon yt">
+                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" style="text-decoration: none;">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>
