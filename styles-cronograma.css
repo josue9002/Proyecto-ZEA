@@ -626,7 +626,7 @@ main {
 }
 
 
-  header-dos.hero{
+  header.hero{
     display:grid; gap:16px; align-items:center; grid-template-columns:auto 1fr auto;
     background: linear-gradient(180deg, rgba(91,157,255,.16), transparent 60%), var(--panel);
     border:1px solid var(--stroke); border-radius:22px; padding:20px 22px; box-shadow:var(--shadow);
@@ -690,8 +690,9 @@ main {
   @media print{
     body{background:#fff}
     .controls, .period-switch, .btn, .badge{display:none !important}
-    header-dos.hero{box-shadow:none; grid-template-columns:auto 1fr}
+    header.hero{box-shadow:none; grid-template-columns:auto 1fr}
     .container-dos{padding:0}
     .card{break-inside:avoid}
     footer{margin-top:8px}
+
   }
