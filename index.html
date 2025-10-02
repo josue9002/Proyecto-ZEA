@@ -102,22 +102,19 @@
 
         <main>
             <section>
-                <div id="slider-container" class="slider-container">
+                <div class="slider-container" id="sliderWrap">
                     <div class="slider" id="slider">
-                      <div class="slider__element slider__element--lightcoral"><img src="photo-index-1.png" alt="" class="img-ok"/></div>
-                      <div class="slider__element slider__element--lightskyblue"><img src="photo-index-3.png" alt="" class="img-ok"/></div>
-                        <div class="slider__element slider__element--lightgreen"><img src="photo-index-5.png" alt="" class="img-ok"></div>
-                      <div class="slider__element slider__element--lightgreen"><img src="photo-index-6.png" alt="" class="img-ok"></div>
-                      <div class="slider__element slider__element--lightgreen"><img src="photo-index-4.png" alt="" class="img-ok"></div>
-                      <div class="slider__element slider__element--lightgreen"><img src="photo-index-7.png" alt="" class="img-ok"></div>
-                      <div class="slider__element slider__element--lightgreen"><img src="photo-index-8.png" alt="" class="img-ok"></div>
+                    <!-- SOLO LAS "REALES" (sin clones). JS añadirá 1ra y última como clones -->
+                    <div class="slide"><img src="photo-index-1.png" alt="Imagen 1"></div>
+                    <div class="slide"><img src="photo-index-2.png" alt="Imagen 2"></div>
+                    <div class="slide"><img src="photo-index-3.png" alt="Imagen 3"></div>
+                </div>
 
-                    </div>
-                  </div>
-                  <div class="slider-buttons">
-                    <button id="button-left" class="button"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button id="button-right" class="button"><i class="fa-solid fa-arrow-right"></i></button>
-                  </div>
+                <button class="nav-btn prev" aria-label="Anterior" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="nav-btn next" aria-label="Siguiente" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="dots" id="dots"></div>
+                </div>
                   <!-- SLIDE END -->
                   <script src="script-index.js"></script>
 
@@ -268,6 +265,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
