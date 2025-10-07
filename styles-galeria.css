@@ -606,14 +606,25 @@ p, b{
   }
   .thumbs img.active{ border-color:var(--accent) }
 
-/* Título de grupo: línea a los lados */
-  .group-title{
-    display:flex; align-items:center; gap:.8rem; margin:28px 0 14px;
-    font-size:1.2rem; font-weight:700; letter-spacing:.03em;
-  }
-  .group-title::before, .group-title::after{
-    content:""; flex:1; height:1px; background:#000000;
-  }
+/* Separador con líneas a los lados */
+.group-sep{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.8rem;
+  margin:32px 0 16px;
+  font: 700 1.1rem/1.2 system-ui, Segoe UI, Inter, Arial;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#0e2a44;              /* ajusta a tu paleta */
+}
+.group-sep::before,
+.group-sep::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, transparent, #c7d2e0, transparent);
+}
 
   @media (max-width:760px){
     .card{ flex:1 1 100% }
