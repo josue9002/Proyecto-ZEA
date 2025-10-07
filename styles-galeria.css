@@ -612,10 +612,11 @@ p, b{
     font-size:1.2rem; font-weight:700; letter-spacing:.03em;
   }
   .group-title::before, .group-title::after{
-    content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent);
+    content:""; flex:1; height:1px; background:#000000;
   }
 
   @media (max-width:760px){
     .card{ flex:1 1 100% }
 
   }
+
