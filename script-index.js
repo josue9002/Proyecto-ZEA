@@ -85,13 +85,13 @@
   nextBtn.addEventListener('click', ()=>{ next(); resetAutoplay(); });
   prevBtn.addEventListener('click', ()=>{ prev(); resetAutoplay(); });
 
-  // Autoplay cada 10s
-  let timer = setInterval(next, 5000);
-  function resetAutoplay(){
-    clearInterval(timer);
-    timer = setInterval(next, 5000);
-  }
+  // Autoplay cada 5s (antes 10s)
+let timer = setInterval(next, 5000);
 
+function resetAutoplay(){
+  clearInterval(timer);
+  timer = setInterval(next, 5000);
+}
   // (Opcional) pausar al pasar el mouse
   slider.parentElement.addEventListener('mouseenter', ()=> clearInterval(timer));
   slider.parentElement.addEventListener('mouseleave', resetAutoplay);
