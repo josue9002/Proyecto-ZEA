@@ -45,6 +45,7 @@ header {
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
+    margin-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
@@ -77,9 +78,9 @@ header {
 /* Derecha: redes */
 .socials {
     display: inline-flex;
-    align-items: center;
+    align-items: right;
     gap: 12px;
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 .social-link {
@@ -88,6 +89,7 @@ header {
     opacity: 0.9;
     transition: transform 0.15s ease, opacity 0.15s ease;
     color: #ffffff;
+    padding-bottom: 60px;
 }
 
 .social-link:hover,
@@ -380,9 +382,7 @@ section#bienvenidos {
     width: 100%;
 }
 
-.espacio{
-    padding-top: 10x;
-}
+
 
 .social {
     display: flex;
@@ -782,6 +782,15 @@ section#bienvenidos {
     .logo-container{
         padding-left: 10px;
     }
+
+    .text-column p{
+        font-size: 14px;
+    }
+
+    .social-column p{
+        font-size: 14px;
+    }
+
 }
 
 .main-ok{
@@ -791,59 +800,73 @@ section#bienvenidos {
     align-items: center;
     justify-content: center;
 }
-.icon{
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    background: #fff;
-    margin: 10px;
-    text-align: center;
-    font-size: 25px;
-    line-height: 50px;
-    font-family: sans-serif;
-    overflow: hidden;
-    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
-    transition: all .3s ease-out;
-}
-.icon:hover{
-    width: 140px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #fff;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-}
-.icon:hover i{
-    color: #fff;
-}
-.icon .fa-facebook-f{
-    color: #1A6ED8;
-}
-.fb:hover{
-    background: #1A6ED8;
-}
 
-.icon .fa-instagram{
-    color: #000;
-}
-.ig:hover{
-    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
-}
-
-.icon .fa-youtube{
-    color: #FE0000;
-}
-.yt:hover{
-    background: #FE0000;
-}
-
-/* responsive */
-@media only screen and (min-width: 500px) and (max-width: 991px) {
-    .main{
-        flex-direction: column;
+:root{
+      --size: 48px;      /* diámetro del círculo */
+      --icon: 23px;       /* tamaño del logo dentro */
+      --gap: 18px;
     }
+    
+.socials-dos{
+      display:flex; align-items:center; gap:var(--gap);
+    }
+
+    .socials-dos a{
+      width:var(--size); height:var(--size);
+      background:#fff; border-radius:50%;
+      display:grid; place-items:center;
+      text-decoration:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      border:1px solid rgba(0,0,0,.06);
+    }
+
+    .socials-dos a:hover{
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+
+    .socials-dos i{
+      font-size:var(--icon);
+      line-height:1;
+    }
+
+    /* Colores oficiales */
+    .facebook i{ color:#1877F2; }   /* Facebook Blue */
+    .youtube  i{ color:#FF0000; }   /* YouTube Red  */
+
+    /* Instagram gradient en el ícono (texto) */
+    .instagram i{
+      background:
+        radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    /* Accesibilidad: foco visible */
+    .socials-dos a:focus{
+      outline:none;
+      box-shadow: 0 0 0 3px rgba(24,119,242,.25), 0 6px 18px rgba(0,0,0,.08);
+    }
+
+    /* ===== Responsivo ===== */
+
+/* Teléfonos pequeños */
+@media (max-width: 500px){
+  :root{
+    --size: 40px;      /* diámetro del círculo */
+      --icon: 20px;       /* tamaño del logo dentro */
+      --gap: 15px;
+  }
+  body{ padding: 10px; }
+}
+
+
+/* Accesibilidad: reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .socials a{ transition: none; }
+  .socials a:hover{ transform: none; }
 }
 
 /*nuevo*/
@@ -1179,8 +1202,3 @@ body.modal-open { overflow: hidden; }
   .modal-anuncio__actions{ background: #ffffff; }
   .btn-anuncio--primary{ background: #000000; color: #ffffff; }
 }
-
-
-
-
-
