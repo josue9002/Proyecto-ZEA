@@ -1018,6 +1018,13 @@ section#bienvenidos {
   pointer-events: none;      /* los eventos pasan al overlay */
 }
 
+.rotar-imagen::after{
+  content: "";
+  position: absolute;
+  inset: 0;                  /* overlay transparente */
+  background: transparent;
+}
+
 .img-guard{
   position: relative; 
   display: inline-block;
