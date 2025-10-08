@@ -24,7 +24,9 @@
     <div class="modal-anuncio__content">
       <!-- Imagen a la izquierda -->
       <div class="modal-anuncio__image">
-        <img src="photo-logo-animado.png" alt="Imagen anuncio" class="no-save">
+        <div class="img-guard">
+            <img src="photo-logo-animado.png" alt="Imagen anuncio" class="no-save" draggable="false">
+        </div>
       </div>
 
       <!-- Texto a la derecha -->
@@ -43,7 +45,9 @@
         <header>
             <div class="logo-container">
                 <!-- Izquierda: logo (se mantiene la clase .logo) -->
-                <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
 
                 <!-- Centro: título (se mantiene .school-name) + frase nueva -->
                 <div class="logo-center">
@@ -219,16 +223,6 @@
             <a href="Biblioteca Virtual/index-biblioteca-virtual.html">Leer Más</a>
         </div>
     </div>
-    <div class="card">
-        <figure>
-            <img src="photo-promo-2024.png">
-        </figure>
-        <div class="contenido-card">
-            <h3>Promo 2024</h3>
-            <p>Bienvenidos a su último año en el Colegio Limec. Este es un hito significativo en su viaje educativo, lleno de aprendizajes, desafíos y triunfos. Han demostrado determinación y resiliencia para alcanzar sus metas. </p>
-            <a href="promo-2024.html">Leer Más</a>
-        </div>
-    </div>
     </div>
     </div>
 
@@ -237,7 +231,9 @@
         <div class="footer-content">
             <div class="footer-column left">
                 <div class="column image-column">
-                    <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
+                    <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
+                    </div>
                 </div>
             </div>
             <div class="column text-column">
@@ -251,15 +247,15 @@
                     <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
                         <div class="main-ok">
                             <div class="socials-dos">
-                                <a class="facebook" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
                                     <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                                 </a>
 
-                                <a class="instagram" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
                                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                                 </a>
 
-                                <a class="youtube" href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
                                     <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </div>

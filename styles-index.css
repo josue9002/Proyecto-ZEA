@@ -1012,6 +1012,22 @@ section#bienvenidos {
     border-radius: 15px;
 }
 
+.img-guard{
+  position: relative; 
+  display: inline-block;
+}
+.img-guard img{
+  user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
+}
+.img-guard::after{
+  content: "";
+  position: absolute;
+  inset: 0;                  /* overlay transparente */
+  background: transparent;
+}
+
 /* === MODAL / ANUNCIO === */
 :root{
   --overlay: rgba(0,0,0,.55);
