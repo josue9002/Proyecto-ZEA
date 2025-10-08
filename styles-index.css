@@ -802,17 +802,17 @@ section#bienvenidos {
 }
 
 :root{
-      --size: 48px;      /* diámetro del círculo */
-      --icon: 23px;       /* tamaño del logo dentro */
-      --gap: 18px;
+      --size-dos: 48px;      /* diámetro del círculo */
+      --icon-dos: 23px;       /* tamaño del logo dentro */
+      --gap-dos: 18px;
     }
     
 .socials-dos{
-      display:flex; align-items:center; gap:var(--gap);
+      display:flex; align-items:center; gap:var(--gap-dos);
     }
 
     .socials-dos a{
-      width:var(--size); height:var(--size);
+      width:var(--size-dos); height:var(--size-dos);
       background:#fff; border-radius:50%;
       display:grid; place-items:center;
       text-decoration:none;
@@ -827,7 +827,7 @@ section#bienvenidos {
     }
 
     .socials-dos i{
-      font-size:var(--icon);
+      font-size:var(--icon-dos);
       line-height:1;
     }
 
@@ -855,9 +855,9 @@ section#bienvenidos {
 /* Teléfonos pequeños */
 @media (max-width: 500px){
   :root{
-    --size: 40px;      /* diámetro del círculo */
-      --icon: 20px;       /* tamaño del logo dentro */
-      --gap: 15px;
+    --size-dos: 40px;      /* diámetro del círculo */
+      --icon-dos: 20px;       /* tamaño del logo dentro */
+      --gap-dos: 15px;
   }
   body{ padding: 10px; }
 }
