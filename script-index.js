@@ -86,10 +86,10 @@
   prevBtn.addEventListener('click', ()=>{ prev(); resetAutoplay(); });
 
   // Autoplay cada 10s
-  let timer = setInterval(next, 10000);
+  let timer = setInterval(next, 5000);
   function resetAutoplay(){
     clearInterval(timer);
-    timer = setInterval(next, 10000);
+    timer = setInterval(next, 5000);
   }
 
   // (Opcional) pausar al pasar el mouse
