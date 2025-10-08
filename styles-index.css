@@ -1012,6 +1012,12 @@ section#bienvenidos {
     border-radius: 15px;
 }
 
+.rotar-imagen{
+    user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
+}
+
 .img-guard{
   position: relative; 
   display: inline-block;
