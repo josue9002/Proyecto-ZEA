@@ -670,7 +670,7 @@ section#bienvenidos {
 
 }
 /* Encabezado */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
 
     .section-qs {
         width: 100%; /* Ocupa el ancho completo */
@@ -702,7 +702,7 @@ section#bienvenidos {
 }
 
 
-@media (max-width: 1350px) {
+@media (max-width: 900px) {
 
 
     .nav-list {
@@ -752,7 +752,7 @@ section#bienvenidos {
 
 
 /* Pie de Pagina */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     .footer {
         padding: 40px;
         margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
