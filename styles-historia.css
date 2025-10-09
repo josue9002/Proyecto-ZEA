@@ -34,17 +34,27 @@ header {
 }
 
 .logo-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* izquierda | centro | derecha */
     align-items: center;
-    justify-content: center;
+    gap: 16px;
     padding: 20px 0;
     animation: fadeInUp 1s ease-in-out;
+    padding-left: 10px;
 }
 
+/* Se mantiene */
 .logo {
     height: 100px;
-    margin-right: 20px;
+    margin-right: 0; /* ya no hace falta margen porque usamos grid */
+    margin-left: 20px;
 }
+
+/* Centro: título centrado (se mantiene .school-name) */
+.logo-center {
+    text-align: center;
+}
+
 
 .school-name {
     font-size: 2.0em;
