@@ -1,6 +1,5 @@
 const texts = {
     inicio: `
-    <br>
          <p>La institución fue creada el 14 de junio de 1.993, después de haberse realizado un censo en el sector, 
          en el cual se observó un déficit de establecimientos educativos que cubriera la totalidad de la cobertura 
          en los niveles de preescolar, primaria y bachillerato. Su propietario, preocupado por el futuro de estos
@@ -23,7 +22,6 @@ const texts = {
          </p>
      `,
      uno: `
-     <br>
          <p>En el 2004 se implementó la banda marcial generando un auge positivo a la institución. 
                          En el 2005, se inauguró una nueva sede en la transversal 101 N° 26 0-18 del mismo barrio, 
                          abarcando toda la población necesitada del sector la cual estaba en espera de una planta 
@@ -32,7 +30,6 @@ const texts = {
                          inglés, sala de sistemas, salón multipropósito.</p>
      `,
      dos: `
-     <br>
          <p>En el 2008, se logró el convenio con el SENA denominado: "ARTICULACIÓN CON LA MEDIA TÉCNICA", 
                          en donde hasta el momento se han certificado 3 promociones otorgando el título de técnicos 
                          en las especialidades de (asistencia administrativa, instalaciones eléctricas Residenciales 
@@ -41,7 +38,6 @@ const texts = {
                          nivel de acceso por el modelo europeo de certificación EFQM.</p>
      `,
      tres: `
-     <br>
          <p>En el 2009, gracias al crecimiento de la población se logró la inauguración de otro nuevo 
                          bloque que permitió a los padres de familia y comunidad en general acceder a la educación 
                          con los niños de seis meses en adelante, este nuevo bloque conocido en el sector como LICEO 
@@ -51,7 +47,6 @@ const texts = {
                          de Estudios Profesionales (FCECEP).</p>
      `,
      cuatro: `
-     <br>
          <p>En el 2012, se logra la certificación de calidad en el Nivel II de excelencia otorgada por 
                          la entidad europea EFQM. También se adquirió una nueva sede ubicada en el barrio urbanización 
                          manantial de la comuna 21 en la ciudad de Cali, denominada LICEO MIXTO EMPERADOR DE CALI SEDE 3.</p>
