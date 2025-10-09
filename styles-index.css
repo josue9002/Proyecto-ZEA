@@ -852,7 +852,7 @@ section#bienvenidos {
     object-fit:cover;
     display:block;
   }
-  /* Botones laterales */
+/* Botones laterales */
   .nav-btn{
     position:absolute; inset:0 auto 0 0;
     top:50%; transform:translateY(-50%);
@@ -870,7 +870,7 @@ section#bienvenidos {
   /* Punticos */
   .dots{
     position:absolute; left:0; right:0; bottom:5px;
-    display:flex; justify-content:center; gap:4px; z-index:4;
+    display:flex; justify-content:center; gap:0px; z-index:4;
   }
   .dot{
     width:12px; height:12px; border-radius:50%;
@@ -898,7 +898,6 @@ section#bienvenidos {
     @media (max-width: 480px){
     .chev { font-size: 0.65rem; }
 }
-
 .scroll-left {
         height: 50px; 
         overflow: hidden;
