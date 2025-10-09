@@ -505,13 +505,6 @@ section#bienvenidos {
     font-family: 'Montserrat', sans-serif;
 }
 
-.parrafo-nose p{
-        user-select: none; /* CSS estándar */
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-    }
-
 .section-qs {
     padding: 15px;
     width: 45%;
@@ -530,6 +523,10 @@ section#bienvenidos {
     content: "";
     clear: both;
     display: table;
+}
+
+.parrafo-nose{
+
 }
 
 /*Galeria de Imagenes*/
@@ -622,6 +619,13 @@ section#bienvenidos {
     font-weight: bold; /* Hace que el texto esté en negrita */
     height: 2px;
     margin-bottom: 20px;
+}
+
+.parrafo-nose{
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 @keyframes slideIn {
