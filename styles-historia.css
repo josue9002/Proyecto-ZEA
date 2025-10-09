@@ -528,6 +528,13 @@ main {
     margin-top: 20px;
 }
 
+.history-text{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 .text-content {
     padding: 40px;
     flex: 1.1;
@@ -540,6 +547,10 @@ main {
     text-align: center;
     color: #003366;
     position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .heading::after {
