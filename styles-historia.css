@@ -528,7 +528,7 @@ main {
     margin-top: 20px;
 }
 
-.history-text{
+.history-text p{
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
