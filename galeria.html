@@ -255,19 +255,30 @@
     if(openCard === card) openCard = null;
   }
 
-  // Abrir/cerrar con click o Enter/Espacio
   cards.forEach(card=>{
-    card.addEventListener("click", e=>{
-      if(e.target.closest(".panel")) return;  // ignora clicks dentro del panel
-      card.classList.contains("expanded") ? collapse(card) : expand(card);
-    });
-    card.addEventListener("keydown", e=>{
-      if(e.key === "Enter" || e.key === " "){
-        e.preventDefault();
-        card.classList.contains("expanded") ? collapse(card) : expand(card);
-      }
-    });
+  card.addEventListener("click", e=>{
+    // 1) Si el click fue en el botón cerrar → colapsar y salir
+    if (e.target.closest(".close-btn")) {
+      e.stopPropagation();
+      collapse(card);
+      return;
+    }
+
+    // 2) Ignora otros clics dentro del panel (no cierran)
+    if (e.target.closest(".panel")) return;
+
+    // 3) Toggle expandir/colapsar al hacer click en la card
+    card.classList.contains("expanded") ? collapse(card) : expand(card);
   });
+
+  card.addEventListener("keydown", e=>{
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      card.classList.contains("expanded") ? collapse(card) : expand(card);
+    }
+  });
+});
+
 </script>
   </section>
     </div>
