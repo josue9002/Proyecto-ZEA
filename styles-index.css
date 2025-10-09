@@ -120,7 +120,8 @@ header {
     }
 
     .logo { height: 72px; display: none;}
-    .socials { margin-top: 4px; }
+    .socials { margin-top: 4px;}
+    .social-link { padding-bottom: 0;}
 }
 
 
