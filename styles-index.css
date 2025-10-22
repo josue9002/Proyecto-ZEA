@@ -114,14 +114,18 @@ header {
 
     }
 
-    .school-phrase 
-    {
+    .school-phrase {
         font-size: 0.7rem;
     }
 
     .logo { height: 72px; display: none;}
     .socials { margin-top: 4px;}
     .social-link { padding-bottom: 0;}
+    .school-name{
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
 }
 
 
@@ -268,17 +272,6 @@ main {
     background-color: aliceblue;
     background-size: cover;
     margin-top: 20px;
-}
-
-section#bienvenidos {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-#bienvenidos h1 {
-    margin-bottom: 20px;
-    text-align: justify;
 }
 
 .footer {
@@ -615,6 +608,11 @@ section#bienvenidos {
 /* Encabezado */
 @media (max-width: 1450px) {
 
+    .footer{
+        margin: 10px; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+    }
+
     .section-qs {
         width: 100%; /* Ocupa el ancho completo */
         margin: 20px 0; /* Ajusta el margen */
@@ -640,6 +638,7 @@ section#bienvenidos {
     .simple-news-box{
         font-size: 0.8em;
     }
+
 }
 
 
@@ -688,12 +687,11 @@ section#bienvenidos {
       padding: 0;
       box-shadow: 0px 0px 20px rgb(255, 255, 255);
     }
-
   }
 
 
 /* Pie de Pagina */
-@media (max-width: 1350px) {
+@media (max-width: 1000px) {
     .footer {
         padding: 40px;
         margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
@@ -721,7 +719,6 @@ section#bienvenidos {
 
     .school-name{
         font-size: 1.4em;
-        padding-left: 0px;
         padding-right: 20px;
         text-align: center;
         
@@ -807,7 +804,6 @@ section#bienvenidos {
       --icon-dos: 20px;       /* tamaño del logo dentro */
       --gap-dos: 15px;
   }
-  body{ padding: 10px; }
 }
 
 
