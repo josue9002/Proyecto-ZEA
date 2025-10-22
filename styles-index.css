@@ -114,8 +114,7 @@ header {
 
     }
 
-    .school-phrase 
-    {
+    .school-phrase {
         font-size: 0.7rem;
     }
 
@@ -641,6 +640,11 @@ section#bienvenidos {
         font-size: 0.8em;
     }
 
+    .footer{
+        width: 100%; /* Ocupa el ancho completo */
+        margin: 20px 0; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+    }
 
 }
 
@@ -690,12 +694,11 @@ section#bienvenidos {
       padding: 0;
       box-shadow: 0px 0px 20px rgb(255, 255, 255);
     }
-
   }
 
 
 /* Pie de Pagina */
-@media (max-width: 1350px) {
+@media (max-width: 1000px) {
     .footer {
         padding: 40px;
         margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
