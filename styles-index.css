@@ -696,7 +696,8 @@ main {
     .footer {
         padding: 40px;
         margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
-        margin-top: 30px;
+        margin-top: 10px;
+        padding-bottom: 20px;
     }
 
     .footer-content {
