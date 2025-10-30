@@ -1,0 +1,887 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans;
+    background-image: url('photo-fondo.png');
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 0 200px;
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+header {
+    background-color: #565a5e;
+    color: #fff;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* izquierda | centro | derecha */
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
+    padding-left: 10px;
+}
+
+/* Se mantiene */
+.logo {
+    height: 100px;
+    margin-right: 0; /* ya no hace falta margen porque usamos grid */
+    margin-left: 20px;
+}
+
+/* Centro: título centrado (se mantiene .school-name) */
+.logo-center {
+    text-align: center;
+}
+
+.school-name {
+    font-size: 2.0em;
+    font-weight: bold;
+    animation: fadeInUp 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Frase nueva debajo del título */
+.school-phrase {
+    margin-top: 6px;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #e4e4e4;
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* Derecha: redes */
+.socials {
+    display: inline-flex;
+    align-items: right;
+    gap: 12px;
+    margin-right: 30px;
+}
+
+.social-link {
+    font-size: 1.25rem;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    color: #ffffff;
+    padding-bottom: 60px;
+}
+
+.social-link:hover,
+.social-link:focus {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Animación existente */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+    .logo-container {
+        grid-template-columns: 1fr; /* apilar */
+        justify-items: center;
+        text-align: center;
+        gap: 8px;
+
+    }   
+
+    .school-phrase {
+        font-size: 0.7rem;
+    }
+
+    .hero, h1{
+        font-size: 0.8em;
+    }
+
+    .card, p{
+        font-size: 0.8rem;
+    }
+
+
+    .logo { height: 72px; display: none;}
+    .socials { margin-top: 4px;}
+    .social-link { padding-bottom: 0;}
+    .school-name{
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+
+/* Estilos para dispositivos móviles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    margin: 10px;
+}
+
+nav {
+    background-color: #ed1919;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+.nav-list li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background-color: #fff;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: block;
+    border-radius: 3px;
+}
+
+.nav-list a:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    color: #ed1919;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ed1919;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content ol{
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.dropdown-content ol a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content ol a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #ed1919;
+    border-radius: 0px;
+}
+
+.welcome-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 5px;
+}
+
+section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.nav-list .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ed1919;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-list .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-list .dropdown-content ol {
+    margin: 0;
+}
+
+.nav-list .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list .dropdown-content a:hover {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    color: #ed1919;
+}
+
+main {
+    padding: 0;
+    border-radius: 10px;
+    background-color: aliceblue;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #565a5e;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 0 200px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+    margin-top: 2%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column.left {
+    text-align: left;
+}
+
+.footer-column.right {
+    text-align: right;
+}
+
+.separator {
+    margin: 20px 0;
+    border-top: 1px solid #ffffff;
+}
+
+.separator-dos {
+    margin: 20px 0;
+    border-top: 1px solid #000000;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.separator-tres {
+    margin: 20px 0;
+    border-top: 1px solid #000000;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.no-copiable {
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.column {
+    flex: 1;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-column img {
+    width: 40%;
+    height: auto;
+    display: block;
+}
+
+.text-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.social-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px; /* Añadido para separación entre el párrafo y las imágenes */
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ajusta este valor según la separación deseada */
+    width: 100%;
+}
+
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img {
+    width: 45px; /* Ajusta este valor según tus necesidades */
+    height: auto;
+    display: block;
+}
+
+.column-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-qs {
+    padding: 15px;
+    width: 45%;
+    margin: 20px 0;
+}
+.left-o {
+    float: left;
+    text-align: left;
+    text-align: justify;
+}
+.right-o {
+    float: right;
+    text-align: justify;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espacio debajo de las columnas */
+}
+
+.column-ok {
+    width: 48%; /* Ajusta el ancho de las columnas */
+    border: 1px solid #ccc; /* Solo para visualización */
+    padding: 10px; /* Solo para visualización */
+}
+
+.news-section {
+    clear: both; /* Asegura que la sección de noticias se coloque debajo de las columnas */
+    margin-top: 20px; /* Espacio adicional si es necesario */
+    justify-content: center; /* Centra el contenido en el contenedor */
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.title-container h3 {
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: bold; /* Hace que el texto esté en negrita */
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+.parrafo-nose{
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Posición inicial */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+@media (max-width: 1200px) {
+    .left-o,
+    .right-o {
+        float: none; /* Elimina el flotado para que se apilen en una columna */
+        text-align: left; /* Ajusta el texto a la izquierda */
+    }
+
+    .right-o {
+        text-align: left; /* Asegúrate de que el texto alineado a la izquierda en pantallas pequeñas */
+    }
+
+    .separator {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+        text-align: center; /* Alinea el texto al centro */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+
+    .separator::before,
+    .separator::after {
+        margin: 10px 0; /* Reduce el espacio entre las líneas en pantallas pequeñas */
+    }
+
+    .separator img {
+        height: 20px; /* Reducir tamaño del logo para pantallas pequeñas si es necesario */
+        margin: 0; /* Eliminar margen derecho en pantallas pequeñas */
+    }
+
+    .title-container{
+        text-align: center;
+        justify-content: center;
+        justify-items: center
+    }
+
+}
+/* Encabezado */
+@media (max-width: 1450px) {
+
+    .footer{
+        margin: 10px; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+        padding-bottom: 20px;
+    }
+
+    .section-qs {
+        width: 100%; /* Ocupa el ancho completo */
+        margin: 20px 0; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+    }
+
+    .container{
+        margin: 0 10px;
+    }
+
+    .contenido-card{
+        font-size: 1em;
+    }
+
+    .parrafo-nose{
+        font-size: 1em;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+
+    .simple-news-box{
+        font-size: 0.8em;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+        background-color: #ed1919;
+    }
+  
+  
+    .nav-list.active {
+        display: flex;
+    }
+  
+    .nav-list li {
+        margin: 10px 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  
+    .menu-icon {
+        display: flex;
+        padding-bottom: 35px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+  
+    .nav-list a {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      line-height: 15px;
+    }
+  
+    .dropdown-content {
+      position: absolute;
+      width: 43%; /* Dropdowns ocupan todo el ancho en pantallas pequeñas */
+      left: 10px;
+      padding: 0;
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    }
+  }
+
+
+/* Pie de Pagina */
+@media (max-width: 1000px) {
+    .footer {
+        padding: 40px;
+        margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
+        margin-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia a diseño de columna para pantallas pequeñas */
+        
+    }
+
+    .footer-column {
+        flex: 1 1 auto; /* Ajusta el ancho automático para adaptarse al contenido */
+        padding: 10px;
+        text-align: center; /* Alineación al centro para pantallas pequeñas */
+    }
+
+    .image-column img {
+        width: 25%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    }
+
+    .social img {
+        width: 30px; /* Ajusta el tamaño de las imágenes de redes sociales para pantallas pequeñas */
+    }
+
+    .school-name{
+        font-size: 1.4em;
+        padding-right: 20px;
+        text-align: center;
+        
+    }
+
+    .logo-container{
+        padding-left: 10px;
+    }
+
+    .text-column p{
+        font-size: 14px;
+    }
+
+    .social-column p{
+        font-size: 14px;
+    }
+
+}
+
+.main-ok{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+      --size-dos: 48px;      /* diámetro del círculo */
+      --icon-dos: 23px;       /* tamaño del logo dentro */
+      --gap-dos: 18px;
+    }
+    
+.socials-dos{
+      display:flex; align-items:center; gap:var(--gap-dos);
+    }
+
+    .socials-dos a{
+      width:var(--size-dos); height:var(--size-dos);
+      background:#fff; border-radius:50%;
+      display:grid; place-items:center;
+      text-decoration:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      border:1px solid rgba(0,0,0,.06);
+    }
+
+    .socials-dos a:hover{
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+
+    .socials-dos i{
+      font-size:var(--icon-dos);
+      line-height:1;
+    }
+
+    /* Colores oficiales */
+    .facebook i{ color:#1877F2; }   /* Facebook Blue */
+    .youtube  i{ color:#FF0000; }   /* YouTube Red  */
+
+    /* Instagram gradient en el ícono (texto) */
+    .instagram i{
+      background:
+        radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    /* Accesibilidad: foco visible */
+    .socials-dos a:focus{
+      outline:none;
+      box-shadow: 0 0 0 3px rgba(24,119,242,.25), 0 6px 18px rgba(0,0,0,.08);
+    }
+
+    /* ===== Responsivo ===== */
+
+/* Teléfonos pequeños */
+@media (max-width: 500px){
+  :root{
+    --size-dos: 40px;      /* diámetro del círculo */
+      --icon-dos: 20px;       /* tamaño del logo dentro */
+      --gap-dos: 15px;
+  }
+}
+
+
+/* Accesibilidad: reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .socials a{ transition: none; }
+  .socials a:hover{ transform: none; }
+}
+
+
+/* Estilos de la caja */
+.simple-news-box {
+    background-color: aliceblue; /* Color de fondo */
+    padding: 10px;             /* Espaciado interno */
+    border-radius: 10px;        /* Bordes ligeramente redondeados */
+    width: 97%;              /* Ancho de la caja */
+    text-align: center;        /* Centrar el texto */
+    margin: 15px auto;         /* Centrar la caja en la página */
+}
+
+/* Estilos del texto */
+.simple-news-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000; /* Color del texto */
+}
+
+.img-ok{
+    border-radius: 15px;
+}
+
+.rotar-imagen{
+    user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
+}
+
+.rotar-imagen::after{
+  content: "";
+  position: absolute;
+  inset: 0;                  /* overlay transparente */
+  background: transparent;
+}
+
+.img-guard{
+  position: relative; 
+  display: inline-block;
+}
+.img-guard img{
+  user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
+}
+.img-guard::after{
+  content: "";
+  position: absolute;
+  inset: 0;                  /* overlay transparente */
+  background: transparent;
+}
+
+:root{
+      --bg:#0b1020;           /* fondo general (oscuro, agradable en pantallas) */
+      --panel:#dcfffd;        /* paneles */
+      --panel-2:#eaeaea;      /* panel alterno */
+      --text:#eaf0ff;         /* texto principal */
+      --muted:#1c1c1d;        /* texto secundario */
+      --brand:#6ea8fe;        /* color principal */
+      --brand-2:#9fdb8f;      /* color complemento */
+      --ring:#95b8ff;         /* foco */
+      --ok:#5dd39e;
+      --warn:#ffd166;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    .wrap{max-width:100%; margin:0 auto; padding:0px}
+
+    header.hero{
+      background: linear-gradient(120deg, rgba(138, 180, 245, 0.14), rgba(136, 158, 246, 0.1));
+      padding:20px;
+      position:relative; overflow:hidden;
+      margin-bottom: 8px;
+      border-radius: 10px;
+    }
+    .hero h1{ 
+     font-size: 2em;
+     margin-bottom: 30px;
+     color: #003366;
+     text-align: left;
+    }
+    .hero p{margin:0; color: #222222;}
+
+    .titulo-dos{
+        text-align:center;
+        margin-bottom: 25px;
+        color: #340000;
+    }
+
+    /* Barra de secciones (pestañas) */
+    .tabs{
+      display:flex; gap:10px; flex-wrap:wrap; margin:20px 0 14px; margin-bottom: 5px;
+    }
+    .tabs [role="tab"]{
+      appearance:none; border:none; cursor:pointer; padding:10px 14px; font-weight:600;
+      border-radius:12px; color:var(--text);
+      background: linear-gradient(180deg, #1a4fc3, #195ced);
+      border: 1px solid rgba(151, 200, 255, 0.25);
+      transform: translateY(0);
+      transition: transform .15s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .tabs [role="tab"]:hover{ transform: translateY(-1px); }
+    .tabs [role="tab"][aria-selected="true"]{
+      background: linear-gradient(180deg, #ededed, #f8f8f8);
+      border-color: rgba(8, 68, 209, 0.55);
+      box-shadow: 0 0 0 3px rgba(212, 206, 255, 0.25);
+      color: #195ced;
+    }
+    .tabs [role="tab"]:focus-visible{ outline:none; box-shadow:0 0 0 4px var(--ring) }
+
+    .panel{
+      border: none;
+      padding: 0px;
+      position:relative; overflow:hidden;
+    }
+    .panel header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      margin: -2px 0 6px;
+    }
+    .panel h2{margin-top: 20px; color: #120e5e;}
+    .panel .desc{ color: #000;}
+
+    .actions{display:flex; gap:8px; flex-wrap:wrap}
+    .btn{
+      appearance:none; border:none; cursor:pointer; padding:9px 12px; border-radius:10px; font-weight:600;
+      color: #0b1020; background: var(--brand);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .btn.secondary{ background: var(--brand-2); }
+    .btn.ghost{ background: transparent; color:#000; border:1px solid rgba(0, 0, 0, 0.35) }
+    .btn:hover{ filter:brightness(1.05); transform: translateY(-1px) }
+
+    .grid{display:grid; gap:14px}
+    @media(min-width:1000px){ .grid{ grid-template-columns: 1.2fr 1fr } }
+
+    .card{
+      background: rgba(255, 255, 255, 0.02);
+      border: 2px solid rgba(26, 72, 241, 0.603);
+      border-radius:14px; padding:14px; position:relative;
+    }
+    .card h3{margin:4px 0 16px}
+    .tag{display:inline-block; font-size:.85rem; padding:2px 8px; border-radius:999px; border:1px solid rgba(151,178,255,.35); color:var(--muted)}
+
+    /* Ocultar/mostrar secciones con aria y atributo hidden */
+    [role="tabpanel"][hidden]{ display:none !important }
+
+    /* Animación sutil al cambiar */
+    .fade-in{ animation: fade .22s ease-out }
+    @keyframes fade{ from{opacity:.6; transform: translateY(4px)} to{opacity:1; transform:none} }
+
+    footer{color:var(--muted); text-align:center; margin:28px 0 8px}
+    .verse-hero{position:relative; margin:0 0 10px; border-radius:14px; overflow:hidden;}
+  .verse-hero img{width:100%; height:clamp(180px, 36vw, 320px); object-fit:cover; display:block; border:1px solid rgba(151,178,255,.2)}
+  .verse-hero .cap{position:absolute; left:12px; right:12px; bottom:12px; background:rgba(0,0,0,.45); backdrop-filter:saturate(130%) blur(2px); padding:10px 12px; border-radius:12px; color:#fff; font-weight:700; line-height:1.35}
+
