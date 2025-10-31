@@ -20,15 +20,30 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="/" class="no-copiable">Inicio</a></li>
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
                     <li class="dropdown">
                         <a class="no-copiable">Mi Institución</a>
                         <ul class="dropdown-content">
@@ -59,9 +74,9 @@
                           <a class="no-copiable">Documentos</a>
                           <ul class="dropdown-content">
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
-                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
                               <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="semana-cultural" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
@@ -374,4 +389,5 @@
         </div>
     </footer>
 </body>
+
 </html>
