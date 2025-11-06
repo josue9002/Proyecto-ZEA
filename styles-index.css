@@ -863,18 +863,20 @@ main {
   .nav-btn.next{ left:auto; right:12px; }
   .nav-btn.prev{ left:12px; }
 
+ 
   /* Punticos */
   .dots{
-    position:absolute; left:0; right:0; bottom:5px;
-    display:flex; justify-content:center; gap:0px; z-index:4;
+    position:absolute; left:0; right:0; bottom:15px;
+    display:flex; justify-content:center; gap:8px; z-index:4;
   }
   .dot{
     width:12px; height:12px; border-radius:50%;
-    background:#454444; cursor:pointer; border:2px solid transparent;
+    background:#272727b5; cursor:pointer; border:2px solid transparent;
     transition:transform .2s, background .2s;
   }
   .dot:hover{ transform:scale(1.1); }
-  .dot.active{ background:#ebebeb; border-color:#494848; }
+  .dot.active{ background:#ebebebf4; border-color:#272727b5; }
+
 
   /* Responsive alto opcional */
   @media (max-width:700px){
