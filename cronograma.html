@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana Cultural</title>
+    <title>Cronograma</title>
     <link rel="stylesheet" href="styles-cronograma.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="photo-logo.png">
+    <link rel="icon" href="photo-logo-banner.png">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
      crossorigin="anonymous"></script>
+     <script src="script-no-copiable"></script>
 </head>
 <body>
     <div class="container">
+         
         <header>
             <div class="logo-container">
-                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="/" class="no-copiable">Inicio</a></li>
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
                     <li class="dropdown">
                         <a class="no-copiable">Mi Institución</a>
                         <ul class="dropdown-content">
@@ -54,9 +71,9 @@
                           <a class="no-copiable">Documentos</a>
                           <ul class="dropdown-content">
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
-                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
                               <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="semana-cultural" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
@@ -73,141 +90,188 @@
               </nav>
           </header>
 
-        <script src="script-menu.js"></script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                document.querySelectorAll('.no-copiable').forEach(element => {
-                    element.addEventListener('copy', (e) => e.preventDefault());
-                    element.addEventListener('cut', (e) => e.preventDefault());
-                    element.addEventListener('contextmenu', (e) => e.preventDefault());
-                });
-            });
-        </script>
+          <script src="script-menu.js"></script>
 
         <main>
             <section>
-                <div class="container-dos">
-    <header class="hero" aria-labelledby="site-title">
-      <div class="logo-dos" title="Liceo Mixto Emperador">
-        <img src="photo-logo-animado-2.png" alt="Escudo Liceo Mixto Emperador">
-      </div>
-      <div class="title">
-        <h1 id="site-title">Cronograma académico</h1>
-        <p> 2025 — <strong id="periodo-label">Tercer periodo</strong></p>
-        <div class="controls" role="region" aria-label="Controles">
-          <input id="search" class="input" type="search" placeholder="Buscar actividad…" aria-label="Buscar actividad">
-          <label class="toggle">
-            <input id="only-pc" type="checkbox" aria-label="Mostrar solo por confirmar"> Mostrar<strong>Por confirmar</strong>
-          </label>
-          <select id="view-month" class="select" aria-label="Filtrar por mes">
-            <option value="all">Todos los meses</option>
-            <option value="10">Octubre</option>
-            <option value="11">Noviembre</option>
-          </select>
-          <button id="export" class="btn btn-primary" title="Exportar PDF">🖨️ Exportar PDF</button>
-        </div>
-      </div>
-
-      <!-- Selector de periodo -->
-      <div class="period-switch">
-        <div id="period-trigger" class="period-trigger" role="button" aria-haspopup="menu" aria-expanded="false">
-          3er periodo ▾
-        </div>
-        <div id="period-menu" class="period-menu" role="menu" aria-label="Seleccionar periodo">
-          <div class="period-item" data-period="1" role="menuitem">1er periodo </div>
-          <div class="period-item" data-period="2" role="menuitem">2do periodo </div>
-          <div class="period-item" data-period="3" role="menuitem">3er periodo </div>
-        </div>
+              <!-- Wrap everything with .crono to keep styles scoped -->
+  <div class="crono">
+    <header class="c-header">
+      <h1 class="heading">Cronograma - 3er Periodo</h1>
+      <div class="legend">
+        <span class="chip"><span class="dot" style="background:var(--accent-1)"></span> Fechas clave</span>
+        <span class="chip"><span class="dot" style="background:var(--accent-2)"></span> Indicaciones</span>
+        <span class="chip"><span class="dot" style="background:var(--accent-3)"></span> Clausura / Horarios</span>
       </div>
     </header>
 
-    <section-dos class="timeline" id="timeline" aria-live="polite"></section-dos>
-<div hidden id="miHidden">
-    <!-- Editor (solo para 1er y 2do) -->
-    <section-dos id="editor" class="panel" hidden>
-      <h2 style="margin:0">✍️ Editor del periodo <span id="editor-periodo" class="pill">1</span></h2>
-      <div class="form">
-        <div class="row">
-          <input id="f-title" class="input" placeholder="Actividad (ej. Exámenes finales)">
-          <input id="f-date" class="input" placeholder="Fecha visible (ej. 12 al 18 de mayo)">
-        </div>
-        <div class="row">
-          <input id="f-month" class="input" placeholder="Mes (número, ej. 5 u 11) — opcional">
-          <input id="f-dayStart" class="input" placeholder="Día inicio (número) — opcional">
-          <input id="f-dayEnd" class="input" placeholder="Día fin (número) — opcional">
-        </div>
-        <div class="row">
-          <input id="f-tags" class="input" placeholder="Tags (coma: informes,docente)">
-          <label class="toggle"><input id="f-confirm" type="checkbox"> Por confirmar</label>
-          <select id="f-chip" class="select">
-            <option value="">Etiqueta visual</option>
-            <option value="eval">Evaluación</option>
-            <option value="final">Definitivo</option>
-            <option value="docs">Documentos</option>
-          </select>
-          <button id="add" class="btn btn-primary">Añadir actividad</button>
-        </div>
+    <main class="wrapper">
+      <div class="grid">
+        <!-- SEDE PRINCIPAL -->
+        <section class="card">
+          <div class="head">
+            <h2>Sede Principal</h2>
+            <span class="tag">Cuarto a Décimo</span>
+          </div>
+          <div class="body">
+            <ul class="c-list">
+              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
+              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
+                <div class="note">
+                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
+                  <div class="times">
+                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
+                    <span class="pill">Estudiantes ingresan 8:00 a.m. (despedida)</span>
+                  </div>
+                </div>
+              </li>
+              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
+              <li class="c-item"><strong>28 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
+                <div class="timebox"><strong>Hora:</strong> 7:00 a.m.</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SEDE 1 y 2 -->
+        <section class="card">
+          <div class="head">
+            <h2>Sede 1 y 2</h2>
+            <span class="tag">Tercero a Décimo (Sede 2)</span>
+          </div>
+          <div class="body">
+            <h3 style="margin-top:0">Tercero a Décimo – Sede 2</h3>
+            <ul class="c-list">
+              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
+              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
+                <div class="note">
+                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
+                  <div class="times">
+                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
+                    <span class="pill">Estudiantes 8:00 a.m. (despedida)</span>
+                    <span class="pill">Jornada tarde: acudientes 1:00 p.m.</span>
+                    <span class="pill">Estudiantes 2:00 p.m. (despedida)</span>
+                  </div>
+                </div>
+              </li>
+              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
+              <li class="c-item"><strong>26 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
+                <div class="timebox">
+                  <strong>Hora:</strong> <span class="pill">De 1.º a 5.º: 1:00 p.m.</span>
+                  <span class="pill">De 6.º a 11.º: 3:30 p.m.</span>
+                </div>
+              </li>
+            </ul>
+
+            <h3 style="margin-top:18px">Primera infancia – Sede 2 (Materno a Transición)</h3>
+            <ul class="c-list">
+              <li class="c-item"><strong>Del 10 al 14 de noviembre:</strong> Exámenes finales. 
+                <div class="times">
+                  <span class="pill">Jornada mañana: salida 10:00 a.m.</span>
+                  <span class="pill">Jornada tarde: salida 4:00 p.m.</span>
+                </div>
+              </li>
+              <li class="c-item"><strong>18 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>19 de noviembre:</strong> Despedida – vienen con uniforme de educación física y <strong>NO</strong> traen lonchera.
+                <div class="timebox">
+                  <strong>Hora:</strong>
+                  <div class="times">
+                    <span class="pill">Jornada mañana: 8:00 a.m. a 11:00 a.m.</span>
+                    <span class="pill">Jornada tarde: 2:00 p.m. a 5:00 p.m.</span>
+                  </div>
+                </div>
+              </li>
+              <li class="c-item"><strong>26 de noviembre:</strong> Clausura y entrega de informes – los estudiantes vienen con el uniforme de diario.
+                <div class="timebox">
+                  <strong>Hora:</strong>
+                  <div class="times">
+                    <span class="pill">Pre‑jardín y Jardín: 7:30 a.m.</span>
+                    <span class="pill">Materno, Párvulos y Transición: 9:30 a.m.</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SEDE 3 -->
+        <section class="card">
+          <div class="head">
+            <h2>Sede 3</h2>
+            <span class="tag">Tercero a Décimo</span>
+          </div>
+          <div class="body">
+            <ul class="c-list">
+              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
+              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
+              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
+                <div class="note">
+                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
+                  <div class="times">
+                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
+                    <span class="pill">Estudiantes 8:00 a.m. (despedida)</span>
+                    <span class="pill">Jornada tarde: acudientes 1:00 p.m.</span>
+                    <span class="pill">Estudiantes 2:00 p.m. (despedida)</span>
+                  </div>
+                </div>
+              </li>
+              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
+              <li class="c-item"><strong>28 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
+                <div class="timebox">
+                  <strong>Hora:</strong>
+                  <div class="times">
+                    <span class="pill">De 1.º a 5.º: 1:30 p.m.</span>
+                    <span class="pill">De 6.º a 11.º: 4:00 p.m.</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-
-      <div class="row">
-        <label class="btn">
-          📥 Importar CSV/JSON
-          <input id="import-file" type="file" accept=".csv,.json" hidden>
-        </label>
-        <button id="export-csv" class="btn">📤 Exportar CSV</button>
-        <button id="clear" class="btn btn-ghost" title="Borrar todo">🗑️ Limpiar periodo</button>
-      </div>
-
-      <div class="panel" style="gap:8px">
-        <strong>Formato CSV:</strong>
-        <code style="font-size:12px">title,dateLabel,month,dayStart,dayEnd,tags,confirm,chip</code>
-        <span class="muted" style="color:var(--muted);font-size:12px">Ejemplo: <em>Semana institucional,06 al 10 de octubre,10,6,10,institucional,,</em></span>
-      </div>
-
-      <table class="table" id="table"></table>
-  </div>
-    </section-dos>
-
-    <script src="script-cronograma.js"></script> <!-- Enlace al archivo JavaScript externo -->
+    </main>
+  </div>  
             </section>
-        </main>     
+        </main>
     </div>
-    
+
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column left">
                 <div class="column image-column">
-                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
                 </div>
             </div>
             <div class="column text-column">
-                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
                 <br>
-                <p>Cali - Colombia</p>
+                <p class="no-copiable">Cali - Colombia</p>
             </div>
             <div class="footer-column right">
                 <div class="column social-column">
                     <br>
-                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
                         <div class="main-ok">
-                            <div class="icon fb">
-                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <span>Facebook</span>
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                                 </a>
-                            </div>
-                    
-                            <div class="icon ig">
-                                 <a href="https://www.instagram.com/limec.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==9"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>Instagram</span>
-                            </div>
-                    
-                            <div class="icon yt">
-                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-youtube"></i>
-                                <span>YouTube</span>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -216,8 +280,9 @@
         </div>
         <div class="separator"></div>
         <div class="footer-bottom">
-            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
         </div>
     </footer>
 </body>
+
 </html>
