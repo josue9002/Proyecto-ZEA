@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles-nuestras-sedes.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="photo-logo.png">
+    <link rel="icon" href="photo-logo-banner.png">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
      crossorigin="anonymous"></script>
+     <script src="script-no-copiable"></script>
 </head>
 <body>
     <div class="container">
@@ -69,9 +70,9 @@
                           <a class="no-copiable">Documentos</a>
                           <ul class="dropdown-content">
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
-                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
                               <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="semana-cultural" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
@@ -88,165 +89,190 @@
               </nav>
           </header>
 
-        <script src="script-menu.js"></script>
+          <script src="script-menu.js"></script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                document.querySelectorAll('.no-copiable').forEach(element => {
-                    element.addEventListener('copy', (e) => e.preventDefault());
-                    element.addEventListener('cut', (e) => e.preventDefault());
-                    element.addEventListener('contextmenu', (e) => e.preventDefault());
-                });
-            });
-        </script>
+  <section>
+      <main class="container-dos">
+    <h1 class="heading">Nuestras Sedes</h1>
 
-        <main>
-            <section class="school-branches">
-                <h1>Nuestras Sedes</h1>
-                <br>
-                <div class="buttons-container">
-                    <button class="branch-btn active" onclick="showBranch('main')">Sede Principal</button>
-                    <button class="branch-btn" onclick="showBranch('north')">Sede N°1</button>
-                    <button class="branch-btn" onclick="showBranch('south')">Sede N°2</button>
-                    <button class="branch-btn" onclick="showBranch('east')">Sede N°3</button>
-                </div>
-                <br>
-                <div class="branch-content">
-                    <div id="main" class="branch active">
-                        <br>
-                        <h3>Sede Principal</h3>
-                        <p>Ubicada junto al Bulevar de Oriente, esta es la sede principal del colegio LIMEC.</p>
-                        <div class="container-dos">
-                            <div class="column-dos">
-                                <img src="photo-sede-principal.png" alt="" class="img-dos">
-                                <div class="info">
-                                    <div class="information">
-                                      <img src="photo-telefono.png" class="icon-new" alt="" />
-                                      <p><a href="tel:+576023063701" target="_blank">(602) 306 3701</a> - <a href="tel:+576024828634">(602) 482 8634</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-correo.png" class="icon-new" alt="" />
-                                      <p><a href="emperadordecali@hotmail.com" target="_blank">emperadordecali@hotmail.com</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-whatsapp-verde.png" class="icon-new" alt="" />
-                                      <p><a href="https://wa.me/c/573187353755" target="_blank">318 735 3755</a></p>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="column-tres">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.710371501005!2d-
+    <div class="tabs" role="tablist" aria-label="Sedes del colegio">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-principal" id="tab-principal">SEDE PRINCIPAL</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-12" id="tab-12">SEDE 1 Y 2</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">SEDE 3</button>
+    </div>
+
+    <!-- SEDE PRINCIPAL -->
+    <section id="panel-principal" class="panel active card" role="tabpanel" aria-labelledby="tab-principal">
+      <div class="header">
+        <span class="badge">Sede principal</span>
+        <p class="desc">Ubicada junto al Bulevar de Oriente, esta es la sede principal del colegio LIMEC.</p>
+        <div class="contact">
+          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023063701" target="_blank"> (602) 306 3701</a> - <a href="tel:+576024828634">(602) 482 8634</a></div>
+          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
+          <div class="item"><strong>WhatsApp:<br></strong> <a href="https://wa.me/c/573187353755" target="_blank" rel="noopener">+57 318 735 3755</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Slider izquierda -->
+        <div>
+          <div class="slider" data-slider="principal">
+            <div class="slides">
+              <div class="slide"><img src="photo-sede-principal.png" alt="Patio central de la sede principal"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1015/800/600" alt="Aulas de la sede principal"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1039/800/600" alt="Laboratorio de ciencias"></div>
+            </div>
+            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
+            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
+          </div>
+        </div>
+
+        <!-- Mapa derecha (reemplaza el src con tu embed de Google Maps) -->
+        <div class="map">
+          <!-- Inserta aquí tu Google Maps Embed: -->
+          <iframe
+            title="Mapa Sede principal"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.710371501005!2d-
                                 76.4839524227873!3d3.420563942564126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0
                                 x8e30a74086ccb29d%3A0x66867908bbd4f8f8!2sDg.%2026p%2015%20%2393-32%2C%20Marroquin%20II%2C
-                                %20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1724282823003!5m2!1ses!2sco" 
-                                width="100%" height="525em" style="border:0; border-radius: 15px;"  allowfullscreen="100%" loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade" border-radius= "15px;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="north" class="branch">
-                        <br>
-                        <h3>Sede N°1</h3>
-                        <p>En el barrio Marroquin II, es la mas grande de todas las sedes para primaria y bachillerato.</p>
-                        <div class="container-dos">
-                            <div class="column-dos">
-                                <img src="photo-sede-1.png" alt="" class="img-dos">
-                                <div class="info">
-                                    <div class="information">
-                                      <img src="photo-telefono.png" class="icon-new" alt="" />
-                                      <p><a href="tel:+576023410721" target="_blank">(602) 341 0721</a> - <a href="tel:+576023410891">(602) 341 0891</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-correo.png" class="icon-new" alt="" />
-                                      <p><a href="emperadordecali@hotmail.com" target="_blank">emperadordecali@hotmail.com</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-whatsapp-verde.png" class="icon-new" alt="" />
-                                      <p><a href="https://wa.me/c/573183835230" target="_blank">318 383 5230</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column-dos">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684.0036332
-                                905182!2d-76.4779206845094!3d3.425887511540758!2m3!1f0!2f0!3f0!3m2!1i1024!2i76
-                                8!4f13.1!3m3!1m2!1s0x8e30a76b19c525d7%3A0x114d96edf382a9ed!2sColegio%20Liceo%20
-                                Emperador%20De%20Cali%20Sede%202!5e0!3m2!1ses!2sco!4v1724282012403!5m2!1ses!2sco"
-                                width="100%" height="525em" style="border:0; border-radius: 15px;"  allowfullscreen="" loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade" border-radius= "15px;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="south" class="branch">
-                        <br>
-                        <h3>Sede N°2</h3>
-                        <p>Al frente de la Clinica Versalles, nuestra sede es un espacio tranquilo y acogedor.</p>
-                        <div class="container-dos">
-                            <div class="column-dos">
-                                <img src="photo-sede-2.png" alt="" class="img-dos">
-                                <div class="info">
-                                    <div class="information">
-                                      <img src="photo-telefono.png" class="icon-new" alt="" />
-                                      <p><a href="tel:+576023799674" target="_blank">(602) 379 9674</a> - <a href="tel:+576023410891">(602) 341 0891</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-correo.png" class="icon-new" alt="" />
-                                      <p><a href="emperadordecali@hotmail.com" target="_blank">emperadordecali@hotmail.com</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-whatsapp-verde.png" class="icon-new" alt="" />
-                                      <p><a href="https://wa.me/c/573183835230" target="_blank">318 383 5230</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column-dos">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.68
-                                7211377462!2d-76.48031202527608!3d3.426133751388072!2m3!1f0!2f0!3f0!3m2!1i1
-                                024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%
-                                20MIXTO%20EMPERADOR%20DECALI!5e0!3m2!1ses!2sco!4v1724279814618!5m2!1ses!2sco"
-                                width="100%" height="525em" style="border:0; border-radius: 15px;"  allowfullscreen="" loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade" border-radius= "15px;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="east" class="branch">
-                        <br>
-                        <h3>Sede N°3</h3>
-                        <p>En el oriente de la ciudad de Cali, cerca del Polideportivo Calimio Decepaz.</p>
-                        <div class="container-dos">
-                            <div class="column-dos">
-                                <img src="photo-sede-3.png" alt="" class="img-dos">
-                                <div class="info">
-                                    <div class="information">
-                                      <img src="photo-telefono.png" class="icon-new" alt="" />
-                                      <p><a href="tel:+576023411264" target="_blank">(602) 341 1264</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-correo.png" class="icon-new" alt="" />
-                                      <p><a href="emperadordecali@hotmail.com" target="_blank">emperadordecali@hotmail.com</a></p>
-                                    </div>
-                                    <div class="information">
-                                      <img src="photo-whatsapp-verde.png" class="icon-new" alt="" />
-                                      <p><a href="https://wa.me/c/573168321874" target="_blank">316 832 1874</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column-dos">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7273
-                                668346857!2d-76.47313452278736!3d3.4164709426016806!2m3!1f0!2f0!3f0!3m2!1i10
-                                24!2i768!4f13.1!3m3!1m2!1s0x8e30a7b05df22e5b%3A0x7711d85efbfb2995!2sLiceo%20Mi
-                                xto%20Emperador%20de%20Cali!5e0!3m2!1ses!2sco!4v1724282647766!5m2!1ses!2sco" 
-                                width="100%" height="525em" style="border:0; border-radius: 15px;"  allowfullscreen="" loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade" border-radius= "15px;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                %20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1724282823003!5m2!1ses!2sco">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-                <script src="script-nuestras-sedes.js"></script>
-            </section>
+    </section>
         </main>
-    </div>
     
+
+    <!-- SEDE 1 Y 2 -->
+    <section id="panel-12" class="panel card" role="tabpanel" aria-labelledby="tab-12">
+      <div class="header">
+        <span class="badge">Sede 1 y 2</span>
+        <p class="desc">Dos campus grandes para primaria y bachillerato.</p>
+        <div class="contact">
+          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023410721" target="_blank"> (602) 341 0721</a> - <a href="tel:+576023410891">(602) 341 0891</a></div>
+          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
+          <div class="item"><strong>WhatsApp:<br></strong> <a href="https://wa.me/c/573183835230" target="_blank" rel="noopener">+57 318 383 5230</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <div class="slider" data-slider="s12">
+            <div class="slides">
+              <div class="slide"><img src="https://picsum.photos/id/1043/800/600" alt="Zona verde sede 1 y 2"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1041/800/600" alt="Espacios de juego"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1025/800/600" alt="Biblioteca infantil"></div>
+            </div>
+            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
+            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe
+            title="Mapa Sede 1 y 2"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.3770681302885!2d-76.48722330642092!3d3.4258159000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20EMPERADOR%20DE%20CALI!5e0!3m2!1ses-419!2sco!4v1762552383402!5m2!1ses-419!2sco">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDE 3 -->
+    <section id="panel-3" class="panel card" role="tabpanel" aria-labelledby="tab-3">
+      <div class="header">
+        <span class="badge">Sede 3</span>
+        <p class="desc">En el oriente de la ciudad de Cali, cerca del Polideportivo Calimio Decepaz.</p>
+        <div class="contact">
+          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023411264" target="_blank"> (602) 341 1264</a></div>
+          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
+          <div class="item"><strong>WhatsApp:<br></strong> <a href="https://wa.me/c/573168321874" target="_blank" rel="noopener">+57 316 832 1874</a></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <div class="slider" data-slider="s3">
+            <div class="slides">
+              <div class="slide"><img src="https://picsum.photos/id/1003/800/600" alt="Canchas múltiples"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1005/800/600" alt="Salón de música"></div>
+              <div class="slide"><img src="https://picsum.photos/id/1019/800/600" alt="Salón múltiple"></div>
+            </div>
+            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
+            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe
+            title="Mapa Sede 3"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.3636955328525!2d-76.4699477545605!3d3.416465103529289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7b05df22e5b%3A0x7711d85efbfb2995!2sLiceo%20Mixto%20Emperador%20de%20Cali!5e0!3m2!1ses!2sco!4v1762552888528!5m2!1ses!2sco">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </section>
+    </div>
+
+      <script>
+    // ----- Tabs (mostrar/ocultar paneles sin cambiar de página) -----
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        panel.classList.add('active');
+        // Mover foco al inicio del panel para accesibilidad
+        panel.querySelector('.badge')?.focus?.();
+      });
+    });
+
+    // ----- Slider simple (por sección) -----
+    class MiniSlider {
+      constructor(root){
+        this.root = root;
+        this.track = root.querySelector('.slides');
+        this.slides = Array.from(root.querySelectorAll('.slide'));
+        this.index = 0;
+        this.total = this.slides.length;
+        this.prev = root.querySelector('.nav.prev');
+        this.next = root.querySelector('.nav.next');
+        this.prev.addEventListener('click', ()=>this.go(this.index-1));
+        this.next.addEventListener('click', ()=>this.go(this.index+1));
+        // Arrastre táctil
+        this.startX = 0; this.deltaX = 0;
+        this.track.addEventListener('touchstart', e=>{ this.startX = e.touches[0].clientX; }, {passive:true});
+        this.track.addEventListener('touchmove', e=>{ this.deltaX = e.touches[0].clientX - this.startX; }, {passive:true});
+        this.track.addEventListener('touchend', ()=>{
+          if (Math.abs(this.deltaX) > 40) this.go(this.index + (this.deltaX<0 ? 1 : -1));
+          this.deltaX = 0;
+        });
+        this.update();
+      }
+      go(i){
+        if (i<0) i=this.total-1;
+        if (i>=this.total) i=0;
+        this.index=i; this.update();
+      }
+      update(){
+        const x = -this.index * 100;
+        this.track.style.transform = `translateX(${x}%)`;
+      }
+    }
+    document.querySelectorAll('.slider').forEach(sl => new MiniSlider(sl));
+  </script>
+
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column left">
@@ -287,4 +313,5 @@
         </div>
     </footer>
 </body>
+
 </html>
