@@ -1036,7 +1036,7 @@ body.modal-open { overflow: hidden; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px;
   padding: 16px 20px;
-  background: #01b4b4; color:#000000; font-weight: 700;
+  background: #86d9fd; color:#000000; font-weight: 700;
 }
 
 .modal-anuncio__body{ padding: 20px; }
