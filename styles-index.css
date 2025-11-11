@@ -1089,7 +1089,8 @@ body.modal-open { overflow: hidden; }
 .modal-anuncio__image{
   flex: 0 0 200px;
   width: 220px;
-  height: 230px;
+  height: 200px;
+  margin-bottom: 20px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
