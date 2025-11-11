@@ -1047,6 +1047,10 @@ main {
 .texto{
   color: #000;
   text-align: justify;
+  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
   .wrap{
@@ -1144,6 +1148,10 @@ strong{
     font-size:28px;
     letter-spacing:.4px;
     text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   .mini-table{
@@ -1151,6 +1159,10 @@ strong{
     border-collapse:collapse;
     margin-top:14px;
     font-size:18px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   .mini-table td{
     border:1px solid #474747;
