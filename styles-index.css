@@ -428,6 +428,9 @@ main {
 .card img{
 	width: 100%;
 	height: auto;
+  user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
 }
 .card .contenido-card{
 	padding: 15px;
