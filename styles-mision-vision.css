@@ -1128,6 +1128,9 @@ main {
   max-height:100%;
   margin:auto;                     /* centra dentro del círculo */
   transition: transform 0.3s ease;
+  user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
 }
 
 .icon img:hover {
