@@ -7,23 +7,39 @@
     <link rel="stylesheet" href="styles-modalidades-sena.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="photo-logo.png">
+    <link rel="icon" href="photo-logo-banner.png">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
      crossorigin="anonymous"></script>
+     <script src="script-no-copiable"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="/" class="no-copiable">Inicio</a></li>
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
                     <li class="dropdown">
                         <a class="no-copiable">Mi Institución</a>
                         <ul class="dropdown-content">
@@ -54,9 +70,9 @@
                           <a class="no-copiable">Documentos</a>
                           <ul class="dropdown-content">
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
-                              <ol><a href="Manual de Convivencia.pdf" class="no-copiable">Manual de Convivencia</a></ol>
-                              <ol><a href="Horario de Clases.pdf" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="semana-cultural" class="no-copiable">Semana Cultural</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="programacion-sc" class="no-copiable">Prog. Semana Cultural</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
@@ -75,113 +91,126 @@
 
           <script src="script-menu.js"></script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                document.querySelectorAll('.no-copiable').forEach(element => {
-                    element.addEventListener('copy', (e) => e.preventDefault());
-                    element.addEventListener('cut', (e) => e.preventDefault());
-                    element.addEventListener('contextmenu', (e) => e.preventDefault());
-                });
-            });
-        </script>
-
         <main>
-            <section>
-                <div class="tabs">
-                    <input type="radio" name="tabs" id="tabone" checked="checked">
-                    <label for="tabone">Asistencia Administrativa</label>
-                    <div class="tab">
-                      <h1>Asistencia Administrativa</h1>
-                      <br>
-                      <img src="sena/photo-administracion.png" alt="Asistencia Administrativa" class="float-image">
-                      <p>El programa Técnico en "Asistencia Administrativa", se creó para brindar 
-                        a los sectores productivos, la posibilidad de incorporar personal con altas 
-                        calidades laborales y profesionales que contribuyan al desarrollo económico, 
-                        social y tecnológico de su entorno y del país, así mismo ofrecer a los 
-                        aprendices formación en las tecnologias de la información y la comunicación 
-                        apoyadas en Internet como canal para obtener y compartir información en la 
-                        atención y servicio con los clientes, las relacionadas con la producción y 
-                        el procesamiento de información, el apoyo a los sistemas de información 
-                        contable y la organización de eventos. El país cuenta con potencial 
-                        productivo en el área de Servicios, y su fortalecimiento y crecimiento 
-                        socio-económico tanto a nivel regional como nacional, dependen en gran 
-                        medida de un recurso humano cualificado y calificado, capaz de responder 
-                        integralmente a la dinámica de los sectores. Este programa propende por la
-                         visión para la motivación del emprendimiento y el apoyo la administrativo 
-                         necesario para la consolidación de microempresas.</p>
-                    </div>
-                    
-                    <input type="radio" name="tabs" id="tabtwo">
-                    <label for="tabtwo">Sistemas</label>
-                    <div class="tab">
-                      <h1>Sistemas</h1>
-                      <br>
-                      <img src="sena/photo-sistemas.png" alt="Asistencia Administrativa" class="float-image">
-                      <p>El programa Técnico en SISTEMAS se creó para para brindar la posibilidad de 
-                        incorporar personal con altas calidades laborales y profesionales que contribuyan 
-                        al desarrollo económico, social y tecnológico de su entorno y del país debido a 
-                        que el uso de las tecnologías de la información y las comunicaciones aplica para 
-                        la mejora de los procesos productivos. La Articulación SENA de este Programa 
-                        ofrece todos los elementos de formación, aportando diferenciadores de valor 
-                        agregado metodológicas de aprendizaje, en el acceso a las tecnologia de ultima generación.</p>
-                    </div>
-                    
-                    <input type="radio" name="tabs" id="tabthree">
-                    <label for="tabthree">Instalaciones Electricas</label>
-                    <div class="tab">
-                      <h1>Instalaciones Electricas</h1>
-                      <br>
-                      <img src="sena/photo-electricidad.png" alt="Asistencia Administrativa" class="float-image">
-                      <p>El programa Técnico en Instalaciones Eléctricas Residenciales se creó para brindar al 
-                        sector eléctrico la posibilidad de incorporar personal con altas calidades laborales y 
-                        profesionales que contribuyan al desarrollo económico, social y tecnológico de su entorno 
-                        y del país, así mismo ofrecer a los aprendices formación en las tecnologías de producción 
-                        industrial. El programa para la ejecución del proceso de formación del SENA, está 
-                        orientado hacia la adquisición por parte del aprendiz, de las competencias necesarias 
-                        requeridas por el sector Eléctrico, las cuales deben fomentar su capacidad creativa 
-                        para resolver problemas, su carácter innovador para crear empresa, pero sobre todo; 
-                        contribuir en la ejecución de las instalaciones eléctricas residenciales aplicando 
-                        la normatividad vigente.</p>
-                    </div>
-                  </div>
-            </section>
-        </main>
+    <div class="wrapper">
+      <section class="intro">
+        <h2>Modalidades SENA</h2>
+        <p>
+          Programas técnicos articulados con el SENA para fortalecer la formación académica,
+          laboral y profesional de nuestros estudiantes.
+        </p>
+      </section>
+
+      <section class="modalidades">
+        <!-- Asistencia Administrativa -->
+        <article class="card">
+          <!-- Cambia esta ruta por la imagen real -->
+          <img src="sena/photo-administracion.png" alt="Estudiantes en clase de Asistencia Administrativa">
+          <div class="card-body">
+            <span class="tag">Técnico</span>
+            <h3>Asistencia Administrativa</h3>
+            <p>
+              El programa Técnico en <strong>Asistencia Administrativa</strong> se creó para brindar a los sectores productivos
+              la posibilidad de incorporar personal con altas calidades laborales y profesionales que contribuyan al
+              desarrollo económico, social y tecnológico de su entorno y del país.
+            </p>
+            <p>
+              Así mismo, ofrece a los aprendices formación en las tecnologías de la información y la comunicación
+              apoyadas en Internet como canal para obtener y compartir información en la atención y servicio con los
+              clientes, en la producción y el procesamiento de información, el apoyo a los sistemas de información contable
+              y la organización de eventos.
+            </p>
+            <p>
+              Este programa propende por la visión para la motivación del emprendimiento y el apoyo administrativo
+              necesario para la consolidación de microempresas, respondiendo a la dinámica del sector servicios a nivel
+              regional y nacional.
+            </p>
+          </div>
+        </article>
+
+        <!-- Sistemas -->
+        <article class="card">
+          <!-- Cambia esta ruta por la imagen real -->
+          <img src="sena/photo-sistemas.png" alt="Estudiantes en laboratorio de sistemas">
+          <div class="card-body">
+            <span class="tag">Técnico</span>
+            <h3>Sistemas</h3>
+            <p>
+              El programa Técnico en <strong>Sistemas</strong> se creó para brindar la posibilidad de incorporar personal con
+              altas calidades laborales y profesionales que contribuyan al desarrollo económico, social y tecnológico
+              de su entorno y del país.
+            </p>
+            <p>
+              El uso de las tecnologías de la información y las comunicaciones se aplica para la mejora de los procesos
+              productivos. La articulación SENA de este programa ofrece todos los elementos de formación, aportando
+              diferenciadores de valor agregado en las metodologías de aprendizaje y en el acceso a tecnologías de
+              última generación.
+            </p>
+          </div>
+        </article>
+
+        <!-- Instalaciones Eléctricas -->
+        <article class="card">
+          <!-- Cambia esta ruta por la imagen real -->
+          <img src="sena/photo-electricidad.png" alt="Estudiantes trabajando en instalaciones eléctricas residenciales">
+          <div class="card-body">
+            <span class="tag">Técnico</span>
+            <h3>Instalaciones Eléctricas Residenciales</h3>
+            <p>
+              El programa Técnico en <strong>Instalaciones Eléctricas Residenciales</strong> se creó para brindar al sector
+              eléctrico la posibilidad de incorporar personal con altas calidades laborales y profesionales que
+              contribuyan al desarrollo económico, social y tecnológico de su entorno y del país.
+            </p>
+            <p>
+              Así mismo, ofrece a los aprendices formación en tecnologías de producción industrial. El programa del SENA
+              está orientado a la adquisición de competencias requeridas por el sector eléctrico, fomentando la
+              creatividad para resolver problemas y la capacidad innovadora para crear empresa.
+            </p>
+            <p>
+              Sobre todo, busca contribuir en la ejecución de instalaciones eléctricas residenciales aplicando la
+              normatividad vigente, garantizando seguridad y calidad en cada proyecto.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        Liceo Mixto Emperador de Cali · Formación técnica articulada con el SENA.
+      </footer>
     </div>
-    
+  </main>
+    </div>
+    </div>
+
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column left">
                 <div class="column image-column">
-                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
                 </div>
             </div>
             <div class="column text-column">
-                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
                 <br>
-                <p>Cali - Colombia</p>
+                <p class="no-copiable">Cali - Colombia</p>
             </div>
             <div class="footer-column right">
                 <div class="column social-column">
                     <br>
-                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
                         <div class="main-ok">
-                            <div class="icon fb">
-                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <span>Facebook</span>
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                                 </a>
-                            </div>
-                    
-                            <div class="icon ig">
-                                 <a href="https://www.instagram.com/limec.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==9"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>Instagram</span>
-                            </div>
-                    
-                            <div class="icon yt">
-                                <a href="https://www.youtube.com/@liceomixtoemperadordecali4679" target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-youtube"></i>
-                                <span>YouTube</span>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -190,8 +219,9 @@
         </div>
         <div class="separator"></div>
         <div class="footer-bottom">
-            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
         </div>
     </footer>
 </body>
+
 </html>
