@@ -925,7 +925,7 @@ main {
     main{ padding:0; display:flex; justify-content:center; }
 
     .grid{
-      width:min(1080px, 92vw);
+      width:100%;
       display: grid; gap:20px;
       grid-template-columns: repeat(12, 1fr);
     }
