@@ -122,20 +122,18 @@
 
         <main>
             <section>
-                <div class="slider-container" id="sliderWrap">
-                    <div class="slider" id="slider">
-                    <!-- SOLO LAS "REALES" (sin clones). JS añadirá 1ra y última como clones -->
-                     <div class="slide"><img src="index-photos/index-limec.png" alt="Imagen 0"></div>
-                     <div class="slide"><img src="index-photos/index-cronograma.png" alt="Imagen 1"></div>
-                    <div class="slide"><img src="index-photos/index-inscripciones.png" alt="Imagen 2"></div>
-                    <div class="slide"><img src="index-photos/index-sedes.png" alt="Imagen 3"></div>
-                </div>
-
-                <button class="nav-btn prev" aria-label="Anterior" id="prevBtn"><i class="fa-solid fa-chevron-left chev"></i></button>
-                <button class="nav-btn next" aria-label="Siguiente" id="nextBtn"><i class="fa-solid fa-chevron-right chev"></i></button>
-
-                <div class="dots" id="dots"></div>
-                </div>
+                <div class="slider-viewport">
+                    <div class="slider-container">
+                    <button class="nav-button left"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide"><img src="photo-index-1 (2).png" alt="1" /></div>
+                        <div class="slide"><img src="photo-index-1.png" alt="2" /></div>
+                        <div class="slide"><img src="photo-index-4.png" alt="3" /></div>
+                    </div>
+                    <button class="nav-button right"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                    <div class="dots" id="dots"></div>
+                    </div>
+                    </div>
                   <!-- SLIDE END -->
                   <script src="script-index.js"></script>
 

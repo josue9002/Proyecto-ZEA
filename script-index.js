@@ -1,110 +1,125 @@
-(function(){
-  const slider = document.getElementById('slider');
-  const dotsContainer = document.getElementById('dots');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+const track = document.getElementById('sliderTrack');
+const slides = Array.from(track.children);
+const leftBtn = document.querySelector('.nav-button.left');
+const rightBtn = document.querySelector('.nav-button.right');
+const dotsContainer = document.getElementById('dots');
+const container = track.closest('.slider-container') || track.parentElement; // para pausar al hover
 
-  // Estado base: solo slides reales (sin clones aún)
-  let slides = Array.from(slider.children);
-  const realCount = slides.length;
+let index = 1;
+let slideWidth = slides[0].getBoundingClientRect().width;
 
-  // Crear clones (último al inicio, primero al final)
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone  = slides[realCount - 1].cloneNode(true);
-  firstClone.classList.add('clone');
-  lastClone.classList.add('clone');
+// Clonar primero y último slide para efecto infinito
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+track.appendChild(firstClone);
+track.insertBefore(lastClone, slides[0]);
 
-  slider.appendChild(firstClone);
-  slider.insertBefore(lastClone, slides[0]);
+const allSlides = Array.from(track.children);
+track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-  // Recalcular lista con clones
-  slides = Array.from(slider.children);
-
-  // Índice arranca en 1 (primer REAL, ya que en 0 está el clone del último)
-  let index = 1;
-
-  // Puntos (solo por reales)
-  const dots = [];
-  for(let i=0; i<realCount; i++){
-    const d = document.createElement('span');
-    d.className = 'dot' + (i===0 ? ' active' : '');
-    d.addEventListener('click', () => goToReal(i));
-    dotsContainer.appendChild(d);
-    dots.push(d);
-  }
-
-  // Posicionar al inicio sin animación
-  function jumpWithoutAnimation(){
-    slider.style.transition = 'none';
-    slider.style.transform  = `translateX(-${index * 100}%)`;
-    // Forzar reflow para que el cambio de transition surta efecto después
-    void slider.offsetWidth;
-    slider.style.transition = 'transform .6s ease-in-out';
-  }
-  jumpWithoutAnimation();
-
-  // Helpers de índice/dots
-  function realIndexFromAny(i){
-    // Convierte índice con clones (0..len-1) a índice real (0..realCount-1)
-    if(i === 0) return realCount - 1;                     // clone del último
-    if(i === slides.length - 1) return 0;                 // clone del primero
-    return i - 1;                                         // reales
-  }
-  function updateDots(){
-    const r = realIndexFromAny(index);
-    dots.forEach((d, i) => d.classList.toggle('active', i===r));
-  }
-
-  // Navegación
-  function next(){
-    index++;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }
-  function prev(){
-    index--;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }
-  function goToReal(realIdx){
-    index = realIdx + 1; // +1 porque en 0 está el clone del último
-    slider.style.transform = `translateX(-${index * 100}%)`;
-    resetAutoplay();
-    updateDots();
-  }
-
-  // Reset invisible al cruzar clones (para que sea loop perfecto)
-  slider.addEventListener('transitionend', ()=> {
-    if(slides[index].classList.contains('clone')){
-      if(index === 0) index = realCount;              // saltar al último real
-      if(index === slides.length - 1) index = 1;      // saltar al primero real
-      jumpWithoutAnimation();
-    }
-    updateDots();
+// Crear dots dinámicos
+for (let i = 0; i < slides.length; i++) {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    goToSlide(i + 1);
+    restartAutoplay(); // 🔁 reinicia autoplay al usar dot
   });
-
-  // Botones
-  nextBtn.addEventListener('click', ()=>{ next(); resetAutoplay(); });
-  prevBtn.addEventListener('click', ()=>{ prev(); resetAutoplay(); });
-
-  // Autoplay cada 5s (antes 10s)
-let timer = setInterval(next, 5000);
-
-function resetAutoplay(){
-  clearInterval(timer);
-  timer = setInterval(next, 5000);
+  dotsContainer.appendChild(dot);
 }
-  // (Opcional) pausar al pasar el mouse
-  slider.parentElement.addEventListener('mouseenter', ()=> clearInterval(timer));
-  slider.parentElement.addEventListener('mouseleave', resetAutoplay);
 
-  // (Opcional) swipe táctil
-  let startX = 0, dx = 0, dragging = false;
-  const wrap = slider.parentElement;
-  wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; dragging = true; clearInterval(timer); }, {passive:true});
-  wrap.addEventListener('touchmove',  e => { if(!dragging) return; dx = e.touches[0].clientX - startX; }, {passive:true});
-  wrap.addEventListener('touchend',   () => {
-    dragging = false;
-    if(Math.abs(dx) > 40){ dx < 0 ? next() : prev(); }
-    dx = 0; resetAutoplay();
-  });
-})();
+const updateDots = () => {
+  const dots = dotsContainer.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[(index - 1 + slides.length) % slides.length].classList.add('active');
+};
 
+const goToSlide = (newIndex) => {
+  index = newIndex;
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+  updateDots();
+};
+
+const nextSlide = () => {
+  if (index >= allSlides.length - 1) return;
+  index++;
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+  updateDots();
+};
+
+const prevSlide = () => {
+  if (index <= 0) return;
+  index--;
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+  updateDots();
+};
+
+track.addEventListener('transitionend', () => {
+  if (allSlides[index].isEqualNode(firstClone)) {
+    index = 1;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+  if (allSlides[index].isEqualNode(lastClone)) {
+    index = allSlides.length - 2;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+});
+
+// Botones
+rightBtn.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
+leftBtn.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+
+// Resize
+window.addEventListener('resize', () => {
+  slideWidth = slides[0].getBoundingClientRect().width;
+  track.style.transition = 'none';
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+});
+
+// =========================
+//     AUTOPLAY (5s)
+// =========================
+const intervalMs = 5000; // ⏱️ cambia aquí si quieres otro tiempo
+let timerId = null;
+
+function startAutoplay() {
+  stopAutoplay(); // evitar timers duplicados
+  timerId = setInterval(() => {
+    // por si el ancho cambió (responsivo)
+    slideWidth = slides[0].getBoundingClientRect().width;
+    nextSlide();
+  }, intervalMs);
+}
+
+function stopAutoplay() {
+  if (timerId) {
+    clearInterval(timerId);
+    timerId = null;
+  }
+}
+
+function restartAutoplay() {
+  stopAutoplay();
+  startAutoplay();
+}
+
+// Pausar al pasar el mouse (desktop)
+if (container) {
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+}
+
+// Pausar si la pestaña no está visible
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopAutoplay();
+  else startAutoplay();
+});
+
+// Arrancar autoplay al cargar
+startAutoplay();

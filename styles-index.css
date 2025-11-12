@@ -811,145 +811,119 @@ main {
   }
 }
 
-
 /* Accesibilidad: reduce animaciones si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce){
   .socials a{ transition: none; }
   .socials a:hover{ transform: none; }
 }
 
-/*nuevo*/
+/* ------------------------------------------------------------------------ */
 
+/* Buenas bases */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+
+/* Variables responsivas */
 :root{
-    --h: 450px;          /* alto del slider */
-    --radius: 14px;
-  }
+  --pad-inline: 16px;
+  --btn-size: 44px;   /* tamaño flecha */
+  --btn-font: 18px;   /* tamaño icono */
+  --dot: 10px;        /* tamaño dot */
+}
 
+/* La sección del slider no permite desbordes laterales */
+.section-del-slider{
+  overflow-x: hidden;
+  padding-inline: var(--pad-inline);
+}
+
+/* Slider responsivo: <=1000px y misma proporción 1000x450 */
 .slider-container{
-    position:relative;
-    width:min(100%, 1200px);
-    margin:20px auto;
-    overflow:hidden;
-    border-radius:var(--radius);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    background:#000;
-  }
-  .slider{
-    display:flex;
-    /* la transición se activa/desactiva vía JS cuando se hacen resets invisibles */
-    transition: transform .6s ease-in-out;
-    will-change: transform;
-  }
-  .slide{
-    min-width:100%;
-    height:var(--h);
-    user-select:none;
-  }
-    .slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    user-select: none;         /* no seleccionar */
-  -webkit-user-drag: none;   /* no arrastrar en WebKit */
-  pointer-events: none;      /* los eventos pasan al overlay */
-  }
-/* Botones laterales */
-  .nav-btn{
-    position:absolute; inset:0 auto 0 0;
-    top:50%; transform:translateY(-50%);
-    width:44px; height:44px;
-    border:none; border-radius:50%;
-    background:rgba(0,0,0,.5);
-    color:#fff; font-size:22px; line-height:44px;
-    cursor:pointer; z-index:5;
-    display:grid; place-items:center;
-  }
-  .nav-btn:hover{ background:rgba(0,0,0,.75); }
-  .nav-btn.next{ left:auto; right:12px; }
-  .nav-btn.prev{ left:12px; }
-
- 
-  /* Punticos */
-  .dots{
-    position:absolute; left:0; right:0; bottom:15px;
-    display:flex; justify-content:center; gap:8px; z-index:4;
-  }
-  .dot{
-    width:12px; height:12px; border-radius:50%;
-    background:#272727b5; cursor:pointer; border:2px solid transparent;
-    transition:transform .2s, background .2s;
-  }
-  .dot:hover{ transform:scale(1.1); }
-  .dot.active{ background:#ebebebf4; border-color:#272727b5; }
-
-
-  /* Responsive alto opcional */
-  @media (max-width:700px){
-    :root{ --h: 177px; }
-
-    .dot{
-        display: none;
-    }
-
-    .nav-btn{
-        width:30px; height:30px;
-    }
-
-    .chev { font-size: 0.75rem; line-height: 1; }
+  position: relative;
+  width: min(1080px, 100%);
+  aspect-ratio: 1080 / 450;
+  margin: 24px auto;
+  overflow: hidden;
+  border-radius: 10px;
 }
-/* Responsive: más pequeño en pantallas angostas */
-    @media (max-width: 480px){
-    .chev { font-size: 0.65rem; }
+
+/* Track y slides */
+.slider-track{ display:flex; height:100%; transition: transform .5s ease; }
+.slide{ flex: 0 0 100%; height: 100%; user-select: none; }
+.slide img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Flechas (Font Awesome dentro del botón) */
+.nav-button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(47, 47, 47, 0.75);
+  border: 1px solid #424243;
+  color: #e5e7eb;
+  cursor: pointer;
+  z-index: 2;
 }
-.scroll-left {
-        height: 50px; 
-        overflow: hidden;
-        position: relative;
-        }
-        .scroll-left h3 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        line-height: 50px;
-        text-align: center;
-        font-size: 30px;
-        
-        /* Starting position */
-        -moz-transform:translateX(-500%);
-        -webkit-transform:translateX(100%); 
-        transform:translateX(100%);
-        /* Apply animation to this element */ 
-        -moz-animation: scroll-left 7s linear infinite;
-        -webkit-animation: scroll-left 7s linear infinite;
-        animation: scroll-left 7s linear infinite;
+.nav-button:hover{ background: rgba(35, 35, 35, 0.95); }
+.nav-button.left{ left: 10px; }
+.nav-button.right{ right: 10px; }
+.nav-button i{
+  font-size: var(--btn-font);
+  line-height: 1;
+  pointer-events: none; /* el click lo recibe el botón, no el <i> */
 }
-        
-        /* Move it (define the animation) */
-        @-moz-keyframes scroll-left {
-        0% { -moz-transform: translateX(100%); }
-        100% { -moz-transform: translateX(-100%); }
-        }
-        
-        @-webkit-keyframes scroll-left {
-        0% { -webkit-transform: translateX(100%); }
-        100% { -webkit-transform: translateX(-100%); }
-        }
-        
-        @keyframes scroll-left {
-        0% { 
-        -moz-transform: translateX(100%); /* Browser bug fix */
-        -webkit-transform: translateX(100%); /* Browser bug fix */
-        transform: translateX(100%); 
-        }
-        
-        100% { 
-        -moz-transform: translateX(-100%); /* Browser bug fix */
-        -webkit-transform: translateX(-100%); /* Browser bug fix */
-        transform: translateX(-100%); 
-        }
+
+/* Dots */
+.dots{
+  position: absolute;
+  left: 0; right: 0; bottom: 10px;
+  display: flex; gap: 8px; justify-content: center;
+  z-index: 2;
 }
+.dot{
+  width: var(--dot); height: var(--dot);
+  border-radius: 999px;
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(0,0,0,.25);
+  cursor: pointer;
+}
+.dot.active{ background: #fff; }
+
+/* Breakpoints para "resolución pequeña" */
+@media (max-width: 768px){
+  :root{
+    --pad-inline: 12px;
+    --btn-size: 38px;
+    --btn-font: 16px;
+    --dot: 8px;
+  }
+  .slider-container{ margin: 16px auto; }
+}
+
+@media (max-width: 480px){
+  :root{
+    --pad-inline: 10px;
+    --btn-size: 32px;   /* flechas más pequeñas */
+    --btn-font: 14px;   /* icono más pequeño */
+    --dot: 6px;         /* dots más pequeños */
+  }
+  .slider-container{ margin: 12px auto; border-radius: 8px; }
+}
+
+@media (max-width: 360px){
+  :root{
+    --btn-size: 28px;
+    --btn-font: 13px;
+  }
+  /* Si prefieres aún más limpio, puedes ocultar flechas:
+  .nav-button{ display:none; }
+  */
+}
+
 
 /* Estilos de la caja */
 .simple-news-box {
