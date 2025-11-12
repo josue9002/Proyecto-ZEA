@@ -937,12 +937,20 @@ main {
 
     .intro {
       text-align: center;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     .intro h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
       color: #003366;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     .intro p {
@@ -956,10 +964,6 @@ main {
     color: #003366;
     position: relative;
     margin-bottom: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 .heading::after {
@@ -979,6 +983,10 @@ main {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.8rem;
       margin-top: 1.5rem;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     .card {
@@ -996,6 +1004,9 @@ main {
       height: 210px;
       object-fit: cover;
       display: block;
+      user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
     }
 
     .card-body {
@@ -1034,6 +1045,10 @@ main {
       text-align: center;
       font-size: 0.8rem;
       color: var(--color-secundario);
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     /* Responsive */
@@ -1053,13 +1068,13 @@ main {
         grid-template-columns: 1fr;
       }
 
-      .intro h2 {
+      .intro h1 {
         font-size: 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
-      .intro h2 {
+      .intro h1 {
         font-size: 1.35rem;
       }
 
