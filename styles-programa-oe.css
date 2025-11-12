@@ -847,7 +847,7 @@ main {
     .orientacion-imagen img {
       max-width: 420px;
       width: 100%;
-      border-radius: 24px;
+      border-radius: 15px;
       object-fit: cover;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
     }
