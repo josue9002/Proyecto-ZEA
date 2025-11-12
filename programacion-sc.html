@@ -1,208 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Semana Cultural</title>
-  <link rel="icon" href="photo-logo-animado-sin-fondo-2.png">
-
-  <!-- Fuentes Google (mismo vibe que vienes usando) -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Iconos (opcional) -->
-  <link rel="preconnect" href="https://kit.fontawesome.com">
-  <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
-
-  <style>
-    :root{
-  /* Base clara: blanco/grises suaves */
-  --bg: #1a1a1a;          /* fondo general (muy claro) */
-  --card: #08233e;        /* tarjetas blancas */
-  --card-2: #09325b;      /* gris muy claro para contraste */
-  --text: #ffffff;        /* texto principal (gris oscuro) */
-  --muted: rgb(175, 175, 175);       /* texto secundario */
-
-  /* Marca: rojo + grises */
-  --primary: #ed1919;     /* rojo institucional */
-  --primary-2: #c9c9c9;   /* gris medio claro de apoyo */
-  --accent: #740d0d;      /* gris para gradientes/badges */
-
-  /* Accesibilidad/sombras */
-  --ring: rgba(211, 47, 47, .35); /* halo rojo */
-  --radius: 18px;
-  --shadow: 0 8px 24px rgba(0,0,0,.08);
-  --glass: rgba(255,255,255,.75);
-
-  /* Brillos suaves en fondo, con toques rojos/grises */
-  --gradient:
-    radial-gradient(1200px 600px at 20% -10%, rgba(0, 0, 0, 0.856), transparent 60%),
-    radial-gradient(800px 400px at 100% 10%, rgba(156,163,175,.14), transparent 60%),
-    linear-gradient(180deg, rgba(63, 63, 63, 0.6), rgba(255,255,255,0));
-}
-    * { box-sizing: border-box; }
-    html, body {
-      margin:0; padding:0; background: var(--bg); color: var(--text);
-      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-    .wrapper{
-      min-height:100svh; background: var(--gradient);
-    }
-    header{
-      position: relative;
-      padding: 28px 20px 18px;
-      display:flex; align-items:center; gap:16px; justify-content:center;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-      backdrop-filter: saturate(140%) blur(5px);
-    }
-    .header-inner{
-      width:min(1200px, 92vw);
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-    }
-    .branding{
-      display:flex; align-items:center; gap:14px;
-    }
-    .logo{
-      width:56px; height:56px; border-radius:0; object-fit:cover;
-      background:none; border:0px;
-    }
-    .title-block h1{
-      font-size: clamp(1.4rem, 2vw + 0.6rem, 2.1rem);
-      margin:0; line-height:1.15; font-weight:800; letter-spacing:.3px;
-      display:flex; align-items:center; gap:.6rem;
-    }
-    .title-badge{
-      font-size:.85rem; font-weight:700; color:#0b1020; background: linear-gradient(90deg, var(--primary-2), #60a5fa);
-      padding:.2rem .6rem; border-radius:999px; transform: translateY(-2px);
-    }
-    .subtitle{
-      margin:.2rem 0 0; font-size:.95rem; color: var(--muted); font-family: Raleway, sans-serif;
-    }
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
-    .cta .pill{
-      display:inline-flex; align-items:center; gap:.5rem; border:0px solid rgba(255, 255, 255, 0.853);
-      background: linear-gradient(90deg,var(--primary),var(--accent));; padding:.6rem .9rem; border-radius:999px; color:var(--text);
-      text-decoration:none; font-weight:600; box-shadow: var(--shadow);
-    }
-    .cta .pill:hover{ border-color: rgba(255,255,255,.35); }
-
-    main{ padding: 24px 20px 60px; display:flex; justify-content:center; }
-    .grid{
-      width:min(1200px, 92vw);
-      display: grid; gap:20px;
-      grid-template-columns: repeat(12, 1fr);
-    }
-    .intro{
-      grid-column: 1 / -1;
-      background: linear-gradient(180deg, rgba(172, 22, 17, 0.774), rgba(116, 6, 6, 0.812));
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius);
-      padding: 18px 18px;
-      box-shadow: var(--shadow);
-    }
-    .intro p{ margin:6px 0 0; color: var(--muted); font-family: Raleway, sans-serif; }
-
-    /* Tarjeta día */
-    .day{
-  grid-column:span 12;display:grid;grid-template-columns:280px 1fr;gap:18px;
-  background:linear-gradient(180deg,var(--card),var(--card-2));
-  border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);
-  overflow:hidden;box-shadow:var(--shadow);
-  position:relative; /* importante para ribbon */
-}
-.day:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.45);}
-.ribbon{
-  position:absolute;top:12px;left:12px;
-  background:linear-gradient(90deg,var(--primary),var(--accent));
-  padding:6px 14px;border-radius:999px;font-weight:800;letter-spacing:.5px;font-size:.78rem;
-  text-transform:uppercase;box-shadow:0 8px 18px rgba(0,0,0,.4);
-  z-index:10; /* <<< FIX: arriba de la imagen */
-}
-    .media{
-      background: #0b0f1a; position: relative; min-height: 220px;
-    }
-    .media img{
-      width:100%; height:100%; object-fit: cover;
-      display:block; filter: saturate(1.05) contrast(1.02);
-    }
-    .media .overlay{
-      position:absolute; inset:0; background: linear-gradient(180deg, transparent, rgba(0,0,0,.35) 65%, rgba(0,0,0,.65));
-    }
-    .content{
-      padding:18px 16px 16px;
-      display:flex; flex-direction: column; gap:10px;
-    }
-    .tag{
-      display:inline-flex; gap:.45rem; align-items:center;
-      font-size:.75rem; font-weight:700; color:#0b1220;
-      background: linear-gradient(90deg, var(--primary-2), #60a5fa);
-      padding:.25rem .6rem; border-radius:999px; width:max-content;
-    }
-    h3{
-      margin:4px 0 0; font-size: clamp(1.05rem, 1vw + .8rem, 1.35rem); line-height:1.2; font-weight:800;
-    }
-    .desc{
-      margin: 0; color: #cbd5e1; font-family: Raleway, sans-serif; line-height:1.55;
-    }
-    .horarios{
-      margin: 4px 0 0; display:grid; gap:10px;
-    }
-    .slot{
-      display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;
-      background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
-      border-radius: 12px; padding:10px 12px;
-    }
-    .slot strong{ display:block; font-size:.78rem; color:#c7d2fe; letter-spacing:.2px; }
-    .slot span{ font-size:.95rem; color: var(--text); }
-    .foot{
-      display:flex; justify-content:flex-end; margin-top:6px;
-    }
-    .foot .mini{
-      font-size:.75rem; color: var(--muted);
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .day{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px){
-      .slot{ grid-template-columns: 1fr; }
-      .branding .title-badge{ display:none; }
-    }
-
-    /* Pequeño foco accesible */
-    .focusable:focus{
-      outline: 2px solid transparent;
-      box-shadow: 0 0 0 4px var(--ring);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion Semana Cultural</title>
+    <link rel="stylesheet" href="styles-programacion-sc.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="photo-logo-banner.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
+     crossorigin="anonymous"></script>
+     <script src="script-no-copiable"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="header-inner">
-        <div class="branding">
-          <!-- Logo del colegio (reemplaza src) -->
-          <img class="logo" src="photo-logo-animado-sin-fondo-2.png" alt="Logo del colegio" />
-          <div class="title-block">
-            <h1>Semana Cultural<span class="title-badge">2025</span></h1>
-            <p class="subtitle">Del 22 al 26 de Septiembre</p>
-          </div>
-        </div>
-        <div class="cta">
-          <!-- Botones opcionales (puedes quitar) -->
-          <a class="pill focusable" href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
-          <a class="pill focusable" href="#info"><i class="fa-solid fa-circle-info"></i> Info</a>
-        </div>
-      </div>
-    </header>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="historia" class="no-copiable">Historia</a></ol>
+                            <ol><a href="simbolos" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="mision-vision" class="no-copiable">Misión y Visión</a></ol>
+                            <ol><a href="nuestras-sedes" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="programa-oe" class="no-copiable">Programa OE</a></ol>
+                            <ol><a href="modalidades-sena" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="direcciones-de-grupo" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="personal-admin" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                              <ul class="dropdown-content">
+                              <ol><a href="galeria" class="no-copiable">Galeria de Fotos</a></ol>
+                              <ol><a href="audios" class="no-copiable">Audios</a></ol>
+                              <ol><a href="videos" class="no-copiable">Videos</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="admisiones" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="requisitos-jardin" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="fechas-importantes" class="no-copiable">Fechas Importantes</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="contacto" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+          <script src="script-menu.js"></script>
+
+        <main>
+            <section>
+              <div class="wrapper">
 
     <main id="programa" aria-labelledby="titulo-semana">
       <div class="grid">
-        
-  
-
         <!-- LUNES -->
         <article class="day" aria-labelledby="lunes-title">
           <span class="ribbon">Lunes</span>
@@ -392,32 +286,6 @@
             ¡TE ESPERAMOS!
               </p>
             <p class="desc">PASEO (PENDIENTE POR DEFINIR)</p>
-
-            <div class="horarios">
-              <div class="slot">
-                <div><strong>Lugar</strong><span>Club Campestre Comfandi Arroyohondo</span></div>
-                <div><strong>Grados</strong><span>Todos</span></div>
-                <div><strong>Hora</strong><span>7:30 AM a 4:00 PM</span></div>
-              </div>
-            </div>
-            <div class="foot">
-              <span class="mini"><i class="fa-regular fa-clock"></i> Actualizado: [22/09/2025]</span>
-            </div>
-          </div>
-        </article>
-<section id="info" class="intro" role="region" aria-label="Información general">
-          <h2 style="margin:0 0 6px; font-weight:800;">Información general</h2>
-          <p>
-            Recuerda llegar 10 minutos antes de cada actividad. Mantén tus pertenencias seguras y sigue las indicaciones
-            de los docentes. La programación puede ajustarse por condiciones climáticas o logística.
-          </p>
-        </section>
-        <!-- Info / Notas -->
-        <section class="intro" role="region" aria-label="Presentación">
-          <h2 id="titulo-semana" style="margin:0 0 6px; font-weight:800; letter-spacing:.3px;">Para la comunidad educativa</h2>
-          <p>Gracias por los aportes y el apoyo para que esta semana cultural sea un exito Dios los continue bendiciendo en sabiduria y amor.</p>
-        </section>
-      </div>
     </main>
   </div>
 
@@ -434,20 +302,51 @@
       });
     });
   </script>
+            </section>
+        </main>
+                
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p class="no-copiable">Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
+                        <div class="main-ok">
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
