@@ -242,7 +242,7 @@ section p {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .nav-list .dropdown:hover .dropdown-content {
@@ -876,7 +876,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 3px;
 }
   
   .form {
