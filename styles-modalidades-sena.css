@@ -842,6 +842,18 @@ main {
     margin-bottom: 20px;
 }
 
+@media (max-width: 1400px) {
+
+    .heading {
+        font-size: 1.7rem;
+    }
+
+    .heading::after {
+        width: 20px;
+        height: 3px;
+    }
+}
+
     /* Grid de modalidades */
     .modalidades {
       display: grid;

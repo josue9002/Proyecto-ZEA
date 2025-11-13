@@ -745,6 +745,18 @@ main {
     animation: underline-grow 2s ease-out;
 }
 
+@media (max-width: 1400px) {
+
+    .heading {
+        font-size: 1.7rem;
+    }
+
+    .heading::after {
+        width: 20px;
+        height: 3px;
+    }
+}
+
 /* Estilos de la caja */
 .simple-news-box {
     background-color: aliceblue; /* Color de fondo */
