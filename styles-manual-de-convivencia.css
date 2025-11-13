@@ -878,6 +878,10 @@ main {
     padding: 20px;
     width: 100%;
     max-width: 1000px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   .folder {
     font-size: 2.1em;
