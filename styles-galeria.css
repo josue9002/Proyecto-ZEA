@@ -1760,3 +1760,28 @@ body.modal-open { overflow: hidden; }
 
   }
 
+  @media (max-width: 1400px) {
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .heading::after {
+        width: 20px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 900px){
+    .crono h2{
+        font-size: 0.9em;
+    }
+
+    .c-list li {
+        font-size: 0.95em;
+    }
+    .heading {
+        font-size: 1.6rem;
+    }
+
+}

@@ -935,13 +935,13 @@ main {
       }
 
       .intro h1 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
     }
 
     @media (max-width: 480px) {
       .intro h1 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
       }
 
       .card img {
