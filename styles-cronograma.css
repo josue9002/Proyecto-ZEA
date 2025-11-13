@@ -904,7 +904,10 @@ main {
 
 
 /* ===== NAMESPACE: wrap the whole component in .crono ===== */
-    .crono:where(*){box-sizing:border-box}
+    .crono:where(*){box-sizing:border-box; user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;}
     .crono{--bg:#f8fafc;--card:#ffffff;--ink:#1f2937;--muted:#052f6a;
            --pastel-1:#ecfeff;--pastel-2:#f5f3ff;--pastel-3:#fefce8;--pastel-4:#f0fdf4;
            --accent-1:#06b6d4;--accent-2:#7c3aed;--accent-3:#ca8a04;--accent-4:#16a34a;
