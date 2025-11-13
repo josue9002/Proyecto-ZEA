@@ -946,6 +946,10 @@ main {
     .tabs{
       display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap;
       margin:10px auto 22px;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
     .tab-btn{
        border:1px solid #2b0f64; background:#2b0f64; color:#ffffff;
@@ -975,8 +979,15 @@ main {
       display:inline-block; padding:.25rem .6rem; border-radius:10px;
       background:rgb(197, 34, 34); color:#ffffff; border:1px solid rgba(222, 12, 12, 0.35);
       font-size:1.3rem; font-weight:700; letter-spacing:.3px;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
-    .desc{color:var(--muted); margin:.30rem 0 .5rem; line-height:1.5; font-size: 1em;}
+    .desc{color:var(--muted); margin:.30rem 0 .5rem; line-height:1.5; font-size: 1em; user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;}
     .contact{
       display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.5rem;
       margin-top:.25rem;
