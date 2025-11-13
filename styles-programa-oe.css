@@ -806,6 +806,10 @@ main {
       background: white;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       margin-bottom: 1rem;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     .orientacion-texto {
@@ -850,6 +854,9 @@ main {
       border-radius: 15px;
       object-fit: cover;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+      user-select: none;         /* no seleccionar */
+  -webkit-user-drag: none;   /* no arrastrar en WebKit */
+  pointer-events: none;      /* los eventos pasan al overlay */
     }
 
     /* Sección de agenda de citas */
@@ -869,6 +876,11 @@ main {
       font-size: 0.95rem;
       color: var(--color-secundario);
       margin-bottom: 1.5rem;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
     }
 
     .cards {
