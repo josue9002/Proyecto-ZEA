@@ -870,6 +870,10 @@ main {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       color: var(--color-texto);
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     }
 
     .agenda p.intro {
