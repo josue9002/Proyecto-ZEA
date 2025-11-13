@@ -72,7 +72,7 @@
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
                               <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
                               <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
+                              <ol><a href="programacion-sc" class="no-copiable">Prog. Semana Cultural</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
@@ -91,48 +91,94 @@
 
           <script src="script-menu.js"></script>
 
-        <main>
-            <section>
-                <h1 class="heading">Personal Administrativo</h1>
-                <div class="wrapper">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <ul class="carousel">
-                      <li class="card">
-                        <div class="img"><img src="personal-admin/photo-rector.png" alt="img" draggable="false"></div>
-                        <h2>Miguel Angel Torres</h2>
-                        <span>Rector y Fundador</span>
-                      </li>
-                      <li class="card">
-                        <div class="img"><img src="personal-admin/photo-vicerectora.png" alt="img" draggable="false"></div>
-                        <h2>Yeimmi Giron Pino</h2>
-                        <span>Vicerectora</span>
-                      </li>
-                      <li class="card">
-                        <div class="img"><img src="personal-admin/photo-coordinadora-v.png" alt="img" draggable="false"></div>
-                        <h2>Vanessa Rebellon Ruiz</h2>
-                        <span>Coordinadora</span>
-                      </li>
-                      <li class="card">
-                        <div class="img"><img src="personal-admin/photo-coordinadora-a.png" alt="img" draggable="false"></div>
-                        <h2>Adriana Torres</h2>
-                        <span>Coordinadora</span>
-                      </li>
-                      <li class="card">
-                        <div class="img"><img src="personal-admin/photo-coordinadora-b.png" alt="img" draggable="false"></div>
-                        <h2>Maria Bertha Yalanda</h2>
-                        <span>Coordinadora</span>
-                      </li>
-                    </ul>
-                    <i id="right" class="fa-solid fa-angle-right"></i>
-                  </div>
-                
-                  <!-- Linking SwiperJS script -->
-                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                
-                  <!-- Linking custom script -->
-                  <script src="script-personal-admin.js"></script>
-            </section>
-        </main>
+          <h1 class="heading">Personal Administrativo</h1>
+        <main class="gallery-page">
+
+    <!-- FOTOS DE PERFIL (MEDIO CUERPO) -->
+    <section class="profiles-section">
+      <div class="profiles-grid">
+        <article class="profile-card">
+          <img src="photo-cordi-1.png" alt="Foto perfil 1">
+          <div class="profile-name">Bertha Yalanda</div>
+          <div class="profile-role">Cargo / Coordinación</div>
+        </article>
+
+        <article class="profile-card">
+          <img src="photo-cordi-2.png" alt="Foto perfil 2">
+          <div class="profile-name">Vanessa Rebellon</div>
+          <div class="profile-role">Cargo / Coordinación</div>
+        </article>
+
+        <article class="profile-card">
+          <img src="photo-cordi-3.png" alt="Foto perfil 3">
+          <div class="profile-name">Adriana Torres</div>
+          <div class="profile-role">Cargo / Coordinación</div>
+        </article>
+
+        <!-- Puedes duplicar más profile-card según necesites -->
+      </div>
+    </section>
+
+        <!-- SLIDER 1000x450 -->
+         <h2>Docentes</h2>
+    <section class="slider-section">
+      <div class="slider-container">   
+        <button class="nav-btn prev" aria-label="Anterior">&#10094;</button> 
+        <div class="slider-track">
+          <div class="slide">
+            <img src="photo-profes-1.png" alt="Foto 1 - Slider">
+          </div>
+          <div class="slide">
+            <img src="photo-profes-2.png" alt="Foto 2 - Slider">
+          </div>
+          <div class="slide">
+            <img src="photo-profes-3.png" alt="Foto 3 - Slider">
+          </div>
+        </div>
+        <button class="nav-btn next" aria-label="Siguiente">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- DOS COLUMNAS GRANDES 1200x1600 -->
+    <section class="two-columns-section">
+      <h2>Secretaria</h2>
+      <div class="two-columns">
+        <div class="column-photo">
+          <img src="photo-secretaria.png" alt="Foto grupal 1">
+        </div>
+        <div class="column-photo">
+          <img src="photo-secretaria-2.png" alt="Foto grupal 2">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS SLIDER -->
+  <script>
+    const track = document.querySelector('.slider-track');
+    const slides = Array.from(track.children);
+    const prevBtn = document.querySelector('.nav-btn.prev');
+    const nextBtn = document.querySelector('.nav-btn.next');
+
+    let index = 0;
+
+    function actualizarSlider(){
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      actualizarSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      actualizarSlider();
+    });
+  </script>
+          
+    </div>
     </div>
 
 

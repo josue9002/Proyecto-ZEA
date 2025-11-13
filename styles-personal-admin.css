@@ -31,6 +31,29 @@ header {
     border-radius: 10px;
 }
 
+.heading {
+    font-size: 2em;
+    text-align: center;
+    color: #003366;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.heading::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: #f39c12;
+    display: block;
+    margin: 0.5rem auto;
+    animation: underline-grow 2s ease-out;
+}
+
 .logo-container {
     display: grid;
     grid-template-columns: auto 1fr auto; /* izquierda | centro | derecha */
@@ -227,7 +250,6 @@ section {
 section h1 {
     font-size: 2em;
     margin-bottom: 10px;
-    margin-top: 30px;
     color: #003366;
     text-align: center;
 }
@@ -272,7 +294,7 @@ main {
     border-radius: 10px;
     background-color: aliceblue;
     background-size: cover;
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 .footer {
@@ -395,103 +417,6 @@ main {
     transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
 }
 
-/* Noticias */
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-/*Cards*/
-.container-card {
-	width: 100%;
-	display: flex;
-	max-width: 1500px;
-	margin: auto;
-    
-}
-.card{
-	width: 100%;
-	margin: 20px;
-	overflow: hidden;
-	background:#fff;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-	transition: all 400ms ease-out;
-	cursor: default;
-    border-radius: 10px;
-}
-.card:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
-}
-.card img{
-	width: 100%;
-	height: auto;
-  user-select: none;         /* no seleccionar */
-  -webkit-user-drag: none;   /* no arrastrar en WebKit */
-  pointer-events: none;      /* los eventos pasan al overlay */
-}
-.card .contenido-card{
-	padding: 15px;
-	text-align: center;
-}
-.card .contenido-card h3{
-	margin-bottom: 15px;
-	color: #003366;
-}
-.card .contenido-card p{
-	line-height: 1.8;
-	color: #6a6a6a;
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-.card .contenido-card a{
-	display: inline-block;
-	padding: 10px;
-	margin-top: 10px;
-	text-decoration: none;
-	color: #007BFF;
-	border: 1px solid #007BFF;
-	border-radius: 4px;
-	transition: all 400ms ease;
-	margin-bottom: 5px;
-}
-.card .contenido-card a:hover{
-	background: #007BFF;
-	color: #fff;
-}
-@media only screen and (min-width:300px) and (max-width:768px){
-	.container-card{
-		flex-wrap: wrap;
-	}
-	.card{
-		margin: 5px;
-	}
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-	.container-card {
-		justify-content: space-around; /* Ajusta el espaciado entre las tarjetas */
-	}
-
-	.card {
-		margin: 5px;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.container-card {
-		grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
-	}
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-	.container-card {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -801,6 +726,22 @@ main {
       box-shadow: 0 0 0 3px rgba(24,119,242,.25), 0 6px 18px rgba(0,0,0,.08);
     }
 
+    /* ===== Responsivo ===== */
+
+/* Teléfonos pequeños */
+@media (max-width: 500px){
+  :root{
+    --size-dos: 40px;      /* diámetro del círculo */
+      --icon-dos: 20px;       /* tamaño del logo dentro */
+      --gap-dos: 15px;
+  }
+}
+
+/* Accesibilidad: reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .socials a{ transition: none; }
+  .socials a:hover{ transform: none; }
+}
 
 
 /* Estilos de la caja */
@@ -853,156 +794,180 @@ main {
   background: transparent;
 }
 
-
-.wrapper {
-    max-width: 100%;
-    width: 100%;
-    position: relative;
-  }
-  .wrapper i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-  }
-  .wrapper i:active{
-    transform: translateY(-50%) scale(0.85);
-  }
-  .wrapper i:first-child{
-    left: -22px;
-  }
-  .wrapper i:last-child{
-    right: -22px;
-  }
-  .wrapper .carousel{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-  .carousel.no-transition {
-    scroll-behavior: auto;
-  }
-  .carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-  }
-  .carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
-  }
-  .carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel .card {
-    scroll-snap-align: start;
-    height: 342px;
-    list-style: none;
-    background: #fff;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-  }
-  .carousel .card .img {
-    background: #007BFF;
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
-  }
-  .card .img img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-  }
-  .carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
-    text-align: center;
-  }
-  .carousel .card span {
-    color: #6A6D78;
-    font-size: 1.31rem;
-  }
-  
-  @media screen and (max-width: 900px) {
-    .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
+:root{
+      --slider-width: 1200px;
+      --slider-height: 450px;
     }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .wrapper .carousel {
-      grid-auto-columns: 100%;
-    }
-  }
 
-  .heading {
-    font-size: 2.2em;
-    text-align: center;
-    color: #003366;
-    position: relative;
-    margin-bottom: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    .gallery-page{
+      min-height: 100vh;
+      padding: 0.5rem 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    h2{
+      text-align: center;
+      margin-bottom: 0em;
+      font-size: 1.8rem;
+      color: #003366;
+    }
+
+    /* SLIDER 1000 x 450 */
+
+    .slider-section{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .slider-container{
+      position: relative;
+      width: min(100%, var(--slider-width));
+      aspect-ratio: 1000 / 450;          /* mantiene proporción 1000x450 */
+      max-height: var(--slider-height);  /* referencia */
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.55);
+      background: #020617;
+    }
+
+    .slider-track{
+      display: flex;
+      height: 100%;
+      transition: transform .45s ease-in-out;
+    }
+
+    .slide{
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-btn{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.7);
+      background: rgba(15,23,42,.75);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: #e5e7eb;
+      font-size: 1.1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-btn:hover{
+      background: rgba(15,23,42,.95);
+    }
+
+    .nav-btn.prev{ left: 10px; }
+    .nav-btn.next{ right: 10px; }
+
+    /* FOTOS DE PERFIL (MEDIO CUERPO) */
+
+    .profiles-section{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .profiles-grid{
+      width: min(100%, 1200px);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .profile-card{
+      background: #020617;
+      border-radius: 15px;
+      padding: .75rem .75rem 1rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,.6);
+    }
+
+    .profile-card img{
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* AHORA ES CUADRADA */
+  object-fit: cover;      /* recorta centrado sin deformar */
+  border-radius: 15px;
+  display: block;
+  margin-bottom: .6rem;
 }
 
-.heading::after {
-    content: '';
-    width: 50px;
-    height: 5px;
-    background-color: #f39c12;
-    display: block;
-    margin: 0.5rem auto;
-    animation: underline-grow 2s ease-out;
-}
-
-@media (max-width: 1400px) {
-
-    .heading {
-        font-size: 1.8rem;
+    .profile-name{
+      font-weight: 600;
+      font-size: .98rem;
+      color: #e4e4e4;
     }
 
-    .heading::after {
-        width: 20px;
-        height: 3px;
-    }
-}
-
-@media (max-width: 900px){
-    .crono h2{
-        font-size: 0.9em;
+    .profile-role{
+      font-size: .86rem;
+      color: #9ca3af;
     }
 
-    .c-list li {
-        font-size: 0.95em;
-    }
-    .heading {
-        font-size: 1.6rem;
+    /* DOS COLUMNAS GRANDES (FOTOS 1200x1600 APROX) */
+
+    .two-columns-section{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
 
-}
+    .two-columns{
+      width: min(100%, 1200px); /* máximo 1200px para ajustarse a pantalla */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .column-photo{
+      background: #020617;
+      border-radius: 15px;
+      padding: .75rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,.7);
+    }
+
+    .column-photo img{
+      width: 100%;
+      aspect-ratio: 3 / 4; /* similar a 1200x1600, formato vertical */
+      object-fit: cover;
+      border-radius: 15px;
+      display: block;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 768px){
+      .nav-btn{
+        width: 34px;
+        height: 34px;
+        font-size: .9rem;
+      }
+
+      h2{
+        font-size: 1.3rem;
+      }
+
+      .two-columns{
+        grid-template-columns: 1fr; /* en pantallas pequeñas se apilan */
+      }
+    }
