@@ -842,17 +842,6 @@ main {
     margin-bottom: 20px;
 }
 
-@media (max-width: 1400px) {
-
-    .heading {
-        font-size: 1.7rem;
-    }
-
-    .heading::after {
-        width: 20px;
-        height: 3px;
-    }
-}
 
     /* Grid de modalidades */
     .modalidades {
@@ -946,13 +935,13 @@ main {
       }
 
       .intro h1 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
     }
 
     @media (max-width: 480px) {
       .intro h1 {
-        font-size: 1.35rem;
+        font-size: 1.7rem;
       }
 
       .card img {
