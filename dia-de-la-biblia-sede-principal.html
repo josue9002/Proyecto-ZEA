@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos</title>
-    <link rel="stylesheet" href="styles-galeria-de-fotos.css">
+    <title>Dia de la Biblia | SEDE PRINCIPAL</title>
+    <link rel="stylesheet" href="styles-dia-de-la-biblia-sp.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="photo-logo-banner.png">
@@ -91,48 +91,154 @@
 
           <script src="script-menu.js"></script>
 <section>
-          <h1 class="heading">Galeria de Fotos</h1>
-        <div class="grid">
-  <!-- Evento 1 -->
-  <a class="album" href="dia-de-la-biblia-sede-principal">
-    <img src="galeria/bible/sedep/6.jpg" alt="Evento 1">
-    <div class="album-info">
-      <div class="album-title">Dia de la Biblia | SEDE PRINCIPAL</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+        <div class="gallery-wrapper" id="galleryWrapper">
 
-  <a class="album" href="galeria OKOK.html">
-    <img src="PHOT-INDEX-3.png" alt="Evento 2">
-    <div class="album-info">
-      <div class="album-title">Dia de la Biblia | SEDE 1 & 2</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+  <div class="gallery-title">Dia de la Biblia | SEDE PRINCIPAL</div>
 
-  <a class="album" href="galeria OKOK.html">
-    <img src="PHOT-INDEX-3.png" alt="Evento 3">
-    <div class="album-info">
-      <div class="album-title">Dia de la Biblia | SEDE 3</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+  <div class="gallery-main" id="galleryMain">
+    <button class="nav-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="nav-btn next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
 
-  <a class="album" href="galeria OKOK.html">
-    <img src="PHOT-INDEX-3.png" alt="Evento 3">
-    <div class="album-info">
-      <div class="album-title">Exposena | SEDE 1 & 2</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
+    <div class="slides">
+      <!-- Cambia las rutas de las fotos -->
+      <div class="slide active">
+        <img src="galeria/bible/sedep/1.jpg" alt="Foto 1">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/2.jpg" alt="Foto 2">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/3.jpg" alt="Foto 3">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/4.jpg" alt="Foto 4">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/5.jpg" alt="Foto 5">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/6.jpg" alt="Foto 6">
+      </div>
+      <div class="slide">
+        <img src="galeria/bible/sedep/7.jpg" alt="Foto 7">
+      </div>
     </div>
-  </a>
 
-  <a class="album" href="galeria OKOK.html">
-    <img src="PHOT-INDEX-3.png" alt="Evento 3">
-    <div class="album-info">
-      <div class="album-title">Dia de la Afrcolombianidad | SEDE 1 & 2</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+    <div class="dots" id="dots"></div>
+  </div>
+
+
+    <!-- Miniaturas debajo (se llenan con JS) -->
+  <div class="thumbs" id="thumbsContainer"></div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.nav-btn.prev');
+  const nextBtn = document.querySelector('.nav-btn.next');
+  const dotsContainer = document.getElementById('dots');
+  const caption = document.getElementById('caption');
+  const galleryWrapper = document.getElementById('galleryWrapper');
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
+  const thumbsContainer = document.getElementById('thumbsContainer');
+
+  let current = 0;
+  let thumbs = [];
+  let dots = [];
+
+  // Crear punticos y miniaturas a partir de las mismas imágenes
+  slides.forEach((slide, i) => {
+    // DOT
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+
+    // THUMB
+    const img = slide.querySelector('img');         // misma imagen grande
+    const thumbBtn = document.createElement('button');
+    thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
+    thumbBtn.dataset.index = i;
+
+    const thumbImg = img.cloneNode();              // clonamos la misma imagen
+    thumbBtn.appendChild(thumbImg);
+
+    thumbsContainer.appendChild(thumbBtn);
+    thumbs.push(thumbBtn);
+  });
+
+  function updateCaption(){
+    caption.textContent = `Foto ${current + 1} del evento`;
+  }
+
+  function showSlide(idx){
+    if(idx < 0) idx = slides.length - 1;
+    if(idx >= slides.length) idx = 0;
+
+    slides[current].classList.remove('active');
+    thumbs[current].classList.remove('active');
+    dots[current].classList.remove('active');
+
+    current = idx;
+
+    slides[current].classList.add('active');
+    thumbs[current].classList.add('active');
+    dots[current].classList.add('active');
+    updateCaption();
+  }
+
+  prevBtn.addEventListener('click', () => showSlide(current - 1));
+  nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+  // Eventos de click en miniaturas
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const i = parseInt(thumb.dataset.index, 10);
+      showSlide(i);
+    });
+  });
+
+  // Eventos de click en punticos
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const i = parseInt(dot.dataset.index, 10);
+      showSlide(i);
+    });
+  });
+
+  // Pantalla completa
+  fullscreenBtn.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      if (galleryWrapper.requestFullscreen) {
+        galleryWrapper.requestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement === galleryWrapper) {
+      galleryWrapper.classList.add('is-fullscreen');
+    } else {
+      galleryWrapper.classList.remove('is-fullscreen');
+    }
+  });
+
+  updateCaption();
+
+  document.addEventListener('fullscreenchange', () => {
+  if (document.fullscreenElement === galleryWrapper) {
+    galleryWrapper.classList.add('is-fullscreen');
+  } else {
+    galleryWrapper.classList.remove('is-fullscreen');
+  }
+});
+
+</script>
   </section>      
     </div>
     </div>
