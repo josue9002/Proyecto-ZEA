@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia de la Biblia | SEDE PRINCIPAL</title>
-    <link rel="stylesheet" href="styles-dia-de-la-biblia-sp.css">
+    <title>ExpoSENA</title>
+    <link rel="stylesheet" href="styles-photos.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="photo-logo-banner.png">
@@ -90,155 +90,144 @@
           </header>
 
           <script src="script-menu.js"></script>
-<section>
-        <div class="gallery-wrapper" id="galleryWrapper">
+          
+<section class="gallery-wrapper">
+  <div class="gallery-title">Día de la Afrolombianidad | SEDE 1 & 2</div>
 
-  <div class="gallery-title">Dia de la Biblia | SEDE PRINCIPAL</div>
+  <div class="gallery-main">
+    <button class="nav-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
+    <button class="nav-btn next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
+    <button class="fullscreen-btn" aria-label="Pantalla completa">&#x26F6;</button>
 
-  <div class="gallery-main" id="galleryMain">
-    <button class="nav-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-    <button class="nav-btn next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-
-    <div class="slides">
-      <!-- Cambia las rutas de las fotos -->
-      <div class="slide active">
-        <img src="galeria/bible/sedep/1.jpg" alt="Foto 1">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/2.jpg" alt="Foto 2">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/3.jpg" alt="Foto 3">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/4.jpg" alt="Foto 4">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/5.jpg" alt="Foto 5">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/6.jpg" alt="Foto 6">
-      </div>
-      <div class="slide">
-        <img src="galeria/bible/sedep/7.jpg" alt="Foto 7">
-      </div>
-    </div>
-
-    <div class="dots" id="dots"></div>
-  </div>
-
-
-    <!-- Miniaturas debajo (se llenan con JS) -->
-  <div class="thumbs" id="thumbsContainer"></div>
+<div class="slides">
+  <div class="slide active"><img src="galeria/izadas/1.jpg" alt="Izadas de Bandera 1"></div>
+  <div class="slide"><img src="galeria/izadas/2.jpg" alt="Izadas de Bandera 2"></div>
+  <div class="slide"><img src="galeria/izadas/3.jpg" alt="Izadas de Bandera 3"></div>
+  <div class="slide"><img src="galeria/izadas/4.jpg" alt="Izadas de Bandera 4"></div>
+  <div class="slide"><img src="galeria/izadas/5.jpg" alt="Izadas de Bandera 5"></div>
+  <div class="slide"><img src="galeria/izadas/6.jpg" alt="Izadas de Bandera 6"></div>
+  <div class="slide"><img src="galeria/izadas/7.jpg" alt="Izadas de Bandera 7"></div>
+  <div class="slide"><img src="galeria/izadas/8.jpg" alt="Izadas de Bandera 8"></div>
+  <div class="slide"><img src="galeria/izadas/9.jpg" alt="Izadas de Bandera 9"></div>
+  <div class="slide"><img src="galeria/izadas/10.jpg" alt="Izadas de Bandera 10"></div>
+  <div class="slide"><img src="galeria/izadas/11.jpg" alt="Izadas de Bandera 11"></div>
+  <div class="slide"><img src="galeria/izadas/12.jpg" alt="Izadas de Bandera 12"></div>
 </div>
 
+    <div class="dots"></div>
+  </div>
+
+  <div class="caption"></div>
+  <div class="thumbs"></div>
+</section>
+
 <script>
-  const slides = document.querySelectorAll('.slide');
-  const prevBtn = document.querySelector('.nav-btn.prev');
-  const nextBtn = document.querySelector('.nav-btn.next');
-  const dotsContainer = document.getElementById('dots');
-  const caption = document.getElementById('caption');
-  const galleryWrapper = document.getElementById('galleryWrapper');
-  const fullscreenBtn = document.getElementById('fullscreenBtn');
-  const thumbsContainer = document.getElementById('thumbsContainer');
+  function setupGallery(wrapper){
+    const slides = wrapper.querySelectorAll('.slide');
+    if (!slides.length) return;      // si no hay fotos, no hace nada
 
-  let current = 0;
-  let thumbs = [];
-  let dots = [];
+    const prevBtn        = wrapper.querySelector('.nav-btn.prev');
+    const nextBtn        = wrapper.querySelector('.nav-btn.next');
+    const dotsContainer  = wrapper.querySelector('.dots');
+    const caption        = wrapper.querySelector('.caption');
+    const fullscreenBtn  = wrapper.querySelector('.fullscreen-btn');
+    const thumbsContainer= wrapper.querySelector('.thumbs');
 
-  // Crear punticos y miniaturas a partir de las mismas imágenes
-  slides.forEach((slide, i) => {
-    // DOT
-    const dot = document.createElement('button');
-    dot.className = 'dot' + (i === 0 ? ' active' : '');
-    dot.dataset.index = i;
-    dotsContainer.appendChild(dot);
-    dots.push(dot);
+    let current = 0;
+    const dots   = [];
+    const thumbs = [];
 
-    // THUMB
-    const img = slide.querySelector('img');         // misma imagen grande
-    const thumbBtn = document.createElement('button');
-    thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
-    thumbBtn.dataset.index = i;
+    // Crear punticos y miniaturas a partir de las imágenes grandes
+    slides.forEach((slide, i) => {
+      const img = slide.querySelector('img');
+      if (!img) return;
 
-    const thumbImg = img.cloneNode();              // clonamos la misma imagen
-    thumbBtn.appendChild(thumbImg);
+      // DOT
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.dataset.index = i;
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
 
-    thumbsContainer.appendChild(thumbBtn);
-    thumbs.push(thumbBtn);
-  });
+      // THUMB
+      const thumbBtn = document.createElement('button');
+      thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
+      thumbBtn.dataset.index = i;
 
-  function updateCaption(){
-    caption.textContent = `Foto ${current + 1} del evento`;
-  }
+      const thumbImg = img.cloneNode();
+      thumbBtn.appendChild(thumbImg);
+      thumbsContainer.appendChild(thumbBtn);
+      thumbs.push(thumbBtn);
+    });
 
-  function showSlide(idx){
-    if(idx < 0) idx = slides.length - 1;
-    if(idx >= slides.length) idx = 0;
+    function updateCaption(){
+      caption.textContent = 'Foto ' + (current + 1);
+    }
 
-    slides[current].classList.remove('active');
-    thumbs[current].classList.remove('active');
-    dots[current].classList.remove('active');
+    function showSlide(index){
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
 
-    current = idx;
+      slides[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+      dots[current].classList.remove('active');
 
-    slides[current].classList.add('active');
-    thumbs[current].classList.add('active');
-    dots[current].classList.add('active');
+      current = index;
+
+      slides[current].classList.add('active');
+      thumbs[current].classList.add('active');
+      dots[current].classList.add('active');
+      updateCaption();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const i = parseInt(thumb.dataset.index, 10);
+        showSlide(i);
+      });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const i = parseInt(dot.dataset.index, 10);
+        showSlide(i);
+      });
+    });
+
+    // Pantalla completa solo para esta galería
+    if (fullscreenBtn){
+      fullscreenBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          wrapper.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      });
+    }
+
     updateCaption();
   }
 
-  prevBtn.addEventListener('click', () => showSlide(current - 1));
-  nextBtn.addEventListener('click', () => showSlide(current + 1));
+  // Esperar a que cargue el DOM antes de crear thumbs
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-wrapper').forEach(setupGallery);
+  });
 
-  // Eventos de click en miniaturas
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const i = parseInt(thumb.dataset.index, 10);
-      showSlide(i);
+  // Manejar la clase is-fullscreen para todas
+  document.addEventListener('fullscreenchange', () => {
+    document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
+      if (document.fullscreenElement === wrapper) {
+        wrapper.classList.add('is-fullscreen');
+      } else {
+        wrapper.classList.remove('is-fullscreen');
+      }
     });
   });
-
-  // Eventos de click en punticos
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const i = parseInt(dot.dataset.index, 10);
-      showSlide(i);
-    });
-  });
-
-  // Pantalla completa
-  fullscreenBtn.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      if (galleryWrapper.requestFullscreen) {
-        galleryWrapper.requestFullscreen();
-      }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  });
-
-  document.addEventListener('fullscreenchange', () => {
-    if (document.fullscreenElement === galleryWrapper) {
-      galleryWrapper.classList.add('is-fullscreen');
-    } else {
-      galleryWrapper.classList.remove('is-fullscreen');
-    }
-  });
-
-  updateCaption();
-
-  document.addEventListener('fullscreenchange', () => {
-  if (document.fullscreenElement === galleryWrapper) {
-    galleryWrapper.classList.add('is-fullscreen');
-  } else {
-    galleryWrapper.classList.remove('is-fullscreen');
-  }
-});
-
 </script>
+
   </section>      
     </div>
     </div>
