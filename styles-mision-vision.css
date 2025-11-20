@@ -27,7 +27,6 @@ body {
 header {
     background-color: #565a5e;
     color: #fff;
-    padding-bottom: 0px;
     border-radius: 10px;
 }
 
@@ -38,19 +37,20 @@ header {
     gap: 16px;
     padding: 20px 0;
     animation: fadeInUp 1s ease-in-out;
-    padding-left: 10px;
 }
 
 /* Se mantiene */
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
-    margin-left: 20px;
+    justify-content: left;
+    padding-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
 .logo-center {
     text-align: center;
+    justify-content: center;
 }
 
 .school-name {
@@ -80,7 +80,8 @@ header {
     display: inline-flex;
     align-items: right;
     gap: 12px;
-    margin-right: 30px;
+    padding-right: 30px;
+    justify-content: right;
 }
 
 .social-link {
@@ -109,18 +110,18 @@ header {
     .logo-container {
         grid-template-columns: 1fr; /* apilar */
         justify-items: center;
+        justify-content: center;
         text-align: center;
         gap: 8px;
-
     }
 
     .school-phrase {
-        font-size: 0.7rem;
+        font-size: 0.7rem; 
     }
 
-    .logo { height: 72px; display: none;}
-    .socials { margin-top: 4px;}
-    .social-link { padding-bottom: 0;}
+    .logo { display: none;}
+    .socials { justify-content: center; align-items: center; padding: 0;}
+    .social-link { padding: 0;}
     .school-name{
         justify-content: center;
         align-items: center;
@@ -529,7 +530,7 @@ main {
     }
 
     .container{
-        margin: 0 10px;
+        margin: 0 5px;
     }
 
     .contenido-card{
@@ -629,13 +630,21 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-right: 20px;
+        padding: 0px;
         text-align: center;
         
     }
 
     .logo-container{
-        padding-left: 10px;
+        padding: 20px;
+    }
+
+    .logo{
+        padding-left: 0;
+    }
+
+    .socials{
+        padding-right: 10%;
     }
 
     .text-column p{
@@ -1054,19 +1063,21 @@ main {
 }
 
   .wrap{
-    max-width:1300px;
+    max-width:1500px;
     margin:20px auto;
     margin-bottom: 0;
-    padding:0 18px;
+    padding:0 0px;
   }
     .grid{
-    display:grid;
+    display: grid;
     gap:22px;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+    justify-content: center;
   }
 
   /* En móviles se apila a 1 columna */
   @media (max-width: 900px){
+
     .grid{ grid-template-columns: 1fr; }
 
     .texto{
@@ -1118,7 +1129,7 @@ main {
 
 .icon{          /* ya lo tienes, solo recuerda centrar */
   width:100px;height:100px;
-  display:grid;place-items:center;
+  display:grid; place-items:center;
   margin:0 auto 0px;
   overflow:hidden;                 /* recorta imágenes que sobresalgan */
 }
