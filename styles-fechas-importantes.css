@@ -300,90 +300,6 @@ main {
     font-family: 'Montserrat', sans-serif;
 }
 
-.calendar-container {
-    max-width: 100%;
-    padding: 20px;
-  }
-  
-  .year-calendar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .month {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-  }
-  
-  .month h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    table-layout: fixed;
-    border-radius: 10px;
-  }
-  
-  thead {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    position: relative; /* Necesario para posicionar el tooltip */
-  }
-  
-  tbody td:hover {
-    background-color: #f1f1f1;
-  }
-  
-  @media (max-width: 768px) {
-    .year-calendar {
-        grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Estilo del tooltip */
-  .tooltip {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 120%; /* Mostrar el tooltip encima de la fecha */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .clickable:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  /* Subrayar la semana */
-  .highlight-week .highlight {
-    text-decoration: none;
-    background-color: #fbff00;
-  }
 
 /* Encabezado */
 @media (max-width: 1200px) {
@@ -565,3 +481,235 @@ main {
         flex-direction: column;
     }
 }
+
+.flyer {
+      max-width: 2000px;
+      width: 100%;
+      background: linear-gradient(135deg, #018ae6, #00435f);
+      color: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      display: grid;
+      grid-template-columns: 2fr 1.8fr;
+      gap: 0;
+    }
+
+    /* Columna izquierda (texto principal) */
+    .flyer-left {
+      padding: 30px 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sede-info {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .sede-info b {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .titulo-colegio {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .titulo-colegio span.ciudad {
+      color: #ffdd2f;
+    }
+
+    .subtitulo {
+      font-weight: 700;
+      margin-top: 5px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bloque {
+      margin-top: 18px;
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .bloque h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #ffdd2f;
+    }
+
+    .bloque ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .bloque ul li::before {
+      content: "•";
+      margin-right: 6px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .horarios {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .horarios h4 {
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+      color: #ffdd2f;
+    }
+
+    .horarios span {
+      font-weight: 600;
+    }
+
+    /* Columna derecha (imagen + ofrecemos) */
+    .flyer-right {
+      position: relative;
+      padding: 24px 30px 24px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .matriculas-label {
+      align-self: flex-end;
+      background: #ffdd2f;
+      color: #004b96;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .ofrecemos {
+      margin-top: 16px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      padding: 14px 16px;
+      max-width: 280px;
+      align-self: flex-end;
+    }
+
+    .ofrecemos h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #ffdd2f;
+    }
+
+    .ofrecemos ul {
+      list-style: none;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .ofrecemos ul li::before {
+      content: "✔";
+      margin-right: 6px;
+      font-weight: 700;
+    }
+
+    .student-wrapper {
+      position: relative;
+      margin-top: 20px;
+      display: flex;
+      justify-content: right;
+      align-items: flex-end;
+      flex-grow: 1;
+    }
+
+    .student-photo {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 24px;
+      background: #f4f4f4;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .student-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 820px) {
+      .flyer {
+        grid-template-columns: 1fr;
+      }
+
+      .flyer-right {
+        padding-top: 10px;
+      }
+
+      .student-photo {
+        max-width: 260px;
+      }
+
+      .ofrecemos {
+        align-self: center;
+        text-align: left;
+        width: 100%;
+        max-width: 330px;
+      }
+
+      .matriculas-label {
+        align-self: center;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 10px;
+      }
+
+      .flyer-left {
+        padding: 18px 16px;
+      }
+
+      .flyer-right {
+        padding: 12px 16px 18px;
+      }
+
+      .titulo-colegio {
+        font-size: 1.35rem;
+      }
+
+      .bloque,
+      .ofrecemos {
+        font-size: 0.88rem;
+      }
+
+      .student-photo {
+        max-width: 220px;
+      }
+
+      .crown {
+        width: 55px;
+        height: 32px;
+        right: 16%;
+      }
+    }
