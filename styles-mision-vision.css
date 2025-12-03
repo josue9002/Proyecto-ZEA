@@ -1049,7 +1049,7 @@ main {
     --ink:#0e1726;
     --muted:#475569;
     --accent:#1e88e5;
-    --radius:18px;
+    --radius:0px;
     --shadow:0 6px 18px rgba(14,23,38,.08);
   }
 
@@ -1078,10 +1078,10 @@ main {
   /* En móviles se apila a 1 columna */
   @media (max-width: 900px){
 
-    .grid{ grid-template-columns: 1fr; }
+    .grid{ grid-template-columns: 1fr; padding: 0; display:block;}
 
     .texto{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .mini-table{
@@ -1093,7 +1093,7 @@ main {
     }
 
     .card h3{
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
 
     .mini-table td{
@@ -1157,41 +1157,72 @@ strong{
 }
 
 
-  h3{
-    margin:0 0 12px;
-    font-size:28px;
-    letter-spacing:.4px;
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-
   .mini-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:14px;
-    font-size:18px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-  .mini-table td{
-    border:1px solid #474747;
-    padding:10px 12px;
-    vertical-align:top;
-  }
-  .foot{
-    text-align:center;
-    font-size:18px;
-    color: #000;
-    border:1px solid #474747;
-    border-top:none;
-    padding:10px 12px;
-    border-radius:0 0 var(--radius) var(--radius);
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+  font-size:18px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.mini-table td{
+  border:1px solid #474747;
+  padding:10px 12px;
+  vertical-align:top;
+  text-align: center;
+}
+
+/* Última fila (Lealtad) con bordes redondeados abajo */
+.mini-table .lealtad-row td{
+  border-radius:0 0 var(--radius) var(--radius);
+}
+
+/* Si quieres asegurar el borde superior redondeado también: */
+.mini-table tr:first-child td:first-child{
+  border-radius: var(--radius) 0 0 0;
+}
+.mini-table tr:first-child td:last-child{
+  border-radius: 0 var(--radius) 0 0;
+}
+
+h3{
+  margin:0 0 12px;
+  font-size:28px;
+  letter-spacing:.4px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* 🔻 RESPONSIVE: 1 sola columna desde 430px hacia abajo */
+@media (max-width: 430px) {
+  .mini-table{
+    display:block;
+    border-collapse:separate;
+    border-spacing:0;
+    font-size:16px; /* opcional */
+    justify-items: center;
   }
 
-  .romanos{
-    font-size: 18px;}
+  .mini-table tr{
+    display:block;
+    width:100%;
+  }
+
+  .mini-table td{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .mini-table tr + tr{
+    margin-top:0px;
+  }
+
+  /* Lealtad sigue ocupando todo el ancho, no hace falta cambio extra */
+}
