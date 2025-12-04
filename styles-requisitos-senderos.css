@@ -27,7 +27,6 @@ body {
 header {
     background-color: #565a5e;
     color: #fff;
-    padding-bottom: 0px;
     border-radius: 10px;
 }
 
@@ -38,19 +37,20 @@ header {
     gap: 16px;
     padding: 20px 0;
     animation: fadeInUp 1s ease-in-out;
-    padding-left: 10px;
 }
 
 /* Se mantiene */
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
-    margin-left: 20px;
+    justify-content: left;
+    padding-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
 .logo-center {
     text-align: center;
+    justify-content: center;
 }
 
 .school-name {
@@ -80,7 +80,14 @@ header {
     display: inline-flex;
     align-items: right;
     gap: 12px;
-    margin-right: 30px;
+    padding-right: 30px;
+    justify-content: right;
+}
+
+@media (max-width: 1000px){
+ .socials{
+    padding-right: 10px;
+}
 }
 
 .social-link {
@@ -109,18 +116,18 @@ header {
     .logo-container {
         grid-template-columns: 1fr; /* apilar */
         justify-items: center;
+        justify-content: center;
         text-align: center;
         gap: 8px;
-
     }
 
     .school-phrase {
-        font-size: 0.7rem;
+        font-size: 0.7rem; 
     }
 
-    .logo { height: 72px; display: none;}
-    .socials { margin-top: 4px;}
-    .social-link { padding-bottom: 0;}
+    .logo { display: none;}
+    .socials { justify-content: center; align-items: center; padding: 0;}
+    .social-link { padding: 0;}
     .school-name{
         justify-content: center;
         align-items: center;
@@ -194,7 +201,7 @@ nav {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1;
 }
 
 .dropdown-content ol{
@@ -226,7 +233,7 @@ section {
 
 section h1 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-top: 30px;
     color: #003366;
     text-align: center;
 }
@@ -242,7 +249,7 @@ section p {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1;
 }
 
 .nav-list .dropdown:hover .dropdown-content {
@@ -403,95 +410,6 @@ main {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-/*Cards*/
-.container-card {
-	width: 100%;
-	display: flex;
-	max-width: 1500px;
-	margin: auto;
-    
-}
-.card{
-	width: 100%;
-	margin: 20px;
-	overflow: hidden;
-	background:#fff;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-	transition: all 400ms ease-out;
-	cursor: default;
-    border-radius: 10px;
-}
-.card:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
-}
-.card img{
-	width: 100%;
-	height: auto;
-  user-select: none;         /* no seleccionar */
-  -webkit-user-drag: none;   /* no arrastrar en WebKit */
-  pointer-events: none;      /* los eventos pasan al overlay */
-}
-.card .contenido-card{
-	padding: 15px;
-	text-align: center;
-}
-.card .contenido-card h3{
-	margin-bottom: 15px;
-	color: #003366;
-}
-.card .contenido-card p{
-	line-height: 1.8;
-	color: #6a6a6a;
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-.card .contenido-card a{
-	display: inline-block;
-	padding: 10px;
-	margin-top: 10px;
-	text-decoration: none;
-	color: #007BFF;
-	border: 1px solid #007BFF;
-	border-radius: 4px;
-	transition: all 400ms ease;
-	margin-bottom: 5px;
-}
-.card .contenido-card a:hover{
-	background: #007BFF;
-	color: #fff;
-}
-@media only screen and (min-width:300px) and (max-width:768px){
-	.container-card{
-		flex-wrap: wrap;
-	}
-	.card{
-		margin: 5px;
-	}
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-	.container-card {
-		justify-content: space-around; /* Ajusta el espaciado entre las tarjetas */
-	}
-
-	.card {
-		margin: 5px;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.container-card {
-		grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
-	}
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-	.container-card {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 *{
@@ -549,12 +467,6 @@ main {
     padding: 15px;
 }
 
-.title-container h3 {
-    font-size: 30px; /* Tamaño de la fuente */
-    font-weight: bold; /* Hace que el texto esté en negrita */
-    height: 2px;
-    margin-bottom: 20px;
-}
 
 .parrafo-nose{
     user-select: none; /* CSS estándar */
@@ -624,7 +536,7 @@ main {
     }
 
     .container{
-        margin: 0 10px;
+        margin: 0 5px;
     }
 
     .contenido-card{
@@ -724,14 +636,19 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-right: 20px;
+        padding: 0px;
         text-align: center;
         
     }
 
     .logo-container{
-        padding-left: 10px;
+        padding: 20px;
     }
+
+    .logo{
+        padding-left: 0;
+    }
+
 
     .text-column p{
         font-size: 14px;
@@ -740,7 +657,6 @@ main {
     .social-column p{
         font-size: 14px;
     }
-
 }
 
 .main-ok{
@@ -811,10 +727,161 @@ main {
   }
 }
 
+
 /* Accesibilidad: reduce animaciones si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce){
   .socials a{ transition: none; }
   .socials a:hover{ transform: none; }
+}
+
+/*nuevo*/
+
+:root{
+    --h: 450px;          /* alto del slider */
+    --radius: 14px;
+  }
+
+.slider-container{
+    position:relative;
+    width:min(100%, 1200px);
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:var(--radius);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    background:#000;
+  }
+  .slider{
+    display:flex;
+    /* la transición se activa/desactiva vía JS cuando se hacen resets invisibles */
+    transition: transform .6s ease-in-out;
+    will-change: transform;
+  }
+  .slide{
+    min-width:100%;
+    height:var(--h);
+    user-select:none;
+  }
+  .slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+/* Botones laterales */
+  .nav-btn{
+    position:absolute; inset:0 auto 0 0;
+    top:50%; transform:translateY(-50%);
+    width:44px; height:44px;
+    border:none; border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff; font-size:22px; line-height:44px;
+    cursor:pointer; z-index:5;
+    display:grid; place-items:center;
+  }
+  .nav-btn:hover{ background:rgba(0,0,0,.75); }
+  .nav-btn.next{ left:auto; right:12px; }
+  .nav-btn.prev{ left:12px; }
+
+  /* Punticos */
+  .dots{
+    position:absolute; left:0; right:0; bottom:5px;
+    display:flex; justify-content:center; gap:0px; z-index:4;
+  }
+  .dot{
+    width:12px; height:12px; border-radius:50%;
+    background:#454444; cursor:pointer; border:2px solid transparent;
+    transition:transform .2s, background .2s;
+  }
+  .dot:hover{ transform:scale(1.1); }
+  .dot.active{ background:#ebebeb; border-color:#494848; }
+
+  /* Responsive alto opcional */
+  @media (max-width:700px){
+    :root{ --h: 177px; }
+
+    .dot{
+        display: none;
+    }
+
+    .nav-btn{
+        width:30px; height:30px;
+    }
+
+    .chev { font-size: 0.75rem; line-height: 1; }
+}
+/* Responsive: más pequeño en pantallas angostas */
+    @media (max-width: 480px){
+    .chev { font-size: 0.65rem; }
+}
+.scroll-left {
+        height: 50px; 
+        overflow: hidden;
+        position: relative;
+        }
+        .scroll-left h3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        font-size: 30px;
+        
+        /* Starting position */
+        -moz-transform:translateX(-500%);
+        -webkit-transform:translateX(100%); 
+        transform:translateX(100%);
+        /* Apply animation to this element */ 
+        -moz-animation: scroll-left 7s linear infinite;
+        -webkit-animation: scroll-left 7s linear infinite;
+        animation: scroll-left 7s linear infinite;
+}
+        
+        /* Move it (define the animation) */
+        @-moz-keyframes scroll-left {
+        0% { -moz-transform: translateX(100%); }
+        100% { -moz-transform: translateX(-100%); }
+        }
+        
+        @-webkit-keyframes scroll-left {
+        0% { -webkit-transform: translateX(100%); }
+        100% { -webkit-transform: translateX(-100%); }
+        }
+        
+        @keyframes scroll-left {
+        0% { 
+        -moz-transform: translateX(100%); /* Browser bug fix */
+        -webkit-transform: translateX(100%); /* Browser bug fix */
+        transform: translateX(100%); 
+        }
+        
+        100% { 
+        -moz-transform: translateX(-100%); /* Browser bug fix */
+        -webkit-transform: translateX(-100%); /* Browser bug fix */
+        transform: translateX(-100%); 
+        }
+}
+
+.heading {
+    font-size: 2.2em;
+    text-align: center;
+    color: #003366;
+    position: relative;
+    margin-bottom: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.heading::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: #f39c12;
+    display: block;
+    margin: 0.5rem auto;
+    animation: underline-grow 2s ease-out;
 }
 
 /* Estilos de la caja */
@@ -865,6 +932,117 @@ main {
   position: absolute;
   inset: 0;                  /* overlay transparente */
   background: transparent;
+}
+
+
+.container-ms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.column-ms {
+    width: 49%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #9c9c9c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 400ms ease-out;
+}
+
+.column-ms:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.column-image {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    transition: transform 0.3s ease;
+}
+
+.column-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
+}
+
+.container-fv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.column-fv {
+    width: 49%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #9c9c9c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 400ms ease-out;
+}
+
+.column-fv:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.no-copiable {
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.column {
+    flex: 1;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-column img {
+    width: 40%;
+    height: auto;
+    display: block;
+}
+
+.text-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.social-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px; /* Añadido para separación entre el párrafo y las imágenes */
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ajusta este valor según la separación deseada */
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img {
+    width: 45px; /* Ajusta este valor según tus necesidades */
+    height: auto;
+    display: block;
+}
+
+.column-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
 }
 
     .flyer {
@@ -1026,11 +1204,9 @@ main {
 
     .student-photo {
       width: 100%;
-      max-width: 400px;
-      border-radius: 24px;
-      background: #f4f4f4;
+      max-width: 500px;
+      background: none;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .student-photo img {
