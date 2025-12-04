@@ -1099,7 +1099,7 @@ body.modal-open {
   position: absolute;
   inset: auto 0 0 0;       /* solo parte inferior */
   height: 35%;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.158), transparent);
   pointer-events: none;
 }
 
