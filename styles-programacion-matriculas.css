@@ -80,14 +80,7 @@ header {
     display: inline-flex;
     align-items: right;
     gap: 12px;
-    padding-right: 30px;
-    justify-content: right;
-}
-
-@media (max-width: 1000px){
- .socials{
-    padding-right: 10px;
-}
+    margin-right: 30px;
 }
 
 .social-link {
@@ -116,24 +109,25 @@ header {
     .logo-container {
         grid-template-columns: 1fr; /* apilar */
         justify-items: center;
-        justify-content: center;
         text-align: center;
         gap: 8px;
+
     }
 
     .school-phrase {
-        font-size: 0.7rem; 
+        font-size: 0.7rem;
     }
 
-    .logo { display: none;}
-    .socials { justify-content: center; align-items: center; padding: 0;}
-    .social-link { padding: 0;}
+    .logo { height: 72px; display: none;}
+    .socials { margin-top: 4px;}
+    .social-link { padding-bottom: 0;}
     .school-name{
         justify-content: center;
         align-items: center;
         justify-items: center;
     }
 }
+
 
 /* Estilos para dispositivos móviles */
 .menu-icon {
@@ -200,7 +194,7 @@ nav {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .dropdown-content ol{
@@ -248,7 +242,7 @@ section p {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .nav-list .dropdown:hover .dropdown-content {
@@ -730,19 +724,14 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding: 0px;
+        padding-right: 20px;
         text-align: center;
         
     }
 
     .logo-container{
-        padding: 20px;
+        padding-left: 10px;
     }
-
-    .logo{
-        padding-left: 0;
-    }
-
 
     .text-column p{
         font-size: 14px;
@@ -751,6 +740,7 @@ main {
     .social-column p{
         font-size: 14px;
     }
+
 }
 
 .main-ok{
@@ -827,114 +817,6 @@ main {
   .socials a:hover{ transform: none; }
 }
 
-/* ------------------------------------------------------------------------ */
-
-/* Buenas bases */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; }
-
-/* Variables responsivas */
-:root{
-  --pad-inline: 16px;
-  --btn-size: 44px;   /* tamaño flecha */
-  --btn-font: 18px;   /* tamaño icono */
-  --dot: 10px;        /* tamaño dot */
-}
-
-/* La sección del slider no permite desbordes laterales */
-.section-del-slider{
-  overflow-x: hidden;
-  padding-inline: var(--pad-inline);
-}
-
-/* Slider responsivo: <=1000px y misma proporción 1000x450 */
-.slider-container{
-  position: relative;
-  width: min(1080px, 100%);
-  aspect-ratio: 1080 / 450;
-  margin: 24px auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-/* Track y slides */
-.slider-track{ display:flex; height:100%; transition: transform .5s ease; }
-.slide{ flex: 0 0 100%; height: 100%; user-select: none; }
-.slide img{ width: 100%; height: 100%; object-fit: cover; display: block; }
-
-/* Flechas (Font Awesome dentro del botón) */
-.nav-button{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: var(--btn-size);
-  height: var(--btn-size);
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: rgba(47, 47, 47, 0.75);
-  border: 1px solid #424243;
-  color: #e5e7eb;
-  cursor: pointer;
-  z-index: 2;
-}
-.nav-button:hover{ background: rgba(35, 35, 35, 0.95); }
-.nav-button.left{ left: 10px; }
-.nav-button.right{ right: 10px; }
-.nav-button i{
-  font-size: var(--btn-font);
-  line-height: 1;
-  pointer-events: none; /* el click lo recibe el botón, no el <i> */
-}
-
-/* Dots */
-.dots{
-  position: absolute;
-  left: 0; right: 0; bottom: 10px;
-  display: flex; gap: 8px; justify-content: center;
-  z-index: 2;
-}
-.dot{
-  width: var(--dot); height: var(--dot);
-  border-radius: 999px;
-  background: rgba(255,255,255,.6);
-  border: 1px solid rgba(0,0,0,.25);
-  cursor: pointer;
-}
-.dot.active{ background: #fff; }
-
-/* Breakpoints para "resolución pequeña" */
-@media (max-width: 768px){
-  :root{
-    --pad-inline: 12px;
-    --btn-size: 38px;
-    --btn-font: 16px;
-    --dot: 8px;
-  }
-  .slider-container{ margin: 16px auto; }
-}
-
-@media (max-width: 480px){
-  :root{
-    --pad-inline: 10px;
-    --btn-size: 32px;   /* flechas más pequeñas */
-    --btn-font: 14px;   /* icono más pequeño */
-    --dot: 6px;         /* dots más pequeños */
-  }
-  .slider-container{ margin: 12px auto; border-radius: 8px; }
-}
-
-@media (max-width: 360px){
-  :root{
-    --btn-size: 28px;
-    --btn-font: 13px;
-  }
-  /* Si prefieres aún más limpio, puedes ocultar flechas:
-  .nav-button{ display:none; }
-  */
-}
-
-
 /* Estilos de la caja */
 .simple-news-box {
     background-color: aliceblue; /* Color de fondo */
@@ -985,255 +867,210 @@ html, body { margin: 0; }
   background: transparent;
 }
 
-/* === MODAL / ANUNCIO === */
-/* === MODAL / ANUNCIO === */
-:root{
-  --overlay: rgba(0,0,0,.55);
-  --modal-radius: 18px;
-  --modal-shadow: 0 20px 50px rgba(0,0,0,.35);
-}
-
-body.modal-open { 
-  overflow: hidden; 
-}
-
-.overlay-anuncio{
-  position: fixed;
-  inset: 0;
-  display: none;              /* oculto por defecto */
-  place-items: center;        /* centra el modal */
-  background: var(--overlay);
-  backdrop-filter: blur(3px); /* opcional: blur del fondo */
-  z-index: 9999;              /* sobre todo */
-}
-
-.overlay-anuncio.show{ 
-  display: grid; 
-}
-
-.modal-anuncio{
-  background: #fff;
-  border-radius: var(--modal-radius);
-  box-shadow: var(--modal-shadow);
-  overflow: hidden;
-  transform: translateY(12px) scale(.98);
-  opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
-  
-  /* ancho pensado para el banner 2000x900 */
-  max-width: 900px;
-  width: min(96vw, 900px);
-  margin: 0 12px; /* pequeño margen lateral */
-}
+:root {
+      --azul: #008fd3;
+      --azul-oscuro: #005a92;
+      --azul-suave: #e5f5ff;
+      --blanco: #ffffff;
+      --gris-texto: #2f3b4c;
+      --amarillo: #ffd64a;
+      --borde: #d0e2f2;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      --radius-card: 18px;
+    }
 
 
+    .page {
+      width: 100%;
+      max-width: 2000px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 26px;
+      padding: 24px 20px 30px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
 
-.overlay-anuncio.show .modal-anuncio{
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
+    .header-dos {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-.modal-anuncio__header{
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 20px;
-  background: #a90000; 
-  color:#ffffff; 
-  font-weight: 700;
-}
+    .header-dos h1 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--azul-oscuro);
+      font-weight: 800;
+    }
 
-/* Botones genéricos */
-.btn-anuncio{
-  appearance:none; 
-  border:0; 
-  border-radius:12px; 
-  padding:10px 16px;
-  font-weight:600; 
-  cursor:pointer;
-}
+    .header-dos p {
+      margin-top: 6px;
+      font-size: 0.96rem;
+      color: #4b5b6d;
+    }
 
-.btn-anuncio--primary{ 
-  background:#111827; 
-  color:#fff; 
-}
+    .header-dos .badge-periodo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--azul);
+      color: var(--blanco);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.btn-anuncio--link{ 
-  background:transparent; 
-  color:#111827; 
-}
+    .header-dos .badge-periodo span {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+    }
 
-.btn-anuncio--close{
-  background:transparent; 
-  border:0; 
-  color:#fefefe; 
-  cursor:pointer;
-  font-size:24px; 
-  line-height:1; 
-  padding:0 6px;
-}
+    .campus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
 
-/* ===============================
-   Banner de imagen ocupando todo
-   =============================== */
+    .campus-card {
+      background: var(--blanco);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
 
-.modal-anuncio__banner{
-  position: relative;
-  width: 100%;
-  max-height: 80vh;        /* para que no se salga de la pantalla */
-  overflow: hidden;
-}
+    .campus-header {
+      background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+      color: var(--blanco);
+      padding: 14px 16px 12px;
+    }
 
-.modal-anuncio__banner-img{
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 80vh;
-  object-fit: cover;       /* mantiene proporción 2000x900 recortando si hace falta */
-}
+    .campus-header h2 {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 2px;
+    }
 
-/* Degradado inferior para leer mejor los botones */
-.modal-anuncio__banner::after{
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;       /* solo parte inferior */
-  height: 35%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.158), transparent);
-  pointer-events: none;
-}
+    .campus-header p {
+      font-size: 0.8rem;
+      opacity: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-/* Contenedor de botones dentro del banner */
-.modal-anuncio__actions{
-  position: absolute;
-  inset-inline: 16px;
-  bottom: 16px;
-  display:flex; 
-  gap:12px; 
-  justify-content:flex-end;
-  flex-wrap: wrap;
-  padding: 0;
-  background: transparent;
-}
+    .campus-header span.tag {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
 
-/* Ajustes de color para legibilidad sobre la imagen */
-.modal-anuncio__banner .btn-anuncio--primary{
-  background: #111827;
-  color: #ffffff;
-}
+    .table-wrapper {
+      padding: 14px 14px 16px;
+      background: var(--azul-suave);
+      flex: 1;
+    }
 
-.modal-anuncio__banner .btn-anuncio--link{
-  background: rgba(255,255,255,0.9);
-  color: #111827;
-}
+    .table-inner {
+      background: var(--blanco);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+    }
 
-/* ===============================
-   Responsive
-   =============================== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
 
-@media (max-width: 768px){
-  .modal-anuncio{
-    width: 96vw;
-    max-width: 620px;
-    border-radius: 16px;
-  }
+    thead {
+      background: #d7efff;
+    }
 
-  .modal-anuncio__banner{
-    max-height: 70vh;
-  }
+    th,
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e1edf8;
+      border-right: 1px solid #e1edf8;
+      text-align: left;
+      vertical-align: top;
+    }
 
-  .modal-anuncio__actions{
-    inset-inline: 12px;
-    bottom: 12px;
-    justify-content: center;
-  }
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
 
-  .btn-anuncio{
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 0.95rem;
-  }
-}
+    tr:last-child td {
+      border-bottom: none;
+    }
 
-/* Layout especial para pantallas muy pequeñas */
-@media (max-width: 480px){
-  .modal-anuncio{
-    width: 96vw;
-    margin: 0 2vw;
-    border-radius: 14px;
-  }
+    th {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.8px;
+      color: #42556b;
+    }
 
-  /* Dejamos que el banner tome la altura que necesite
-     y permitimos que el contenido (botones) salga hacia abajo
-     sin ser cortado */
-  .modal-anuncio__banner{
-    max-height: none;
-    overflow: visible;
-  }
+    td.fecha {
+      font-weight: 600;
+      width: 34%;
+    }
 
-  /* Quitamos el degradado porque ya no habrá botones encima de la imagen */
-  .modal-anuncio__banner::after{
-    display: none;
-  }
+    td.hora {
+      width: 28%;
+      white-space: nowrap;
+    }
 
-  /* Botones dejan de ser absolutos y se comportan como bloque normal,
-     quedando DEBAJO de la imagen, dentro del modal */
-  .modal-anuncio__actions{
-    position: static;              /* ya no absolute */
-    margin-top: 0px;
-    padding: 8px 12px 14px;
-    background: #00000048;
-    display: flex;
-    flex-direction: column;        /* uno debajo del otro */
-    align-items: stretch;
-    gap: 8px;
-  }
+    td.grado {
+      width: 38%;
+    }
 
-  .modal-anuncio__actions .btn-anuncio{
-    width: 100%;
-    text-align: center;
-    padding: 8px 10px;
-    font-size: 0.85rem;
-    border-radius: 10px;
-    line-height: 1.2;
-  }
-}
+    /* Alternancia filas */
+    tbody tr:nth-child(even) td {
+      background: #f7fbff;
+    }
 
+    /* Responsive tablas: scroll horizontal en pantallas muy pequeñas */
+    @media (max-width: 1650px) {
+      .table-inner {
+        overflow-x: auto;
+      }
 
-/* ====== Accesibilidad extra ====== */
-@media (prefers-reduced-motion: reduce){
-  .modal-anuncio{
-    transition: none !important;
-  }
-  .overlay-anuncio{
-    backdrop-filter: none;
-  }
-}
+      table {
+        min-width: 480px;
+      }
 
-/* Modo oscuro (si lo usas en todo el sitio) */
-@media (prefers-color-scheme: dark){
-  .modal-anuncio{
-    background: #ffffff;
-    color: #000000;
-  }
-}
+      .page {
+        padding: 18px 10px 25px;
+      }
 
-/* Botones más pequeños en pantallas muy pequeñas */
-@media (max-width: 430px){
-  .modal-anuncio__banner{
-    max-height: 60vh;
-  }
+      header h1 {
+        font-size: 1.4rem;
+      }
+    }
 
-  .modal-anuncio__actions{
-    inset-inline: 8px;
-    bottom: 10px;
-    gap: 6px;
-  }
+    /* Extra detalle para móviles */
+    @media (max-width: 420px) {
+      header p {
+        font-size: 0.85rem;
+      }
 
-  .modal-anuncio__actions .btn-anuncio{
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    line-height: 1.2;
-  }
-}
+      th,
+      td {
+        padding: 7px 8px;
+      }
+    }
