@@ -14,24 +14,37 @@
 </head>
 <body>
     <div class="container">
-            <!-- Izquierda: logo (se mantiene la clase .logo) -->
-                 <div class="img-guard">
-                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                 </div>
+            <!-- Overlay + Modal de anuncio con imagen -->
+<div class="overlay-anuncio" id="overlayAnuncio" aria-hidden="true">
+  <div class="modal-anuncio" role="dialog" aria-modal="true" aria-labelledby="anuncio-title">
+    
+    <!-- Antes era <header> -->
+    <div class="modal-anuncio__header">
+      <span id="anuncio-title" class="no-copiable">¡Novedades del LIMEC!</span>
+      <button class="btn-anuncio--close" id="cerrarAnuncio" aria-label="Cerrar">×</button>
+    </div>
 
-                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
-                <div class="logo-center">
-                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
-                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
-                </div>
+    <!-- Banner de imagen que ocupa todo el anuncio -->
+    <div class="modal-anuncio__banner">
+      <img 
+        src="index-senderos.gif" 
+        alt="Programación del tercer periodo - LIMEC" 
+        class="modal-anuncio__banner-img no-save" 
+        draggable="false">
 
-                <!-- Derecha: redes sociales con Font Awesome -->
-                <div class="socials" aria-label="Redes sociales">
-                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+      <!-- Botones sobre la imagen -->
+      <div class="modal-anuncio__actions">
+        <a class="btn-anuncio btn-anuncio--primary no-copiable" href="cronograma.html" role="button">
+          Más información
+        </a>
+        <button class="btn-anuncio btn-anuncio--link no-copiable" id="masTarde">
+          Más tarde
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
         <header>
             <div class="logo-container">
                 <!-- Izquierda: logo (se mantiene la clase .logo) -->
