@@ -967,7 +967,7 @@ main {
     animation: underline-grow 2s ease-out;
 }
 
-    .container-dos{max-width:1300px; margin:auto; padding:10px; padding-bottom: 0;}
+    .container-dos{max-width:2000px; margin:auto; padding:10px; padding-bottom: 0;}
 
     .tabs{
       display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap;
