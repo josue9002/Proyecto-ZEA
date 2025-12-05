@@ -200,7 +200,7 @@ nav {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .dropdown-content ol{
@@ -248,7 +248,7 @@ section p {
     background-color: #ed1919;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .nav-list .dropdown:hover .dropdown-content {
