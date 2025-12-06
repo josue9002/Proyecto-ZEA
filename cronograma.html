@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronograma</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="styles-cronograma.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,6 +14,37 @@
 </head>
 <body>
     <div class="container">
+            <!-- Overlay + Modal de anuncio con imagen -->
+<div class="overlay-anuncio" id="overlayAnuncio" aria-hidden="true">
+  <div class="modal-anuncio" role="dialog" aria-modal="true" aria-labelledby="anuncio-title">
+    
+    <!-- Antes era <header> -->
+    <div class="modal-anuncio__header">
+      <span id="anuncio-title" class="no-copiable">¡Novedades LIMEC!</span>
+      <button class="btn-anuncio--close" id="cerrarAnuncio" aria-label="Cerrar">×</button>
+    </div>
+
+    <!-- Banner de imagen que ocupa todo el anuncio -->
+    <div class="modal-anuncio__banner">
+      <img 
+        src="index-photos/index-inscripciones-limec.png" 
+        alt="Programación LIMEC" 
+        class="modal-anuncio__banner-img no-save" 
+        draggable="false">
+
+      <!-- Botones sobre la imagen -->
+      <div class="modal-anuncio__actions">
+        <a class="btn-anuncio btn-anuncio--primary no-copiable" href="matriculas-abiertas-limec" role="button">
+          Más información
+        </a>
+        <button class="btn-anuncio btn-anuncio--link no-copiable" id="masTarde">
+          Más tarde
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
         <header>
             <div class="logo-container">
                 <!-- Izquierda: logo (se mantiene la clase .logo) -->
@@ -72,16 +103,17 @@
                               <ol><a href="cronograma" class="no-copiable">Cronograma</a></ol>
                               <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
                               <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
-                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
+                              <ol><a href="programacion-sc" class="no-copiable">Prog. Semana Cultural</a></ol>
                               <ol><a href="Biblioteca Virtual/index-biblioteca-virtual" class="no-copiable">Biblioteca Digital</a></ol>
                           </ul>
                       </li>
                       <li class="dropdown">
                         <a class="no-copiable">Admisiones</a>
                         <ul class="dropdown-content">
-                            <ol><a href="admisiones" class="no-copiable">Proceso de Inscripción</a></ol>
+                            <ol><a href="matriculas-abiertas-limec" class="no-copiable">Matriculas Abiertas LIMEC</a></ol>
                             <ol><a href="requisitos-jardin" class="no-copiable">Requisitos Jardin Infantil</a></ol>
-                            <ol><a href="fechas-importantes" class="no-copiable">Fechas Importantes</a></ol>
+                            <ol><a href="requisitos-senderos-de-paz" class="no-copiable">Requisitos Senderos de Paz</a></ol>
+                            <ol><a href="programacion-matriculas" class="no-copiable">Programacion Matriculas</a></ol>
                         </ul>
                     </li>
                       <li><a href="contacto" class="no-copiable">Contacto</a></li>
@@ -93,153 +125,110 @@
 
         <main>
             <section>
-              <!-- Wrap everything with .crono to keep styles scoped -->
-  <div class="crono">
-    <header class="c-header">
-      <h1 class="heading">Cronograma - 3er Periodo</h1>
-      <div class="legend">
-        <span class="chip"><span class="dot" style="background:var(--accent-1)"></span> Fechas clave</span>
-        <span class="chip"><span class="dot" style="background:var(--accent-2)"></span> Indicaciones</span>
-        <span class="chip"><span class="dot" style="background:var(--accent-3)"></span> Clausura / Horarios</span>
-      </div>
-    </header>
+                <div class="slider-viewport">
+                    <div class="slider-container">
+                    <button class="nav-button left"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide"><img src="index-photos/index-limec.gif" alt="1" /></div>
+                        <div class="slide"><a href="programacion-matriculas" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-abiertas.gif" alt="0"></a></div>
+                        <div class="slide"><a href="matriculas-abiertas-limec" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-limec.png" alt="0"></a></div>
+                        <div class="slide"><a href="requisitos-senderos-de-paz" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-senderos.gif" alt="0"></a></div>
+                        <div class="slide"><a href="nuestras-sedes" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-sedes.gif" alt="0"></a></div>
+                    </div>
+                    <button class="nav-button right"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                    <div class="dots" id="dots"></div>
+                    </div>
+                    </div>
+                  <!-- SLIDE END -->
+                  <script src="script-index.js"></script>
 
-    <main class="wrapper">
-      <div class="grid">
-        <!-- SEDE PRINCIPAL -->
-        <section class="card">
-          <div class="head">
-            <h2>Sede Principal</h2>
-            <span class="tag">Cuarto a Décimo</span>
-          </div>
-          <div class="body">
-            <ul class="c-list">
-              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
-              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
-                <div class="note">
-                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
-                  <div class="times">
-                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
-                    <span class="pill">Estudiantes ingresan 8:00 a.m. (despedida)</span>
-                  </div>
+                <div class="section-qs left-o clearfix" id="quienes-somos">
+                    <h2 class="no-copiable">Quiénes Somos</h2>
+                    <div class="separator-tres"></div>
+                    <p class="parrafo-nose">Somos una Institución de carácter privado contamos con una educación integral, 
+                        moral y Espiritual teniendo a Dios siempre como nuestro referente principal, 
+                        trabajamos para lograr siempre un alto rendimiento académico, humanista-
+                        constructivista en un ambiente de sana convivencia, que asegure el mejoramiento 
+                        continuo de los procesos del sistema de gestión de calidad, para alcanzar 
+                        niveles de eficiencia.</p>
                 </div>
-              </li>
-              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
-              <li class="c-item"><strong>28 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
-                <div class="timebox"><strong>Hora:</strong> 7:00 a.m.</div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- SEDE 1 y 2 -->
-        <section class="card">
-          <div class="head">
-            <h2>Sede 1 y 2</h2>
-            <span class="tag">Tercero a Décimo (Sede 2)</span>
-          </div>
-          <div class="body">
-            <h3 style="margin-top:0">Tercero a Décimo – Sede 2</h3>
-            <ul class="c-list">
-              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
-              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
-                <div class="note">
-                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
-                  <div class="times">
-                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
-                    <span class="pill">Estudiantes 8:00 a.m. (despedida)</span>
-                    <span class="pill">Jornada tarde: acudientes 1:00 p.m.</span>
-                    <span class="pill">Estudiantes 2:00 p.m. (despedida)</span>
-                  </div>
+                <div class="section-qs right-o clearfix" id="como-trabajamos">
+                    <h2 class="no-copiable">Cómo Trabajamos</h2>
+                    <div class="separator-tres"></div>
+                    <p class="parrafo-nose">Aplicamos como metodología el liderazgo en el ejercicio de la actividad ejecutada 
+                        en un proyecto, de forma eficaz y eficiente.
+                        Evaluamos periódicamente la eficiencia y pertinencia de los criterios establecidos 
+                        para su manejo y realiza ajustes para mejorarlos y lograr mayor cohesión. Se trabaja 
+                        en equipo y se aplican distintas formas, para resolver los problemas.
+                        Usamos estrategias como: el diálogo, actividades integradoras y sobre todo, el pleno 
+                        desarrollo hacia la tolerancia. El respeto a la diversidad de personalidades en una 
+                        sociedad que exige el trabajo en equipo para garantizar productividad, eficiencia y 
+                        calidad en la labor docente.</p>
                 </div>
-              </li>
-              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
-              <li class="c-item"><strong>26 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
-                <div class="timebox">
-                  <strong>Hora:</strong> <span class="pill">De 1.º a 5.º: 1:00 p.m.</span>
-                  <span class="pill">De 6.º a 11.º: 3:30 p.m.</span>
+                <div class="section-qs left-o clearfix" id="en-que-creemos">
+                    <h2 class="no-copiable">En Qué Creemos</h2>
+                    <div class="separator-tres"></div>
+                    <p class="parrafo-nose">Creemos en Dios como ser superior y celestial, que guía nuestro diario caminar.
+                        Creemos que la educación permite mejorar la calidad de vida.
+                        Creemos que con la organización comunitaria, se logra desarrollar proyectos de vida e Institucionales.
+                        Creemos que la construcción colectiva permite generar diferentes propuestas.
+                        Creemos que la construcción de valores contribuye a formar personas aptas para vivir en sociedad. 
+                        Creemos que la educación más humana cimentará individuos más autónomos, críticos, libres y propositivos.
+                    </p>
                 </div>
-              </li>
-            </ul>
-
-            <h3 style="margin-top:18px">Primera infancia – Sede 2 (Materno a Transición)</h3>
-            <ul class="c-list">
-              <li class="c-item"><strong>Del 10 al 14 de noviembre:</strong> Exámenes finales. 
-                <div class="times">
-                  <span class="pill">Jornada mañana: salida 10:00 a.m.</span>
-                  <span class="pill">Jornada tarde: salida 4:00 p.m.</span>
-                </div>
-              </li>
-              <li class="c-item"><strong>18 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>19 de noviembre:</strong> Despedida – vienen con uniforme de educación física y <strong>NO</strong> traen lonchera.
-                <div class="timebox">
-                  <strong>Hora:</strong>
-                  <div class="times">
-                    <span class="pill">Jornada mañana: 8:00 a.m. a 11:00 a.m.</span>
-                    <span class="pill">Jornada tarde: 2:00 p.m. a 5:00 p.m.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="c-item"><strong>26 de noviembre:</strong> Clausura y entrega de informes – los estudiantes vienen con el uniforme de diario.
-                <div class="timebox">
-                  <strong>Hora:</strong>
-                  <div class="times">
-                    <span class="pill">Pre‑jardín y Jardín: 7:30 a.m.</span>
-                    <span class="pill">Materno, Párvulos y Transición: 9:30 a.m.</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- SEDE 3 -->
-        <section class="card">
-          <div class="head">
-            <h2>Sede 3</h2>
-            <span class="tag">Tercero a Décimo</span>
-          </div>
-          <div class="body">
-            <ul class="c-list">
-              <li class="c-item"><strong>13 de noviembre:</strong> Exámenes finales.</li>
-              <li class="c-item"><strong>14 de noviembre:</strong> Digitación de notas – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>18 de noviembre:</strong> Calificación de exámenes – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>19 de noviembre:</strong> Reunión del comité de evaluación y promoción – <em>no tienen clases</em>.</li>
-              <li class="c-item"><strong>20 de noviembre:</strong> Divulgación y despedida.
-                <div class="note">
-                  La reunión de padres de familia es para notificar a los estudiantes que deben habilitar 1 asignatura o si ganó o perdió el año escolar.
-                  <div class="times">
-                    <span class="pill">Jornada mañana: acudientes 7:00 a.m.</span>
-                    <span class="pill">Estudiantes 8:00 a.m. (despedida)</span>
-                    <span class="pill">Jornada tarde: acudientes 1:00 p.m.</span>
-                    <span class="pill">Estudiantes 2:00 p.m. (despedida)</span>
-                  </div>
-                </div>
-              </li>
-              <li class="c-item"><strong>24 de noviembre:</strong> Habilitaciones (para quienes recuperan 1 asignatura). Estrategias por WhatsApp.</li>
-              <li class="c-item"><strong>28 de noviembre:</strong> Clausura y entrega de informes – <em>solo vienen los estudiantes que sean notificados</em>.
-                <div class="timebox">
-                  <strong>Hora:</strong>
-                  <div class="times">
-                    <span class="pill">De 1.º a 5.º: 1:30 p.m.</span>
-                    <span class="pill">De 6.º a 11.º: 4:00 p.m.</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>  
+                <div class="section-qs right-o clearfix" id="lo-que-hacemos">
+                    <h2 class="no-copiable">Lo Que Hacemos</h2>
+                    <div class="separator-tres"></div>
+                    <p class="parrafo-nose">Formar estudiantes teniendo a Dios como guía, que apliquen y defiendan los valores éticos, 
+                        morales y culturales en la construcción positiva de la Sociedad, con capacidad de pensamiento 
+                        e investigación para participar activamente en procesos de cambio, liderados por la comunidad 
+                        educativa, con responsabilidad en la formación para el trabajo y desarrollo humano, estando 
+                        comprometidos con el medio ambiente.
+                    </p>
+                </div>        
             </section>
         </main>
+            <div class="news-section">
+            </div>
+            <div class="simple-news-box">
+                <span class="simple-news-text">🌎Noticias</span>
+            </div>
+            <div class="separator-dos"></div>
+
+
+    <div class="container-card">
+        
+    <div class="card">
+        <figure>
+            <img src="index-photos/photo-semana-cultural.png">
+        </figure>
+        <div class="contenido-card">
+            <h3>Programación Semana Cultural</h3>
+            <p>La Semana Cultural del Emperador es un evento anual que durante una semana, la comunidad escolar participa en actividades como presentaciones de música, danza, teatro, exposiciones de arte y una feria gastronómica.</p>
+            <a href="programacion-sc">Leer Más</a>
+        </div>
+    </div>
+    <div class="card">
+        <figure>
+            <img src="index-photos/photo-programa-oe.png">
+        </figure>
+        <div class="contenido-card">
+            <h3>Programa Orientación Estudiantil</h3>
+            <p>El Programa OE del colegio LIMEC está diseñado para proporcionar apoyo individualizado a los estudiantes en áreas específicas como el desarrollo personal, emocional y académico.</p>
+            <a href="programa-oe">Leer Más</a>
+        </div>
+    </div>
+    <div class="card">
+        <figure>
+            <img src="index-photos/photo-senderos.png">
+        </figure>
+        <div class="contenido-card">
+            <h3>Senderos de Paz</h3>
+            <p>Senderos de Paz ofrece educación bachiller por ciclos, permitiendo cursar dos grados en un año en una jornada nocturna flexible y pensada para jóvenes y adultos que desean completar sus estudios.</p>
+            <a href="requisitos-senderos-de-paz.html">Leer Más</a>
+        </div>
+    </div>
+    </div>
     </div>
 
 
