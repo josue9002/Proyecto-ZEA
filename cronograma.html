@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="styles-cronograma.css">
+    <title>Cronograma</title>
+    <link rel="stylesheet" href="styles-proximamente.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="photo-logo-banner.png">
@@ -14,37 +14,6 @@
 </head>
 <body>
     <div class="container">
-            <!-- Overlay + Modal de anuncio con imagen -->
-<div class="overlay-anuncio" id="overlayAnuncio" aria-hidden="true">
-  <div class="modal-anuncio" role="dialog" aria-modal="true" aria-labelledby="anuncio-title">
-    
-    <!-- Antes era <header> -->
-    <div class="modal-anuncio__header">
-      <span id="anuncio-title" class="no-copiable">¡Novedades LIMEC!</span>
-      <button class="btn-anuncio--close" id="cerrarAnuncio" aria-label="Cerrar">×</button>
-    </div>
-
-    <!-- Banner de imagen que ocupa todo el anuncio -->
-    <div class="modal-anuncio__banner">
-      <img 
-        src="index-photos/index-inscripciones-limec.png" 
-        alt="Programación LIMEC" 
-        class="modal-anuncio__banner-img no-save" 
-        draggable="false">
-
-      <!-- Botones sobre la imagen -->
-      <div class="modal-anuncio__actions">
-        <a class="btn-anuncio btn-anuncio--primary no-copiable" href="matriculas-abiertas-limec" role="button">
-          Más información
-        </a>
-        <button class="btn-anuncio btn-anuncio--link no-copiable" id="masTarde">
-          Más tarde
-        </button>
-      </div>
-    </div>
-
-  </div>
-</div>
         <header>
             <div class="logo-container">
                 <!-- Izquierda: logo (se mantiene la clase .logo) -->
@@ -65,7 +34,7 @@
                     <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <nav>
+                        <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -121,114 +90,23 @@
               </nav>
           </header>
 
+
           <script src="script-menu.js"></script>
 
-        <main>
-            <section>
-                <div class="slider-viewport">
-                    <div class="slider-container">
-                    <button class="nav-button left"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-                    <div class="slider-track" id="sliderTrack">
-                        <div class="slide"><img src="index-photos/index-limec.gif" alt="1" /></div>
-                        <div class="slide"><a href="programacion-matriculas" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-abiertas.gif" alt="0"></a></div>
-                        <div class="slide"><a href="matriculas-abiertas-limec" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-limec.png" alt="0"></a></div>
-                        <div class="slide"><a href="requisitos-senderos-de-paz" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-inscripciones-senderos.gif" alt="0"></a></div>
-                        <div class="slide"><a href="nuestras-sedes" target="_blank" rel="noopener" class="img-link"><img src="index-photos/index-sedes.gif" alt="0"></a></div>
-                    </div>
-                    <button class="nav-button right"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-                    <div class="dots" id="dots"></div>
-                    </div>
-                    </div>
-                  <!-- SLIDE END -->
-                  <script src="script-index.js"></script>
-
-                <div class="section-qs left-o clearfix" id="quienes-somos">
-                    <h2 class="no-copiable">Quiénes Somos</h2>
-                    <div class="separator-tres"></div>
-                    <p class="parrafo-nose">Somos una Institución de carácter privado contamos con una educación integral, 
-                        moral y Espiritual teniendo a Dios siempre como nuestro referente principal, 
-                        trabajamos para lograr siempre un alto rendimiento académico, humanista-
-                        constructivista en un ambiente de sana convivencia, que asegure el mejoramiento 
-                        continuo de los procesos del sistema de gestión de calidad, para alcanzar 
-                        niveles de eficiencia.</p>
-                </div>
-                <div class="section-qs right-o clearfix" id="como-trabajamos">
-                    <h2 class="no-copiable">Cómo Trabajamos</h2>
-                    <div class="separator-tres"></div>
-                    <p class="parrafo-nose">Aplicamos como metodología el liderazgo en el ejercicio de la actividad ejecutada 
-                        en un proyecto, de forma eficaz y eficiente.
-                        Evaluamos periódicamente la eficiencia y pertinencia de los criterios establecidos 
-                        para su manejo y realiza ajustes para mejorarlos y lograr mayor cohesión. Se trabaja 
-                        en equipo y se aplican distintas formas, para resolver los problemas.
-                        Usamos estrategias como: el diálogo, actividades integradoras y sobre todo, el pleno 
-                        desarrollo hacia la tolerancia. El respeto a la diversidad de personalidades en una 
-                        sociedad que exige el trabajo en equipo para garantizar productividad, eficiencia y 
-                        calidad en la labor docente.</p>
-                </div>
-                <div class="section-qs left-o clearfix" id="en-que-creemos">
-                    <h2 class="no-copiable">En Qué Creemos</h2>
-                    <div class="separator-tres"></div>
-                    <p class="parrafo-nose">Creemos en Dios como ser superior y celestial, que guía nuestro diario caminar.
-                        Creemos que la educación permite mejorar la calidad de vida.
-                        Creemos que con la organización comunitaria, se logra desarrollar proyectos de vida e Institucionales.
-                        Creemos que la construcción colectiva permite generar diferentes propuestas.
-                        Creemos que la construcción de valores contribuye a formar personas aptas para vivir en sociedad. 
-                        Creemos que la educación más humana cimentará individuos más autónomos, críticos, libres y propositivos.
-                    </p>
-                </div>
-                <div class="section-qs right-o clearfix" id="lo-que-hacemos">
-                    <h2 class="no-copiable">Lo Que Hacemos</h2>
-                    <div class="separator-tres"></div>
-                    <p class="parrafo-nose">Formar estudiantes teniendo a Dios como guía, que apliquen y defiendan los valores éticos, 
-                        morales y culturales en la construcción positiva de la Sociedad, con capacidad de pensamiento 
-                        e investigación para participar activamente en procesos de cambio, liderados por la comunidad 
-                        educativa, con responsabilidad en la formación para el trabajo y desarrollo humano, estando 
-                        comprometidos con el medio ambiente.
-                    </p>
-                </div>        
-            </section>
+        <main class="wrap" role="main">
+    <span class="badge">Sitio en construcción</span>
+    <h1><span class="grad">¡Próximamente!</span></h1>
+    <p>
+      Esta página estará disponible muy pronto.
+      Estamos preparando algo genial para ti.
+    </p>
+    <div class="dots" aria-hidden="true">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+    <p class="small" style="margin-top:22px;">
+      Gracias por tu paciencia.
+    </p>
         </main>
-            <div class="news-section">
-            </div>
-            <div class="simple-news-box">
-                <span class="simple-news-text">🌎Noticias</span>
-            </div>
-            <div class="separator-dos"></div>
-
-
-    <div class="container-card">
-        
-    <div class="card">
-        <figure>
-            <img src="index-photos/photo-semana-cultural.png">
-        </figure>
-        <div class="contenido-card">
-            <h3>Programación Semana Cultural</h3>
-            <p>La Semana Cultural del Emperador es un evento anual que durante una semana, la comunidad escolar participa en actividades como presentaciones de música, danza, teatro, exposiciones de arte y una feria gastronómica.</p>
-            <a href="programacion-sc">Leer Más</a>
-        </div>
-    </div>
-    <div class="card">
-        <figure>
-            <img src="index-photos/photo-programa-oe.png">
-        </figure>
-        <div class="contenido-card">
-            <h3>Programa Orientación Estudiantil</h3>
-            <p>El Programa OE del colegio LIMEC está diseñado para proporcionar apoyo individualizado a los estudiantes en áreas específicas como el desarrollo personal, emocional y académico.</p>
-            <a href="programa-oe">Leer Más</a>
-        </div>
-    </div>
-    <div class="card">
-        <figure>
-            <img src="index-photos/photo-senderos.png">
-        </figure>
-        <div class="contenido-card">
-            <h3>Senderos de Paz</h3>
-            <p>Senderos de Paz ofrece educación bachiller por ciclos, permitiendo cursar dos grados en un año en una jornada nocturna flexible y pensada para jóvenes y adultos que desean completar sus estudios.</p>
-            <a href="requisitos-senderos-de-paz.html">Leer Más</a>
-        </div>
-    </div>
-    </div>
     </div>
 
 
