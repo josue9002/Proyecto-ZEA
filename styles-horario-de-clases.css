@@ -44,12 +44,14 @@ header {
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
-    margin-left: 20px;
+    justify-content: left;
+    padding-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
 .logo-center {
     text-align: center;
+    justify-content: center;
 }
 
 .school-name {
@@ -133,7 +135,6 @@ header {
         justify-items: center;
     }
 }
-
 /* Estilos para dispositivos móviles */
 .menu-icon {
     display: none;
