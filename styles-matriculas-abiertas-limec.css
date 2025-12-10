@@ -38,19 +38,20 @@ header {
     gap: 16px;
     padding: 20px 0;
     animation: fadeInUp 1s ease-in-out;
-    padding-left: 10px;
 }
 
 /* Se mantiene */
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
-    margin-left: 20px;
+    justify-content: left;
+    padding-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
 .logo-center {
     text-align: center;
+    justify-content: center;
 }
 
 .school-name {
@@ -134,6 +135,7 @@ header {
         justify-items: center;
     }
 }
+
 
 /* Estilos para dispositivos móviles */
 .menu-icon {
@@ -637,7 +639,7 @@ main {
         
     }
 
-    .logo-container{
+  .logo-container{
         padding: 20px;
     }
 
