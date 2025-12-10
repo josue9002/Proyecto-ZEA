@@ -84,6 +84,12 @@ header {
     justify-content: right;
 }
 
+@media (max-width: 1000px){
+ .socials{
+    padding-right: 10px;
+}
+}
+
 .social-link {
     font-size: 1.25rem;
     text-decoration: none;
