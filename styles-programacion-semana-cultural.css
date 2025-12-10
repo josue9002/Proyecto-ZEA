@@ -731,14 +731,19 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-right: 20px;
+        padding: 0px;
         text-align: center;
         
     }
 
-    .logo-container{
-        padding-left: 10px;
+  .logo-container{
+        padding: 20px;
     }
+
+    .logo{
+        padding-left: 0;
+    }
+
 
     .text-column p{
         font-size: 14px;
@@ -747,7 +752,6 @@ main {
     .social-column p{
         font-size: 14px;
     }
-
 }
 
 .main-ok{
