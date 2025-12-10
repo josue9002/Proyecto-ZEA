@@ -38,19 +38,20 @@ header {
     gap: 16px;
     padding: 20px 0;
     animation: fadeInUp 1s ease-in-out;
-    padding-left: 10px;
 }
 
 /* Se mantiene */
 .logo {
     height: 100px;
     margin-right: 0; /* ya no hace falta margen porque usamos grid */
-    margin-left: 20px;
+    justify-content: left;
+    padding-left: 20px;
 }
 
 /* Centro: título centrado (se mantiene .school-name) */
 .logo-center {
     text-align: center;
+    justify-content: center;
 }
 
 .school-name {
@@ -80,7 +81,14 @@ header {
     display: inline-flex;
     align-items: right;
     gap: 12px;
-    margin-right: 30px;
+    padding-right: 30px;
+    justify-content: right;
+}
+
+@media (max-width: 1000px){
+ .socials{
+    padding-right: 10px;
+}
 }
 
 .social-link {
@@ -109,25 +117,24 @@ header {
     .logo-container {
         grid-template-columns: 1fr; /* apilar */
         justify-items: center;
+        justify-content: center;
         text-align: center;
         gap: 8px;
-
     }
 
     .school-phrase {
-        font-size: 0.7rem;
+        font-size: 0.7rem; 
     }
 
-    .logo { height: 72px; display: none;}
-    .socials { margin-top: 4px;}
-    .social-link { padding-bottom: 0;}
+    .logo { display: none;}
+    .socials { justify-content: center; align-items: center; padding: 0;}
+    .social-link { padding: 0;}
     .school-name{
         justify-content: center;
         align-items: center;
         justify-items: center;
     }
 }
-
 
 /* Estilos para dispositivos móviles */
 .menu-icon {
@@ -627,14 +634,19 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-right: 20px;
+        padding: 0px;
         text-align: center;
         
     }
 
     .logo-container{
-        padding-left: 10px;
+        padding: 20px;
     }
+
+    .logo{
+        padding-left: 0;
+    }
+
 
     .text-column p{
         font-size: 14px;
