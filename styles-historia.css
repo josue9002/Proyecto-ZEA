@@ -542,8 +542,13 @@ main {
     }
 
     .logo-container{
-        padding-left: 10px;
+        padding: 20px;
     }
+
+    .logo{
+        padding-left: 0;
+    }
+
 
     .text-column p{
         font-size: 14px;
@@ -552,7 +557,6 @@ main {
     .social-column p{
         font-size: 14px;
     }
-
 }
 
 .main-ok{

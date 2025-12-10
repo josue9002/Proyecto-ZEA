@@ -53,11 +53,6 @@ header {
     text-align: center;
 }
 
-/* Centro: título centrado (se mantiene .school-name) */
-.logo-center {
-    text-align: center;
-}
-
 .school-name {
     font-size: 2.0em;
     font-weight: bold;
@@ -638,14 +633,19 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-right: 0px;
+        padding: 0px;
         text-align: center;
         
     }
 
     .logo-container{
-        padding-left: 10px;
+        padding: 20px;
     }
+
+    .logo{
+        padding-left: 0;
+    }
+
 
     .text-column p{
         font-size: 14px;
@@ -654,7 +654,6 @@ main {
     .social-column p{
         font-size: 14px;
     }
-
 }
 
 .main-ok{
