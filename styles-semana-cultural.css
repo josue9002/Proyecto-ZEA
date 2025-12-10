@@ -595,13 +595,26 @@ main {
 
     .school-name{
         font-size: 1.4em;
-        padding-left: 0px;
-        padding-right: 20px;
+        padding: 0px;
         text-align: center;
+        
     }
 
     .logo-container{
-        padding-left: 20px;
+        padding: 20px;
+    }
+
+    .logo{
+        padding-left: 0;
+    }
+
+
+    .text-column p{
+        font-size: 14px;
+    }
+
+    .social-column p{
+        font-size: 14px;
     }
 
     section h1{
