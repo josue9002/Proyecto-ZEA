@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Administrativo</title>
-    <link rel="stylesheet" href="styles-personal-admin.css">
+    <title>Programa Orientación Estudiantil</title>
+    <link rel="stylesheet" href="styles-programa-orientacion-estudiantil.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="photo-logo-banner.png">
@@ -91,94 +91,64 @@
 
           <script src="script-menu.js"></script>
 
-          <h1 class="heading">Personal Administrativo</h1>
-        <main class="gallery-page">
+        <main>
+            <section>
+                 <div class="section-wrapper">
 
-    <!-- FOTOS DE PERFIL (MEDIO CUERPO) -->
-    <section class="profiles-section">
-      <div class="profiles-grid">
-        <article class="profile-card">
-          <img src="personal-admin/photo-cordi-1.png" alt="Foto perfil 1">
-          <div class="profile-name">Bertha Yalanda</div>
-          <div class="profile-role">Cargo / Coordinación</div>
-        </article>
-
-        <article class="profile-card">
-          <img src="personal-admin/photo-cordi-2.png" alt="Foto perfil 2">
-          <div class="profile-name">Vanessa Rebellon</div>
-          <div class="profile-role">Cargo / Coordinación</div>
-        </article>
-
-        <article class="profile-card">
-          <img src="personal-admin/photo-cordi-3.png" alt="Foto perfil 3">
-          <div class="profile-name">Adriana Torres</div>
-          <div class="profile-role">Cargo / Coordinación</div>
-        </article>
-
-        <!-- Puedes duplicar más profile-card según necesites -->
-      </div>
-    </section>
-
-        <!-- SLIDER 1000x450 -->
-         <h2>Docentes</h2>
-    <section class="slider-section">
-      <div class="slider-container">   
-        <button class="nav-btn prev" aria-label="Anterior">&#10094;</button> 
-        <div class="slider-track">
-          <div class="slide">
-            <img src="personal-admin/photo-profes-1.png" alt="Foto 1 - Slider">
-          </div>
-          <div class="slide">
-            <img src="personal-admin/photo-profes-2.png" alt="Foto 2 - Slider">
-          </div>
-          <div class="slide">
-            <img src="personal-admin/photo-profes-3.png" alt="Foto 3 - Slider">
-          </div>
+      <!-- Bloque principal: texto + imagen -->
+      <section class="orientacion">
+        <div class="orientacion-texto">
+          <h3>Bienestar Estudiantil</h3>
+          <h2>Programa de Orientación Estudiantil</h2>
+          <p>
+            El Programa de Orientación Estudiantil del Liceo Mixto Emperador de Cali está diseñado para brindar un
+            espacio de apoyo emocional y psicológico a nuestros estudiantes. Liderado por los profesores
+            <strong>Hugo Domínguez</strong> e <strong>Ingrid Mina</strong>, este programa se enfoca en ayudar a los estudiantes
+            a enfrentar los desafíos emocionales y personales que puedan estar experimentando, tanto en el hogar como
+            en su vida diaria.
+          </p>
+          <p>
+            Temas como la ansiedad, depresión y otros aspectos relacionados con la salud mental son abordados con
+            empatía y confidencialidad. El objetivo es ofrecer un entorno seguro donde los estudiantes puedan expresar
+            cómo se sienten y recibir el apoyo necesario para superar sus dificultades emocionales, mejorando así su
+            bienestar y rendimiento académico.
+          </p>
         </div>
-        <button class="nav-btn next" aria-label="Siguiente">&#10095;</button>
-      </div>
-    </section>
 
-    <!-- DOS COLUMNAS GRANDES 1200x1600 -->
-    <section class="two-columns-section">
-      <h2>Secretaria</h2>
-      <div class="two-columns">
-        <div class="column-photo">
-          <img src="personal-admin/photo-secres-1.png" alt="Foto grupal 1">
+        <div class="orientacion-imagen">
+          <!-- Cambia la ruta de la imagen por la que uses en tu proyecto -->
+          <img src="photo-oe.png" alt="Estudiantes recibiendo orientación y apoyo emocional">
         </div>
-        <div class="column-photo">
-          <img src="personal-admin/photo-secres-2.png" alt="Foto grupal 2">
+      </section>
+
+      <!-- Sección de agenda de citas -->
+      <section class="agenda">
+        <h2>Agenda tu cita aquí</h2>
+        <p class="intro">
+          Elige el docente encargado según tu género para agendar un espacio de escucha y acompañamiento personal.
+        </p>
+
+        <div class="cards">
+          <!-- Hombres -->
+          <article class="card">
+            <span class="tag">Hombres</span>
+            <h3>Con el profesor Hugo Domínguez</h3>
+            <p>Apoyo emocional y acompañamiento para estudiantes hombres.</p>
+            <p class="telefono">📞 +57 316 828 2531</p>
+            <a class="btn" href="tel:+573168282531">Llamar / escribir al profesor Hugo</a>
+          </article>
+
+          <!-- Mujeres -->
+          <article class="card">
+            <span class="tag">Mujeres</span>
+            <h3>Con la profesora Ingrid Mina</h3>
+            <p>Acompañamiento emocional y orientación para estudiantes mujeres.</p>
+            <p class="telefono">📞 +57 321 670 7391</p>
+            <a class="btn" href="tel:+573216707391">Llamar / escribir a la profesora Ingrid</a>
+          </article>
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- JS SLIDER -->
-  <script>
-    const track = document.querySelector('.slider-track');
-    const slides = Array.from(track.children);
-    const prevBtn = document.querySelector('.nav-btn.prev');
-    const nextBtn = document.querySelector('.nav-btn.next');
-
-    let index = 0;
-
-    function actualizarSlider(){
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    prevBtn.addEventListener('click', () => {
-      index = (index - 1 + slides.length) % slides.length;
-      actualizarSlider();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      index = (index + 1) % slides.length;
-      actualizarSlider();
-    });
-  </script>
-          
-    </div>
+      </section>
+                 </div>
     </div>
 
 
