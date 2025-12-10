@@ -235,6 +235,7 @@ section h1 {
     font-size: 2em;
     color: #003366;
     text-align: center;
+    padding: 15px;
 }
 
 section p {
@@ -734,41 +735,6 @@ main {
   .socials a:hover{ transform: none; }
 }
 
-
-.heading {
-    font-size: 2.2em;
-    text-align: center;
-    color: #003366;
-    position: relative;
-    margin-bottom: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-.heading::after {
-    content: '';
-    width: 50px;
-    height: 5px;
-    background-color: #f39c12;
-    display: block;
-    margin: 0.5rem auto;
-    animation: underline-grow 2s ease-out;
-}
-
-@media (max-width: 1400px) {
-
-    .heading {
-        font-size: 1.8rem;
-    }
-
-    .heading::after {
-        width: 20px;
-        height: 3px;
-    }
-}
-
 @media (max-width: 900px){
     .crono h2{
         font-size: 0.9em;
@@ -944,22 +910,10 @@ main {
     transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
 }
 
-:root{
-      --bg:#0f172a;      /* slate-900 */
-      --card:#111827;    /* gray-900 */
-      --muted:#000000;   /* slate-400 */
-      --text:#c3c4c5;    /* gray-200 */
-      --brand:#00469c;   /* green-500 */
-      --brand-2:#2b0f64; /* green-600 */
-      --ring:#60a5fa;    /* blue-400 */
-      --radius:16px;
-      --gap:1rem;
-    }
-
     .heading {
     font-size: 2.2em;
     text-align: center;
-    color: #003366;
+    color: #0b0044;
     position: relative;
     margin-bottom: 25px;
     margin-top: 19px;
@@ -973,117 +927,126 @@ main {
     content: '';
     width: 50px;
     height: 5px;
-    background-color: #f39c12;
+    background-color: #ed1919;
     display: block;
     margin: 0.5rem auto;
     animation: underline-grow 2s ease-out;
 }
 
-    .container-dos{max-width:2000px; margin:auto; padding:10px; padding-bottom: 0;}
+:root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#001033;
+      --muted:#475569;
+      --border:#e5e7eb;
+      --brand:#16a34a;       /* verde */
+      --brand-2:#22c55e;
+      --brand-soft:#eaecf7;
+      --ring:#3b82f6;
+      --radius:16px;
+      --gap:1rem;
+    }
 
+    .container-dos{max-width:2000px; margin:auto; padding:0px; padding-top: 15px;}
+    .heading{
+      text-align:center; margin:8px 0 16px; font-size:clamp(28px,4vw,40px);
+      letter-spacing:.2px;
+    }
+
+    /* Tabs */
     .tabs{
       display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap;
       margin:10px auto 22px;
-      user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     }
     .tab-btn{
-       border:1px solid #2b0f64; background:#2b0f64; color:#ffffff;
-      padding:.65rem 1rem; border-radius:999px; cursor:pointer; font-weight:600;
-      transition:transform .08s ease, background .2s ease, border-color .2s;
+      appearance:none; border:1px solid var(--border); background:#fff; color:var(--text);
+      padding:.65rem 1rem; border-radius:999px; cursor:pointer; font-weight:700;
+      transition:transform .08s ease, background .2s ease, border-color .2s, box-shadow .2s;
+      box-shadow:0 1px 0 rgba(15,23,42,.04);
     }
+    .tab-btn:hover{background:#f8f9fc}
     .tab-btn:focus{outline:2px solid var(--ring); outline-offset:2px}
-    .tab-btn:hover{background:#00469c}
-    .tab-btn.active{background:var(--brand); border-color:var(--brand-2); color:#ffffff}
+    .tab-btn.active{
+      background:var(--brand-soft); border-color:#bfc4e7;
+      box-shadow:0 0 0 2px #d8daf3 inset; color:#0a0478;
+    }
 
+    /* Paneles */
     .panel{display:none; animation:fade .25s ease}
     .panel.active{display:block}
     @keyframes fade{from{opacity:.5; transform:translateY(4px)} to{opacity:1; transform:none}}
 
+    /* Card */
     .card{
-      background:linear-gradient(180deg,#ffffff,#ffffff);
-      border:1px solid #ffffff; border-radius:var(--radius);
-      box-shadow:0 5px 15px rgba(0,0,0,.35); padding:clamp(14px,2.5vw,22px);
+      background:var(--card);
+      border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:0 8px 24px rgba(15,23,42,.06); padding:clamp(14px,2.5vw,22px);
     }
 
+    /* Header del panel */
     .header{
       display:grid; gap:.5rem;
       grid-template-columns:1fr;
       margin-bottom:1rem;
     }
     .badge{
-      display:inline-block; padding:.25rem .6rem; border-radius:10px;
-      background:rgb(197, 34, 34); color:#ffffff; border:1px solid rgba(222, 12, 12, 0.35);
-      font-size:1.3rem; font-weight:700; letter-spacing:.3px;
-      user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+      display:inline-block; padding:.35rem .7rem; border-radius:999px;
+      background:var(--brand-soft); color:#0a0478; border:1px solid #bfc5e7;
+      font-size:.9rem; font-weight:800; letter-spacing:.3px;
     }
-    .desc{color:var(--muted); margin:.30rem 0 .5rem; line-height:1.5; font-size: 1em; user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;}
+    .desc{color:var(--muted); margin:.25rem 0 .5rem; line-height:1.55}
     .contact{
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.5rem;
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:.6rem;
       margin-top:.25rem;
     }
     .contact .item{
-      background:#2b0f64; border-radius:12px;
-      padding:.6rem .8rem; color:#dcdcdc;
+      background:#ffffff; border:1px solid var(--border); border-radius:12px;
+      padding:.7rem .9rem; color:#0f172a;
+      box-shadow:0 1px 0 rgba(15,23,42,.03);
     }
-    .contact a{color:#b2f0f7; text-decoration: none;}
+    .contact a{color:#0b7a3b; text-decoration:none; font-weight:600}
     .contact a:hover{text-decoration:underline}
 
+    /* Grid slider/mapa */
     .grid{
       display:grid; gap:var(--gap);
       grid-template-columns:1fr 1fr;
     }
     @media (max-width: 860px){
       .grid{grid-template-columns:1fr}
+
     }
 
     /* Slider */
     .slider{
       position:relative; overflow:hidden; border-radius:14px; height:320px;
-      background:#000;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
+      background:#fff; border:1px solid var(--border);
     }
     .slides{
       display:flex; width:100%; height:100%; transition:transform .35s ease-in-out;
     }
-    .slide{
-      min-width:100%; height:100%; position:relative; user-select:none;
-    }
-    .slide img{
-      width:100%; height:100%; object-fit:cover; display:block;
-      filter:contrast(1.05) saturate(1.05);
-        user-select: none;         /* no seleccionar */
-        -webkit-user-drag: none;   /* no arrastrar en WebKit */
-        pointer-events: none;      /* los eventos pasan al overlay */
-    }
+    .slide{min-width:100%; height:100%; position:relative; user-select:none; background:#f1f5f9}
+    .slide img{width:100%; height:100%; object-fit:cover; display:block}
     .nav{
       position:absolute; top:50%; transform:translateY(-50%);
-      background:rgba(15,23,42,.75); border:1px solid #1f2937; color:#e5e7eb;
+      background:#ffffff; border:1px solid var(--border); color:#111827;
       width:40px; height:40px; border-radius:999px; display:grid; place-items:center;
-      cursor:pointer; font-size:15px;
+      cursor:pointer; font-size:18px; box-shadow:0 4px 18px rgba(15,23,42,.12);
     }
-    .nav:hover{background:rgba(15,23,42,.95)}
+    .nav:hover{background:#f8fafc}
     .nav.prev{left:10px}
     .nav.next{right:10px}
+    .chev{pointer-events:none}
 
     /* Map */
     .map{
-      border-radius:14px; overflow:hidden; height:320px;
-      background:#0b1220;
+      border-radius:14px; overflow:hidden; border:1px solid var(--border); height:320px;
+      background:#fff;
     }
     .map iframe{border:0; width:100%; height:100%}
 
-    footer{color:#64748b; text-align:center; font-size:.85rem; margin:24px 0 6px}
-    .hint{font-size:.85rem; color:#9ca3af; text-align:center; margin-top:6px}
-
+    footer{color:#64748b; text-align:center; font-size:.9rem; margin:24px 0 6px}
+    .hint{font-size:.9rem; color:#64748b; text-align:center; margin-top:6px}
     
   /* Responsive alto opcional */
   @media (max-width:700px){
@@ -1102,4 +1065,86 @@ main {
 /* Responsive: más pequeño en pantallas angostas */
     @media (max-width: 480px){
     .chev { font-size: 0.65rem; }
+}
+
+/* Evita desbordes en layouts de grid */
+.grid > * { min-width: 0; }
+
+/* Imágenes/iframes siempre dentro */
+img, iframe { max-width: 100%; }
+
+/* Que los “chips” de contacto no empujen el ancho */
+.contact .item{
+  max-width: 100%;
+  overflow-wrap: anywhere;   /* corta emails largos */
+  word-break: break-word;
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 430px){
+  .container-dos{ padding: 0px; padding-top: 10px; }
+
+  /* Todo en una sola columna y sin desbordes */
+  .grid{ grid-template-columns: 1fr; }
+
+  /* Contacto en una sola columna */
+  .contact{ grid-template-columns: 1fr; }
+
+  /* Reduce altura de slider/mapa para que no “salten” */
+  .slider, .map{ height: 220px; }
+
+  /* Botones/tab más compactos */
+  .tab-btn{ padding: .5rem .75rem; font-size: .9rem; }
+
+  /* Redondeos/padding más pequeños dentro de las tarjetas */
+  .card{ padding: 14px; }
+}
+
+/* Si usas contenedores con overflow, habilita scroll suave horizontal (último recurso) */
+.panel{ overflow-x: hidden; }
+
+
+/* Escala progresiva en móviles */
+@media (max-width: 480px){ html { font-size: 15px; } }
+@media (max-width: 430px){ html { font-size: 14px; } }
+@media (max-width: 360px){ html { font-size: 13px; } }
+
+/* Titular y textos clave con clamp para fluididad */
+.heading{ font-size: clamp(22px, 6vw, 34px); }
+.desc{ font-size: clamp(13px, 3.4vw, 16px); line-height: 1.5; }
+
+/* Tabs más compactos */
+.tab-btn{ font-size: .95rem; }
+@media (max-width: 430px){
+  .tab-btn{ font-size: .85rem; padding: .45rem .6rem; }
+}
+
+/* Fichas de contacto más pequeñas y legibles */
+.contact .item{ font-size: .95rem; }
+.contact .item strong{ font-size: .95rem; }
+@media (max-width: 430px){
+  .contact .item{ font-size: .875rem; }
+  .contact .item strong{ font-size: .9rem; }
+}
+
+/* Slider y mapa: etiquetas y botones un poco más chicos */
+.nav{ width: 36px; height: 36px; font-size: 16px; }
+@media (max-width: 430px){
+  .nav{ width: 32px; height: 32px; font-size: 14px; }
+}
+
+/* Badge/subtítulo */
+.badge{ font-size: .85rem; }
+@media (max-width: 430px){
+  .badge{ font-size: .8rem; padding: 0; padding-top: 0;}
+}
+
+/* <= 768px (tablets) */
+@media (max-width: 768px){
+  section h1{ font-size: 1.8em; padding: 0px; padding-top: 0;}
+}
+
+/* <= 600px (teléfonos grandes) */
+@media (max-width: 600px){
+  section h1{ font-size: 1.6em; padding: 5px; padding-top: 0;}
 }
