@@ -829,7 +829,7 @@ main {
       text-transform:uppercase;
       color:var(--muted);
     }
-    h1{
+    main h1{
       margin:18px 0 8px;
       font-size: clamp(28px, 5vw, 44px);
       line-height:1.05;
