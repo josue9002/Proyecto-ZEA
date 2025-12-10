@@ -635,7 +635,7 @@ main {
         
     }
 
-    .logo-container{
+  .logo-container{
         padding: 20px;
     }
 
@@ -643,9 +643,6 @@ main {
         padding-left: 0;
     }
 
-    .socials{
-        padding-right: 10%;
-    }
 
     .text-column p{
         font-size: 14px;
@@ -654,7 +651,6 @@ main {
     .social-column p{
         font-size: 14px;
     }
-
 }
 
 .main-ok{
