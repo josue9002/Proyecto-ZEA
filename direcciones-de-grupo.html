@@ -15,8 +15,23 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="photo-logo.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
-                <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
@@ -436,36 +451,30 @@
         <div class="footer-content">
             <div class="footer-column left">
                 <div class="column image-column">
-                    <img src="photo-logo.png" alt="Imagen Mediana" class="rotar-imagen">
+                        <img src="photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
                 </div>
             </div>
             <div class="column text-column">
-                <p>"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
                 <br>
-                <p>Cali - Colombia</p>
+                <p class="no-copiable">Cali - Colombia</p>
             </div>
             <div class="footer-column right">
                 <div class="column social-column">
                     <br>
-                    <p class="espacio"><a href="https://wa.me/c/573183835230">Correo Institucional:<br>emperadordecali@hotmail.com</p></a>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
                         <div class="main-ok">
-                            <div class="icon fb">
-                                <a href="https://www.facebook.com/liceoemperador/?locale=es_LA"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <span>Facebook</span>
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                                 </a>
-                            </div>
-                    
-                            <div class="icon ig">
-                                 <a href="https://www.instagram.com/limec.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==9"  target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>Instagram</span>
-                            </div>
-                    
-                            <div class="icon yt">
-                                <a href="https://www.youtube.com/@limecoficial" target="_blank" style="text-decoration: none;">
-                                <i class="fa-brands fa-youtube"></i>
-                                <span>YouTube</span>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -474,17 +483,8 @@
         </div>
         <div class="separator"></div>
         <div class="footer-bottom">
-            <p class="no-copiable">Todos los derechos reservados © ZEA for Liceo Mixto Emperador de Cali</p>
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

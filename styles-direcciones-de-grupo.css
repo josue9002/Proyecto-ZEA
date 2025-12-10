@@ -310,13 +310,12 @@ section#bienvenidos {
 #bienvenidos h1 {
     margin-bottom: 20px;
 }
-
 .footer {
     background-color: #565a5e;
     padding: 20px;
     color: #ffffff;
     border-radius: 10px;
-    margin: 0 100px;
+    margin: 0 200px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
     margin-top: 2%;
@@ -343,6 +342,18 @@ section#bienvenidos {
 .separator {
     margin: 20px 0;
     border-top: 1px solid #ffffff;
+}
+
+.separator-dos {
+    margin: 20px 0;
+    border-top: 1px solid #000000;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.separator-tres {
+    margin: 20px 0;
+    border-top: 1px solid #000000;
 }
 
 .footer-bottom {
@@ -548,8 +559,48 @@ td + td, th + th {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Encabezado */
 @media (max-width: 1200px) {
+    .left-o,
+    .right-o {
+        float: none; /* Elimina el flotado para que se apilen en una columna */
+        text-align: left; /* Ajusta el texto a la izquierda */
+    }
+
+    .right-o {
+        text-align: left; /* Asegúrate de que el texto alineado a la izquierda en pantallas pequeñas */
+    }
+
+    .separator {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+        text-align: center; /* Alinea el texto al centro */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+
+    .separator::before,
+    .separator::after {
+        margin: 10px 0; /* Reduce el espacio entre las líneas en pantallas pequeñas */
+    }
+
+    .separator img {
+        height: 20px; /* Reducir tamaño del logo para pantallas pequeñas si es necesario */
+        margin: 0; /* Eliminar margen derecho en pantallas pequeñas */
+    }
+
+    .title-container{
+        text-align: center;
+        justify-content: center;
+        justify-items: center
+    }
+
+}
+/* Encabezado */
+@media (max-width: 1450px) {
+
+    .footer{
+        margin: 10px; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+        padding-bottom: 20px;
+    }
 
     .section-qs {
         width: 100%; /* Ocupa el ancho completo */
@@ -577,11 +628,10 @@ td + td, th + th {
         font-size: 0.8em;
     }
 
-
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
 
 
     .nav-list {
@@ -626,16 +676,16 @@ td + td, th + th {
       padding: 0;
       box-shadow: 0px 0px 20px rgb(255, 255, 255);
     }
-
   }
 
 
 /* Pie de Pagina */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .footer {
         padding: 40px;
         margin: 0 10px; /* Elimina el margen horizontal en pantallas pequeñas */
-        margin-top: 30px;
+        margin-top: 10px;
+        padding-bottom: 20px;
     }
 
     .footer-content {
@@ -664,7 +714,7 @@ td + td, th + th {
         
     }
 
-  .logo-container{
+    .logo-container{
         padding: 20px;
     }
 
@@ -680,6 +730,7 @@ td + td, th + th {
     .social-column p{
         font-size: 14px;
     }
+
 }
 
 .main-ok{
@@ -689,55 +740,70 @@ td + td, th + th {
     align-items: center;
     justify-content: center;
 }
-.icon{
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    background: #fff;
-    margin: 10px;
-    text-align: center;
-    font-size: 25px;
-    line-height: 50px;
-    font-family: sans-serif;
-    overflow: hidden;
-    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
-    transition: all .3s ease-out;
-}
-.icon:hover{
-    width: 200px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #fff;
-}
-.icon:hover i{
-    color: #fff;
-}
-.icon .fa-facebook-f{
-    color: #1A6ED8;
-}
-.fb:hover{
-    background: #1A6ED8;
-}
 
-.icon .fa-instagram{
-    color: #000;
-}
-.ig:hover{
-    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
-}
-
-.icon .fa-youtube{
-    color: #FE0000;
-}
-.yt:hover{
-    background: #FE0000;
-}
-
-/* responsive */
-@media only screen and (min-width: 500px) and (max-width: 991px) {
-    .main{
-        flex-direction: column;
+:root{
+      --size-dos: 48px;      /* diámetro del círculo */
+      --icon-dos: 23px;       /* tamaño del logo dentro */
+      --gap-dos: 18px;
     }
+    
+.socials-dos{
+      display:flex; align-items:center; gap:var(--gap-dos);
+    }
+
+    .socials-dos a{
+      width:var(--size-dos); height:var(--size-dos);
+      background:#fff; border-radius:50%;
+      display:grid; place-items:center;
+      text-decoration:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      border:1px solid rgba(0,0,0,.06);
+    }
+
+    .socials-dos a:hover{
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+
+    .socials-dos i{
+      font-size:var(--icon-dos);
+      line-height:1;
+    }
+
+    /* Colores oficiales */
+    .facebook i{ color:#1877F2; }   /* Facebook Blue */
+    .youtube  i{ color:#FF0000; }   /* YouTube Red  */
+
+    /* Instagram gradient en el ícono (texto) */
+    .instagram i{
+      background:
+        radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    /* Accesibilidad: foco visible */
+    .socials-dos a:focus{
+      outline:none;
+      box-shadow: 0 0 0 3px rgba(24,119,242,.25), 0 6px 18px rgba(0,0,0,.08);
+    }
+
+    /* ===== Responsivo ===== */
+
+/* Teléfonos pequeños */
+@media (max-width: 500px){
+  :root{
+    --size-dos: 40px;      /* diámetro del círculo */
+      --icon-dos: 20px;       /* tamaño del logo dentro */
+      --gap-dos: 15px;
+  }
+}
+
+
+/* Accesibilidad: reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .socials a{ transition: none; }
+  .socials a:hover{ transform: none; }
 }
