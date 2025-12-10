@@ -32,20 +32,106 @@ header {
 }
 
 .logo-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* izquierda | centro | derecha */
     align-items: center;
-    justify-content: center;
+    gap: 16px;
     padding: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
 }
 
+/* Se mantiene */
 .logo {
     height: 100px;
-    margin-right: 20px;
+    margin-right: 0; /* ya no hace falta margen porque usamos grid */
+    margin-left: 20px;
+}
+
+/* Centro: título centrado (se mantiene .school-name) */
+.logo-center {
+    text-align: center;
 }
 
 .school-name {
     font-size: 2.0em;
     font-weight: bold;
+    animation: fadeInUp 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Frase nueva debajo del título */
+.school-phrase {
+    margin-top: 6px;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #e4e4e4;
+    user-select: none; /* CSS estándar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* Derecha: redes */
+.socials {
+    display: inline-flex;
+    align-items: right;
+    gap: 12px;
+    padding-right: 30px;
+    justify-content: right;
+}
+
+@media (max-width: 1000px){
+ .socials{
+    padding-right: 10px;
+}
+}
+
+.social-link {
+    font-size: 1.25rem;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    color: #ffffff;
+    padding-bottom: 60px;
+}
+
+.social-link:hover,
+.social-link:focus {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Animación existente */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+    .logo-container {
+        grid-template-columns: 1fr; /* apilar */
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .school-phrase {
+        font-size: 0.7rem; 
+    }
+
+    .logo { display: none;}
+    .socials { justify-content: center; align-items: center; padding: 0;}
+    .social-link { padding: 0;}
+    .school-name{
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
 }
 
 /* Estilos para dispositivos móviles */
