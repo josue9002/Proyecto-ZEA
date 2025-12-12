@@ -803,7 +803,7 @@ main {
     }
 
     .section-wrapper {
-      max-width: 2000px;
+      max-width: 100%;
       margin: 0 auto;
     }
 
