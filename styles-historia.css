@@ -703,6 +703,7 @@ main {
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;          /* Permite que pasen a otra fila */
     gap: 10px;
     justify-content: center;
     margin-top: 30px;
@@ -716,10 +717,32 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    white-space: nowrap;      /* Evita que se parta el texto */
 }
 
 .nav-button:hover {
     background-color: #0359b6;
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 1400px) {
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* En pantallas pequeñas, uno debajo del otro */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-button {
+        width: 100%;          /* Ocupa todo el ancho disponible */
+        text-align: center;
+    }
 }
 
 .image-content {
@@ -769,10 +792,6 @@ main {
     .quote {
         font-size: 12px;
         padding: 6px;
-    }
-
-    .nav-button {
-        padding: 6px 12px;
     }
 
     .image-content img {
