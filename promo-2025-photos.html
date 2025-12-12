@@ -99,12 +99,13 @@
     <button class="fullscreen-btn" aria-label="Pantalla completa">&#x26F6;</button>
 
 <div class="slides">
-  <div class="slide active"><img src="galeria/promo-2025/1.jpeg" alt="Expo SENA 1"></div>
-  <div class="slide"><img src="galeria/promo-2025/2.jpeg" alt="Expo SENA 2"></div>
-  <div class="slide"><img src="galeria/promo-2025/3.jpeg" alt="Expo SENA 3"></div>
+  <div class="slide active"><img src="1.jpeg" alt="Promo 1"></div>
+  <div class="slide"><img src="2.jpeg" alt="Promo 2"></div>
+  <div class="slide"><img src="3.jpeg" alt="Promo 3"></div>
+  <div class="slide"><img src="4.jpg" alt="Promo 3"></div>
+   <!-- Video en el slider -->
+  <div class="slide"><video src="grado 5-1.mp4" controls poster="frame.png"></video></div>
 </div>
-
-
     <div class="dots"></div>
   </div>
 
@@ -114,73 +115,105 @@
 
 <script>
   function setupGallery(wrapper){
-    const slides = wrapper.querySelectorAll('.slide');
-    if (!slides.length) return;      // si no hay fotos, no hace nada
+    const slides          = wrapper.querySelectorAll('.slide');
+    if (!slides.length) return;
 
-    const prevBtn        = wrapper.querySelector('.nav-btn.prev');
-    const nextBtn        = wrapper.querySelector('.nav-btn.next');
-    const dotsContainer  = wrapper.querySelector('.dots');
-    const caption        = wrapper.querySelector('.caption');
-    const fullscreenBtn  = wrapper.querySelector('.fullscreen-btn');
-    const thumbsContainer= wrapper.querySelector('.thumbs');
+    const prevBtn         = wrapper.querySelector('.nav-btn.prev');
+    const nextBtn         = wrapper.querySelector('.nav-btn.next');
+    const dotsContainer   = wrapper.querySelector('.dots');
+    const caption         = wrapper.querySelector('.caption');
+    const fullscreenBtn   = wrapper.querySelector('.fullscreen-btn');
+    const thumbsContainer = wrapper.querySelector('.thumbs');
 
     let current = 0;
     const dots   = [];
     const thumbs = [];
 
-    // Crear punticos y miniaturas a partir de las imágenes grandes
+    // Crear punticos y miniaturas
     slides.forEach((slide, i) => {
-      const img = slide.querySelector('img');
-      if (!img) return;
+      const media = slide.querySelector('img, video');
+      if (!media) return;
 
-      // DOT
+      // MINIATURA: data-thumb > poster (video) > src (imagen)
+      let thumbSrc = slide.dataset.thumb || "";
+
+      if (!thumbSrc) {
+        const tag = media.tagName.toLowerCase();
+        if (tag === "img") {
+          thumbSrc = media.src;
+        } else if (tag === "video") {
+          thumbSrc = media.poster || "";
+        }
+      }
+
+      // Si no tenemos manera de sacar miniatura, igual creamos dot
       const dot = document.createElement('button');
       dot.className = 'dot' + (i === 0 ? ' active' : '');
       dot.dataset.index = i;
       dotsContainer.appendChild(dot);
       dots.push(dot);
 
-      // THUMB
-      const thumbBtn = document.createElement('button');
-      thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
-      thumbBtn.dataset.index = i;
+      // Si hay imagen para thumb, creamos el botón de miniatura
+      if (thumbSrc) {
+        const thumbBtn = document.createElement('button');
+        thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
+        thumbBtn.dataset.index = i;
 
-      const thumbImg = img.cloneNode();
-      thumbBtn.appendChild(thumbImg);
-      thumbsContainer.appendChild(thumbBtn);
-      thumbs.push(thumbBtn);
+        const thumbImg = document.createElement('img');
+        thumbImg.src = thumbSrc;
+        thumbImg.alt = 'Miniatura ' + (i + 1);
+
+        thumbBtn.appendChild(thumbImg);
+        thumbsContainer.appendChild(thumbBtn);
+        thumbs.push(thumbBtn);
+      } else {
+        // Si NO hay thumbSrc, empujamos un placeholder para no desfasar índices
+        thumbs.push(null);
+      }
     });
 
     function updateCaption(){
-      caption.textContent = 'Foto ' + (current + 1);
+      caption.textContent = 'Elemento ' + (current + 1);
     }
 
     function showSlide(index){
       if (index < 0) index = slides.length - 1;
       if (index >= slides.length) index = 0;
 
+      // Pausar video del slide anterior
+      const prevVideo = slides[current].querySelector('video');
+      if (prevVideo){
+        prevVideo.pause();
+      }
+
+      // Quitar clases activas
       slides[current].classList.remove('active');
-      thumbs[current].classList.remove('active');
-      dots[current].classList.remove('active');
+      if (thumbs[current]) thumbs[current].classList.remove('active');
+      if (dots[current])   dots[current].classList.remove('active');
 
       current = index;
 
+      // Activar nuevo
       slides[current].classList.add('active');
-      thumbs[current].classList.add('active');
-      dots[current].classList.add('active');
+      if (thumbs[current]) thumbs[current].classList.add('active');
+      if (dots[current])   dots[current].classList.add('active');
+
       updateCaption();
     }
 
     if (prevBtn) prevBtn.addEventListener('click', () => showSlide(current - 1));
     if (nextBtn) nextBtn.addEventListener('click', () => showSlide(current + 1));
 
+    // Click en thumbs
     thumbs.forEach(thumb => {
+      if (!thumb) return;
       thumb.addEventListener('click', () => {
         const i = parseInt(thumb.dataset.index, 10);
         showSlide(i);
       });
     });
 
+    // Click en puntos
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         const i = parseInt(dot.dataset.index, 10);
@@ -200,14 +233,49 @@
     }
 
     updateCaption();
+
+    function showSlide(index){
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+
+  // Pausar video anterior
+  const prevVideo = slides[current].querySelector('video');
+  if (prevVideo){
+    prevVideo.pause();
   }
 
-  // Esperar a que cargue el DOM antes de crear thumbs
+  // Quitar activos
+  slides[current].classList.remove('active');
+  if (thumbs[current]) thumbs[current].classList.remove('active');
+  if (dots[current])   dots[current].classList.remove('active');
+
+  current = index;
+
+  // Activar nuevo
+  slides[current].classList.add('active');
+  if (thumbs[current]) thumbs[current].classList.add('active');
+  if (dots[current])   dots[current].classList.add('active');
+
+  updateCaption();
+
+  // Si el slide actual es un video, marcar la galería
+  const newVideo = slides[current].querySelector('video');
+  if (newVideo){
+    wrapper.classList.add('has-video-active');   // ⭐ oculta punticos
+    newVideo.play().catch(()=>{});
+  } else {
+    wrapper.classList.remove('has-video-active');
+  }
+}
+
+  }
+
+  // Inicializar galerías al cargar
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.gallery-wrapper').forEach(setupGallery);
   });
 
-  // Manejar la clase is-fullscreen para todas
+  // Manejar clase is-fullscreen
   document.addEventListener('fullscreenchange', () => {
     document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
       if (document.fullscreenElement === wrapper) {
@@ -218,6 +286,7 @@
     });
   });
 </script>
+
 
   </section>      
     </div>
