@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos</title>
-    <link rel="stylesheet" href="styles-galeria-de-fotos.css">
+    <title>Promo 2025 | Fotos LIMEC </title>
+    <link rel="stylesheet" href="styles-photos.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="logos/photo-logo-banner.png">
@@ -89,58 +89,135 @@
           </header>
 
           <script src="script-menu.js"></script>
-<section>
-          <h1 class="heading">Galeria de Fotos</h1>
-        <div class="grid">
-  <!-- Evento 1 -->
+          
+<section class="gallery-wrapper">
+  <div class="gallery-title">Grado 5° | PROMO 2025</div>
 
-  <a class="album" href="promo-2025-photos.html">
-    <img src="" alt="Evento 1">
-    <div class="album-info">
-      <div class="album-title">PROMO 2025</div>
-      <div class="album-sub">Grados Transicion, 5° y 11°</div>
-    </div>
-  </a>
-  
-  <a class="album" href="dia-de-la-biblia-photos">
-    <img src="galeria/bible/sedep/6.jpg" alt="Evento 1">
-    <div class="album-info">
-      <div class="album-title">DÍA DE LA BIBLIA</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+  <div class="gallery-main">
+    <button class="nav-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
+    <button class="nav-btn next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
+    <button class="fullscreen-btn" aria-label="Pantalla completa">&#x26F6;</button>
 
-  <a class="album" href="dia-de-la-afrocolombianidad-photos">
-    <img src="galeria/afro/17.jpg" alt="Evento 2">
-    <div class="album-info">
-      <div class="album-title">DIA DE LA AFROCOLOMBIANIDAD</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+<div class="slides">
+  <div class="slide active"><img src="galeria/promo-2025/1.jpeg" alt="Expo SENA 1"></div>
+  <div class="slide"><img src="galeria/promo-2025/2.jpeg" alt="Expo SENA 2"></div>
+  <div class="slide"><img src="galeria/promo-2025/3.jpeg" alt="Expo SENA 3"></div>
+</div>
 
-  <a class="album" href="exposena-photos">
-    <img src="galeria/exposena/EXP-9.jpeg" alt="Evento 2">
-    <div class="album-info">
-      <div class="album-title">EXPOSENA</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
 
-  <a class="album" href="semana-cultural-photos">
-    <img src="galeria/dia-g/d-10.jpg" alt="Evento 3">
-    <div class="album-info">
-      <div class="album-title">SEMANA CULTURAL</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+    <div class="dots"></div>
+  </div>
 
-  <a class="album" href="grados-once-photos">
-    <img src="galeria/sede-3/s3-18.jpg" alt="Evento 3">
-    <div class="album-info">
-      <div class="album-title">GRADOS 11°</div>
-      <div class="album-sub">Haz clic para ver las fotos</div>
-    </div>
-  </a>
+  <div class="caption"></div>
+  <div class="thumbs"></div>
+</section>
+
+<script>
+  function setupGallery(wrapper){
+    const slides = wrapper.querySelectorAll('.slide');
+    if (!slides.length) return;      // si no hay fotos, no hace nada
+
+    const prevBtn        = wrapper.querySelector('.nav-btn.prev');
+    const nextBtn        = wrapper.querySelector('.nav-btn.next');
+    const dotsContainer  = wrapper.querySelector('.dots');
+    const caption        = wrapper.querySelector('.caption');
+    const fullscreenBtn  = wrapper.querySelector('.fullscreen-btn');
+    const thumbsContainer= wrapper.querySelector('.thumbs');
+
+    let current = 0;
+    const dots   = [];
+    const thumbs = [];
+
+    // Crear punticos y miniaturas a partir de las imágenes grandes
+    slides.forEach((slide, i) => {
+      const img = slide.querySelector('img');
+      if (!img) return;
+
+      // DOT
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.dataset.index = i;
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
+
+      // THUMB
+      const thumbBtn = document.createElement('button');
+      thumbBtn.className = 'thumb' + (i === 0 ? ' active' : '');
+      thumbBtn.dataset.index = i;
+
+      const thumbImg = img.cloneNode();
+      thumbBtn.appendChild(thumbImg);
+      thumbsContainer.appendChild(thumbBtn);
+      thumbs.push(thumbBtn);
+    });
+
+    function updateCaption(){
+      caption.textContent = 'Foto ' + (current + 1);
+    }
+
+    function showSlide(index){
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      slides[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+      dots[current].classList.remove('active');
+
+      current = index;
+
+      slides[current].classList.add('active');
+      thumbs[current].classList.add('active');
+      dots[current].classList.add('active');
+      updateCaption();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const i = parseInt(thumb.dataset.index, 10);
+        showSlide(i);
+      });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const i = parseInt(dot.dataset.index, 10);
+        showSlide(i);
+      });
+    });
+
+    // Pantalla completa solo para esta galería
+    if (fullscreenBtn){
+      fullscreenBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          wrapper.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      });
+    }
+
+    updateCaption();
+  }
+
+  // Esperar a que cargue el DOM antes de crear thumbs
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.gallery-wrapper').forEach(setupGallery);
+  });
+
+  // Manejar la clase is-fullscreen para todas
+  document.addEventListener('fullscreenchange', () => {
+    document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
+      if (document.fullscreenElement === wrapper) {
+        wrapper.classList.add('is-fullscreen');
+      } else {
+        wrapper.classList.remove('is-fullscreen');
+      }
+    });
+  });
+</script>
 
   </section>      
     </div>
