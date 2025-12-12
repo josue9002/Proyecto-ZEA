@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Culturales</title>
+    <link rel="stylesheet" href="styles-actividades-culturales.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/photo-logo-banner.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
+     crossorigin="anonymous"></script>
+     <script src="script-no-copiable"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="logos/photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="historia" class="no-copiable">Historia</a></ol>
+                            <ol><a href="simbolos" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="mision-vision" class="no-copiable">Misión & Visión</a></ol>
+                            <ol><a href="nuestras-sedes" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="programa-orientacion-estudiantil" class="no-copiable">Orientacion Estudiantil</a></ol>
+                            <ol><a href="modalidades-sena" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="direcciones-de-grupo" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="personal-administrativo" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                              <ul class="dropdown-content">
+                              <ol><a href="galeria-de-fotos" class="no-copiable">Galeria de Fotos</a></ol>
+                              <ol><a href="videos" class="no-copiable">Videos</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="cronograma-academico" class="no-copiable">Cronograma Academico</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="programacion-semana-cultural" class="no-copiable">Prog. Semana Cultural</a></ol>
+                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="matriculas-abiertas-limec" class="no-copiable">Matriculas Abiertas LIMEC</a></ol>
+                            <ol><a href="requisitos-jardin-infantil" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="requisitos-senderos-de-paz" class="no-copiable">Requisitos Senderos de Paz</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="contacto" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+          <script src="script-menu.js"></script>
+
+      <main>
+  <div class="wrap">
+    <div class="header-dos">
+      <h1>Actividades Culturales</h1>
+      <p>Conoce todas nuestras actividades a lo largo del año lectivo.</p>
+      <div class="tabs" role="tablist" aria-label="Secciones de actividades">
+        <button role="tab" id="tab-inicio" aria-selected="true" aria-controls="sec-inicio" class="tab">Inicio</button>
+        <button role="tab" id="tab-dia-de-la-biblia" aria-selected="false" aria-controls="sec-dia-de-la-biblia" class="tab">Día de la Biblia</button>
+        <button role="tab" id="tab-dia-de-la-afrocolombianidad" aria-selected="false" aria-controls="sec-dia-de-la-afrocolombianidad" class="tab">Día de la Afrocolombianidad</button>
+        <button role="tab" id="tab-semana-cultural" aria-selected="false" aria-controls="sec-semana-cultural" class="tab">Semana Cultural</button>
+        <button role="tab" id="tab-dia-del-idioma" aria-selected="false" aria-controls="sec-dia-del-idioma" class="tab">Dia del Idioma</button>
+      </div>
+    </div>
+
+    <!-- INICIO -->
+    <section id="sec-inicio" role="tabpanel" aria-labelledby="tab-inicio" class="panel fade-in">
+      <div class="grid-dos">
+        <div class="card">
+          <h3>Bienvenid@ 👋</h3>
+          <p>
+Los invitamos a leer y aprender sobre nuestras Actividades Culturales LIMEC, para que conozcan de qué se tratan, por qué se celebran y qué significan para nuestra comunidad educativa. A través de estas celebraciones descubrimos nuestras raíces, valoramos la diversidad, fortalecemos nuestros valores y entendemos que cada actividad tiene un propósito: formarnos como personas respetuosas, creativas y orgullosas de nuestra identidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÍA DE LA BIBLIA -->
+    <section id="sec-dia-de-la-biblia" role="tabpanel" aria-labelledby="tab-dia-de-la-biblia" class="panel" hidden>
+        <div class="header-dos">
+        <div>
+          <h2>Día de la Biblia</h2>
+          <p class="desc">Viernes, 21 de mayo de 2026</p>
+        </div>
+        <div class="actions">
+          <button class="btn" data-action="imprimir">Imprimir sección</button>
+          <button class="btn ghost" data-action="copiar-enlace">Copiar enlace a esta sección</button>
+        </div>
+    </div>
+      <div class="grid">
+        <div class="card">
+          <figure class="verse-hero">
+            <img src="foto-dia-de-la-biblia.jpg" alt="Biblia abierta con luz cálida" />
+            <figcaption class="cap"><em>La palabra de Dios es viva y eficaz.</em><strong> Hebreos 4.12</strong></figcaption>
+          </figure>
+          <em>Asiento enfasis a nuestra filosofía institucional disfrutamos hoy en 
+            <strong>El Liceo Mixto Emperador de Cali</strong>. Con todos nuestro estudiantes la celebración del día de la biblia.</em>
+        </div>
+        <div class="card">
+          <h3>¿POR QUÉ SE CONMEMORA EL DÍA DE LA BIBLIA?</h3>
+          <p>No existe un mes o un día específico para la conmemoración del día de la Biblia; en algunos países se hace a finales de septiembre y en otros en octubre. Este día se celebra debido a que el <strong>26 de septiembre de 1569</strong> se terminó de imprimir la primera Biblia traducida al español por <strong>Casiodoro de Reina</strong>. Esta traducción fue revisada por <strong>Cipriano de Valera</strong> años más tarde, lo que le dio el nombre de <em>Reina-Valera</em>, una de las versiones más usadas (aunque existen muchas más).</p>
+        </div>
+        <div class="card">
+          <h3>Datos y contexto</h3>
+          <p>
+            La Biblia originalmente fue escrita en <strong>tres idiomas</strong>: hebreo, griego y arameo. Fue redactada en <strong>tres continentes</strong>: Asia, Europa y África, y debido a su proceso progresivo de composición, tardó aproximadamente <strong>1.600 años</strong> en completarse. Actualmente, la Biblia —o parte de ella— se encuentra traducida a <strong>2.303 idiomas</strong>.
+          </p>
+          <p>
+            Estadísticamente, la Biblia es el libro más leído y más vendido en el mundo; por ejemplo, en <strong>2021</strong> superó los <strong>100 millones</strong> de ejemplares en <strong>100 países</strong> y <strong>23 idiomas</strong>.
+          </p>
+          <p>
+            Leyendo la Biblia aprendes quién es Dios. Contiene su mensaje sobre la vida, las relaciones y el trabajo; en definitiva, todo lo que da sentido a tu vida. Reúne relatos de la interacción de Dios con las personas y muestra cómo Dios cuida de la humanidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÍA DE LA AFROCOLOMBIANIDAD -->
+    <section id="sec-dia-de-la-afrocolombianidad" role="tabpanel" aria-labelledby="tab-dia-de-la-afrocolombianidad" class="panel" hidden>
+      <div class="header-dos">
+        <div>
+          <h2>Día de la Afrocolombianidad</h2>
+          <p class="desc">Proximamente el Jueves, 21 de mayo de 2026</p>
+        </div>
+        <div class="actions">
+          <button class="btn" data-action="imprimir">Imprimir sección</button>
+          <button class="btn ghost" data-action="copiar-enlace">Copiar enlace a esta sección</button>
+        </div>
+    </div>
+      <div class="grid">
+        <div class="card">
+          <figure class="verse-hero">
+            <img src="afro-foto.jpg" alt="Biblia abierta con luz cálida" />
+            <figcaption class="cap"><em>“Celebramos nuestras raíces afrocolombianas con alegría, respeto y unidad en Cristo.”</em></figcaption>
+          </figure>
+          <em>“Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía.”</em> — <strong>Salmos 133:1</strong>
+        </div>
+        <div class="card">
+          <h3>Definción</h3>
+            <p>El Día de la Afrocolombianidad en el Liceo Mixto Emperador de Cali es una jornada de celebración
+                 y reconocimiento a la cultura afrocolombiana, donde estudiantes y docentes resaltan su historia,
+                  tradiciones y aportes a nuestro país. Ese día nos vestimos con trajes típicos, traemos y 
+                  compartimos comidas tradicionales, realizamos danzas y bailes folclóricos, y todos los grados
+                   se reúnen en un espacio amplio junto con profesores, coordinadores y secretarias para vivir
+                    un momento de integración, respeto y orgullo por nuestra diversidad cultural.</p>
+        </div>
+        <div class="card">
+          <h3>Lo Que Hacemos</h3>
+          <p>- Nos vestimos con trajes típicos afrocolombianos.</p>
+            <p>- Traemos y compartimos comidas típicas.</p>
+            <p>- Realizamos danzas y bailes folclóricos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEMANA CULTURAL -->
+    <section id="sec-semana-cultural" role="tabpanel" aria-labelledby="tab-semana-cultural" class="panel" hidden>
+      <div class="header-dos">
+        <div>
+          <h2>Semana Cultural</h2>
+          <p class="desc">Fecha: Por definirse (aprox. entre agosto y septiembre)</p>
+        </div>
+        <div class="actions">
+          <button class="btn" data-action="imprimir">Imprimir sección</button>
+          <button class="btn ghost" data-action="copiar-enlace">Copiar enlace a esta sección</button>
+        </div>
+    </div>
+      <div class="grid">
+        <div class="card">
+          <figure class="verse-hero">
+            <img src="foto-semana-cultural.jpg" alt="Biblia abierta con luz cálida" />
+            <figcaption class="cap"><em>“Celebremos los talentos que Dios nos ha dado y compartamos como una sola familia LIMEC.”</em></figcaption>
+          </figure>
+          <em>“Y todo lo que hagáis, hacedlo de corazón, como para el Señor y no para los hombres.”
+Colosenses 3:23</em> — <strong>Salmos 133:1</strong>
+        </div>
+        <div class="card">
+          <h3>Definción</h3>
+            <p>La Semana Cultural del Liceo Mixto Emperador de Cali es una jornada especial que se celebra
+                 de lunes a viernes, donde se integran el aprendizaje, el arte, la creatividad y la recreación.
+                  El lunes se viven las Ciencias con maquetas y experimentos; el martes se realiza el desfile
+                   con carrozas alusivas a lugares de la ciudad de Cali; el miércoles se disfruta del Festival
+                    Gastronómico y del Talento LIMEC con stands y presentaciones; el jueves se llevan a cabo 
+                    actividades lúdicas, recreativas y las miniolimpiadas de matemáticas y español; y el 
+                    viernes se realiza una salida pedagógica, cerrando la semana con una experiencia formativa
+                     fuera del aula.</p>
+        </div>
+        <div class="card">
+          <h3>Lo Que Hacemos</h3>
+          <p>🔴 Lunes – Día de las Ciencias</p>
+            <p>🟢 Martes – Desfile</p>
+            <p>🔵 Miércoles – Festival Gastronómico y Talento LIMEC</p>
+            <p>🟠 Jueves – Día Lúdico Recreativo y Miniolimpiadas</p>
+            <p>🟣 Viernes – Salida Pedagógica.</p>
+            <p class="tag">Mas informacion sobre la programación <a href="programacion-semana-cultural">aqui</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-dia-del-idioma" role="tabpanel" aria-labelledby="tab-dia-del-idioma" class="panel" hidden>
+      <div class="header-dos">
+        <div>
+          <h2>Dia del Idioma</h2>
+          <p class="desc">Jueves, 23 de abril de 2026</p>
+        </div>
+        <div class="actions">
+          <button class="btn" data-action="imprimir">Imprimir sección</button>
+          <button class="btn ghost" data-action="copiar-enlace">Copiar enlace a esta sección</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Definición</h3>
+        </div>
+        <div class="card">
+          <h3>Etapas</h3>
+        </div>
+      </div>
+    </section>
+  </div>
+    </div>
+
+    <script src="actividades-culturales.js"></script>
+      </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                        <img src="logos/photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p class="no-copiable">Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
+                        <div class="main-ok">
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+
+</html>
