@@ -123,3 +123,4 @@ document.addEventListener('visibilitychange', () => {
 
 // Arrancar autoplay al cargar
 startAutoplay();
+
