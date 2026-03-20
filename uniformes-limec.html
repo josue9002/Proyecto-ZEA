@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniformes</title>
+    <link rel="stylesheet" href="styles-uniformes-limec.css">
+    <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/photo-logo-banner.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7623882304929645"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- Izquierda: logo (se mantiene la clase .logo) -->
+                 <div class="img-guard">
+                        <img src="logos/photo-logo-blanco-y-negro.png" alt="Logo del Liceo Mixto Emperador de Cali" class="logo">
+                 </div>
+
+                <!-- Centro: título (se mantiene .school-name) + frase nueva -->
+                <div class="logo-center">
+                    <h1 class="school-name">Liceo Mixto Emperador de Cali</h1>
+                    <p class="school-phrase">"DIOS, AMOR, CIENCIA Y SABIDURÍA"</p>
+                </div>
+
+                <!-- Derecha: redes sociales con Font Awesome -->
+                <div class="socials" aria-label="Redes sociales">
+                    <a class="social-link" href="https://www.facebook.com/liceoemperador/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-link" href="https://www.instagram.com/limecoficial/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index" class="no-copiable">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="no-copiable">Mi Institución</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="historia" class="no-copiable">Historia</a></ol>
+                            <ol><a href="simbolos" class="no-copiable">Simbolos</a></ol>
+                            <ol><a href="mision-vision" class="no-copiable">Misión & Visión</a></ol>
+                            <ol><a href="nuestras-sedes" class="no-copiable">Nuestras Sedes</a></ol>
+                            <ol><a href="programa-orientacion-estudiantil" class="no-copiable">Orientacion Estudiantil</a></ol>
+                            <ol><a href="modalidades-sena" class="no-copiable">Modalidades SENA</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Directiva</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="direcciones-de-grupo" class="no-copiable">Direcciones de Grupo</a></ol>
+                              <ol><a href="personal-administrativo" class="no-copiable">Personal Administrativo</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Multimedia</a>
+                              <ul class="dropdown-content">
+                              <ol><a href="galeria-de-fotos" class="no-copiable">Galeria de Fotos</a></ol>
+                              <ol><a href="videos" class="no-copiable">Videos</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a class="no-copiable">Documentos</a>
+                          <ul class="dropdown-content">
+                              <ol><a href="cronograma-academico" class="no-copiable">Cronograma Academico</a></ol>
+                              <ol><a href="manual-de-convivencia" class="no-copiable">Manual de Convivencia</a></ol>
+                              <ol><a href="horario-de-clases" class="no-copiable">Horario de Clases</a></ol>
+                              <ol><a href="programacion-semana-cultural" class="no-copiable">Prog. Semana Cultural</a></ol>
+                              <ol><a href="actividades-culturales" class="no-copiable">Actividades Culturales</a></ol>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a class="no-copiable">Admisiones</a>
+                        <ul class="dropdown-content">
+                            <ol><a href="matriculas-abiertas-limec" class="no-copiable">Matriculas Abiertas LIMEC</a></ol>
+                            <ol><a href="requisitos-jardin-infantil" class="no-copiable">Requisitos Jardin Infantil</a></ol>
+                            <ol><a href="requisitos-senderos-de-paz" class="no-copiable">Requisitos Senderos de Paz</a></ol>
+                        </ul>
+                    </li>
+                      <li><a href="contacto" class="no-copiable">Contacto</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <script src="script-menu.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('.no-copiable').forEach(element => {
+                    element.addEventListener('copy', (e) => e.preventDefault());
+                    element.addEventListener('cut', (e) => e.preventDefault());
+                    element.addEventListener('contextmenu', (e) => e.preventDefault());
+                });
+            });
+        </script>
+
+  <section class="uniformes-main">
+    <section class="uniformes-hero" id="diario">
+      <div class="uniformes-wrap">
+        <div class="uniformes-hero-box">
+          <div class="uniformes-texto">
+            <small>Presentación oficial del uniforme</small>
+            <h1>Uniforme de diario del colegio</h1>
+            <p>
+              En este espacio se muestra la forma correcta de portar el uniforme de diario,
+              manteniendo una presentación ordenada, adecuada y acorde con la imagen institucional del colegio.
+            </p>
+
+            <div class="uniformes-tags">
+              <span>Presentación impecable</span>
+              <span>Uso correcto</span>
+              <span>Imagen institucional</span>
+            </div>
+
+            <div class="uniformes-actions">
+              <a href="#porte" class="uniformes-btn uniformes-btn-primary">Ver cómo portarlo</a>
+              <a href="#tipos" class="uniformes-btn uniformes-btn-secondary">Ver tipos de uniformes</a>
+            </div>
+          </div>
+
+          <div class="uniformes-imagen">
+            <div class="uniformes-card">
+              <div class="uniformes-label">Uniforme de diario</div>
+              <img src="uniforme-diario.png" alt="Uniforme de diario del colegio">
+              <div class="uniforme-info-box">
+                <h3>Presentación oficial</h3>
+                <p>Imagen de referencia del uniforme de diario con fondo transparente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="uniformes-section" id="porte">
+      <div class="uniformes-wrap">
+        <div class="uniformes-title">
+          <h2>Cómo debe portarse el uniforme</h2>
+          <p>
+            El uniforme debe usarse de forma completa, limpia y organizada, reflejando respeto por la institución y excelente presentación personal.
+          </p>
+        </div>
+
+        <div class="uniformes-rules">
+          <div class="uniformes-rule-card">
+            <div class="icon">01</div>
+            <h3>Prendas completas</h3>
+            <p>El estudiante debe portar todas las prendas correspondientes al uniforme según lo establecido por el colegio.</p>
+          </div>
+
+          <div class="uniformes-rule-card">
+            <div class="icon">02</div>
+            <h3>Limpieza y orden</h3>
+            <p>El uniforme debe estar limpio, en buen estado, bien ajustado y correctamente llevado durante la jornada escolar.</p>
+          </div>
+
+          <div class="uniformes-rule-card">
+            <div class="icon">03</div>
+            <h3>Accesorios adecuados</h3>
+            <p>Los zapatos, medias y demás complementos deben corresponder al uniforme autorizado por la institución.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="uniformes-section" id="tipos">
+      <div class="uniformes-wrap">
+        <div class="uniformes-title">
+          <h2>Tipos de uniformes del colegio</h2>
+          <p>
+            Estos son los uniformes institucionales que identifican a los estudiantes en las diferentes actividades escolares.
+          </p>
+        </div>
+
+        <div class="uniformes-grid">
+          <article class="uniformes-type">
+            <div class="uniformes-img-box">
+              <img src="uniforme-diario.png" alt="Uniforme de diario">
+            </div>
+            <div class="uniforme-info-box-tipo">
+              <h3>Uniforme de diario</h3>
+              <p>Uso habitual para la asistencia a clases y actividades académicas regulares.</p>
+              <ul>
+                <li>Camibuso blanco institucional</li>
+                <li>Pantalon de tela</li>
+                <li>Zapatos negros</li>
+                <li>Portarlo con elegancia y respeto</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="uniformes-type">
+            <div class="uniformes-img-box">
+              <img src="uniforme-edu-fisica.png" alt="Uniforme de educación física">
+            </div>
+            <div class="uniforme-info-box-tipo">
+              <h3>Uniforme de educación física</h3>
+              <p>Diseñado para actividades deportivas, recreativas y clases de movimiento.</p>
+              <ul>
+                <li>Camiseta deportiva blanca institucional</li>
+                <li>Sudadera negra institucional</li>
+                <li>Tenis blancos</li>
+                <li>Presentación limpia y organizada</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="uniformes-type">
+            <div class="uniformes-img-box">
+              <img src="img/uniforme-gala.png" alt="Uniforme SENA">
+            </div>
+            <div class="uniforme-info-box-tipo">
+              <h3>Uniforme del SENA</h3>
+              <p>Utilizado en la modalidad correspondiente, por los grados 10° y 11°.</p>
+              <ul>
+                <li>Camisa gris con cierre</li>
+                <li>Sudadera gris institucional</li>
+                <li>Tenis blancos</li>
+                <li>Presentación formal</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="uniformes-wrap">
+      <div class="uniformes-notice">
+        <h2>Importante</h2>
+        <p>
+          Esta página tiene como objetivo orientar a estudiantes y familias sobre la correcta presentación del uniforme escolar.
+          Las imágenes pueden adaptarse según los modelos oficiales autorizados por la institución.
+        </p>
+      </div>
+    </section>
+  </section>
+
+    </section>
+  </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column left">
+                <div class="column image-column">
+                        <img src="logos/photo-logo-blanco-y-negro.png" alt="Imagen Mediana" class="rotar-imagen">
+                </div>
+            </div>
+            <div class="column text-column">
+                <p class="no-copiable">"El LIMEC no solo tiene como propósito el crecimiento del conocimiento, sino también, la formación en principios y valores."</p>
+                <br>
+                <p class="no-copiable">Cali - Colombia</p>
+            </div>
+            <div class="footer-column right">
+                <div class="column social-column">
+                    <br>
+                    <p class="no-copiable">Correo Institucional:<br>emperadordecali@hotmail.com</p>
+                        <div class="main-ok">
+                            <div class="socials-dos">
+                                <a class="facebook" href="https://www.facebook.com/liceoemperador/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="instagram" href="https://www.instagram.com/limecoficial/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="youtube" href="https://www.youtube.com/@limecoficial" target="_blank" rel="noopener" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-bottom">
+            <p class="no-copiable">Todos los derechos reservados © ZEA para el Liceo Mixto Emperador de Cali</p>
+        </div>
+    </footer>
+</body>
+</html>
