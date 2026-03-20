@@ -228,7 +228,7 @@ nav {
 }
 
 section {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 section h1 {
@@ -824,12 +824,16 @@ main {
     }
 
     .heading {
-    font-size: 2em;
-    text-align: center;
-    color: #003366;
+    width: fit-content;
+    margin: 10px auto 15px;
+    padding: 15px 28px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0b3f78;
+    background: rgba(255,255,255,0.45);
+    border-radius: 18px;
     position: relative;
-    margin-bottom: 25px;
-    margin-top: 30px;
+    letter-spacing: 0.5px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -837,13 +841,13 @@ main {
 }
 
 .heading::after {
-    content: '';
-    width: 50px;
-    height: 5px;
-    background-color: #f39c12;
-    display: block;
-    margin: 0.5rem auto;
-    animation: underline-grow 2s ease-out;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 6px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, #f3a400, #ffbe33);
+  border-radius: 999px;
 }
 
 @media (max-width: 1400px) {
@@ -870,4 +874,91 @@ main {
         font-size: 1.6rem;
     }
 
+}
+
+.galeria-anios{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bloque-anio{
+  margin-bottom: 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+}
+
+.barra-anio{
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(90deg, #f3a400, #ffbe33);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.barra-anio::-webkit-details-marker{
+  display: none;
+}
+
+.barra-anio::after{
+  content: "▾";
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.bloque-anio[open] .barra-anio::after{
+  transform: rotate(180deg);
+}
+
+.contenido-anio{
+  padding: 18px 0 0;
+}
+
+/* 2026 - amarillo */
+.anio-2026 .barra-anio{
+  background: linear-gradient(90deg, #f3a400, #ffc233);
+}
+
+/* 2025 - azul */
+.anio-2025 .barra-anio{
+  background: linear-gradient(90deg, #0b3f78, #1d5ea8);
+}
+
+/* ESTE ES EL QUE EVITA QUE SE TE PONGAN ANCHOS */
+.albums-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+@media (max-width: 992px){
+  .albums-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .barra-anio{
+    font-size: 22px;
+    padding: 5px 18px;
+  }
+}
+
+@media (max-width: 600px){
+  .albums-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .barra-anio{
+    font-size: 18px;
+  }
 }
