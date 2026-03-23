@@ -6,14 +6,18 @@
 
 body {
     font-family: Open Sans;
-    background-image: url('logos/photo-fondo.png');
-    color: #000000;
+    background:
+        radial-gradient(circle at top left, rgba(0, 170, 255, 0.25), transparent 30%),
+        radial-gradient(circle at top right, rgba(255, 179, 0, 0.20), transparent 28%),
+        linear-gradient(135deg, #f4fbff 0%, #eef6ff 35%, #fff8ea 100%);
+      color:#18324a;
     margin: 0;
     padding: 0;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 .container {
     margin: 0 200px;
