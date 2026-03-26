@@ -241,7 +241,7 @@ nav {
     background-size: cover;
     background-position: center;
     color: #fff; /* Cambia el color del texto si es necesario para asegurar legibilidad */
-    padding: 250px 20px; /* Ajusta el relleno según sea necesario */
+    padding: 250px 0px; /* Ajusta el relleno según sea necesario */
     text-align: center;
 }
 
@@ -256,7 +256,6 @@ section {
 
 section h1 {
     font-size: 2.2em;
-    margin-bottom: 1px;
     color: #003366;
     text-align: center;
     margin-top: 15px;
@@ -304,15 +303,6 @@ main {
     background-size: cover;
 }
 
-section#bienvenidos {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-#bienvenidos h1 {
-    margin-bottom: 20px;
-}
 .footer {
     background-color: #565a5e;
     padding: 20px;
@@ -739,7 +729,7 @@ section#bienvenidos {
         display: flex;
         padding-bottom: 35px;
         padding-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         padding-left: 10px;
     }
 
@@ -890,17 +880,6 @@ section#bienvenidos {
   .socials a:hover{ transform: none; }
 }
 
-    body{
-      font-family: "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(0, 170, 255, 0.25), transparent 30%),
-        radial-gradient(circle at top right, rgba(255, 179, 0, 0.20), transparent 28%),
-        linear-gradient(135deg, #f4fbff 0%, #eef6ff 35%, #fff8ea 100%);
-      color:#18324a;
-      line-height:1.6;
-      overflow-x:hidden;
-    }
-
     .limec-uniformes-wrap{
       width:100%;
       margin:auto;
@@ -914,7 +893,7 @@ section#bienvenidos {
     .limec-deco-3{
       position:fixed;
       border-radius:25%;
-      z-index:0;
+      z-index:-1;
       pointer-events:none;
       filter:blur(8px);
       opacity:.25;
@@ -947,7 +926,7 @@ section#bienvenidos {
     /* Hero */
     .limec-hero{
       position:relative;
-      padding:25px 0px 20px;
+      padding:20px 0px 0px;
       text-align:center;
     }
 
@@ -955,7 +934,7 @@ section#bienvenidos {
       background:rgba(255,255,255,.78);
       backdrop-filter:blur(10px);
       border:1px solid rgba(255,255,255,.65);
-      border-radius:30px;
+      border-radius:15px;
       box-shadow:0 18px 45px rgba(31, 75, 130, 0.14);
       padding:42px 28px;
       position:relative;
@@ -1005,13 +984,14 @@ section#bienvenidos {
 
     /* Secciones */
     .limec-section{
-      margin:28px 0 40px;
+      margin:20px 0 0px;
     }
 
     .limec-title{
       text-align:center;
       font-size:clamp(1.6rem, 3vw, 2.3rem);
       color:#12385b;
+      margin-top: 30PX;
       margin-bottom:22px;
       font-weight:800;
       position:relative;
@@ -1030,7 +1010,7 @@ section#bienvenidos {
     /* Normas */
     .limec-reglas-box{
       background:rgba(255,255,255,.82);
-      border-radius:28px;
+      border-radius:15px;
       padding:28px;
       box-shadow:0 16px 40px rgba(25, 66, 117, 0.10);
       border:1px solid rgba(255,255,255,.75);
@@ -1044,7 +1024,7 @@ section#bienvenidos {
 
     .limec-regla{
       background:linear-gradient(145deg, #ffffff, #f3f9ff);
-      border-radius:22px;
+      border-radius:15px;
       padding:20px 18px;
       border:1px solid #dbefff;
       box-shadow:0 10px 24px rgba(0, 92, 171, 0.08);
@@ -1088,7 +1068,7 @@ section#bienvenidos {
     .limec-card-uniforme{
       position:relative;
       background:rgba(255,255,255,.86);
-      border-radius:28px;
+      border-radius:15px;
       padding:24px 22px 22px;
       text-align:center;
       box-shadow:0 18px 38px rgba(30, 75, 128, 0.12);
@@ -1137,7 +1117,7 @@ section#bienvenidos {
 
     .limec-card-inner{
       position:relative;
-      z-index:1;
+      z-index:0;
     }
 
     .limec-card-uniforme h3{
@@ -1153,7 +1133,7 @@ section#bienvenidos {
       align-items:center;
       justify-content:center;
       margin-bottom:16px;
-      border-radius:22px;
+      border-radius:15px;
       background:
         linear-gradient(135deg, rgba(255,255,255,.75), rgba(235,247,255,.95));
       border:2px dashed #bfdfff;
@@ -1179,7 +1159,7 @@ section#bienvenidos {
 
     /* Franja final */
     .limec-footer-aviso{
-      margin:10px 0 60px;
+      margin:10px 0 0px;
       background:linear-gradient(120deg, #0f7ae5, #00b4d8, #5e60ce);
       color:#fff;
       border-radius:15px;
@@ -1214,22 +1194,22 @@ section#bienvenidos {
 
     @media (max-width: 600px){
       .limec-hero{
-        padding:45px 10px 25px;
+        padding:10px 0px 10px;
       }
 
       .limec-hero-box{
         padding:28px 18px;
-        border-radius:22px;
+        border-radius:15px;
       }
 
       .limec-reglas-box{
         padding:18px;
-        border-radius:22px;
+        border-radius:15px;
       }
 
       .limec-regla{
         padding:16px 14px;
-        border-radius:18px;
+        border-radius:15px;
       }
 
       .limec-num{
@@ -1239,8 +1219,8 @@ section#bienvenidos {
       }
 
       .limec-card-uniforme{
-        padding:20px 16px;
-        border-radius:22px;
+        padding:20px 5px;
+        border-radius:15px;
       }
 
       .limec-imagen-box{
@@ -1248,7 +1228,7 @@ section#bienvenidos {
       }
 
       .limec-footer-aviso{
-        border-radius:22px;
+        border-radius:15px;
         padding:22px 16px;
       }
     }
