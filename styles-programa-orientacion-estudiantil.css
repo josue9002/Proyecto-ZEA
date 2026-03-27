@@ -812,7 +812,7 @@ main {
       display: flex;
       gap: 2.5rem;
       align-items: center;
-      padding: 2.5rem;
+      padding: 2rem;
       border-radius: 15px;
       background: white;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
@@ -873,13 +873,13 @@ main {
     /* Sección de agenda de citas */
     .agenda {
       background: linear-gradient(135deg, var(--color-primario-suave), #afc0fa);
-      border-radius: 24px;
-      padding: 2rem 2rem 2.3rem;
+      border-radius: 15px;
+      padding: 1.5rem 1.5rem 1.5rem;
     }
 
     .agenda h2 {
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
       color: var(--color-texto);
       user-select: none;
     -webkit-user-select: none;
@@ -1027,3 +1027,221 @@ main {
         font-size: 1.35rem;
       }
     }
+
+    .visor-biblico {
+  position: relative;
+  padding: 70px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+  font-family: Arial, sans-serif;
+}
+
+.visor-biblico__fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.14), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,215,0,0.12), transparent 28%);
+  pointer-events: none;
+}
+
+.visor-biblico__encabezado {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #000000;
+  z-index: 1;
+  animation: subirSuave 1s ease;
+}
+
+.visor-biblico__etiqueta {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.visor-biblico__titulo {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ffd166;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.visor-biblico__texto {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.7;
+  color: #000000;
+}
+
+.visor-biblico__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.visor-biblico__card {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 24px;
+  padding: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: flotarEntrada 0.9s ease;
+}
+
+.visor-biblico__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+}
+
+.visor-biblico__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.visor-biblico__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f1c765b6, #f0e5ca46);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.visor-biblico__card-titulo {
+  margin: 0;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.visor-biblico__frame-box,
+.visor-biblico__video-box {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+.visor-biblico__frame {
+  width: 100%;
+  height: 430px;
+  border: none;
+  display: block;
+}
+
+.visor-biblico__video {
+  width: 100%;
+  height: 430px;
+  border: none;
+  display: block;
+}
+
+.visor-biblico__boton {
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ffd166, #ffb703);
+  color: #14213d;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 14px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.visor-biblico__boton:hover {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotarEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .visor-biblico__grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+
+  .visor-biblico__frame,
+  .visor-biblico__video {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visor-biblico {
+    padding: 55px 15px;
+  }
+
+  .visor-biblico__card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .visor-biblico__icono {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .visor-biblico__frame,
+  .visor-biblico__video {
+    height: 300px;
+  }
+
+  .visor-biblico__boton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .visor-biblico__frame,
+  .visor-biblico__video {
+    height: 240px;
+  }
+
+  .visor-biblico__texto {
+    font-size: 0.95rem;
+  }
+}
