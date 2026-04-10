@@ -1121,6 +1121,8 @@ main {
       display: block;
     }
 
+    
+
     .media-play-btn {
       position: absolute;
       inset: 0;
@@ -1129,7 +1131,7 @@ main {
       justify-content: center;
     }
 
-    .media-play-btn span {
+    .media-play-btn i {
       width: 46px;
       height: 46px;
       border-radius: 999px;
