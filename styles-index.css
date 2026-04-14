@@ -285,14 +285,15 @@ main {
 }
 
 .footer {
-    background-color: #565a5e;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    margin: 0 200px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    margin-top: 2%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 2% auto 0;
+  background-color: #565a5e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-content {
