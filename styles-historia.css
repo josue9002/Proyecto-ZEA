@@ -19,11 +19,14 @@ body {
 }
 
 .container {
-    margin: 0 200px;
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    border-radius: 10px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 header {
@@ -226,7 +229,7 @@ nav {
 
 
 section {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 section h1 {
@@ -237,7 +240,7 @@ section h1 {
 }
 
 section p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.6;
     text-align: justify;
 }
@@ -280,14 +283,15 @@ main {
 }
 
 .footer {
-    background-color: #565a5e;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    margin: 0 200px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    margin-top: 2%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 2% auto 0;
+  background-color: #565a5e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -425,20 +429,20 @@ main {
 @media (max-width: 1450px) {
 
     .footer{
-        margin: 10px; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-        padding-bottom: 20px;
-    }
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
 
-    .section-qs {
-        width: 100%; /* Ocupa el ancho completo */
-        margin: 20px 0; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-    }
-
-    .container{
-        margin: 0 10px;
-    }
+  .container{
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
     .contenido-card{
         font-size: 1em;
@@ -697,8 +701,9 @@ main {
     font-size: 15.5px;
     background-color: #ecf0f1;
     padding: 10px;
-    border-left: 5px solid #007BFF;
+    border-left: 10px solid #007BFF;
     margin: 20px 0;
+    border-radius: 10px;
 }
 
 .buttons {
@@ -714,7 +719,7 @@ main {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     white-space: nowrap;      /* Evita que se parta el texto */
@@ -735,13 +740,16 @@ main {
 /* En pantallas pequeñas, uno debajo del otro */
 @media (max-width: 600px) {
     .buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column 1fr;
+        align-items: center;
     }
 
     .nav-button {
-        width: 100%;          /* Ocupa todo el ancho disponible */
+        width: 25%;          /* Ocupa todo el ancho disponible */
         text-align: center;
+        justify-content: center;
+        padding: 4px 10px;
+        font-size: 0.7rem;
     }
 }
 
@@ -781,7 +789,7 @@ main {
     }
 
     .heading {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .heading::after {
