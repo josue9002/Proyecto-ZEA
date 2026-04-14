@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronograma Academico</title>
+    <title>Personal Administrativo</title>
     <link rel="stylesheet" href="styles-cronograma-academico.css">
     <script src="https://kit.fontawesome.com/ccd00cce56.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
                     <a class="social-link" href="https://www.youtube.com/@limecoficial" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-                 <nav>
+            <nav>
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -88,25 +88,316 @@
               </nav>
           </header>
 
-
           <script src="script-menu.js"></script>
 
-        <main class="wrap" role="main">
-    <span class="badge">Sitio en construcción</span>
-    <h1><span class="grad">¡Próximamente!</span></h1>
-    <p>
-      Esta página estará disponible muy pronto.
-      Estamos preparando algo genial para ti.
-    </p>
-    <div class="dots" aria-hidden="true">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    </div>
-    <p class="small" style="margin-top:22px;">
-      Gracias por tu paciencia.
-    </p>
-        </main>
-    </div>
+          <main class="wrap">
+    <section class="hero">
+      <div class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> LIMEC AÑO 2026</div>
+      <h1>Cronograma Estudiantil</h1>
+      <p>
+        <strong>¡Vive cada momento en el Emperador!</strong> Consulta aquí las fechas y actividades más importantes del año escolar y mantente al día con cada evento especial de nuestra comunidad educativa.
+      </p>
+    </section>
 
+     <section class="controls">
+      <div class="controls-grid">
+        <div class="field">
+          <div class="field-label"><i class="fa-solid fa-calendar-days"></i> Seleccionar mes</div>
+          <div class="control-shell select-shell">
+            <select id="monthSelect" class="select">
+            <option value="febrero">📚 Febrero</option>
+            <option value="marzo">🎓 Marzo</option>
+            <option value="abril">📝 Abril</option>
+            <option value="mayo">🌟 Mayo</option>
+            <option value="junio">🍃 Junio</option>
+            <option value="julio">☀️ Julio</option>
+            <option value="agosto">🎨 Agosto</option>
+            <option value="septiembre">📖 Septiembre</option>
+            <option value="octubre">🍂 Octubre</option>
+            <option value="noviembre">🏆 Noviembre</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label"><i class="fa-solid fa-magnifying-glass"></i> Buscar dentro del mes</div>
+          <div class="control-shell"> 
+            <input id="searchInput" class="search" type="text" placeholder="Escribe una actividad, fecha u observación...">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="layout">
+      <section class="board">
+        <div class="month-head">
+          <h2 class="month-title" id="monthTitle">📚 Febrero 2026</h2>
+          <div class="month-pill" id="monthPill">Mes con fechas importantes</div>
+        </div>
+
+        <div class="weekdays">
+          <div class="weekday">Lun</div>
+          <div class="weekday">Mar</div>
+          <div class="weekday">Mié</div>
+          <div class="weekday">Jue</div>
+          <div class="weekday">Vie</div>
+          <div class="weekday">Sáb</div>
+          <div class="weekday">Dom</div>
+        </div>
+
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </section>
+
+      <aside class="legend-panel">
+        <div class="summary-card">
+          <h3><i class="fa-solid fa-file-lines"></i> Resumen del mes</h3>
+          <p id="monthDescription">Consulta las actividades del mes seleccionado y revisa rápidamente las fechas resaltadas en el calendario.</p>
+        </div>
+
+        <div class="summary-card">
+          <h3><i class="fa-solid fa-folder-open"></i> Fechas importantes</h3>
+          <div id="eventsList" class="events-list"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const monthData = {
+      febrero: {
+        label: '📚 Febrero',
+        pill: 'Valor: EL ORDEN',
+        accent: 'var(--feb)',
+        daysInMonth: 28,
+        startOffset: 6,
+        description: 'En febrero practicamos el orden, manteniendo nuestros espacios, ideas y acciones en armonía para convivir mejor cada día.',
+        events: [
+          { day: 5, title: 'Iniciación de clases y período', type: 'Apertura', note: 'Socialización del Manual de Convivencia y semana de diagnóstico por áreas.' },
+          { day: 17, title: 'Proyecto Democracia', type: 'Proyecto', note: 'Socialización con OE y área de Ciencias Sociales.' },
+          { day: 17, title: 'Dirección de grupo', type: 'Acompañamiento', note: 'Participan los directores de grupo y los estudiantes.' }
+        ]
+      },
+      marzo: {
+        label: '🎓 Marzo',
+        pill: 'Valor: LA VERDAD',
+        accent: 'var(--mar)',
+        daysInMonth: 31,
+        startOffset: 6,
+        description: 'En marzo resaltamos el valor de la verdad, hablando con sinceridad y actuando siempre con honestidad.',
+        events: [
+          { day: 12, title: 'Elección del personero', type: 'Elección', note: 'Charlas de sensibilización con OE y área de Ciencias Sociales.' },
+          { day: 13, title: 'Realización de informes parciales', type: 'Informes', note: 'Los docentes deben tener mínimo tres calificaciones.' },
+          { day: 17, title: 'Reunión de apertura y entrega de informes', type: 'Reunión', note: 'Actividad programada del 17 al 19 de marzo para la comunidad educativa.' },
+          { day: 30, title: 'Semana Santa', type: 'Receso', note: 'Receso estudiantil del 30 de marzo al 3 de abril.' }
+        ]
+      },
+      abril: {
+        label: '📝 Abril',
+        pill: 'Valor: LA FE',
+        accent: 'var(--abr)',
+        daysInMonth: 30,
+        startOffset: 2,
+        description: 'En abril fortalecemos la fe, confiando en nosotros mismos, en los demás y en que cada esfuerzo trae buenos frutos.',
+        events: [
+          { day: 7, title: 'Último plazo para pago de exámenes finales', type: 'Pago', note: 'Fecha límite para pago de exámenes finales.' },
+          { day: 23, title: 'Exámenes Primera Infancia a Primero', type: 'Exámenes', note: 'Se desarrollan del 23 al 29 de abril.' },
+          { day: 28, title: 'Exámenes Segundo', type: 'Exámenes', note: 'Programados los días 28 y 29 de abril.' },
+          { day: 29, title: 'Exámenes Tercero a Once', type: 'Exámenes', note: 'Participan docentes y estudiantes.' },
+          { day: 30, title: 'Digitación de notas', type: 'Notas', note: 'Docentes de Primera Infancia a 11°.' }
+        ]
+      },
+      mayo: {
+        label: '🌟 Mayo',
+        pill: 'Valor: RESPETO',
+        accent: 'var(--may)',
+        daysInMonth: 31,
+        startOffset: 4,
+        description: 'En mayo promovemos el respeto, valorando a cada persona, sus opiniones y diferencias con amabilidad y tolerancia.',
+        events: [
+          { day: 4, title: 'Reunión y notificación de estrategias', type: 'Reunión', note: 'Gestión académica y docentes.' },
+          { day: 6, title: 'Estrategias de apoyo', type: 'Apoyo', note: 'Se llevan a cabo del 6 al 8 de mayo.' },
+          { day: 12, title: 'Entrega de informe final del primer período', type: 'Entrega', note: 'Participan directivos, docentes y estudiantes.' },
+          { day: 15, title: 'Día del Maestro', type: 'Celebración', note: 'Reconocimiento a la labor docente.' },
+          { day: 22, title: 'Afrocolombianidad y proyecto ambiental', type: 'Jornada especial', note: 'Izada de bandera, plan de aula y seguimiento académico.' }
+        ]
+      },
+      junio: {
+        label: '🍃 Junio',
+        pill: 'Valor: INTEGRIDAD',
+        accent: 'var(--jun)',
+        daysInMonth: 30,
+        startOffset: 0,
+        description: 'En junio practicamos la integridad, actuando con honestidad y haciendo siempre lo correcto en cada momento.',
+        events: []
+      },
+      julio: {
+        label: '☀️ Julio',
+        pill: 'Valor: INTEGRIDAD',
+        accent: 'var(--jul)',
+        daysInMonth: 31,
+        startOffset: 2,
+        description: 'En julio fortalecemos la integridad, siendo coherentes entre lo que pensamos, decimos y hacemos cada día.',
+        events: []
+      },
+      agosto: {
+        label: '🎨 Agosto',
+        pill: 'Valor: JUSTICIA',
+        accent: 'var(--ago)',
+        daysInMonth: 31,
+        startOffset: 5,
+        description: 'En agosto reflexionamos sobre la justicia, aprendiendo a actuar con equidad, responsabilidad y respeto por los derechos de los demás.',
+        events: []
+      },
+      septiembre: {
+        label: '📖 Septiembre',
+        pill: 'Valor: LA PAZ',
+        accent: 'var(--sep)',
+        daysInMonth: 30,
+        startOffset: 1,
+        description: 'En septiembre cultivamos la paz, fomentando la calma, el diálogo y la buena convivencia en nuestro entorno.',
+        events: []
+      },
+      octubre: {
+        label: '🍂 Octubre',
+        pill: 'Valor: SOLIDARIDAD',
+        accent: 'var(--oct)',
+        daysInMonth: 31,
+        startOffset: 3,
+        description: 'En octubre fortalecemos la solidaridad, brindando apoyo a los demás con generosidad, empatía y cariño.',
+        events: []
+      },
+      noviembre: {
+        label: '🏆 Noviembre',
+        pill: 'Valor: SOLIDARIDAD',
+        accent: 'var(--nov)',
+        daysInMonth: 30,
+        startOffset: 6,
+        description: 'En noviembre seguimos viviendo la solidaridad, compartiendo con los demás y ayudando con alegría para construir una mejor convivencia.',
+        events: []
+      }
+    };
+
+    const monthSelect = document.getElementById('monthSelect');
+    const searchInput = document.getElementById('searchInput');
+    const monthTitle = document.getElementById('monthTitle');
+    const monthPill = document.getElementById('monthPill');
+    const monthDescription = document.getElementById('monthDescription');
+    const calendarGrid = document.getElementById('calendarGrid');
+    const eventsList = document.getElementById('eventsList');
+
+    function renderMonth(monthKey) {
+      const data = monthData[monthKey];
+      const term = searchInput.value.trim().toLowerCase();
+      document.documentElement.style.setProperty('--month-accent', `color-mix(in srgb, ${data.accent} 100%, transparent)`);
+
+      monthTitle.textContent = data.label;
+      monthPill.textContent = data.pill;
+      monthDescription.textContent = data.description;
+
+      const eventMap = {};
+      data.events.forEach(event => {
+        if (!eventMap[event.day]) eventMap[event.day] = [];
+        eventMap[event.day].push(event);
+      });
+
+      calendarGrid.innerHTML = '';
+
+      for (let i = 0; i < data.startOffset; i++) {
+        const empty = document.createElement('div');
+        empty.className = 'day empty';
+        calendarGrid.appendChild(empty);
+      }
+
+      for (let day = 1; day <= data.daysInMonth; day++) {
+        const dayEvents = (eventMap[day] || []).filter(ev => {
+          const text = `${ev.title} ${ev.type} ${ev.note} ${day}`.toLowerCase();
+          return term === '' || text.includes(term);
+        });
+
+        const hasEvent = dayEvents.length > 0;
+        const cell = document.createElement('div');
+        cell.className = `day${hasEvent ? ' has-event' : ''}`;
+
+        const note = hasEvent
+          ? `<div class="tag-mini">${dayEvents[0].type}</div><div class="day-note">${dayEvents[0].title}</div>`
+          : '';
+
+        cell.innerHTML = `
+          <div class="day-number">${day}</div>
+          ${note}
+        `;
+
+        calendarGrid.appendChild(cell);
+      }
+
+      const totalCells = data.startOffset + data.daysInMonth;
+      const extra = totalCells % 7 === 0 ? 0 : 7 - (totalCells % 7);
+      for (let i = 0; i < extra; i++) {
+        const empty = document.createElement('div');
+        empty.className = 'day empty';
+        calendarGrid.appendChild(empty);
+      }
+
+      renderEventList(data, term);
+    }
+
+    function renderEventList(data, term) {
+      const filtered = data.events.filter(ev => {
+        const text = `${ev.title} ${ev.type} ${ev.note} ${ev.day}`.toLowerCase();
+        return term === '' || text.includes(term);
+      });
+
+      eventsList.innerHTML = '';
+
+      if (!data.events.length) {
+        eventsList.innerHTML = `
+          <div class="soon">
+            <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Próximamente</h3>
+            <p>Este mes aún no tiene fechas registradas. Cuando tengas nueva información, aquí se mostrará en formato escolar.</p>
+          </div>
+        `;
+        return;
+      }
+
+      if (!filtered.length) {
+        eventsList.innerHTML = `
+          <div class="event-item">
+            <div class="event-date">Sin resultados</div>
+            <p>No se encontraron actividades con esa búsqueda dentro del mes seleccionado.</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(ev => {
+        const item = document.createElement('article');
+        item.className = 'event-item';
+        item.innerHTML = `
+          <div class="event-date"> <i class="fa-solid fa-star"></i> ${ev.day}</div>
+          <h4>${ev.title}</h4>
+          <p><b>${ev.type}:</b> ${ev.note}</p>
+        `;
+        eventsList.appendChild(item);
+      });
+    }
+
+    monthSelect.addEventListener('change', () => {
+      searchInput.value = '';
+      renderMonth(monthSelect.value);
+    });
+
+    searchInput.addEventListener('input', () => {
+      renderMonth(monthSelect.value);
+    });
+
+    renderMonth('febrero');
+  </script>
+  </main>
+  </div>
+        
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
