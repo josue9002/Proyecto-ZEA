@@ -1081,7 +1081,7 @@ body.modal-open {
 
 /* Ajustes generales: que el modal nunca pegue bordes */
 .modal-anuncio{
-  max-width: 640px;
+  max-width: 440px;
   width: min(92vw, 640px);
   margin: 0 12px; /* pequeño margen lateral en pantallas angostas */
 }
@@ -1098,9 +1098,9 @@ body.modal-open {
 
 /* Imagen cuadrada “mediana” por defecto */
 .modal-anuncio__image{
-  flex: 0 0 200px;
-  width: 200px;
-  height: 200px;
+  flex: 0 0 400px;
+  width: 700px;
+  height: 500px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
@@ -1129,7 +1129,7 @@ body.modal-open {
 /* ====== Breakpoint tablet y abajo ====== */
 @media (max-width: 768px){
   .modal-anuncio{
-    width: min(94vw, 620px);
+    width: min(94vw, 340px);
     border-radius: 16px;
   }
 
@@ -1141,8 +1141,8 @@ body.modal-open {
 
   /* Imagen más grande pero fluida */
   .modal-anuncio__image{
-    width: clamp(180px, 48vw, 280px);
-    height: clamp(180px, 48vw, 280px);
+    width: clamp(300px, 20vw, 700px);
+    height: clamp(400px, 48vw, 500px);
     flex: 0 0 auto; /* deja que fluya */
   }
 
@@ -1161,15 +1161,15 @@ body.modal-open {
 /* ====== Breakpoint móvil pequeño ====== */
 @media (max-width: 480px){
   .modal-anuncio{
-    width: 96vw;
+    width: 90vw;
     margin: 0 2vw;
     border-radius: 14px;
   }
 
   /* Imagen tipo “banner cuadrado” centrado */
   .modal-anuncio__image{
-    width: min(80vw, 320px);
-    height: min(80vw, 320px);
+    width: min(80vw, 700px);
+    height: min(100vw, 500px);
     border-radius: 10px;
   }
 
