@@ -557,14 +557,6 @@ main {
     box-sizing: border-box;
   }
 
-  .section-qs {
-    width: calc(100% - 20px);
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
   .container{
     width: calc(100% - 20px);
     max-width: 1200px;
