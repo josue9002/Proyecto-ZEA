@@ -17,11 +17,14 @@ body {
 }
 
 .container {
-    margin: 0 200px;
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    border-radius: 10px; /* Opcional: para bordes redondeados */
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 header {
@@ -619,20 +622,28 @@ main {
 @media (max-width: 1450px) {
 
     .footer{
-        margin: 10px; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-        padding-bottom: 20px;
-    }
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
 
-    .section-qs {
-        width: 100%; /* Ocupa el ancho completo */
-        margin: 20px 0; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-    }
+  .section-qs {
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
-    .container{
-        margin: 0 10px;
-    }
+  .container{
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
     .contenido-card{
         font-size: 1em;
