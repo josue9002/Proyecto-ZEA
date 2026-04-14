@@ -5,7 +5,7 @@ const texts = {
          en los niveles de preescolar, primaria y bachillerato. Su propietario, preocupado por el futuro de estos
           jóvenes, quiso crear una institución donde se beneficiara gran parte de esta población que se estaba 
           quedando sin estudios por las distintas dificultades que había para ingresar a los pocos colegios públicos,
-           y que por falta de recursos no tenían oportunidad en los colegios privados del sector.</p>
+           y que por falta de recursos no tenían oportunidad en los colegios privados del sector.</p><br>
  
  
          <p>Pensando en un nombre que impactara grandeza en el campo de la educación, superioridad 
