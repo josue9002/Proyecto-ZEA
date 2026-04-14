@@ -310,7 +310,7 @@ main {
 .footer {
   width: calc(100% - 40px);
   max-width: 1200px;
-  margin: 2% auto 0;
+  margin: 20px auto 0;
   background-color: #565a5e;
   color: #ffffff;
   padding: 20px;
