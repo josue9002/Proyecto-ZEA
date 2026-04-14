@@ -17,11 +17,14 @@ body {
 }
 
 .container {
-    margin: 0 200px;
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    border-radius: 10px; /* Opcional: para bordes redondeados */
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 header {
@@ -291,14 +294,15 @@ main {
 
 
 .footer {
-    background-color: #565a5e;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    margin: 0 200px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    margin-top: 2%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 0;
+  background-color: #565a5e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -522,21 +526,20 @@ main {
 @media (max-width: 1450px) {
 
     .footer{
-        margin: 10px; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-        padding-bottom: 20px;
-    }
-
-    .section-qs {
-        width: 100%; /* Ocupa el ancho completo */
-        margin: 20px 0; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     }
 
     .container{
-        margin: 0 10px;
+        width: calc(100% - 20px);
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
-
     .contenido-card{
         font-size: 1em;
     }
@@ -792,15 +795,15 @@ section h1, h2, h3, p{
       --bg: #f7f9fc;
       --card: #ffffff;
       --text: #0f172a;
-      --muted: #5b6475;
-      --accent: #082955;
-      --accent-2: #0a7bdc;
+      --muted: #260054;
+      --accent: #7733c9;
+      --accent-2: #3977d5;
       --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
       --radius: 18px;
     }
 
     .wrap{
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0px;
     }
@@ -822,15 +825,37 @@ section h1, h2, h3, p{
       margin-top: 10px;
     }
 
-        .header-dos h1{
-      margin: 10px 0 10px;
+    .header-dos h1{
+      margin: 30px 0 10px;
       font-size: clamp(22px, 3vw, 30px);
       font-weight: 700;
       font-size: 2EM;
       letter-spacing: .2px;
-      color: #03213f;
-      padding: 15px;
+      color: #123466;
+      padding: 5px;
     }
+
+    .heading {
+    font-size: 2.2em;
+    text-align: center;
+    color: #123466;
+    position: relative;
+    margin-bottom: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.heading::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: #f31212;
+    display: block;
+    margin: 0.5rem auto;
+    animation: underline-grow 2s ease-out;
+}
 
 
     .header-dos p{
@@ -859,6 +884,7 @@ section h1, h2, h3, p{
       align-items:center;
       gap:10px;
       margin-bottom: 10px;
+      color: #123466;
     }
 
     .hymn-badge{
@@ -872,14 +898,14 @@ section h1, h2, h3, p{
     .hymn-title h2{
       margin:0;
       font-size: clamp(20px, 2.2vw, 24px);
-      font-weight: 650;
+      font-weight: 700;
     }
 
     .hymn{
       text-align: center;
       line-height: 1.55;
       font-size: clamp(14.5px, 1.1vw, 16px);
-      color: #0f1a2b;
+      color: #123466;
       padding: 8px 6px 0;
       white-space: pre-line; /* respeta saltos */
     }
@@ -887,14 +913,14 @@ section h1, h2, h3, p{
     .credits{
       margin-top: 18px;
       padding-top: 14px;
-      border-top: 1px dashed #e6eaf2;
+      border-top: 1px dashed #d4d8df;
       text-align: left;
     }
 
     .credits h3{
       margin: 0 0 6px;
       font-size: 14.5px;
-      color: var(--accent);
+      color: #123466;
       letter-spacing: .2px;
     }
 
@@ -930,13 +956,14 @@ section h1, h2, h3, p{
     .asset-head h3{
       margin:0;
       font-size: 16.5px;
-      font-weight: 650;
+      font-weight: 700;
+      color: #123466;
     }
 
     .asset-head span{
       font-size: 11.5px;
       color: var(--muted);
-      background: #f1f6ff;
+      background: #f9ebff;
       padding: 4px 8px;
       border-radius: 999px;
       font-weight: 600;
