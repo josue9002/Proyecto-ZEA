@@ -795,9 +795,9 @@ section h1, h2, h3, p{
       --bg: #f7f9fc;
       --card: #ffffff;
       --text: #0f172a;
-      --muted: #260054;
-      --accent: #7733c9;
-      --accent-2: #3977d5;
+      --muted: #ffffff;
+      --accent: #3a62a0;
+      --accent-2: #2d4d7d;
       --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
       --radius: 18px;
     }
@@ -963,7 +963,7 @@ section h1, h2, h3, p{
     .asset-head span{
       font-size: 11.5px;
       color: var(--muted);
-      background: #f9ebff;
+      background: #ed1919;
       padding: 4px 8px;
       border-radius: 999px;
       font-weight: 600;
