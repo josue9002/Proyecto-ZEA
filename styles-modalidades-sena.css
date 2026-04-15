@@ -6,7 +6,7 @@
 
 body {
     font-family: Open Sans;
-    background-image: url('logos/photo-fondo.png');
+    background-image: url('photo-fondo.png');
     color: #000000;
     margin: 0;
     padding: 0;
@@ -17,11 +17,14 @@ body {
 }
 
 .container {
-    margin: 0 200px;
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    border-radius: 10px; /* Opcional: para bordes redondeados */
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 header {
@@ -228,7 +231,7 @@ nav {
 }
 
 section {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 section h1 {
@@ -282,14 +285,15 @@ main {
 }
 
 .footer {
-    background-color: #565a5e;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    margin: 0 200px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    margin-top: 2%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 0;
+  background-color: #565a5e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -522,19 +526,19 @@ main {
 @media (max-width: 1450px) {
 
     .footer{
-        margin: 10px; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-        padding-bottom: 20px;
-    }
-
-    .section-qs {
-        width: 100%; /* Ocupa el ancho completo */
-        margin: 20px 0; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     }
 
     .container{
-        margin: 0 10px;
+        width: calc(100% - 20px);
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .contenido-card{
@@ -804,11 +808,11 @@ main {
     }
 
     main {
-      padding: 0.9rem 0.5rem 0.5rem;
+      padding: 0rem 0rem 0rem;
     }
 
     .wrapper {
-      max-width: 100%;
+      max-width: 2000px;
       margin: 0 auto;
     }
 
@@ -822,7 +826,7 @@ main {
 
     .intro h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin: 35px 20px;
       color: #003366;
       user-select: none;
     -webkit-user-select: none;
@@ -841,17 +845,20 @@ main {
     color: #003366;
     position: relative;
     margin-bottom: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .heading::after {
     content: '';
     width: 50px;
     height: 5px;
-    background-color: #f39c12;
+    background-color: #f31212;
     display: block;
     margin: 0.5rem auto;
     animation: underline-grow 2s ease-out;
-    margin-bottom: 20px;
 }
 
 
