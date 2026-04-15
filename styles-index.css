@@ -6,7 +6,7 @@
 
 body {
     font-family: Open Sans;
-    background-image: url('logos/photo-fondo.png');
+    background-size: url('logo/photo-fondo.png');
     color: #000000;
     margin: 0;
     padding: 0;
@@ -434,7 +434,7 @@ main {
 }
 .card:hover{
 	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
+	transform: translateY(-1%);
 }
 .card img{
 	width: 100%;
@@ -444,7 +444,7 @@ main {
   pointer-events: none;      /* los eventos pasan al overlay */
 }
 .card .contenido-card{
-	padding: 15px;
+	padding: 20px;
 	text-align: center;
 }
 .card .contenido-card h3{
@@ -453,9 +453,10 @@ main {
 }
 .card .contenido-card p{
 	line-height: 1.8;
-	color: #6a6a6a;
+	color: #323232;
 	font-size: 14px;
 	margin-bottom: 5px;
+    text-align: center;
 }
 .card .contenido-card a{
 	display: inline-block;
@@ -464,9 +465,9 @@ main {
 	text-decoration: none;
 	color: #007BFF;
 	border: 1px solid #007BFF;
-	border-radius: 4px;
+	border-radius: 30px;
 	transition: all 400ms ease;
-	margin-bottom: 5px;
+    font-size: 0.9em;
 }
 .card .contenido-card a:hover{
 	background: #007BFF;
@@ -515,7 +516,7 @@ main {
 .section-qs {
     padding: 15px;
     width: 45%;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .left-o {
     float: left;
@@ -622,6 +623,12 @@ main {
 /* Encabezado */
 @media (max-width: 1450px) {
 
+    .section-qs {
+        width: 100%; /* Ocupa el ancho completo */
+        margin: 20px 0; /* Ajusta el margen */
+        padding: 10px; /* Ajusta el relleno */
+    }
+
     .footer{
     width: calc(100% - 20px);
     max-width: 1200px;
@@ -629,22 +636,14 @@ main {
     padding: 10px;
     padding-bottom: 20px;
     box-sizing: border-box;
-  }
+    }
 
-  .section-qs {
-    width: calc(100% - 20px);
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .container{
-    width: calc(100% - 20px);
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
+    .container{
+        width: calc(100% - 20px);
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
     .contenido-card{
         font-size: 1em;
@@ -863,7 +862,7 @@ html, body { margin: 0; }
 /* Slider responsivo: <=1000px y misma proporción 1000x450 */
 .slider-container{
   position: relative;
-  width: min(1200px, 100%);
+  width: min(1080px, 100%);
   aspect-ratio: 1080 / 450;
   margin: 24px auto;
   overflow: hidden;
