@@ -978,8 +978,9 @@ section h1, h2, h3, p{
       align-items:center;
       justify-content:center;
       overflow: hidden;
-      border: 1px solid #eef2f8;
+      border: 1px solid #072f6b24;
     }
+
 
     .asset-img img{
       width: 100%;
