@@ -927,7 +927,7 @@ section h1, h2, h3, p{
     .credits p{
       margin: 0;
       font-size: 13.5px;
-      color: var(--muted);
+      color: #565a5e;
       text-align: left;
     }
 
