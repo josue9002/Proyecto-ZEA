@@ -402,28 +402,6 @@ main {
 }
 
 
-.heading {
-    font-size: 2.2em;
-    text-align: center;
-    color: #003366;
-    position: relative;
-    margin-bottom: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-.heading::after {
-    content: '';
-    width: 50px;
-    height: 5px;
-    background-color: #f39c12;
-    display: block;
-    margin: 0.5rem auto;
-    animation: underline-grow 2s ease-out;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 *{
     margin: 0;
@@ -769,10 +747,10 @@ section h1, h2, h3, p{
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
 
     .heading {
-        font-size: 1.7rem;
+        font-size: 1em;
     }
 
     .heading::after {
@@ -927,7 +905,7 @@ section h1, h2, h3, p{
     .credits p{
       margin: 0;
       font-size: 13.5px;
-      color: #565a5e;
+      color: var(--muted);
       text-align: left;
     }
 
@@ -980,7 +958,6 @@ section h1, h2, h3, p{
       overflow: hidden;
       border: 1px solid #072f6b24;
     }
-
 
     .asset-img img{
       width: 100%;
@@ -1038,7 +1015,7 @@ section h1, h2, h3, p{
     }
 
     /* RESPONSIVE */
-    @media (max-width: 980px){
+    @media (max-width: 1000px){
       .grid{
         grid-template-columns: 1fr;
       }
@@ -1049,6 +1026,13 @@ section h1, h2, h3, p{
       .hymn-title h2{
         font-size: 1.2em;
       }
+
+      .header-dos h1{
+      font-size: 1.7em;
+      padding: 1px;
+      margin-top: 25px;
+      
+    }
     }
 
     @media (max-width: 480px){
@@ -1065,4 +1049,11 @@ section h1, h2, h3, p{
       .hymn-title h2{
         font-size: 1em;
       }
+
+      .header-dos h1{
+      font-size: 1.4em;
+      padding: 0;
+      margin-top: 20px;
+      
+    }
     }
