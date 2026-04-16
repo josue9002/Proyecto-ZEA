@@ -774,8 +774,8 @@ section h1, h2, h3, p{
       --card: #ffffff;
       --text: #0f172a;
       --muted: #ffffff;
-      --accent: #3a62a0;
-      --accent-2: #2d4d7d;
+      --accent: #150b84;
+      --accent-2: #0b1180;
       --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
       --radius: 18px;
     }
@@ -905,7 +905,7 @@ section h1, h2, h3, p{
     .credits p{
       margin: 0;
       font-size: 13.5px;
-      color: var(--muted);
+      color: #121212;
       text-align: left;
     }
 
@@ -956,7 +956,7 @@ section h1, h2, h3, p{
       align-items:center;
       justify-content:center;
       overflow: hidden;
-      border: 1px solid #072f6b24;
+      border: 1px solid #0066ff24;
     }
 
     .asset-img img{
@@ -991,12 +991,12 @@ section h1, h2, h3, p{
     .btn-primary{
       color:#fff;
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      box-shadow: 0 6px 16px rgba(11,79,168,0.22);
+      box-shadow: 0 6px 16px rgba(148, 182, 230, 0.22);
     }
 
     .btn-primary:hover{
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(11,79,168,0.28);
+      box-shadow: 0 10px 22px rgba(124, 167, 224, 0.28);
     }
 
     .btn-ghost{
