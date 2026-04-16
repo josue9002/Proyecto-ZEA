@@ -891,7 +891,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3px;
+    border-radius: 15px;
 }
   
   .form {
