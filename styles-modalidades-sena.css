@@ -941,29 +941,36 @@ main {
       .modalidades {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .intro h1{
+      font-size: 1.7em;
+      padding: 0px;
+      margin:0%;
+      
+    }
     }
 
     @media (max-width: 768px) {
 
       main {
-        padding: 1rem 0.5rem 1rem;
+        padding: 0;
       }
 
       .modalidades {
         grid-template-columns: 1fr;
       }
-
-      .intro h1 {
-        font-size: 1.8rem;
-      }
     }
 
     @media (max-width: 480px) {
-      .intro h1 {
-        font-size: 1.6rem;
-      }
 
       .card img {
         height: 190px;
       }
+
+      .intro h1{
+      font-size: 1.4em;
+      padding: 0%;
+      margin: 0%;
+      
+    }
     }
