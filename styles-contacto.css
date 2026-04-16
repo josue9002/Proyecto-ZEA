@@ -17,11 +17,14 @@ body {
 }
 
 .container {
-    margin: 0 200px;
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    border-radius: 10px; /* Opcional: para bordes redondeados */
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 header {
@@ -282,14 +285,15 @@ main {
 }
 
 .footer {
-    background-color: #565a5e;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    margin: 0 200px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
-    margin-top: 2%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 0;
+  background-color: #565a5e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(9, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -619,19 +623,19 @@ main {
 @media (max-width: 1450px) {
 
     .footer{
-        margin: 10px; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
-        padding-bottom: 20px;
-    }
-
-    .section-qs {
-        width: 100%; /* Ocupa el ancho completo */
-        margin: 20px 0; /* Ajusta el margen */
-        padding: 10px; /* Ajusta el relleno */
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     }
 
     .container{
-        margin: 0 10px;
+        width: calc(100% - 20px);
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .contenido-card{
@@ -892,12 +896,12 @@ main {
   
   .form {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    overflow: hidden;
+    overflow: visible;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1227,10 +1231,10 @@ main {
   }
   
   @media (max-width: 768px) {
-    .container-new {
-      padding: 0;
-      padding-top: 10px;
-    }
+    .container-new{
+    min-height: auto;
+    align-items: flex-start;
+  }
   
     .contact-info:before {
       display: none;
@@ -1268,11 +1272,11 @@ main {
     }
   
     .icon-new {
-      width: 30px;
+      width: 0px;
     }
 
     .icon-new-u {
-        width: 27px;
+        width: 0px;
       }
   
     .input {
