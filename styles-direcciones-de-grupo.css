@@ -451,7 +451,7 @@ section#bienvenidos {
 
     .page{
         max-width: 100%;
-      width:min(1100px, 92vw);
+      width:min(1200px, 92vw);
       margin: 0 auto;
       padding: 20px 0 0px;
     }
@@ -481,7 +481,7 @@ section#bienvenidos {
     }
 
     .hero__title{
-      margin: 12px 0 8px;
+      margin: 0px 0 8px;
       font-family:"Montserrat", sans-serif;
       font-weight: 800;
       letter-spacing: .2px;
@@ -534,17 +534,19 @@ section#bienvenidos {
       font-size: 16px;
       letter-spacing:.2px;
       color:#132040;
+      padding-top: 3px;
     }
 
     .pill{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding: 7px 10px;
+      padding: 5px 10px;
       border-radius: 999px;
-      background: #f3f6ff;
-      border: 1px solid #e1e9ff;
-      color: #3e4f75;
+      background: #ed1919;
+      border: 1px solid #ed1919;
+      color: #ffffff;
+      font-weight: 600;
       font-family:"Montserrat", sans-serif;
       font-size: 12px;
       white-space: nowrap;
