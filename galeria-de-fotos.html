@@ -200,6 +200,14 @@
     </div>
     </div>
 
+    <script>
+  document.addEventListener('contextmenu', function(e){
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+      e.preventDefault();
+    }
+  });
+</script>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column left">
