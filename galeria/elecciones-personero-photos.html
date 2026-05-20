@@ -231,6 +231,20 @@
       }
     });
   });
+
+  document.addEventListener('contextmenu', function(e){
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+      e.preventDefault();
+    }
+  });
+
+  document.querySelectorAll('img, video').forEach(media => {
+    media.setAttribute('draggable', 'false');
+
+    media.addEventListener('dragstart', function(e){
+      e.preventDefault();
+    });
+  });
 </script>
 
   </section>      
