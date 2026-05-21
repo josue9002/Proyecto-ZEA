@@ -1093,7 +1093,7 @@ body.modal-open {
 
 /* Ajustes generales: que el modal nunca pegue bordes */
 .modal-anuncio{
-  max-width: 440px;
+  max-width: 350px;
   width: min(92vw, 640px);
   margin: 0 12px; /* pequeño margen lateral en pantallas angostas */
 }
@@ -1102,7 +1102,7 @@ body.modal-open {
 .modal-anuncio__content{
   display: flex;
   gap: clamp(12px, 2.2vw, 20px);
-  padding: clamp(16px, 2.5vw, 20px);
+  padding: clamp(16px, 2.5vw, 10px);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap; /* si no cabe, que pase abajo */
@@ -1110,7 +1110,7 @@ body.modal-open {
 
 /* Imagen cuadrada “mediana” por defecto */
 .modal-anuncio__image{
-  flex: 0 0 380px;
+  flex: 0 0 300px;
   width: 700px;
   height: 570px;
   border-radius: 12px;
@@ -1180,7 +1180,7 @@ body.modal-open {
 
   /* Imagen tipo “banner cuadrado” centrado */
   .modal-anuncio__image{
-    width: min(78vw, 700px);
+    width: min(70vw, 700px);
     height: min(150vw, 480px);
     border-radius: 10px;
   }
