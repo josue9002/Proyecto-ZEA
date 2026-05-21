@@ -90,221 +90,344 @@
 
           <script src="script-menu.js"></script>
 
-  <section>
-      <main class="container-dos">
-    <h1>Nuestras Sedes</h1>
+      <section class="sedes-section" id="sedes">
+    <div class="sedes-container">
+      <div class="sedes-header">
+        <div class="mini-emblema">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <h2>Nuestras Sedes</h2>
+        <div class="decor-line"></div>
+        <p>En el LIMEC contamos con cuatro sedes en el oriente de Cali, espacios seguros y acogedores donde formamos con calidad, cercanía y compromiso a nuestra comunidad educativa.</p>
+      </div>
 
-    <div class="tabs" role="tablist" aria-label="Sedes del colegio">
-      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-principal" id="tab-principal">SEDE PRINCIPAL</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-12" id="tab-12">SEDE 1 Y 2</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">SEDE 3</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4">SENDEROS DE PAZ</button>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Ver sede anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-window">
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- SEDE PRINCIPAL -->
+            <article class="campus-slide" style="--sede-img: url('sedes-photos/sp-1.png');">
+              <div class="slide-content">
+                <div class="campus-info">
+                  <div class="campus-badge">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+
+                  <h3>Sede Principal</h3>
+                  <div class="title-underline"></div>
+
+                  <div class="contact-list">
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                      <div>
+                        <span class="no-copiable">Teléfono</span>
+                        <a href="tel:+576023063701">(602) 306 3701</a><br><a href="tel:+576024828634">(602) 482 8634</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div>
+                        <span class="no-copiable">Correo</span>
+                        <a href="mailto:principal@colegio.edu.co">emperadordecali@hotmail.com</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                      <div>
+                        <span class="no-copiable">WhatsApp</span>
+                        <a href="https://wa.me/573187353755" target="_blank">+57 318 735 3755</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="contacto" class="btn-sede">Conoce más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="no-copiable">Ubicación</span>
+                  </div>
+
+                  <div class="map-box">
+                    <!-- Cambia el src por el iframe exacto de Google Maps de esta sede -->
+                    <!-- Ejemplo: <iframe src="TU_LINK_DE_GOOGLE_MAPS_AQUI" allowfullscreen loading="lazy"></iframe> -->
+                     <div class="map-box">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497.8387992283682!2d-76.47958229811118!3d3.420558568998557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a758f8b29e61%3A0x22507946e9fc18ec!2sSede%20Principal%20%7C%20LICEO%20MIXTO%20EMPERADOR!5e0!3m2!1sen!2sco!4v1762817832232!5m2!1sen!2sco"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SEDE 1 Y 2 -->
+            <article class="campus-slide" style="--sede-img: url('sedes-photos/sede1y2-1.png');">
+              <div class="slide-content">
+                <div class="campus-info">
+                  <div class="campus-badge">
+                    <i class="fa-solid fa-city"></i>
+                  </div>
+
+                  <h3>Sede 1 & 2</h3>
+                  <div class="title-underline"></div>
+
+                  <div class="contact-list">
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                      <div>
+                        <span class="no-copiable">Teléfono</span>
+                        <a href="tel:+576023410721">(602) 341 0721</a><br><a href="tel:+576023410891">(602) 341 0891</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div>
+                        <span class="no-copiable">Correo</span>
+                        <a href="mailto:sedes12@colegio.edu.co">emperadordecali@hotmail.com</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                      <div>
+                        <span class="no-copiable">WhatsApp</span>
+                        <a href="https://wa.me/573183835230" target="_blank">+57 318 383 5230</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="contacto" class="btn-sede">Conoce más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="no-copiable">Ubicación</span>
+                  </div>
+
+                  <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.3770681302885!2d-76.48722330642092!3d3.4258159000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20EMPERADOR%20DE%20CALI!5e0!3m2!1ses-419!2sco!4v1762552383402!5m2!1ses-419!2sco">
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SEDE 3 -->
+            <article class="campus-slide" style="--sede-img: url('sedes-photos/s3-1.png');">
+              <div class="slide-content">
+                <div class="campus-info">
+                  <div class="campus-badge">
+                    <i class="fa-solid fa-school-flag"></i>
+                  </div>
+
+                  <h3>Sede 3</h3>
+                  <div class="title-underline"></div>
+
+                  <div class="contact-list">
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                      <div>
+                        <span class="no-copiable">Teléfono</span>
+                        <a href="tel:+576023411264">(602) 341 1264</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div>
+                        <span class="no-copiable">Correo</span>
+                        <a href="mailto:sede3@colegio.edu.co">emperadordecali@hotmail.com</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                      <div>
+                        <span class="no-copiable">WhatsApp</span>
+                        <a href="https://wa.me/573168321874" target="_blank">+57 316 832 1874</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="contacto" class="btn-sede">Conoce más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="no-copiable">Ubicación</span>
+                  </div>
+
+                  <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.3636955328525!2d-76.4699477545605!3d3.416465103529289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7b05df22e5b%3A0x7711d85efbfb2995!2sLiceo%20Mixto%20Emperador%20de%20Cali!5e0!3m2!1ses!2sco!4v1762552888528!5m2!1ses!2sco">
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SENDEROS DE PAZ -->
+            <article class="campus-slide" style="--sede-img: url('sedes-photos/sede1y2-3.png');">
+              <div class="slide-content">
+                <div class="campus-info">
+                  <div class="campus-badge">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+
+                  <h3>Senderos de Paz</h3>
+                  <div class="title-underline"></div>
+
+                  <div class="contact-list">
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                      <div>
+                        <span class="no-copiable">Teléfono</span>
+                        <a href="tel:+576023411264">(602) 341 1264</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div>
+                        <span class="no-copiable">Correo</span>
+                        <a href="mailto:senderos@colegio.edu.co">emperadordecali@hotmail.com</a>
+                      </div>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                      <div>
+                        <span class="no-copiable">WhatsApp</span>
+                        <a href="https://wa.me/573183835230" target="_blank">+57 318 383 5230</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="contacto" class="btn-sede">Conoce más <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="map-card">
+                  <div class="map-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="no-copiable">Ubicación</span>
+                  </div>
+
+                  <div class="map-box">
+                    <!-- Cambia el src por el iframe exacto de Google Maps de esta sede -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.3770681302885!2d-76.48722330642092!3d3.4258159000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20EMPERADOR%20DE%20CALI!5e0!3m2!1ses-419!2sco!4v1762552383402!5m2!1ses-419!2sco">
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn" aria-label="Ver siguiente sede">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots" aria-label="Indicadores del carrusel"></div>
     </div>
-
-    <!-- SEDE PRINCIPAL -->
-    <section id="panel-principal" class="panel active card" role="tabpanel" aria-labelledby="tab-principal">
-      <div class="header">
-        <span class="badge">Sede principal</span>
-        <p class="desc">Ubicada junto al Bulevar de Oriente, esta es la sede principal del colegio LIMEC.</p>
-        <div class="contact">
-          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023063701" target="_blank"> (602) 306 3701</a> - <a href="tel:+576024828634">(602) 482 8634</a></div>
-          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
-          <div class="item"><strong>WhatsApp:<br></strong><a href="https://wa.me/c/573187353755" target="_blank" rel="noopener">+57 318 735 3755</a><br><a href="https://wa.me/c/573174520435" target="_blank" rel="noopener">+57 317 4520435</a></div>
-        </div>
-      </div>
-
-      <div class="grid">
-        <!-- Slider izquierda -->
-        <div>
-          <div class="slider" data-slider="principal">
-            <div class="slides">
-              <div class="slide"><img src="sedes-photos/sp-1.png" alt="photo-1"></div>
-              <div class="slide"><img src="sedes-photos/sp-2.png" alt="photo-2"></div>
-              <div class="slide"><img src="sedes-photos/sp-3.png" alt="photo-2"></div>
-            </div>
-            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
-            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
-          </div>
-        </div>
-
-        <!-- Mapa derecha (reemplaza el src con tu embed de Google Maps) -->
-        <div class="map">
-          <!-- Inserta aquí tu Google Maps Embed: -->
-          <iframe
-            title="Mapa Sede principal"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497.8387992283682!2d-76.47958229811118!3d3.420558568998557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a758f8b29e61%3A0x22507946e9fc18ec!2sSede%20Principal%20%7C%20LICEO%20MIXTO%20EMPERADOR!5e0!3m2!1sen!2sco!4v1762817832232!5m2!1sen!2sco">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    </section>
-        </main>
-    
-
-    <!-- SEDE 1 Y 2 -->
-    <section id="panel-12" class="panel card" role="tabpanel" aria-labelledby="tab-12">
-      <div class="header">
-        <span class="badge">Sede 1 y 2</span>
-        <p class="desc">Dos campus grandes para primaria y bachillerato.</p>
-        <div class="contact">
-          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023410721" target="_blank"> (602) 341 0721</a> - <a href="tel:+576023410891">(602) 341 0891</a></div>
-          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
-          <div class="item"><strong>WhatsApp:<br></strong> <a href="https://wa.me/c/573183835230" target="_blank" rel="noopener">+57 318 383 5230</a></div>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div>
-          <div class="slider" data-slider="s12">
-            <div class="slides">
-              <div class="slide"><img src="sedes-photos/sede1y2-1.png" alt="photo-1"></div>
-              <div class="slide"><img src="sedes-photos/sede1y2-2.png" alt="photo-2"></div>
-              <div class="slide"><img src="sedes-photos/sede1y2-3.png" alt="photo-3"></div>
-              <div class="slide"><img src="sedes-photos/sede1y2-4.png" alt="photo-4"></div>
-            </div>
-            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
-            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
-          </div>
-        </div>
-
-        <div class="map">
-          <iframe
-            title="Mapa Sede 1 y 2"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.3770681302885!2d-76.48722330642092!3d3.4258159000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20EMPERADOR%20DE%20CALI!5e0!3m2!1ses-419!2sco!4v1762552383402!5m2!1ses-419!2sco">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEDE 3 -->
-    <section id="panel-3" class="panel card" role="tabpanel" aria-labelledby="tab-3">
-      <div class="header">
-        <span class="badge">Sede 3</span>
-        <p class="desc">En el oriente de la ciudad de Cali, cerca del Polideportivo Calimio Decepaz.</p>
-        <div class="contact">
-          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023411264" target="_blank"> (602) 341 1264</a></div>
-          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
-          <div class="item"><strong>WhatsApp:<br></strong> <a href="" target="_blank" rel="noopener">+57 316 8321874</a></div>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div>
-          <div class="slider" data-slider="s3">
-            <div class="slides">
-              <div class="slide"><img src="sedes-photos/s3-1.png" alt="photo-1"></div>
-              <div class="slide"><img src="sedes-photos/s3-2.png" alt="photo-2"></div>
-              <div class="slide"><img src="sedes-photos/s3-3.png" alt="photo-3"></div>
-            </div>
-            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
-            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
-          </div>
-        </div>
-
-        <div class="map">
-          <iframe
-            title="Mapa Sede 3"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.3636955328525!2d-76.4699477545605!3d3.416465103529289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7b05df22e5b%3A0x7711d85efbfb2995!2sLiceo%20Mixto%20Emperador%20de%20Cali!5e0!3m2!1ses!2sco!4v1762552888528!5m2!1ses!2sco">
-          </iframe>
-        </div>
-      </div>
-    </section>
   </section>
 
-  <!-- SEDE 3 -->
-    <section id="panel-4" class="panel card" role="tabpanel" aria-labelledby="tab-4">
-      <div class="header">
-        <span class="badge">SENDEROS DE PAZ</span>
-        <p class="desc">Ubicada en la sede 2 en jornada nocturna ofreciendo bachiller por ciclos.</p>
-        <div class="contact">
-          <div class="item"><strong>TÉLEFONO:<br></strong><a href="tel:+576023411264" target="_blank"> (602) 341 1264</a></div>
-          <div class="item"><strong>CORREO:<br></strong> <a>emperadordecali@hotmail.com </a> </div>
-          <div class="item"><strong>WhatsApp:<br></strong> <a href="" target="_blank" rel="noopener">+57 318 383 5230</a></div>
-        </div>
-      </div>
+  <script>
+    const track = document.getElementById("carouselTrack");
+    const slides = Array.from(document.querySelectorAll(".campus-slide"));
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const dotsContainer = document.getElementById("carouselDots");
 
-      <div class="grid">
-        <div>
-          <div class="slider" data-slider="s3">
-            <div class="slides">
-              <div class="slide"><img src="galeria/albumes-2025/grados-11/senderos/1.jpg" alt="photo-1"></div>
-              <div class="slide"><img src="galeria/albumes-2025/grados-11/senderos/2.jpg" alt="photo-2"></div>
-            </div>
-            <button class="nav prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left chev"></i></button>
-            <button class="nav next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right chev"></i></button>
-          </div>
-        </div>
+    let currentIndex = 0;
 
-        <div class="map">
-          <iframe
-            title="Mapa Sede 3"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.3770681302885!2d-76.48722330642092!3d3.4258159000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a76b199ff261%3A0x7a1bffb3fb892820!2sLICEO%20MIXTO%20EMPERADOR%20DE%20CALI!5e0!3m2!1ses-419!2sco!4v1762552383402!5m2!1ses-419!2sco">
-          </iframe>
-        </div>
-      </div>
-    </section>
-  </section>
-    </div>
-
-      <script>
-    // ----- Tabs (mostrar/ocultar paneles sin cambiar de página) -----
-    const tabs = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.panel');
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabs.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-        panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active'); btn.setAttribute('aria-selected','true');
-        const panel = document.getElementById(btn.getAttribute('aria-controls'));
-        panel.classList.add('active');
-        // Mover foco al inicio del panel para accesibilidad
-        panel.querySelector('.badge')?.focus?.();
-      });
+    slides.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.classList.add("dot");
+      dot.setAttribute("aria-label", `Ver sede ${index + 1}`);
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
     });
 
-    // ----- Slider simple (por sección) -----
-    class MiniSlider {
-      constructor(root){
-        this.root = root;
-        this.track = root.querySelector('.slides');
-        this.slides = Array.from(root.querySelectorAll('.slide'));
-        this.index = 0;
-        this.total = this.slides.length;
-        this.prev = root.querySelector('.nav.prev');
-        this.next = root.querySelector('.nav.next');
-        this.prev.addEventListener('click', ()=>this.go(this.index-1));
-        this.next.addEventListener('click', ()=>this.go(this.index+1));
-        // Arrastre táctil
-        this.startX = 0; this.deltaX = 0;
-        this.track.addEventListener('touchstart', e=>{ this.startX = e.touches[0].clientX; }, {passive:true});
-        this.track.addEventListener('touchmove', e=>{ this.deltaX = e.touches[0].clientX - this.startX; }, {passive:true});
-        this.track.addEventListener('touchend', ()=>{
-          if (Math.abs(this.deltaX) > 40) this.go(this.index + (this.deltaX<0 ? 1 : -1));
-          this.deltaX = 0;
-        });
-        this.update();
-      }
-      go(i){
-        if (i<0) i=this.total-1;
-        if (i>=this.total) i=0;
-        this.index=i; this.update();
-      }
-      update(){
-        const x = -this.index * 100;
-        this.track.style.transform = `translateX(${x}%)`;
-      }
+    const dots = Array.from(document.querySelectorAll(".dot"));
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
     }
-    document.querySelectorAll('.slider').forEach(sl => new MiniSlider(sl));
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") nextSlide();
+      if (event.key === "ArrowLeft") prevSlide();
+    });
+
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener("touchstart", (event) => {
+      startX = event.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", (event) => {
+      endX = event.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? nextSlide() : prevSlide();
+      }
+    });
+
+    updateCarousel();
   </script>
+
+  </div>
 
 
     <footer class="footer">
