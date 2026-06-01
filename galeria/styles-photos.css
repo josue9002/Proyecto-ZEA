@@ -962,7 +962,7 @@ main {
   }
   .thumb.active{
     opacity:1;
-    outline-color:#fbbf24;
+    outline-color:#ed1919;
   }
 
   .caption{
@@ -1116,6 +1116,16 @@ main {
   .gallery-title
   {
     font-size: 0.9em;
+  }
+
+  .dots
+  {
+    display: none;
+  }
+
+  .caption
+  {
+    display: none;
   }
 }
 
