@@ -961,8 +961,8 @@ main {
     border-radius:6px;
   }
   .thumb.active{
-    opacity:1;
-    outline-color:#ed1919;
+    opacity:10;
+    outline-color:#ff7300;
   }
 
   .caption{
@@ -1115,7 +1115,7 @@ main {
 
   .gallery-title
   {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .dots
@@ -1123,7 +1123,7 @@ main {
     display: none;
   }
 
-  .caption
+  .nav-btn.next, .nav-btn.prev
   {
     display: none;
   }
