@@ -800,12 +800,12 @@ main {
 }
 
   .gallery-wrapper{
-    max-width:1080px;
+    max-width: 1200px;
     width:100%;
     background:#ffffff;
     padding:15px;
     margin: auto;
-    border-radius:14px;
+    border-radius:15px;
     box-shadow:0 18px 40px rgba(0,0,0,.15);
     position:relative;
     margin-top:25px;
@@ -1112,5 +1112,10 @@ main {
 
   .nav-btn.prev{ left:6px; }   /* opcional: acercar a los bordes */
   .nav-btn.next{ right:6px; }
+
+  .gallery-title
+  {
+    font-size: 0.9em;
+  }
 }
 
