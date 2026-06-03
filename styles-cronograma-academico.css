@@ -872,8 +872,9 @@ main {
       font-weight: 800;
       letter-spacing: .4px;
       text-transform: uppercase;
-      background: linear-gradient(90deg, rgb(255, 125, 125), rgb(240, 180, 180));
+      background: linear-gradient(90deg, rgb(231, 132, 132), rgb(253, 168, 168));
       margin-bottom: 14px;
+      color: #3d0101;
     }
 
     h1 {
