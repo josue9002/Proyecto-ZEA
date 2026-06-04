@@ -151,12 +151,7 @@
 
       <aside class="legend-panel">
         <div class="summary-card">
-          <h3><i class="fa-solid fa-file-lines"></i> Resumen del mes</h3>
-          <p id="monthDescription">Consulta las actividades del mes seleccionado y revisa rápidamente las fechas resaltadas en el calendario.</p>
-        </div>
-
-        <div class="summary-card">
-          <h3><i class="fa-solid fa-folder-open"></i> Fechas importantes</h3>
+          <h3><i class="fa-solid fa-folder-open"></i> Fechas importantes<hr class="linea-separadora"></h3>
           <div id="eventsList" class="events-list"></div>
         </div>
       </aside>
@@ -308,7 +303,7 @@
     const searchInput = document.getElementById('searchInput');
     const monthTitle = document.getElementById('monthTitle');
     const monthPill = document.getElementById('monthPill');
-    const monthDescription = document.getElementById('monthDescription');
+    
     const calendarGrid = document.getElementById('calendarGrid');
     const eventsList = document.getElementById('eventsList');
 
@@ -319,7 +314,7 @@
 
       monthTitle.textContent = data.label;
       monthPill.textContent = data.pill;
-      monthDescription.textContent = data.description;
+      
 
       const eventMap = {};
       data.events.forEach(event => {
