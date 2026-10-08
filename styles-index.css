@@ -1094,7 +1094,7 @@ body.modal-open {
 /* Ajustes generales: que el modal nunca pegue bordes */
 .modal-anuncio{
   max-width: 500px;
-  width: min(92vw, 640px);
+  width: min(92vw, 440px);
   margin: 0 12px; /* pequeño margen lateral en pantallas angostas */
 }
 
