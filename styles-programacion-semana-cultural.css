@@ -228,7 +228,7 @@ nav {
 }
 
 section {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 section h1 {
@@ -888,9 +888,9 @@ main {
   --muted: rgb(0, 0, 0);       /* texto secundario */
 
   /* Marca: rojo + grises */
-  --primary: #ed1919;     /* rojo institucional */
+  --primary: #ffea00;     /* rojo institucional */
   --primary-2: #0b0042;   /* gris medio claro de apoyo */
-  --accent: #740d0d;      /* gris para gradientes/badges */
+  --accent: #eeff00;      /* gris para gradientes/badges */
 
   /* Accesibilidad/sombras */
   --ring: rgba(211, 47, 47, .35); /* halo rojo */
