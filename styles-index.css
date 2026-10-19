@@ -1154,7 +1154,7 @@ body.modal-open {
   /* Imagen más grande pero fluida */
   .modal-anuncio__image{
     width: clamp(300px, 20vw, 700px);
-    height: clamp(380px, 48vw, 500px);
+    height: clamp(450px, 48vw, 500px);
     flex: 0 0 auto; /* deja que fluya */
   }
 
@@ -1181,7 +1181,7 @@ body.modal-open {
   /* Imagen tipo “banner cuadrado” centrado */
   .modal-anuncio__image{
     width: min(80vw, 700px);
-    height: min(100vw, 480px);
+    height: min(150vw, 480px);
     border-radius: 10px;
   }
 
